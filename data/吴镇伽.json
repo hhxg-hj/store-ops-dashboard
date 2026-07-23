@@ -1,67 +1,578 @@
 {
   "name": "吴镇伽",
   "store": "宝妈时光（重庆綦江万达店）",
+  "region": "重庆区域",
   "zaidian": false,
-  "naifenUsers": 0,
-  "naifenUsersLast": 0,
-  "naifenUsersQoq": null,
-  "naifenGuanshu": 0,
-  "naifenGuanshuLast": 0,
-  "kedanjia": 0,
-  "kedanjiaQoq": 0,
-  "kedanliang": 0,
-  "kedanliangLast": 0,
-  "kedanliangQoq": 0,
-  "chengjiaoNew": 0,
-  "chengjiaoNewLast": 0,
-  "chengjiaoTotal": 2,
-  "fugouRate": 0,
-  "fugouMonthly": 0,
-  "fugouMonthlyLast": 0,
-  "fugouMonthlyQoq": 0,
-  "fugouGeyue": 0,
-  "fugouGeyueLast": 0,
-  "fugouGeyueQoq": 0,
-  "fugouJidu": 0,
-  "fugouJiduLast": 0,
-  "fugouJiduQoq": 0,
-  "zhutuiUsers": 0,
-  "zhutuiUsersLast": 0,
-  "zhutuiUsersQoq": 0,
-  "zhutuiType": "主推奶粉",
-  "tonghuoUsers": 0,
-  "tonghuoUsersLast": 0,
-  "tonghuoUsersQoq": 0,
-  "tonghuoType": "通货奶粉",
-  "zhutuiGuanshu": 0,
-  "zhutuiGuanshuLast": 0,
-  "tonghuoGuanshu": 0,
-  "tonghuoGuanshuLast": 0,
-  "bindWecom": 0,
-  "bindWecomQoq": 0,
-  "haoyouTotal": 0,
-  "sankeUsers": 2,
-  "sankeUsersLast": 2,
-  "sankeUsersQoq": 0,
-  "jishiOrders": 0,
-  "jishiOrdersLast": 0,
-  "jishiOrdersQoq": 0,
-  "liushiUsers": 0,
-  "liushiUsersLast": 0,
-  "liushiUsersQoq": 0,
-  "updatedAt": "2026-07-11",
-  "month": "2026-07",
-  "dachengLv": 0,
-  "xiaoshouYJ": 0,
-  "xiaoshouMB": 0,
+  "isManager": false,
+  "commission": 0,
   "commissionShangpin": 0,
   "commissionFujian": 0,
   "commissionBaojin": 0,
   "commissionJishi": 0,
   "commissionManager": 0,
-  "commissionTotal": 0,
-  "isManager": false,
+  "target": 0,
+  "achieved": 0,
+  "achievementRate": 0,
   "mendianDachengLv": 0,
   "mendianStaffCount": 0,
-  "version": "2026-07-23 08-04"
+  "milkCans": 0,
+  "milkCansLast": 0,
+  "momMilkCans": null,
+  "pushCans": 0,
+  "pushCansLast": 0,
+  "momPushCans": null,
+  "totalClients": 0,
+  "totalClientsLast": 0,
+  "momClients": null,
+  "milkClients": 0,
+  "milkClientsLast": 0,
+  "momMilkClients": null,
+  "pushClients": 0,
+  "pushClientsLast": 0,
+  "momPushClients": null,
+  "milkAvg": 0,
+  "milkAvgLast": 0,
+  "momMilkAvg": null,
+  "depositCount": 0,
+  "visitShould": 0,
+  "visitDone": 0,
+  "visitPending": 0,
+  "naifenUsers": 0,
+  "naifenUsersLast": 0,
+  "naifenGuanshu": 0,
+  "naifenGuanshuLast": 0,
+  "kedanjia": 0,
+  "kedanjiaQoq": null,
+  "kedanliang": 0,
+  "kedanliangLast": 0,
+  "chengjiaoNew": 0,
+  "chengjiaoNewLast": 0,
+  "chengjiaoTotal": 2,
+  "fugouRate": 0,
+  "zhutuiUsers": 0,
+  "zhutuiUsersLast": 0,
+  "tonghuoUsers": 0,
+  "tonghuoUsersLast": 0,
+  "bindWecom": 0,
+  "haoyouTotal": 0,
+  "sankeUsers": 2,
+  "sankeUsersLast": 2,
+  "jishiOrders": 0,
+  "jishiOrdersLast": 0,
+  "liushiUsers": 0,
+  "liushiUsersLast": 0,
+  "updatedAt": "2026-07",
+  "month": "2026-07",
+  "version": "2026-07-23 09-50",
+  "storeRank": 5,
+  "storeTotal": 10,
+  "storeTopName": "陈丹",
+  "storeTopComm": 638.55,
+  "regionRank": 11,
+  "regionTotal": 19,
+  "regionTopName": "胡美娟",
+  "regionTopComm": 5213.76,
+  "suggestion": "💪 你处于团队中上游，重点关注主推奶粉与营养品组合销售，提升客单价\n📊 目标达成率偏低（0.0%），建议每日新增至少2名奶粉意向客户跟进\n🥛 奶粉罐数偏少，建议在服务中主动了解宝宝月龄和喂养需求，精准推荐",
+  "learningResources": "🎯 你的主推产品销量需要提升（本月主推仅0罐），请重点学习以下产品资料：\n  • 美赞臣A2（09、美赞臣）: 📄一页纸:[港版美赞臣A2 专利版（36个月保质期）.png](https://jvlcno43vsp.feishu.cn/file/Cr8xbj63mo1ARVxqgozc5giZnig?from=from_copylink)  🎬视频:[美赞臣A2专利版.mp4](https://jvlcno43vsp.feishu.cn/file/NvrkbAiTNotc8dxfHrqcWzRhnSr?from=from_copylink)\n  • 港版亲舒（09、美赞臣）: 📄一页纸:[港版亲舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DwhUbYvTOocD56xneRXciAS6nZe?from=from_copylink)  🎬视频:[港版亲舒5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CgnNb3E3soQ48KxOXukcU6Guntc?from=from_copylink)\n💡 共 7 款主推产品，建议每天学习 2 个，3 天内掌握！",
+  "productKb": {
+    "恩敏舒1+": {
+      "onepager": "[恩敏舒1+一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/ExVCbqDXKolrofxq2QecDZpZnJA?from=from_copylink)",
+      "video": "[恩敏舒1+ 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/FawnboAmGocqjlxIcC3cifs8nmf?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "安敏速": {
+      "onepager": "[安敏速一页纸.png](https://jvlcno43vsp.feishu.cn/file/ABYfbsC49opjCzxUscOcYk3dnRh?from=from_copylink)",
+      "video": "[安敏速5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Vpn0bhCkho5hWrxY2KHcpcabnRe?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "肽敏舒HMO": {
+      "onepager": "[肽敏舒HMO 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/RGxqbKsTjoYsKsxYlhEct9KXnYb?from=from_copylink)",
+      "video": "[肽敏舒HMO 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/MtzgbUqFFoeBiqxDSq0cJxX6n9c?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "恩敏舒HMO ": {
+      "onepager": "[恩敏舒HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/UTiobFv1iot17UxQiZIcccCDnHc?from=from_copylink)",
+      "video": "[恩敏舒HMO 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BPJibgIkqowp7YxyuLwc2BhEnOh?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "蔼儿舒HMO": {
+      "onepager": "[蔼儿舒HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/I2aXbHBBoocuzKx9c90cKBE5nif?from=from_copylink)",
+      "video": "[蔼儿舒HMO 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/SoePb2q6ioAYb0xcEVjcgjNVn1f?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "全护A2": {
+      "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
+      "video": "[能恩全护A2 五分钟产品讲解.mp4](https://yuoukuajing.feishu.cn/file/BJTRbpIjXoEV41xowXZcztJ9ned?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "能恩A2": {
+      "onepager": "[能恩A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DMjgbakUWobCEWxJIXDcrQRon7d?from=from_copylink)",
+      "video": "[能恩A2 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/S8zmba1hBoobPkxw2jecD4Z7nhb?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "能恩全护HA": {
+      "onepager": "[能恩全护HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/IISjbgxNQoXEb7x6sgXcGGOvnhc?from=from_copylink)",
+      "video": "[能恩全护HA 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/ERSTbgy9XotBedxRMMmcTx9Pn9J?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "德白": {
+      "onepager": "[一页纸【德国爱他美白金版】.png](https://jvlcno43vsp.feishu.cn/file/Yf9ibgmfCoI7yMxMwOScmrglnbc?from=from_copylink)",
+      "video": "[德国爱他美白金版五分钟产品讲解.mp4](https://jvlcno43vsp.feishu.cn/file/BfHPbchSkomCLkx9luDcpUV7n0c?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "安敏健": {
+      "onepager": "[安敏健一页纸.png](https://jvlcno43vsp.feishu.cn/file/ULuFbtAhvowy47xq7EQcUzLUnhe?from=from_copylink)",
+      "video": "[安敏健5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/MSwmb6cjYoMilxxp9ZuclK4OnJc?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "蔼儿舒": {
+      "onepager": "[蔼儿舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Y8jYbZKsBoEtx0xjqbic0Md6no6?from=from_copylink)",
+      "video": "[蔼儿舒5分钟产品视频.mp4](https://jvlcno43vsp.feishu.cn/file/MjVrb4Q2GoyrZcxJCnLcxblCn3c?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "恩敏舒": {
+      "onepager": "[恩敏舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QhIfbszI0omE1Gx46micJ8Aonlc?from=from_copylink)",
+      "video": "[恩敏舒 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/AtVKbo0QAoqWHCxBWKLcS59Cnqd?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "美赞臣A2": {
+      "onepager": "[港版美赞臣A2 专利版（36个月保质期）.png](https://jvlcno43vsp.feishu.cn/file/Cr8xbj63mo1ARVxqgozc5giZnig?from=from_copylink)",
+      "video": "[美赞臣A2专利版.mp4](https://jvlcno43vsp.feishu.cn/file/NvrkbAiTNotc8dxfHrqcWzRhnSr?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "澳白": {
+      "onepager": "[一页纸【澳洲爱他美白金版】.png](https://jvlcno43vsp.feishu.cn/file/Rg7rbUnTnoYdaFxj1XncZJ1iny6?from=from_copylink)",
+      "video": "[澳洲爱他美白金版五分钟产品介绍.mp4](https://jvlcno43vsp.feishu.cn/file/SlJ1bbXJPoTQAYxf50McqDDUny3?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "澳金": {
+      "onepager": "[澳金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/EGrDbhyJXolIgIxobCzc9tEUn7g?from=from_copylink)",
+      "video": "[澳洲爱他美金装版五分钟产品讲解.mp4](https://jvlcno43vsp.feishu.cn/file/PUqubRkpjohmQFxhZ3IcOfzvnBj?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "英白": {
+      "onepager": "[英白一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MtwIbEGLto189xxeMYUcScWrn3d?from=from_copylink)",
+      "video": "[英白 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/UyJmbMSRpo0jZ8xlpG2cfsgJn2o?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "卓徉": {
+      "onepager": "[卓徉一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/KowWba4yhoru8ixKlnjcqcMJnTc?from=from_copylink)",
+      "video": "[爱他美卓徉5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/ITmMbH2L8o920fxCJc0c3yWanjc?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "卓傲": {
+      "onepager": "[卓傲一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/I4S5bcXxCohwwOxT7srcw68kn8g?from=from_copylink)",
+      "video": "[爱他美卓傲5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/MMNPbRnYDotKK5xrEbKcWduanag?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "德爱易乐罐": {
+      "onepager": "[德爱一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/EOfAb2wksoDKV0xJCJJchxIgnqf?from=from_copylink)",
+      "video": "[德爱易乐罐5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/W6JJbWyGHorO3vxtkgdco1a1ntg?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "奇迹白罐（老版）": {
+      "onepager": "[奇迹白罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WIqAbb5AGoLZPAxuo9hctaqMnAb?from=from_copylink)",
+      "video": "[爱他美奇迹白罐（老版）5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/OlinbA1h2oFWy7x2NHWc9WahnBb?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "奇迹蓝罐": {
+      "onepager": "[奇迹蓝罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/OxcjbbnA0o1nB3xnZzTceqbonSV?from=from_copylink)",
+      "video": "[爱他美奇迹蓝罐5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Wq2ZbelkyovRvQxOIyacQouTnTf?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "奇迹绿罐": {
+      "onepager": "[奇迹绿罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DMW1bWDLooBYznxB6Dpc31esnMh?from=from_copylink)",
+      "video": "[爱他美奇迹绿罐5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/WMxxbmzI4oewwlxXUPlcjX6On0b?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "英爱易乐罐": {
+      "onepager": "[英爱易乐罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MtD5bEPpioc0FZx45VjccMAjnlf?from=from_copylink)",
+      "video": "[英爱易乐罐5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KMl2bXw77oYehaxD6GBcvISIn7f?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "蓝臻": {
+      "onepager": "[港版蓝臻一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MUzWbGuv1o8I1FxYz3xcDlRNn8c?from=from_copylink)",
+      "video": "[美赞臣港版蓝臻5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Xs1Gbns7zoFZo4x7RbNc90lVn8c?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "智睿": {
+      "onepager": "[美赞臣智睿一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WfqZbR6R3oVmG7xjEmUcvFMLnKh?from=from_copylink)",
+      "video": "[美赞臣智睿5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KIh8b9sYKok5UHxVL5kcfJqGn2d?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "诺优能有机A2": {
+      "onepager": "[诺优能有机A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/FmFqbKGTmoBwJ0xWIymc9MSinMh?from=from_copylink)",
+      "video": "[诺优能有机A2 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/ROIybhHbColq7cxrjaJcqXXcnub?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "DHA": {
+      "onepager": "[Nature Made天维美DHA一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/VuZdbC4CkoH1eoxl4VecmdItn1d?from=from_copylink)",
+      "video": "[Nature Made天维美DHA 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/YL2Sbp9yJoi7nCxrsW3cGWnJnXg?from=from_copylink)",
+      "brand": "06、Nature Made天维美"
+    },
+    "多维矿": {
+      "onepager": "[Nature Made天维美多维矿一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/B8SSbXI4uoAPDLxEojJcRShPn4g?from=from_copylink)",
+      "video": "[Nature Made天维美多维矿 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Oragbmt4yolTsLxK8QxcG5HCnZd?from=from_copylink)",
+      "brand": "06、Nature Made天维美"
+    },
+    "益生菌": {
+      "onepager": "[Nature Made天维美益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Bu61bYK0wo6hvZx801oc5vi4n5e?from=from_copylink)",
+      "video": "[Nature Made天维美益生菌5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Y3SIbtKCyoSCJwxOBqvcSZtunyd?from=from_copylink)",
+      "brand": "06、Nature Made天维美"
+    },
+    "叶黄素酯": {
+      "onepager": "[Nature Made天维美叶黄素酯一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/GIt6blWQso7EVIxtRuvccq9rnHg?from=from_copylink)",
+      "video": "[Nature Made天维美叶黄素酯5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/D3XSbFBHaogwyexcKkncJSk0njg?from=from_copylink)",
+      "brand": "06、Nature Made天维美"
+    },
+    "姜黄葛根": {
+      "onepager": "[Nature Made天维美姜黄葛根一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/K9VYbQbC4oFAcMxH1vOcBOrCn2g?from=from_copylink)",
+      "video": "[Nature Made天维美姜黄葛根5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Hw9DbZ3OioiIxnx0YJEcQX2dnof?from=from_copylink)",
+      "brand": "06、Nature Made天维美"
+    },
+    "DHA叶黄素": {
+      "onepager": "[DHA叶黄素一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/FLaMb0OB5osqLdxce6Eczvz3nmb?from=from_copylink)",
+      "video": "[妈咪爱茁依DHA.mp4](https://jvlcno43vsp.feishu.cn/file/O4S4buLceoftYixZCGRcORsanxe?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "成长宝盒": {
+      "onepager": "[成长宝盒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Px4Ob9dYdojBr3xOWw2copiFnwg?from=from_copylink)",
+      "video": "[成长宝盒5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/LYaybYmwToU2dCx8sBxcpQyUnOb?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "蓝莓叶黄素益生菌": {
+      "onepager": "[蓝莓叶黄素益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nynzbnm9ooX1lQxwqd5cOOwOnRh?from=from_copylink)",
+      "video": "[蓝莓叶黄素益生菌5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/ZrwFb0T3xoShfAxyfFPcgDf5nTh?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "枇杷雪梨益生菌": {
+      "onepager": "[枇杷雪梨益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/T3elbBIcvoIX2xxbY7Mc7kv0nBe?from=from_copylink)",
+      "video": "[枇杷雪梨益生菌5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/R8QFbenNFotV0ax9Pr5corz9npb?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "乳铁蛋白": {
+      "onepager": "",
+      "video": "[妈咪爱茁依乳铁蛋白五分钟产品讲解.mp4](https://jvlcno43vsp.feishu.cn/file/NOSRbmEuXoRIp1xQcyqcZargnTh?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "山楂茯苓益生菌": {
+      "onepager": "[山楂茯苓益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DohnbcO6foTjyQxotm4cJWHXnLO?from=from_copylink)",
+      "video": "[山楂茯苓益生菌5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Vp62bu6DnoLleLxiDGXcCVPVnae?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "天才学霸": {
+      "onepager": "[天才学霸一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/BH5CbzdwhoIvAdxUdqXcuQaKnDf?from=from_copylink)",
+      "video": "[天才学霸5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/WMjFbNAqxoJGwnxYA4ecfCCSnmd?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "婴配粉": {
+      "onepager": "[茁依婴配一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/J466bqtLxoey8DxdWZEcDxlDnEi?from=from_copylink)",
+      "video": "[妈咪爱茁依婴配-双氮包装 五分钟产品讲解.mp4](https://jvlcno43vsp.feishu.cn/file/RkXzbSXvQohbg1xwaW7cNkATn5m?from=from_copylink)",
+      "brand": "05、妈咪爱"
+    },
+    "紫白金": {
+      "onepager": "[澳洲A2紫白金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/SdKabFAfVoMrk2xXyc5cl50anlf?from=from_copylink)",
+      "video": "[澳洲A2紫白金5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/G0IgbXKvNo0bbJxcEcHcaC3Kno5?from=from_copylink)",
+      "brand": "10、a2"
+    },
+    "澳版小安素": {
+      "onepager": "[澳版小安素一页纸-更新版.png](https://jvlcno43vsp.feishu.cn/file/BfJwbNnCpo06RFxjQlxczrRsnyh?from=from_copylink)",
+      "video": "[澳版小安素新5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KR99bfb22oMTrbxDcq3cSYAtnmb?from=from_copylink)",
+      "brand": "07、雅培"
+    },
+    "金钻（老版本）": {
+      "onepager": "[hero金钻一页纸（老版）.png](https://jvlcno43vsp.feishu.cn/file/Y1PTbzPJ8oWxD3xJ0fbcXWmKnKc?from=from_copylink)",
+      "video": "[hero金钻 5分钟视频（老版）.mp4](https://jvlcno43vsp.feishu.cn/file/W2F3b9rI1ohwNTxA50Bcp19onig?from=from_copylink)",
+      "brand": "12、Hero Baby"
+    },
+    "初生娇贵": {
+      "onepager": "[初生娇贵一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/TCU0bAXCXooXf9xWCX5cNETmnyg?from=from_copylink)",
+      "video": "[初生娇贵5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Otzxbw9Rfocb6zxWEHJcKtQbnHc?from=from_copylink)",
+      "brand": "08、咔哆哆"
+    },
+    "云端宝贝": {
+      "onepager": "[云端宝贝一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XGyyb9sSIo26iix5CkicCkyYn8d?from=from_copylink)",
+      "video": "[云端宝贝5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/TZBAb2uTao185WxNjkMcSe9knZe?from=from_copylink)",
+      "brand": "08、咔哆哆"
+    },
+    "纽康特星诺": {
+      "onepager": "[纽康特星诺一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/JXCyba7ZBoAZOmxpJEecYg8Gnhc?from=from_copylink)",
+      "video": "[纽康特星诺 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/OYhbbsRMOonR6zxbxuIcvPEznfc?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "至尊 HA": {
+      "onepager": "[SMA至尊 HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/HwC2bU4q7ouQ9px4BfXcyzbinDe?from=from_copylink)",
+      "video": "[SMA至尊HA 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/PU5Fb5I7NovH94xNR70cuvR9nsg?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "启赋敏适HA": {
+      "onepager": "[惠氏启赋敏适HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/U8eZb6UW6oB7YVxM6a1cZdwznch?from=from_copylink)",
+      "video": "[惠氏启赋敏适HA 5分钟讲解视频.mp4](https://jvlcno43vsp.feishu.cn/file/ES84bseauoXsduxEmkOcvYdXn4f?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "启赋未来6HMO ": {
+      "onepager": "[惠氏启赋未来6HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/UdBRbCkI6o62rQxljAHcrUQDnGd?from=from_copylink)",
+      "video": "[惠氏启赋未来6HMO 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KMCLbABZVoBUm0xqZ5jcckUYn3d?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "启赋有机": {
+      "onepager": "[港版启赋有机导图.jpg](https://jvlcno43vsp.feishu.cn/file/QpZTbRpTkoLRHsxKrOIcZxRwns1?from=from_copylink)",
+      "video": "[惠氏启赋有机5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/VCtJbUJZnoF0GZxZBrPcZGCYnmh?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "纽康特1+": {
+      "onepager": "[纽康特1+一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hgb3bEdSQoNK1qxESlqcSIWcnPf?from=from_copylink)",
+      "video": "[纽康特1+ 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KqwUb7lVlodeC4xCAuLcF29WnFe?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "纽太特": {
+      "onepager": "[纽太特一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Qzc3bzMuXoKQXlxyUxOcHWEgn5e?from=from_copylink)",
+      "video": "[纽太特5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Ko1ObhOObo7FVfxOazfcZFnrnLb?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "太益启，太益加": {
+      "onepager": "[太益启，太益加一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/OcZvbSR05ohPknx90iacCSyfnbJ?from=from_copylink)",
+      "video": "[太益启，太益加5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CQR1bcrJsoZw56xfzSocQ4yMnYf?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "纽荃星1+": {
+      "onepager": "[纽荃星一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/YEqub1QDCo42MCxrfYxcJg1Qnxd?from=from_copylink)",
+      "video": "[纽荃星1+ 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/E3UebtpKboWX8mxH4XMcGc7cnhc?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "儿童成长粉": {
+      "onepager": "[小升高一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/BmiabUFG1oAzpxx9cGqctH7inbh?from=from_copylink)",
+      "video": "[小阩高5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/EsSqbMf3JouejQxyCoAcTxO0nKd?from=from_copylink)",
+      "brand": "11、小阩高"
+    },
+    "皇家A2": {
+      "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
+      "video": "[臻护新苼皇家5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/WhxSbOPMhoQFqBx6ajIcE4Gpn5h?from=from_copylink)",
+      "brand": "01、臻护新苼"
+    },
+    "至尊A2": {
+      "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
+      "video": "[臻护新苼至尊 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Uw20bmiqPorRCsxPyW0cjyo8n6f?from=from_copylink)",
+      "brand": "01、臻护新苼"
+    },
+    "铂金": {
+      "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
+      "video": "[臻护新苼铂金 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/IVttb0iUEoq7RsxpiWxc77ApnkP?from=from_copylink)",
+      "brand": "01、臻护新苼"
+    },
+    "羊奶": {
+      "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
+      "video": "[臻护新苼羊奶 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/SMcObyr53obYfnxa8YgcRXFGnIb?from=from_copylink)",
+      "brand": "01、臻护新苼"
+    },
+    "小佳膳": {
+      "onepager": "[小佳膳一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DyfWbedGNoUCv9xfnXrca3IKnAe?from=from_copylink)",
+      "video": "[小佳膳 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/GhfKbl62fon1Y0xwFGccyUXYn0c?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "小佰太能": {
+      "onepager": "[小佰太能一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/GIMVblo0DohlDGxgjZNck5h5nrf?from=from_copylink)",
+      "video": "[小佰太能 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CaHabZBzcoXoAwx8aNbcnnmsnch?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "超启能恩": {
+      "onepager": "[超启能恩.jpg](https://jvlcno43vsp.feishu.cn/file/QTpPbzo3OoOCTjxWwcycTxFAnac?from=from_copylink)",
+      "video": "[超启能恩5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Shuub4s9zoa3GbxsWYicoHhgnGb?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "超级能恩": {
+      "onepager": "[超级能恩一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/CrTHbjM11oMLIOxTb9PcwhHtnDd?from=from_copylink)",
+      "video": "[超级能恩 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/WIvibPyS3oiBb9xDPLjclNLWnhb?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "BEBA": {
+      "onepager": "[BEBA至尊.jpg](https://jvlcno43vsp.feishu.cn/file/GZDMbFt1JoXNXJxd9qCcegcEnIb?from=from_copylink)",
+      "video": "[BEBA5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/EGXIbp90Poy8CdxmmiCc1oVfnSh?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "肽敏舒": {
+      "onepager": "[肽敏舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WDbub0hbdo7Lbnx3ONoc2a6EnSf?from=from_copylink)",
+      "video": "[肽敏舒5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/DnNXbaCo0orFDjxLkgGcQTUNnIf?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "澳版安儿宁": {
+      "onepager": "",
+      "video": "[澳版安儿宁5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/TGZ3bq8i7o5a57xhL6wcdOfCnxe?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "领熠": {
+      "onepager": "[领熠一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XKLhbFatQoILRIxVHGFcDbv9nSe?from=from_copylink)",
+      "video": "[爱他美领熠5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BNRybJyZZoKUoLxKEoxcEzSHnsh?from=from_copylink)",
+      "brand": "02、达能"
+    },
+    "港版亲舒": {
+      "onepager": "[港版亲舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DwhUbYvTOocD56xneRXciAS6nZe?from=from_copylink)",
+      "video": "[港版亲舒5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CgnNb3E3soQ48KxOXukcU6Guntc?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "荷兰至臻": {
+      "onepager": "[荷兰至臻一页纸.png](https://jvlcno43vsp.feishu.cn/file/CRxfbMlQnohETPxizuQcCQZmnve?from=from_copylink)",
+      "video": "[喜宝荷兰至臻.mp4](https://jvlcno43vsp.feishu.cn/file/SDWpbP6WcoHr7FxEZXDcBZk3nSh?from=from_copylink)",
+      "brand": "14、喜宝"
+    },
+    "德国珍宝": {
+      "onepager": "[德国珍宝一页纸.png](https://jvlcno43vsp.feishu.cn/file/VFCObkQvDoInq4x9QspclQw8nEg?from=from_copylink)",
+      "video": "[喜宝德国珍宝.mp4](https://jvlcno43vsp.feishu.cn/file/KvHubaheIomTQZxQLAjciXCNnPt?from=from_copylink)",
+      "brand": "14、喜宝"
+    },
+    "SMA Pro": {
+      "onepager": "[SMA Pro 一页纸.png](https://jvlcno43vsp.feishu.cn/file/JqThbsS3cosiyIxoCVncvQTXnoh?from=from_copylink)",
+      "video": "[SMA Pro 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CWPYb8exeobto3xS64eccKzwnlg?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "萌趣呵护": {
+      "onepager": "[萌趣呵护一页纸.png](https://jvlcno43vsp.feishu.cn/file/IvsBbhLV4o1KDexsVMhcYLD3nqg?from=from_copylink)",
+      "video": "[萌趣呵护5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/HuXCbxKCWoPl9BxdjBmcTpOlnZe?from=from_copylink)",
+      "brand": "08、咔哆哆"
+    },
+    "安婴宝": {
+      "onepager": "[安婴宝一页纸.png](https://jvlcno43vsp.feishu.cn/file/D3mmb1SZnomd0AxOFATcmTlYnCg?from=from_copylink)",
+      "video": "[美赞臣 安婴宝 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Qc6Pb2Srqo9m7QxBVrmcdKUpnbd?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "恬适": {
+      "onepager": "[君乐宝恬适 一页纸.png](https://jvlcno43vsp.feishu.cn/file/Rohpbgm3doBtu6x8viAcv82inne?from=from_copylink)",
+      "video": "[君乐宝恬适5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/MR1xbow0RofiIHx7IkCcF0rOn2b?from=from_copylink)",
+      "brand": "15、君乐宝"
+    },
+    "早启能恩": {
+      "onepager": "[早启能恩一页纸.png](https://jvlcno43vsp.feishu.cn/file/GtBXb87m3oz4x3xHBBzcM0f7njb?from=from_copylink)",
+      "video": "[雀巢早启能恩  五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/NFUUb1KIvo5zZVx5dfdceLl8n3d?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "启赋蕴怡": {
+      "onepager": "[启赋蕴怡一页纸.png](https://jvlcno43vsp.feishu.cn/file/Qe37bqjNEoOEkyxUuAqcyCfDnPc?from=from_copylink)",
+      "video": "[启赋 蕴怡 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Ty9obV6VNoctKixgXKlclfk7nKd?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "皇家美素佳儿": {
+      "onepager": "[皇家美素佳儿一页纸.png](https://jvlcno43vsp.feishu.cn/file/BVbAbbrPToyamgxFymmciovKnqe?from=from_copylink)",
+      "video": "[皇家美素佳儿 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BKdtbkkFyoD1hRxd1SUcR9LonCb?from=from_copylink)",
+      "brand": "16、皇家美素佳儿"
+    },
+    "国行版亲舒": {
+      "onepager": "[国行版亲舒一页纸.png](https://jvlcno43vsp.feishu.cn/file/NztxbU9AsorS4cxS9dAcMSYXnab?from=from_copylink)",
+      "video": "[美赞臣 国行亲舒 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BJz5bJsDeo0WIWxGMzOc1KX1nbg?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "国行版安儿宁": {
+      "onepager": "[安儿宁一页纸.png](https://jvlcno43vsp.feishu.cn/file/IZ5xbZ9dkoiGvrxrr0Bc1CFunAg?from=from_copylink)",
+      "video": "[雀巢安儿宁国行版 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/AXWAbOKK9oxru9xbvf4cfnkPnUh?from=from_copylink)",
+      "brand": "03、雀巢"
+    },
+    "铂睿": {
+      "onepager": "[铂睿一页纸.png](https://jvlcno43vsp.feishu.cn/file/UvS4bfXIZocNdFxwlnNcz9Gmneh?from=from_copylink)",
+      "video": "[美赞臣 铂睿 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/QYcZbG0qOoV6MqxBNTXcBoAVnDc?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "悦白": {
+      "onepager": "[佳贝艾特一页纸.png](https://jvlcno43vsp.feishu.cn/file/AEKdbdjETowygPx8xgkcdTM7nPb?from=from_copylink)",
+      "video": "[佳贝艾特 悦白 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/GyJXbe8MkoKSJXx8PxBckeKOnXd?from=from_copylink)",
+      "brand": "17、佳贝艾特"
+    },
+    "塞纳牧": {
+      "onepager": "[塞纳牧有机一页纸.png](https://jvlcno43vsp.feishu.cn/file/ExSxbBnIkoxGtyxlmfbcsP6wnpl?from=from_copylink)",
+      "video": "[金领冠塞纳牧 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/DlrkbG3fgozEZRxniJecHk1nnKg?from=from_copylink)",
+      "brand": "18、金领冠"
+    },
+    "安儿宝": {
+      "onepager": "[美赞臣安儿宝 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CzCJbjZUUotaDWxJgdFcDRdynYb?from=from_copylink)",
+      "video": "[美赞臣安儿宝 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CzCJbjZUUotaDWxJgdFcDRdynYb?from=from_copylink)",
+      "brand": "09、美赞臣"
+    },
+    "星飞帆儿童奶粉": {
+      "onepager": "[星飞帆儿童奶粉 一页纸.png](https://jvlcno43vsp.feishu.cn/file/FG7kbIPjMoq1tVxDvhgcr6cKnef?from=from_copylink)",
+      "video": "[星飞帆 儿童奶粉 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/SBjHbUy78oNNU8xIHhic8gnNn4g?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "卓睿": {
+      "onepager": "[飞鹤星飞帆卓睿 一页纸.png](https://jvlcno43vsp.feishu.cn/file/JgHWbp1T8oVhGFxDwiqcWSWEnhd?from=from_copylink)",
+      "video": "[飞鹤星飞帆 卓睿 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/AO8Ubh7B3ohaLSx42tbcxi3Onfc?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "飞鹤飞帆": {
+      "onepager": "[飞鹤飞帆奶粉.png](https://jvlcno43vsp.feishu.cn/file/Z5GObQBCpoKePExqiPCcdhgTnob?from=from_copylink)",
+      "video": "[飞鹤 飞帆 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/KsMmbAeGyoUcS4x8dhncyn1ZnQe?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "卓耀": {
+      "onepager": "[星飞帆卓耀 一页纸.png](https://jvlcno43vsp.feishu.cn/file/AipbbHLdEo7CISxUlaqcygudnY7?from=from_copylink)",
+      "video": "[星飞帆 卓耀 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BCVdbb9QBowk6bxNAfscHCpznuf?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "星飞帆": {
+      "onepager": "[飞鹤星飞帆 一页纸.png](https://jvlcno43vsp.feishu.cn/file/WHApbPIVJoQKUdxNTbKcNzNxn2f?from=from_copylink)",
+      "video": "[飞鹤 星飞帆 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/QIlxbMm7Do6CcuxKpALc2NZPnlg?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "臻爱倍护": {
+      "onepager": "[飞鹤臻爱倍护  一页纸.png](https://jvlcno43vsp.feishu.cn/file/XBzNbHIZMoOs0NxYsa1cDIoznkb?from=from_copylink)",
+      "video": "[飞鹤 臻爱倍护 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/NbgcbSsdUoTPFvxUl8Bcjd0VnTc?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "美素力源悦奶粉": {
+      "onepager": "[美素佳儿源悦 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/XxbSbbfnso00gfxdg6rcZrpJnqh?from=from_copylink)",
+      "video": "[美素佳儿 源悦 一页纸.png](https://jvlcno43vsp.feishu.cn/file/WYTybNjiBoVJUhxwGQ6cesGCnI8?from=from_copylink)",
+      "brand": "16、皇家美素佳儿"
+    },
+    "至初": {
+      "onepager": "[a2至初一页纸.png](https://jvlcno43vsp.feishu.cn/file/Uw1bbql9goyYDMxgDyZcIIAkn1e?from=from_copylink)",
+      "video": "[a2至初5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Hjkdb3soFoT1S1xpY9Qc0nEbnvh?from=from_copylink)",
+      "brand": "10、a2"
+    },
+    "珍护": {
+      "onepager": "[金领冠珍护一页纸.png](https://jvlcno43vsp.feishu.cn/file/CbMHbdMX8oxxlaxNQK8cysSlngg?from=from_copylink)",
+      "video": "[金领冠珍护.mp4](https://jvlcno43vsp.feishu.cn/file/E5HYbsMSEokmLWxZ3zZcETMyn4c?from=from_copylink)",
+      "brand": "18、金领冠"
+    },
+    "优萃有机": {
+      "onepager": "[君乐宝优萃一页纸.png](https://jvlcno43vsp.feishu.cn/file/Kom6bB6UmoXUAnxeLtZcATodnze?from=from_copylink)",
+      "video": "[君乐宝优萃有机5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/Pwskbz1wRo0kQpxjAoxceT5RnWc?from=from_copylink)",
+      "brand": "15、君乐宝"
+    },
+    "茁然茁护": {
+      "onepager": "[飞鹤茁然茁护 一页纸.png](https://jvlcno43vsp.feishu.cn/file/EzJQbHgT8oLCjWxEKULcryMVnYd?from=from_copylink)",
+      "video": "[飞鹤茁然茁护5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/DI0NbnF0xo2i1XxtDQPcEMMUnXg?from=from_copylink)",
+      "brand": "19、飞鹤"
+    },
+    "儿童成长奶粉": {
+      "onepager": "[合生元儿童成长奶粉 一页纸.png](https://jvlcno43vsp.feishu.cn/file/LutzbIp3loEwwJxZ5GBcDB6dnnc?from=from_copylink)",
+      "video": "[合生元儿童成长奶粉5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/GOK4bpr8yoLAbrxRYgqc3Etrnwb?from=from_copylink)",
+      "brand": "20、合生元"
+    },
+    "派星": {
+      "onepager": "[合生元派星 一页纸.png](https://jvlcno43vsp.feishu.cn/file/QfHobYfU3o7KVSxgK1AcsqLxnne?from=from_copylink)",
+      "video": "[合生元派星5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/GwzHbv9LmoAfY4xmc8Rc7prentc?from=from_copylink)",
+      "brand": "20、合生元"
+    },
+    "惠氏启赋蕴淳": {
+      "onepager": "[惠氏启赋蕴淳一页纸.png](https://jvlcno43vsp.feishu.cn/file/MeExbEsgeoaTTGxiVjKcVX4fnNd?from=from_copylink)",
+      "video": "[惠氏启赋蕴淳5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/BpR1bJp2NoisLPxJuA4cQ9zEnUb?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "惠氏启赋": {
+      "onepager": "[惠氏启赋一页纸.png](https://jvlcno43vsp.feishu.cn/file/JGsvb1qjSoSL8yxlQRnckrxTnFf?from=from_copylink)",
+      "video": "[惠氏启赋5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/FQb2bee1uoZ1gmxPU5tcmVaPnHc?from=from_copylink)",
+      "brand": "04、惠氏"
+    },
+    "国行版蓝臻": {
+      "onepager": "[国行版蓝臻一页纸.png](https://jvlcno43vsp.feishu.cn/file/UxFcbuO3EoJXl4x97BQcCqH2nVh?from=from_copylink)",
+      "video": "[美赞臣国行版蓝臻5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/LcJxbFvBuoT86bx9Mc1c61BJnee?from=from_copylink)",
+      "brand": "09、美赞臣"
+    }
+  },
+  "storeAgg": {
+    "target": 65000,
+    "achieved": 22203.45,
+    "achievementRate": 0.34159153846153845,
+    "milkCans": 306,
+    "momMilkCans": 0.3021276595744681,
+    "pushCans": 50,
+    "momPushCans": null
+  }
 }
