@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-23 10-28",
+  "version": "2026-07-23 11-00",
   "storeRank": 3,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -565,6 +565,83 @@
       "video": "[美赞臣国行版蓝臻5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/LcJxbFvBuoT86bx9Mc1c61BJnee?from=from_copylink)",
       "brand": "09、美赞臣"
     }
+  },
+  "weeklyTasks": [
+    {
+      "icon": "📋",
+      "text": "联系 10 位本月未复购客户，了解宝宝近况和换品原因"
+    },
+    {
+      "icon": "🎯",
+      "text": "向 9 位未接触主推产品的客户介绍适合的奶粉"
+    },
+    {
+      "icon": "🔄",
+      "text": "了解 1 位停止主推产品客户的原因"
+    },
+    {
+      "icon": "🔐",
+      "text": "从 10 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+    }
+  ],
+  "customerInsights": [
+    "你服务了 10 位奶粉客户，但只有 1 位（10%）接触过主推产品。其余 9 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "有 1 位客户停止了主推产品购买（2→1，↓50%），可能是不适应口感或宝宝需求变化——建议逐一了解原因。",
+    "你的 10 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+  ],
+  "productKnowledge": {
+    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 9 位奶粉客户未接触过主推产品，1 位客户停止了主推产品）",
+    "products": [
+      {
+        "name": "小安素",
+        "brand": "",
+        "scenario": "挑食偏食、生长迟缓",
+        "age": "1-10岁",
+        "links": ""
+      },
+      {
+        "name": "臻护新苼",
+        "brand": "",
+        "scenario": "新生儿、早产儿",
+        "age": "0-12个月",
+        "links": ""
+      },
+      {
+        "name": "美赞臣A2",
+        "brand": "09、美赞臣",
+        "scenario": "消化不佳、胀气",
+        "age": "0-3岁",
+        "links": "[一页纸]([港版美赞臣A2 专利版（36个月保质期）.png](https://jvlcno43vsp.feishu.cn/file/Cr8xbj63mo1ARVxqgozc5giZnig?from=from_copylink)) · [五分钟视频]([美赞臣A2专利版.mp4](https://jvlcno43vsp.feishu.cn/file/NvrkbAiTNotc8dxfHrqcWzRhnSr?from=from_copylink))"
+      },
+      {
+        "name": "惠氏SMA敏护",
+        "brand": "",
+        "scenario": "过敏体质、湿疹",
+        "age": "0-12个月",
+        "links": ""
+      },
+      {
+        "name": "惠氏SMA致护",
+        "brand": "",
+        "scenario": "免疫低下、易生病",
+        "age": "0-3岁",
+        "links": ""
+      },
+      {
+        "name": "港版亲舒",
+        "brand": "09、美赞臣",
+        "scenario": "乳糖不耐、腹泻",
+        "age": "0-3岁",
+        "links": "[一页纸]([港版亲舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DwhUbYvTOocD56xneRXciAS6nZe?from=from_copylink)) · [五分钟视频]([港版亲舒5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CgnNb3E3soQ48KxOXukcU6Guntc?from=from_copylink))"
+      },
+      {
+        "name": "Nature Made天维美",
+        "brand": "",
+        "scenario": "日常营养补充、免疫力",
+        "age": "成人/儿童",
+        "links": ""
+      }
+    ]
   },
   "storeAgg": {
     "target": 150000,

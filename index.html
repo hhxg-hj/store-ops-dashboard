@@ -95,6 +95,23 @@
     .fu-badge.fu-high { background:#fef9c3; color:#ca8a04; }
     .fu-badge.fu-medium { background:#dcfce7; color:#16a34a; }
     .fu-badge.fu-low { background:#e0f2fe; color:#0284c7; }
+
+    /* 本周服务清单 */
+    .task-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid #f5f5f5; }
+    .task-item:last-child { border-bottom:none; }
+    .task-icon { font-size:18px; flex-shrink:0; width:28px; text-align:center; }
+    .task-text { font-size:13px; line-height:1.6; }
+    /* 客户洞察 */
+    .insight-item { padding:10px 14px; margin:6px 0; background:#f8f6ff; border-left:3px solid var(--primary); border-radius:4px; font-size:13px; line-height:1.7; }
+    /* 产品知识 */
+    .pk-intro { font-size:13px; color:var(--text2); margin-bottom:12px; line-height:1.6; }
+    .pk-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:8px; }
+    .pk-card { background:#fafafa; border-radius:8px; padding:10px 12px; border:1px solid var(--border); }
+    .pk-name { font-weight:700; font-size:14px; color:var(--primary); }
+    .pk-brand { font-weight:400; font-size:11px; color:var(--text2); margin-left:6px; }
+    .pk-meta { font-size:11px; color:var(--text2); margin:4px 0; }
+    .pk-links { font-size:11px; margin-top:6px; }
+    .pk-links a { color:var(--accent); text-decoration:none; margin-right:6px; }
 </style>
 </head>
 <body>
@@ -247,6 +264,43 @@ function render(d) {
 </div>
 
 
+
+<!-- 本周服务清单 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📅</span> 本周服务清单</div>
+    ${(d.weeklyTasks||[]).map(t => `
+    <div class="task-item">
+      <span class="task-icon">${t.icon}</span>
+      <span class="task-text">${t.text}</span>
+    </div>`).join('')}
+  </div>
+</div>
+
+<!-- 客户洞察 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">🔍</span> 客户洞察</div>
+    ${(d.customerInsights||[]).map(ins => `
+    <div class="insight-item">${ins}</div>`).join('')}
+  </div>
+</div>
+
+<!-- 产品知识 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📖</span> 产品知识</div>
+    <div class="pk-intro">${d.productKnowledge?.intro || ''}</div>
+    <div class="pk-grid">
+      ${(d.productKnowledge?.products||[]).map(p => `
+      <div class="pk-card">
+        <div class="pk-name">${p.name}${p.brand ? `<span class="pk-brand">${p.brand}</span>` : ''}</div>
+        <div class="pk-meta">${p.scenario} · ${p.age}</div>
+        <div class="pk-links">${p.links || '资料更新中'}</div>
+      </div>`).join('')}
+    </div>
+  </div>
+</div>
 <!-- 回访清单 -->
 <div class="section">
   <div class="card">
