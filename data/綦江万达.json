@@ -574,5 +574,195 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 79,
+    "high": 72,
+    "medium": 28,
+    "low": 35,
+    "total": 245,
+    "list": [
+      {
+        "phone": "138****0895",
+        "lastBuy": "2026-04-25",
+        "daysAgo": 89,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "135****2015",
+        "lastBuy": "2026-04-26",
+        "daysAgo": 88,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "139****3331",
+        "lastBuy": "2026-04-27",
+        "daysAgo": 87,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "186****0000",
+        "lastBuy": "2026-04-27",
+        "daysAgo": 87,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "199****4050",
+        "lastBuy": "2026-04-27",
+        "daysAgo": 87,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "136****8708",
+        "lastBuy": "2026-04-28",
+        "daysAgo": 86,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "152****9004",
+        "lastBuy": "2026-04-28",
+        "daysAgo": 86,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "183****8347",
+        "lastBuy": "2026-04-28",
+        "daysAgo": 86,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "135****5270",
+        "lastBuy": "2026-04-28",
+        "daysAgo": 86,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "181****7810",
+        "lastBuy": "2026-04-28",
+        "daysAgo": 86,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "130****5722",
+        "lastBuy": "2026-04-29",
+        "daysAgo": 85,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "177****5401",
+        "lastBuy": "2026-04-29",
+        "daysAgo": 85,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "136****8636",
+        "lastBuy": "2026-04-29",
+        "daysAgo": 85,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "192****9113",
+        "lastBuy": "2026-04-30",
+        "daysAgo": 84,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "177****5963",
+        "lastBuy": "2026-04-30",
+        "daysAgo": 84,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "131****4218",
+        "lastBuy": "2026-05-01",
+        "daysAgo": 83,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "188****1838",
+        "lastBuy": "2026-05-01",
+        "daysAgo": 83,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "199****0048",
+        "lastBuy": "2026-05-01",
+        "daysAgo": 83,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "188****5985",
+        "lastBuy": "2026-05-01",
+        "daysAgo": 83,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "188****2725",
+        "lastBuy": "2026-05-01",
+        "daysAgo": 83,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      }
+    ]
   }
 }

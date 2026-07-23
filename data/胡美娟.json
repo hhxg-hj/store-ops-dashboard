@@ -574,5 +574,195 @@
     "momMilkCans": -0.38651315789473684,
     "pushCans": 80,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 82,
+    "critical": 25,
+    "high": 49,
+    "medium": 28,
+    "low": 14,
+    "total": 219,
+    "list": [
+      {
+        "phone": "137****0632",
+        "lastBuy": "2025-12-26",
+        "daysAgo": 209,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "136****4253",
+        "lastBuy": "2025-12-28",
+        "daysAgo": 207,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "182****9753",
+        "lastBuy": "2025-12-30",
+        "daysAgo": 205,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "152****8426",
+        "lastBuy": "2026-01-03",
+        "daysAgo": 201,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "183****9232",
+        "lastBuy": "2026-01-03",
+        "daysAgo": 201,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "185****9127",
+        "lastBuy": "2026-01-06",
+        "daysAgo": 198,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "150****8550",
+        "lastBuy": "2026-01-06",
+        "daysAgo": 198,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "189****1115",
+        "lastBuy": "2026-01-07",
+        "daysAgo": 197,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "138****9453",
+        "lastBuy": "2026-01-07",
+        "daysAgo": 197,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "132****3152",
+        "lastBuy": "2026-01-11",
+        "daysAgo": 193,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "159****2634",
+        "lastBuy": "2026-01-11",
+        "daysAgo": 193,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "150****4012",
+        "lastBuy": "2026-01-11",
+        "daysAgo": 193,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "159****9744",
+        "lastBuy": "2026-01-13",
+        "daysAgo": 191,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "177****1999",
+        "lastBuy": "2026-01-14",
+        "daysAgo": 190,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "176****8996",
+        "lastBuy": "2026-01-14",
+        "daysAgo": 190,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "151****5564",
+        "lastBuy": "2026-01-15",
+        "daysAgo": 189,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "139****1833",
+        "lastBuy": "2026-01-18",
+        "daysAgo": 186,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "178****4664",
+        "lastBuy": "2026-01-18",
+        "daysAgo": 186,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "199****0066",
+        "lastBuy": "2026-01-20",
+        "daysAgo": 184,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "173****4426",
+        "lastBuy": "2026-01-20",
+        "daysAgo": 184,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      }
+    ]
   }
 }

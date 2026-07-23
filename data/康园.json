@@ -574,5 +574,195 @@
     "momMilkCans": null,
     "pushCans": 4,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "total": 40,
+    "list": [
+      {
+        "phone": "195****3032",
+        "lastBuy": "2026-07-16",
+        "daysAgo": 7,
+        "predicted": "2026-08-13",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "151****6022",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "139****6220",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "190****2079",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "139****5357",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "182****5194",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "151****7725",
+        "lastBuy": "2026-07-17",
+        "daysAgo": 6,
+        "predicted": "2026-08-14",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "189****5280",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "184****8668",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "177****5786",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "138****5958",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "183****6205",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "152****0310",
+        "lastBuy": "2026-07-18",
+        "daysAgo": 5,
+        "predicted": "2026-08-15",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "199****2204",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "139****8889",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "135****1790",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "135****7276",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "139****9470",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "177****8687",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      },
+      {
+        "phone": "155****5017",
+        "lastBuy": "2026-07-19",
+        "daysAgo": 4,
+        "predicted": "2026-08-16",
+        "cycle": 28,
+        "urgency": "",
+        "level": null
+      }
+    ]
   }
 }

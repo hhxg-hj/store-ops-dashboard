@@ -574,5 +574,33 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 2,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "total": 2,
+    "list": [
+      {
+        "phone": "152****7853",
+        "lastBuy": "2026-05-12",
+        "daysAgo": 72,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "152****4465",
+        "lastBuy": "2026-05-16",
+        "daysAgo": 68,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      }
+    ]
   }
 }

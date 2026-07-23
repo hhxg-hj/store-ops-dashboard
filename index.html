@@ -71,7 +71,31 @@
     .toast.show { display:block; animation:slide .3s ease; }
     @keyframes slide { from { transform:translateX(-50%) translateY(-40px); opacity:0; } to { transform:translateX(-50%) translateY(0); opacity:1; } }
     .state-msg { text-align:center; padding:80px 20px; color:var(--text2); }
-  </style>
+  
+    /* Follow-up */
+    .followup-stats { display:flex; gap:8px; justify-content:center; margin-bottom:14px; }
+    .fu-stat { text-align:center; padding:10px 14px; border-radius:8px; min-width:55px; }
+    .fu-stat .fu-num { font-size:22px; font-weight:700; }
+    .fu-stat .fu-lbl { font-size:10px; margin-top:2px; }
+    .fu-stat.lost { background:#fef2f2; color:#dc2626; }
+    .fu-stat.critical { background:#fff7ed; color:#ea580c; }
+    .fu-stat.high { background:#fefce8; color:#ca8a04; }
+    .fu-stat.medium { background:#f0fdf4; color:#16a34a; }
+    .fu-stat.low { background:#f0f9ff; color:#0284c7; }
+    .followup-list { margin-top:8px; }
+    .fu-header, .fu-row { display:flex; align-items:center; padding:6px 8px; font-size:12px; }
+    .fu-header { color:var(--text2); font-weight:600; border-bottom:2px solid var(--border); margin-bottom:4px; }
+    .fu-row { border-bottom:1px solid #f8f8f8; border-radius:4px; }
+    .fu-row.lost { background:#fef2f2; }
+    .fu-row.critical { background:#fff7ed; }
+    .fu-row.high { background:#fefce8; }
+    .fu-badge { padding:2px 6px; border-radius:6px; font-size:10px; font-weight:600; }
+    .fu-badge.fu-lost { background:#fee2e2; color:#dc2626; }
+    .fu-badge.fu-critical { background:#ffedd5; color:#ea580c; }
+    .fu-badge.fu-high { background:#fef9c3; color:#ca8a04; }
+    .fu-badge.fu-medium { background:#dcfce7; color:#16a34a; }
+    .fu-badge.fu-low { background:#e0f2fe; color:#0284c7; }
+</style>
 </head>
 <body>
   <div class="container" id="app">
@@ -222,6 +246,40 @@ function render(d) {
   </div>
 </div>
 
+
+<!-- 回访清单 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
+    <div class="followup-stats">
+      <div class="fu-stat lost"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
+      <div class="fu-stat critical"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
+      <div class="fu-stat high"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
+      <div class="fu-stat medium"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
+      <div class="fu-stat low"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
+    </div>
+    ${(d.followUp?.list||[]).length > 0 ? `
+    <div class="followup-list">
+      <div class="fu-header">
+        <span style="width:130px">手机号</span>
+        <span style="width:90px">上次购买</span>
+        <span style="width:90px">预计回访</span>
+        <span style="width:50px">天</span>
+        <span style="width:50px">级别</span>
+      </div>
+      ${(d.followUp?.list||[]).slice(0,10).map(f => `
+      <div class="fu-row ${f.level||''}">
+        <span style="width:130px;font-family:monospace">${f.phone||'-'}</span>
+        <span style="width:90px;font-size:12px">${f.lastBuy||'-'}</span>
+        <span style="width:90px;font-size:12px">${f.predicted||'-'}</span>
+        <span style="width:50px;font-weight:600" class="${f.daysAgo>60?'mom-up':f.daysAgo>30?'':'mom-down'}">${f.daysAgo||0}天</span>
+        <span style="width:50px" class="fu-badge fu-${f.level||''}">${f.urgency||''}</span>
+      </div>`).join('')}
+      ${(d.followUp?.list||[]).length > 10 ? `<div style="text-align:center;padding:8px;color:var(--text2);font-size:12px">... 共 ${d.followUp?.total||0} 条，仅显示前 10 条</div>` : ''}
+    </div>
+    ` : '<div style="text-align:center;color:var(--text2);padding:16px">暂无需要回访的客户</div>'}
+  </div>
+</div>
 <div class="refresh-info">🕐 每60秒自动检查更新 · 版本 ${d.version||'-'}</div>
 `;
 

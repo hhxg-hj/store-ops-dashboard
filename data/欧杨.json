@@ -574,5 +574,78 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 0,
+    "high": 4,
+    "medium": 2,
+    "low": 1,
+    "total": 7,
+    "list": [
+      {
+        "phone": "177****0710",
+        "lastBuy": "2026-06-06",
+        "daysAgo": 47,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "176****2637",
+        "lastBuy": "2026-06-10",
+        "daysAgo": 43,
+        "predicted": "2026-07-25",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "189****8046",
+        "lastBuy": "2026-06-14",
+        "daysAgo": 39,
+        "predicted": "2026-07-29",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "136****4977",
+        "lastBuy": "2026-06-19",
+        "daysAgo": 34,
+        "predicted": "2026-08-03",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "187****8558",
+        "lastBuy": "2026-07-06",
+        "daysAgo": 17,
+        "predicted": "2026-08-03",
+        "cycle": 28,
+        "urgency": "本周",
+        "level": "medium"
+      },
+      {
+        "phone": "152****5911",
+        "lastBuy": "2026-07-06",
+        "daysAgo": 17,
+        "predicted": "2026-08-03",
+        "cycle": 28,
+        "urgency": "本周",
+        "level": "medium"
+      },
+      {
+        "phone": "151****7253",
+        "lastBuy": "2026-07-11",
+        "daysAgo": 12,
+        "predicted": "2026-08-08",
+        "cycle": 28,
+        "urgency": "关注",
+        "level": "low"
+      }
+    ]
   }
 }
