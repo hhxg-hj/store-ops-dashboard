@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宝妈时光 · 销售业绩看板</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #f5f0f8;
+      --card: #ffffff;
+      --primary: #9b59b6;
+      --primary-light: #f3e8fa;
+      --accent: #e91e8c;
+      --accent-light: #fce4ec;
+      --success: #27ae60;
+      --success-light: #e8f8ef;
+      --warning: #f39c12;
+      --warning-light: #fef9e7;
+      --danger: #e74c3c;
+      --danger-light: #fdedec;
+      --text: #2c3e50;
+      --text-secondary: #7f8c8d;
+      --border: #eee;
+      --radius: 12px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #9b59b6, #e91e8c);
+      color: white;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -50%; right: -20%;
+      width: 300px; height: 300px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+    }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+    .header-name { font-size: 28px; font-weight: 700; }
+    .header-store { font-size: 14px; opacity: 0.85; margin-top: 4px; }
+    .header-date { font-size: 12px; opacity: 0.7; margin-top: 8px; }
+    .header-badge {
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      backdrop-filter: blur(4px);
+    }
+    .header-role {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      position: relative; z-index: 1;
+    }
+    .role-tag {
+      background: rgba(255,255,255,0.18);
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    /* Metric Cards Row */
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .metric-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .metric-label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+    .metric-value { font-size: 26px; font-weight: 700; }
+    .metric-sub { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+    .metric-up { color: var(--danger); }
+    .metric-down { color: var(--success); }
+
+    /* Chart Cards */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+    .chart-wrap { position: relative; height: 200px; }
+
+    /* Progress */
+    .progress-section { margin-bottom: 16px; }
+    .progress-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+    .progress-title { font-size: 15px; font-weight: 600; }
+    .progress-pct {
+      font-size: 36px;
+      font-weight: 700;
+    }
+    .progress-bar-outer {
+      height: 12px;
+      background: #f0f0f0;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .progress-bar-inner {
+      height: 100%;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #e91e8c, #9b59b6);
+      transition: width 1s ease;
+    }
+    .progress-detail {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    /* Commission */
+    .commission-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .commission-item {
+      flex: 1;
+      min-width: 120px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+    }
+    .commission-item .val { font-size: 18px; font-weight: 700; color: var(--primary); }
+    .commission-item .lbl { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+
+    /* Operation Metrics */
+    .op-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .op-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .op-card .val { font-size: 22px; font-weight: 700; }
+    .op-card .lbl { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+    .op-card .change { font-size: 11px; margin-top: 6px; }
+
+    /* Comparison Table */
+    .compare-table { width: 100%; font-size: 13px; border-collapse: collapse; }
+    .compare-table th {
+      text-align: left; color: var(--text-secondary); font-weight: 500;
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+    }
+    .compare-table td {
+      padding: 8px 6px;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* Status indicators */
+    .trend-up { color: var(--danger); }
+    .trend-down { color: var(--success); }
+    .trend-zero { color: var(--text-secondary); }
+
+    /* Loading / Error */
+    .state-msg {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--text-secondary);
+    }
+    .state-msg h2 { font-size: 20px; margin-bottom: 10px; }
+    .state-msg p { font-size: 14px; }
+
+    /* Version update toast */
+    .toast {
+      position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+      background: #333; color: white;
+      padding: 10px 24px; border-radius: 20px;
+      font-size: 13px; cursor: pointer;
+      z-index: 999;
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
+    .toast.show { display: block; }
+    @keyframes slideIn {
+      from { transform: translateX(-50%) translateY(-40px); opacity: 0; }
+      to { transform: translateX(-50%) translateY(0); opacity: 1; }
+    }
+
+    /* refresh timer */
+    .refresh-info {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-secondary);
+      padding: 16px 0 8px;
+    }
+
+    @media (max-width: 600px) {
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .grid-2 { grid-template-columns: 1fr; }
+      .op-metrics { grid-template-columns: 1fr; }
+      .header-name { font-size: 22px; }
+      .progress-pct { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="app">
+    <div class="state-msg">
+      <h2>📊 加载中...</h2>
+      <p>正在获取最新数据</p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" onclick="location.reload()">
+    🔄 数据已更新，点击刷新 →
+  </div>
+
+  <script>
+    // ── Config ──
+    const VERSION_URL = 'data/version.json';
+    const POLL_INTERVAL = 60_000; // 1min check
+
+    // ── Helpers ──
+    function getParam(name) {
+      const url = new URL(location.href);
+      return url.searchParams.get(name);
+    }
+
+    function fmtPct(v) {
+      if (v == null || isNaN(v)) return '-';
+      const n = Number(v);
+      return (n >= 0 ? '+' : '') + (n * 100).toFixed(1) + '%';
+    }
+
+    function fmtMoney(v) {
+      if (v == null || isNaN(v)) return '-';
+      return '¥' + Number(v).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function fmtNum(v, decimals = 0) {
+      if (v == null || isNaN(v)) return '-';
+      return Number(v).toLocaleString('zh-CN', { maximumFractionDigits: decimals });
+    }
+
+    function trendClass(v) {
+      if (v == null || isNaN(v)) return 'trend-zero';
+      return v > 0 ? 'trend-up' : v < 0 ? 'trend-down' : 'trend-zero';
+    }
+
+    function trendArrow(v) {
+      if (v == null || isNaN(v)) return '';
+      return v > 0 ? '↑' : v < 0 ? '↓' : '→';
+    }
+
+    function scoreColor(v) {
+      if (v >= 0.9) return 'var(--success)';
+      if (v >= 0.7) return 'var(--warning)';
+      return 'var(--danger)';
+    }
+
+    // ── Build UI ──
+    function render(d) {
+      const score = d.dachengLv || 0;
+      const sc = scoreColor(score);
+
+      const html = `
+      <!-- Header -->
+      <div class="header">
+        <div class="header-top">
+          <div>
+            <div class="header-name">${d.name || '店员'}</div>
+            <div class="header-store">📍 ${d.store || '未分配门店'}</div>
+            <div class="header-date">📅 数据更新至 ${d.updatedAt || '-'}</div>
+          </div>
+          <div class="header-badge">${d.zaidian ? '在店' : '离店'}</div>
+        </div>
+        <div class="header-role">
+          ${d.isManager ? '<span class="role-tag">🏪 见习店长</span>' : ''}
+          <span class="role-tag">👥 好友 ${fmtNum(d.haoyouTotal)}</span>
+        </div>
+      </div>
+
+      <!-- Core Metrics -->
+      <div class="metrics">
+        <div class="metric-card">
+          <div class="metric-label">奶粉本月用户数</div>
+          <div class="metric-value">${fmtNum(d.naifenUsers)}</div>
+          <div class="metric-sub ${trendClass(d.naifenUsersQoq)}">${trendArrow(d.naifenUsersQoq)} 上月 ${fmtNum(d.naifenUsersLast)}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">全品类客单价</div>
+          <div class="metric-value">${fmtMoney(d.kedanjia)}</div>
+          <div class="metric-sub ${trendClass(d.kedanjiaQoq)}">${trendArrow(d.kedanjiaQoq)} 环比 ${fmtPct(d.kedanjiaQoq)}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">成交用户新增</div>
+          <div class="metric-value">${fmtNum(d.chengjiaoNew)}</div>
+          <div class="metric-sub">累计 ${fmtNum(d.chengjiaoTotal)}</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">复购用户占比</div>
+          <div class="metric-value">${(d.fugouRate * 100).toFixed(1)}%</div>
+          <div class="metric-sub ${trendClass(d.fugouRateQoq)}">${trendArrow(d.fugouRateQoq)} 环比 ${fmtPct(d.fugouRateQoq)}</div>
+        </div>
+      </div>
+
+      <!-- Progress: Achievement -->
+      <div class="progress-section">
+        <div class="progress-card">
+          <div class="progress-header">
+            <div>
+              <div class="progress-title">本月达成率</div>
+              <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">
+                业绩 ${fmtMoney(d.xiaoshouYJ)} / 目标 ${fmtMoney(d.xiaoshouMB)}
+              </div>
+            </div>
+            <div class="progress-pct" style="color:${sc}">${(score * 100).toFixed(1)}%</div>
+          </div>
+          <div class="progress-bar-outer">
+            <div class="progress-bar-inner" style="width:${Math.min(score * 100, 100)}%;background:${sc}"></div>
+          </div>
+          ${d.isManager ? `<div style="font-size:12px;color:var(--text-secondary);margin-top:6px;">🏪 门店达成率 ${(d.mendianDachengLv * 100).toFixed(1)}% · 门店 ${fmtNum(d.mendianStaffCount)}人</div>` : ''}
+        </div>
+      </div>
+
+      <!-- Commission -->
+      <div class="card" style="margin-bottom:16px">
+        <div class="card-title">💰 提成明细</div>
+        <div class="commission-row">
+          <div class="commission-item">
+            <div class="val">${fmtMoney(d.commissionShangpin)}</div>
+            <div class="lbl">商品销售提成</div>
+          </div>
+          <div class="commission-item">
+            <div class="val">${fmtMoney(d.commissionFujian)}</div>
+            <div class="lbl">主推附件激励</div>
+          </div>
+          <div class="commission-item">
+            <div class="val">${fmtMoney(d.commissionBaojin)}</div>
+            <div class="lbl">保证金提成</div>
+          </div>
+          <div class="commission-item">
+            <div class="val">${fmtMoney(d.commissionJishi)}</div>
+            <div class="lbl">即时零售提成</div>
+          </div>
+          ${d.isManager ? `<div class="commission-item" style="background:#fce4ec"><div class="val">${fmtMoney(d.commissionManager)}</div><div class="lbl">见习店长提成</div></div>` : ''}
+        </div>
+        <div style="text-align:right;margin-top:12px;font-size:20px;font-weight:700;color:var(--accent)">
+          提成合计：${fmtMoney(d.commissionTotal)}
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">奶粉用户细分</div>
+          <div class="chart-wrap">
+            <canvas id="chartPie"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">销售罐数对比</div>
+          <div class="chart-wrap">
+            <canvas id="chartBar"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operation Metrics -->
+      <div class="op-metrics">
+        <div class="op-card">
+          <div class="val">${fmtNum(d.bindWecom)}</div>
+          <div class="lbl">绑定企微&amp;手机用户</div>
+          <div class="change ${trendClass(d.bindWecomQoq)}">${trendArrow(d.bindWecomQoq)} 环比 ${fmtPct(d.bindWecomQoq)}</div>
+        </div>
+        <div class="op-card">
+          <div class="val">${fmtNum(d.sankeUsers)}</div>
+          <div class="lbl">本月散客用户数量</div>
+          <div class="change ${trendClass(d.sankeUsersQoq)}">${trendArrow(d.sankeUsersQoq)} 环比 ${fmtPct(d.sankeUsersQoq)}</div>
+        </div>
+        <div class="op-card">
+          <div class="val">${fmtNum(d.jishiOrders)}</div>
+          <div class="lbl">即时零售本月单量</div>
+          <div class="change ${trendClass(d.jishiOrdersQoq)}">${trendArrow(d.jishiOrdersQoq)} 环比 ${fmtPct(d.jishiOrdersQoq)}</div>
+        </div>
+      </div>
+
+      <!-- Monthly comparison table -->
+      <div class="card">
+        <div class="card-title">📋 本月各项环比</div>
+        <table class="compare-table">
+          <thead>
+            <tr><th>指标</th><th>本月</th><th>上月</th><th>环比</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>复购用户（每月）</td>
+              <td>${fmtNum(d.fugouMonthly)}</td>
+              <td>${fmtNum(d.fugouMonthlyLast)}</td>
+              <td class="${trendClass(d.fugouMonthlyQoq)}">${fmtPct(d.fugouMonthlyQoq)}</td>
+            </tr>
+            <tr>
+              <td>复购用户（隔月）</td>
+              <td>${fmtNum(d.fugouGeyue)}</td>
+              <td>${fmtNum(d.fugouGeyueLast)}</td>
+              <td class="${trendClass(d.fugouGeyueQoq)}">${fmtPct(d.fugouGeyueQoq)}</td>
+            </tr>
+            <tr>
+              <td>复购用户（季度）</td>
+              <td>${fmtNum(d.fugouJidu)}</td>
+              <td>${fmtNum(d.fugouJiduLast)}</td>
+              <td class="${trendClass(d.fugouJiduQoq)}">${fmtPct(d.fugouJiduQoq)}</td>
+            </tr>
+            <tr>
+              <td>流失用户数量</td>
+              <td>${fmtNum(d.liushiUsers)}</td>
+              <td>${fmtNum(d.liushiUsersLast)}</td>
+              <td class="${trendClass(d.liushiUsersQoq)}">${fmtPct(d.liushiUsersQoq)}</td>
+            </tr>
+            <tr>
+              <td>奶粉类客单量</td>
+              <td>${fmtNum(d.kedanliang, 1)}</td>
+              <td>${fmtNum(d.kedanliangLast, 1)}</td>
+              <td class="${trendClass(d.kedanliangQoq)}">${fmtPct(d.kedanliangQoq)}</td>
+            </tr>
+            <tr>
+              <td>主推奶粉用户</td>
+              <td>${fmtNum(d.zhutuiUsers)}</td>
+              <td>${fmtNum(d.zhutuiUsersLast)}</td>
+              <td class="${trendClass(d.zhutuiUsersQoq)}">${fmtPct(d.zhutuiUsersQoq)}</td>
+            </tr>
+            <tr>
+              <td>通货奶粉用户</td>
+              <td>${fmtNum(d.tonghuoUsers)}</td>
+              <td>${fmtNum(d.tonghuoUsersLast)}</td>
+              <td class="${trendClass(d.tonghuoUsersQoq)}">${fmtPct(d.tonghuoUsersQoq)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="refresh-info">🕐 页面每 60 秒自动检查更新 · 版本 ${d.version || '-'}</div>
+      `;
+
+      document.getElementById('app').innerHTML = html;
+
+      // Render charts
+      setTimeout(() => {
+        // Pie chart
+        const pieCtx = document.getElementById('chartPie')?.getContext('2d');
+        if (pieCtx) {
+          new Chart(pieCtx, {
+            type: 'doughnut',
+            data: {
+              labels: [d.zhutuiType, d.tonghuoType],
+              datasets: [{
+                data: [d.zhutuiUsers, d.tonghuoUsers],
+                backgroundColor: ['#e91e8c', '#9b59b6'],
+                borderWidth: 2,
+                borderColor: '#fff',
+              }]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, pointStyleWidth: 8 } }
+              },
+            }
+          });
+        }
+
+        // Bar chart
+        const barCtx = document.getElementById('chartBar')?.getContext('2d');
+        if (barCtx) {
+          new Chart(barCtx, {
+            type: 'bar',
+            data: {
+              labels: [d.zhutuiType, d.tonghuoType, '合计'],
+              datasets: [
+                {
+                  label: '本月',
+                  data: [d.zhutuiGuanshu, d.tonghuoGuanshu, d.naifenGuanshu],
+                  backgroundColor: '#e91e8c',
+                  borderRadius: 4,
+                },
+                {
+                  label: '上月',
+                  data: [d.zhutuiGuanshuLast, d.tonghuoGuanshuLast, d.naifenGuanshuLast],
+                  backgroundColor: '#d5b8e8',
+                  borderRadius: 4,
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { position: 'bottom', labels: { usePointStyle: true, pointStyleWidth: 8 } }
+              },
+              scales: {
+                y: { beginAtZero: true, grid: { color: '#f0f0f0' } },
+                x: { grid: { display: false } }
+              }
+            }
+          });
+        }
+      }, 100);
+    }
+
+    function showError(msg) {
+      document.getElementById('app').innerHTML = `
+        <div class="state-msg">
+          <h2>😔 暂无数据</h2>
+          <p>${msg || '未找到该店员的数据'}</p>
+        </div>
+      `;
+    }
+
+    // ── Load Data ──
+    async function loadData(userId) {
+      try {
+        const resp = await fetch(`data/${encodeURIComponent(userId)}.json`);
+        if (!resp.ok) throw new Error('数据加载失败');
+        const data = await resp.json();
+        render(data);
+        return true;
+      } catch(e) {
+        showError('未找到该店员的数据，请联系管理员');
+        return false;
+      }
+    }
+
+    // ── Version Check ──
+    let currentVersion = null;
+    async function checkVersion() {
+      try {
+        const resp = await fetch(VERSION_URL + '?t=' + Date.now());
+        const v = await resp.json();
+        if (currentVersion === null) {
+          currentVersion = v.version;
+        } else if (v.version !== currentVersion) {
+          document.getElementById('toast').classList.add('show');
+          // Auto-refresh after 3 seconds
+          setTimeout(() => { location.reload(); }, 3000);
+        }
+      } catch(e) { /* ignore */ }
+    }
+
+    // ── Init ──
+    (async function() {
+      const userId = getParam('id');
+      if (!userId) {
+        showError('请在链接中添加 ?id=店员名字 参数');
+        return;
+      }
+      const ok = await loadData(userId);
+      if (ok) {
+        setInterval(checkVersion, POLL_INTERVAL);
+      }
+    })();
+  </script>
+</body>
+</html>
