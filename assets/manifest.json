@@ -1,0 +1,22 @@
+{
+  "全护A2": {
+    "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
+    "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
+  },
+  "羊奶": {
+    "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
+    "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
+  },
+  "铂金": {
+    "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
+    "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
+  },
+  "皇家A2": {
+    "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
+    "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
+  },
+  "至尊A2": {
+    "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
+    "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
+  }
+}

@@ -64,7 +64,7 @@
     .suggestion-item { padding:8px 12px; margin:4px 0; background:#fffbeb; border-left:3px solid var(--warning); border-radius:4px; }
 
     /* 学习资源 */
-    .learning { font-size:13px; line-height:1.8; white-space:pre-line; color:#334155; }
+    .learning { font-size:13px; color:#334155; }
 
     .refresh-info { text-align:center; font-size:11px; color:var(--text2); padding:16px 0 8px; }
     .toast { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:#333; color:#fff; padding:10px 24px; border-radius:20px; font-size:13px; cursor:pointer; z-index:999; display:none; }
@@ -107,6 +107,16 @@
     .task-text { font-size:13px; line-height:1.6; }
     /* 客户洞察 */
     .insight-item { padding:10px 14px; margin:6px 0; background:#f8f6ff; border-left:3px solid var(--primary); border-radius:4px; font-size:13px; line-height:1.7; }
+    .lr-intro { font-size:13px; line-height:1.7; color:#334155; margin-bottom:10px; }
+    .lr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+    .lr-card { border:1px solid var(--border); border-radius:8px; overflow:hidden; background:#fff; }
+    .lr-name { font-weight:600; font-size:13px; padding:8px 10px; background:#f8fafc; border-bottom:1px solid var(--border); }
+    .lr-img { width:100%; display:block; }
+    .lr-links { display:flex; gap:8px; padding:8px 10px; flex-wrap:wrap; }
+    .lr-link { font-size:12px; color:var(--primary); text-decoration:none; background:#eff6ff; padding:4px 10px; border-radius:6px; }
+    .lr-link:hover { background:#dbeafe; }
+    .lr-tip { font-size:12px; color:#64748b; margin-top:10px; line-height:1.6; }
+    .lr-empty { font-size:13px; color:#94a3b8; padding:12px 0; }
 </style>
 </head>
 <body>
@@ -308,7 +318,7 @@ function render(d) {
 <div class="section">
   <div class="card">
     <div class="section-title"><span class="icon">📚</span> 学习资源</div>
-    <div class="learning">${(d.learningResources||'').replace(/\n/g,'<br>') || '主推产品资料正在更新中'}</div>
+    <div class="learning">${renderLearning(d.learningResources)}</div>
   </div>
 </div>
 
@@ -320,6 +330,21 @@ function render(d) {
 
 function showError(msg) {
   $('app').innerHTML = `<div class="state-msg"><h2>😔 暂无数据</h2><p>${msg||'未找到该店员的数据'}</p></div>`;
+}
+
+// 学习资源：内嵌展示一页纸图片 + 测试题下载（资源已入仓 GitHub Pages，不再依赖飞书权限）
+function renderLearning(lr) {
+  if (!lr || !lr.items || !lr.items.length) return '<div class="lr-empty">主推产品资料正在更新中</div>';
+  const cards = lr.items.map(it => `
+    <div class="lr-card">
+      <div class="lr-name">${it.name}</div>
+      ${it.onepager ? `<img class="lr-img" src="${it.onepager}" alt="${it.name}一页纸" loading="lazy">` : ''}
+      <div class="lr-links">
+        ${it.onepager ? `<a class="lr-link" href="${it.onepager}" target="_blank" rel="noopener">📄 一页纸</a>` : ''}
+        ${it.test ? `<a class="lr-link" href="${it.test}" download>📝 测试题</a>` : ''}
+      </div>
+    </div>`).join('');
+  return `<div class="lr-intro">${lr.intro||''}</div><div class="lr-grid">${cards}</div><div class="lr-tip">${lr.tip||''}</div>`;
 }
 
 async function loadData(userId) {
