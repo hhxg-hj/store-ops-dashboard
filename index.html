@@ -74,7 +74,9 @@
   
     /* Follow-up */
     .followup-stats { display:flex; gap:8px; justify-content:center; margin-bottom:14px; }
-    .fu-stat { text-align:center; padding:10px 14px; border-radius:8px; min-width:55px; }
+    .fu-stat { text-align:center; padding:10px 14px; border-radius:8px; min-width:55px; cursor:pointer; transition:transform .15s, opacity .15s; opacity:.6; }
+    .fu-stat:hover { opacity:.85; }
+    .fu-stat.active { opacity:1; transform:scale(1.08); box-shadow:0 0 0 2px currentColor; }
     .fu-stat .fu-num { font-size:22px; font-weight:700; }
     .fu-stat .fu-lbl { font-size:10px; margin-top:2px; }
     .fu-stat.lost { background:#fef2f2; color:#dc2626; }
@@ -89,6 +91,8 @@
     .fu-row.lost { background:#fef2f2; }
     .fu-row.critical { background:#fff7ed; }
     .fu-row.high { background:#fefce8; }
+    .fu-row.medium { background:#f0fdf4; }
+    .fu-row.low { background:#f0f9ff; }
     .fu-badge { padding:2px 6px; border-radius:6px; font-size:10px; font-weight:600; }
     .fu-badge.fu-lost { background:#fee2e2; color:#dc2626; }
     .fu-badge.fu-critical { background:#ffedd5; color:#ea580c; }
@@ -114,6 +118,7 @@
 <script>
 const VERSION_URL = 'data/version.json';
 const POLL = 60_000;
+let _currentData = null;
 
 function $(id) { return document.getElementById(id); }
 function getParam(n) { return new URL(location.href).searchParams.get(n); }
@@ -197,33 +202,14 @@ function render(d) {
 <div class="section">
   <div class="card">
     <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
-    <div class="followup-stats">
-      <div class="fu-stat lost"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
-      <div class="fu-stat critical"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
-      <div class="fu-stat high"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
-      <div class="fu-stat medium"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
-      <div class="fu-stat low"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
+    <div class="followup-stats" id="fuStats">
+      <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
+      <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
+      <div class="fu-stat high" data-level="high" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
+      <div class="fu-stat medium" data-level="medium" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
+      <div class="fu-stat low" data-level="low" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
     </div>
-    ${(d.followUp?.list||[]).length > 0 ? `
-    <div class="followup-list">
-      <div class="fu-header">
-        <span style="width:130px">手机号</span>
-        <span style="width:90px">上次购买</span>
-        <span style="width:90px">预计回访</span>
-        <span style="width:50px">天</span>
-        <span style="width:50px">级别</span>
-      </div>
-      ${(d.followUp?.list||[]).slice(0,10).map(f => `
-      <div class="fu-row ${f.level||''}">
-        <span style="width:130px;font-family:monospace">${f.phone||'-'}</span>
-        <span style="width:90px;font-size:12px">${f.lastBuy||'-'}</span>
-        <span style="width:90px;font-size:12px">${f.predicted||'-'}</span>
-        <span style="width:50px;font-weight:600" class="${f.daysAgo>60?'mom-up':f.daysAgo>30?'':'mom-down'}">${f.daysAgo||0}天</span>
-        <span style="width:50px" class="fu-badge fu-${f.level||''}">${f.urgency||''}</span>
-      </div>`).join('')}
-      ${(d.followUp?.list||[]).length > 10 ? `<div style="text-align:center;padding:8px;color:var(--text2);font-size:12px">... 共 ${d.followUp?.total||0} 条，仅显示前 10 条</div>` : ''}
-    </div>
-    ` : '<div style="text-align:center;color:var(--text2);padding:16px">暂无需要回访的客户</div>'}
+    <div id="fuContent">${renderFollowupList(d.followUp?.list||[], 'lost')}</div>
   </div>
 </div>
 
@@ -326,7 +312,11 @@ async function loadData(userId) {
   try {
     const resp = await fetch(`data/${encodeURIComponent(userId)}.json`);
     if (!resp.ok) throw new Error('数据加载失败');
-    render(await resp.json());
+    _currentData = await resp.json();
+    render(_currentData);
+    // Set default active tab
+    const firstTab = document.querySelector('#fuStats .fu-stat.lost');
+    if (firstTab) firstTab.classList.add('active');
     return true;
   } catch(e) { showError('未找到该店员数据，请联系管理员'); return false; }
 }
@@ -336,6 +326,38 @@ async function checkVersion() {
   try { v = (await (await fetch(VERSION_URL+'?t='+Date.now())).json()).version; } catch(_) {}
   if (v && !checkVersion._last) checkVersion._last = v;
   else if (v && v !== checkVersion._last) { $('toast').classList.add('show'); setTimeout(()=>location.reload(),3000); }
+}
+
+function renderFollowupList(list, level) {
+  const filtered = (list || []).filter(c => c.level === level);
+  if (!filtered.length) {
+    const emptyMsg = { lost:'暂无已流失客户', critical:'暂无高危客户', high:'暂无紧急回访客户', medium:'暂无本周回访客户', low:'暂无关注客户' };
+    return '<div style="text-align:center;padding:24px 0;color:#94a3b8;font-size:13px;">' + (emptyMsg[level]||'暂无数据') + '</div>';
+  }
+  return `
+    <div class="followup-list">
+      <div class="fu-header">
+        <div style="flex:1.3">客户手机</div>
+        <div style="flex:1">上次购买</div>
+        <div style="flex:0.5;text-align:center;">天数</div>
+        <div style="flex:1.5">回访建议</div>
+      </div>
+      ${filtered.map(c => `
+      <div class="fu-row ${c.level}">
+        <div style="flex:1.3;font-weight:600;">${c.phone||'—'}</div>
+        <div style="flex:1;">${c.lastBuy||'—'}</div>
+        <div style="flex:0.5;text-align:center;color:var(--text2);">${c.daysAgo!=null?c.daysAgo+'天':'—'}</div>
+        <div style="flex:1.5;font-size:11px;color:#64748b;">${c.predicted||'—'}</div>
+      </div>`).join('')}
+    </div>`;
+}
+
+function switchFollowupTab(el) {
+  document.querySelectorAll('#fuStats .fu-stat').forEach(s => s.classList.remove('active'));
+  el.classList.add('active');
+  const level = el.dataset.level;
+  const list = (_currentData && _currentData.followUp && _currentData.followUp.list) || [];
+  $('fuContent').innerHTML = renderFollowupList(list, level);
 }
 
 (async function() {
