@@ -122,6 +122,21 @@ let _currentData = null;
 
 function $(id) { return document.getElementById(id); }
 function getParam(n) { return new URL(location.href).searchParams.get(n); }
+
+// Base64 UTF-8 decode for URL id parameter
+function decodeId(raw) {
+  if (!raw) return null;
+  // Try base64 decode first
+  try {
+    const binary = atob(raw);
+    const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+    const decoded = new TextDecoder('utf-8').decode(bytes);
+    // Sanity check: decoded should be reasonable text
+    if (decoded && decoded.length > 0 && decoded.length < 50) return decoded;
+  } catch(_) {}
+  // Fallback: use raw value (backward compatible with old ?id=店员名 URLs)
+  return raw;
+}
 function fmtPct(v, raw) { if (v == null || isNaN(v)) return '—'; const p = raw ? v * 100 : v; return (p >= 0 ? '↑' : '↓') + Math.abs(p).toFixed(1) + '%'; }
 function fmtMoney(v) { if (v == null || isNaN(v)) return '¥0'; return '¥' + Number(v).toLocaleString('zh-CN', {minimumFractionDigits:2,maximumFractionDigits:2}); }
 function fmtNum(v) { if (v == null || isNaN(v)) return '0'; return Number(v).toLocaleString('zh-CN'); }
@@ -361,8 +376,9 @@ function switchFollowupTab(el) {
 }
 
 (async function() {
-  const uid = getParam('id');
-  if (!uid) { showError('请在链接中添加 ?id=店员名字 参数'); return; }
+  const rawId = getParam('id');
+  if (!rawId) { showError('请在链接中添加 ?id=参数'); return; }
+  const uid = decodeId(rawId);
   if (await loadData(uid)) { setInterval(checkVersion, POLL); }
 })();
 </script>
