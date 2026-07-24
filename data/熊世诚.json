@@ -1153,5 +1153,13 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "total": 0,
+    "list": []
   }
 }
