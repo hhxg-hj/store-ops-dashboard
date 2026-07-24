@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <title>门店运营赋能 · 每日LTV快报</title>
   <style>
     :root {
@@ -172,7 +173,7 @@
   <div id="app">
     <div class="state-msg">📊 加载中...</div>
   </div>
-  <div class="toast" id="toast" onclick="location.reload()">🔄 数据已更新，点击刷新 →</div>
+  <div class="toast" id="toast" onclick="bustedReload()">🔄 数据已更新，点击刷新 →</div>
 
 <script>
 const VERSION_URL = 'data/version.json';
@@ -429,7 +430,7 @@ function switchFollowupTab(el) {
 
 async function loadData(userId) {
   try {
-    const resp = await fetch(`data/${encodeURIComponent(userId)}.json`);
+    const resp = await fetch(`data/${encodeURIComponent(userId)}.json?t=${Date.now()}`, { cache: 'no-store' });
     if (!resp.ok) throw new Error('数据加载失败');
     _currentData = await resp.json();
     buildShell(_currentData);
@@ -442,12 +443,23 @@ async function loadData(userId) {
   } catch(e) { showError('未找到该店员数据，请联系管理员'); return false; }
 }
 
+function bustedReload() {
+  const url = new URL(location.href);
+  url.searchParams.set('_r', Date.now());
+  location.replace(url);
+}
+
 async function checkVersion() {
   let v = null;
   try { v = (await (await fetch(VERSION_URL+'?t='+Date.now())).json()).version; } catch(_) {}
   if (v && !checkVersion._last) checkVersion._last = v;
-  else if (v && v !== checkVersion._last) { $('toast').classList.add('show'); setTimeout(()=>location.reload(),3000); }
+  else if (v && v !== checkVersion._last) { $('toast').classList.add('show'); setTimeout(()=>bustedReload(),3000); }
 }
+
+(function cleanReloadParam() {
+  const url = new URL(location.href);
+  if (url.searchParams.has('_r')) { url.searchParams.delete('_r'); history.replaceState(null, '', url); }
+})();
 
 (async function() {
   const rawId = getParam('id');
