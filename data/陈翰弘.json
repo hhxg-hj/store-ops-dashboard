@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 03-57",
+  "version": "2026-07-24 06-16",
   "storeRank": 2,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -79,31 +79,31 @@
       {
         "name": "能恩全护A2",
         "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
-        "video": "",
+        "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
         "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
       },
       {
         "name": "臻护新笙·皇家A2",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
-        "video": "",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
         "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·至尊A2",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
-        "video": "",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
         "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·铂金",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
-        "video": "",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
         "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
       },
       {
         "name": "臻护新笙·羊奶",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
-        "video": "",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
         "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
       }
     ],
@@ -157,7 +157,7 @@
     },
     "全护A2": {
       "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
-      "video": "",
+      "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
       "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -598,7 +598,7 @@
     },
     "皇家A2": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
-      "video": "",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
       "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -607,7 +607,7 @@
     },
     "至尊A2": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
-      "video": "",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
       "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -616,7 +616,7 @@
     },
     "铂金": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
-      "video": "",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
       "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -625,7 +625,7 @@
     },
     "羊奶": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
-      "video": "",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
       "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -1015,35 +1015,35 @@
         "brand": "03、雀巢",
         "scenario": "消化吸收、免疫支持",
         "age": "0-3岁",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg) · [测试题](/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx)"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx)"
       },
       {
         "name": "臻护新笙·皇家A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg) · [测试题](/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx)"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·至尊A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg) · [测试题](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx)"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·铂金",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg) · [测试题](/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx)"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx)"
       },
       {
         "name": "臻护新笙·羊奶",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg) · [测试题](/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx)"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx)"
       }
     ]
   },
