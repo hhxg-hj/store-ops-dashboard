@@ -653,7 +653,7 @@
     "high": 6,
     "medium": 2,
     "low": 1,
-    "total": 13,
+    "total": 12,
     "list": [
       {
         "phone": "133****1601",
@@ -762,15 +762,6 @@
         "cycle": 28,
         "urgency": "关注",
         "level": "low"
-      },
-      {
-        "phone": "152****6606",
-        "lastBuy": "2026-07-20",
-        "daysAgo": 3,
-        "predicted": "2026-08-17",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
       }
     ]
   }

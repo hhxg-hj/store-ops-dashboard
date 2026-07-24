@@ -649,62 +649,7 @@
     "high": 0,
     "medium": 0,
     "low": 0,
-    "total": 6,
-    "list": [
-      {
-        "phone": "134****5020",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      },
-      {
-        "phone": "159****7725",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      },
-      {
-        "phone": "138****6124",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      },
-      {
-        "phone": "177****3061",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      },
-      {
-        "phone": "136****1555",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      },
-      {
-        "phone": "173****5131",
-        "lastBuy": "2026-07-22",
-        "daysAgo": 1,
-        "predicted": "2026-08-19",
-        "cycle": 28,
-        "urgency": "",
-        "level": null
-      }
-    ]
+    "total": 0,
+    "list": []
   }
 }
