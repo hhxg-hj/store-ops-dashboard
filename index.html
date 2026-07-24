@@ -4,125 +4,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>门店运营赋能 · 每日LTV快报</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <style>
     :root {
-      --bg: #f5f0f8; --card: #fff; --primary: #7c3aed; --primary-light: #f3e8ff;
+      --bg: #f4f5f7; --card: #fff; --primary: #7c3aed; --primary-light: #f3e8ff;
       --accent: #e91e8c; --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
-      --text: #1e293b; --text2: #64748b; --border: #e2e8f0; --radius: 12px;
+      --text: #1e293b; --text2: #64748b; --border: #e8ebf0; --radius: 14px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: var(--bg); color: var(--text); min-height: 100vh; padding: 16px;
+      background: var(--bg); color: var(--text); min-height: 100vh;
     }
-    .container { max-width: 720px; margin: 0 auto; }
+    .state-msg { text-align:center; padding:120px 20px; color:var(--text2); font-size:15px; }
 
-    /* Header */
-    .header {
-      background: linear-gradient(135deg, #7c3aed, #e91e8c); color: #fff;
-      border-radius: var(--radius); padding: 20px 24px; margin-bottom: 14px; position: relative; overflow: hidden;
+    /* ===== Layout ===== */
+    .shell { display:flex; min-height:100vh; }
+    .sidebar {
+      width:236px; flex-shrink:0; background:#fff; border-right:1px solid var(--border);
+      display:flex; flex-direction:column; position:sticky; top:0; height:100vh;
     }
-    .header::after { content:''; position:absolute; top:-30%; right:-15%; width:200px; height:200px; background:rgba(255,255,255,.05); border-radius:50%; }
-    .header-row { display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:1; }
-    .header-name { font-size:26px; font-weight:700; }
-    .header-store { font-size:13px; opacity:.85; margin-top:4px; }
-    .header-badge { background:rgba(255,255,255,.18); padding:4px 12px; border-radius:14px; font-size:12px; }
-    .header-meta { font-size:12px; opacity:.7; margin-top:8px; position:relative; z-index:1; }
+    .brand { padding:18px 20px 14px; font-weight:800; font-size:16px; color:var(--primary); display:flex; align-items:center; gap:8px; }
+    .side-user { padding:0 20px 14px; border-bottom:1px solid var(--border); margin-bottom:10px; }
+    .su-name { font-size:15px; font-weight:700; }
+    .su-store { font-size:12px; color:var(--text2); margin-top:3px; }
+    .su-meta { font-size:11px; color:var(--text2); margin-top:4px; }
+    .nav { flex:1; padding:6px 12px; overflow:auto; }
+    .nav-item {
+      padding:11px 14px; border-radius:10px; margin:3px 0; cursor:pointer; font-size:14px;
+      color:var(--text2); display:flex; align-items:center; gap:11px; transition:all .15s; user-select:none;
+    }
+    .nav-item:hover { background:var(--primary-light); color:var(--primary); }
+    .nav-item.active { background:var(--primary); color:#fff; font-weight:600; box-shadow:0 4px 12px rgba(124,58,237,.25); }
+    .side-foot { padding:14px 20px; font-size:11px; color:var(--text2); border-top:1px solid var(--border); }
+    .main { flex:1; display:flex; flex-direction:column; min-width:0; }
+    .topbar {
+      height:58px; background:#fff; border-bottom:1px solid var(--border); display:flex;
+      align-items:center; justify-content:space-between; padding:0 22px; position:sticky; top:0; z-index:10;
+    }
+    .tb-name { font-size:13px; font-weight:700; }
+    .tb-title { font-size:12px; color:var(--text2); margin-top:1px; }
+    .tb-right { font-size:12px; color:var(--success); display:flex; align-items:center; gap:6px; }
+    .live-dot { width:8px; height:8px; border-radius:50%; background:var(--success); animation:pulse 1.6s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.4;transform:scale(.7);} }
+    .view { padding:20px 22px 40px; overflow:auto; flex:1; }
 
-    .section { margin-bottom: 14px; }
-    .card { background:var(--card); border-radius:var(--radius); padding:18px 20px; box-shadow:0 1px 6px rgba(0,0,0,.05); }
+    .card { background:var(--card); border-radius:var(--radius); padding:18px 20px; box-shadow:0 1px 8px rgba(15,23,42,.05); margin-bottom:16px; }
+    .view > .card:last-child { margin-bottom:0; }
     .section-title { font-size:15px; font-weight:700; margin-bottom:12px; display:flex; align-items:center; gap:6px; }
     .section-title .icon { font-size:18px; }
+    .section-title.plain { margin:18px 2px 6px; }
 
     /* 业绩奖励 */
-    .reward-hero { text-align:center; padding:8px 0 4px; }
-    .reward-amount { font-size:38px; font-weight:800; color:var(--accent); }
+    .reward-hero { text-align:center; padding:6px 0 2px; }
+    .reward-amount { font-size:40px; font-weight:800; color:var(--accent); letter-spacing:-1px; }
     .reward-label { font-size:13px; color:var(--text2); }
-    .rank-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
-    .rank-item { background:var(--primary-light); border-radius:8px; padding:10px; text-align:center; }
-    .rank-item .rank-num { font-size:22px; font-weight:700; color:var(--primary); }
-    .rank-item .rank-label { font-size:11px; color:var(--text2); margin-top:3px; }
+    .rank-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
+    .rank-item { background:var(--primary-light); border-radius:10px; padding:12px; text-align:center; }
+    .rank-item .rank-num { font-size:15px; font-weight:700; color:var(--primary); }
+    .rank-item .rank-label { font-size:11px; color:var(--text2); margin-top:4px; }
+
+    /* KPI */
+    .kpi-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:14px; }
+    .kpi { background:#fff; border-radius:var(--radius); padding:16px 18px; box-shadow:0 1px 8px rgba(15,23,42,.05); border-left:3px solid var(--primary); }
+    .kpi.accent { border-left-color:var(--accent); }
+    .kpi.green { border-left-color:var(--success); }
+    .kpi.orange { border-left-color:var(--warning); }
+    .kpi-val { font-size:25px; font-weight:800; color:var(--text); line-height:1.1; }
+    .kpi-lbl { font-size:12px; color:var(--text2); margin-top:6px; }
+    .kpi-sub { font-size:11px; margin-top:6px; }
 
     /* 销售业绩 */
     .perf-table { width:100%; font-size:13px; border-collapse:collapse; }
     .perf-table th { text-align:left; color:var(--text2); font-weight:500; padding:7px 4px; border-bottom:1px solid var(--border); font-size:11px; }
-    .perf-table td { padding:7px 4px; border-bottom:1px solid #f8f8f8; }
-    .perf-table .section-row td { font-weight:700; padding-top:12px; font-size:14px; color:var(--primary); border-bottom:2px solid var(--primary-light); }
+    .perf-table td { padding:8px 4px; border-bottom:1px solid #f4f4f6; }
+    .perf-table .section-row td { font-weight:700; padding-top:14px; font-size:14px; color:var(--primary); border-bottom:2px solid var(--primary-light); }
     .mom { font-size:12px; }
     .mom-up { color:var(--danger); } .mom-down { color:var(--success); } .mom-none { color:var(--text2); }
 
     /* 用户服务 */
-    .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
-    .service-item { text-align:center; padding:12px 8px; background:#fafafa; border-radius:8px; }
-    .service-item .sv { font-size:18px; font-weight:700; }
-    .service-item .sl { font-size:11px; color:var(--text2); margin-top:3px; }
-    .service-item .sm { font-size:10px; margin-top:2px; }
+    .service-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:10px; }
+    .service-item { text-align:center; padding:14px 8px; background:#fafbff; border-radius:10px; }
+    .service-item .sv { font-size:20px; font-weight:700; }
+    .service-item .sl { font-size:11px; color:var(--text2); margin-top:4px; }
+    .service-item .sm { font-size:10px; margin-top:3px; }
 
-    /* 建议 */
+    /* 建议 / 洞察 */
     .suggestion { font-size:13px; line-height:1.8; white-space:pre-line; color:#334155; }
-    .suggestion-item { padding:8px 12px; margin:4px 0; background:#fffbeb; border-left:3px solid var(--warning); border-radius:4px; }
+    .suggestion-item { padding:9px 13px; margin:5px 0; background:#fffbeb; border-left:3px solid var(--warning); border-radius:6px; }
+    .insight-item { padding:11px 15px; margin:7px 0; background:#f8f6ff; border-left:3px solid var(--primary); border-radius:6px; font-size:13px; line-height:1.7; }
 
     /* 学习资源 */
-    .learning { font-size:13px; color:#334155; }
+    .lr-intro { font-size:13px; line-height:1.7; color:#334155; margin-bottom:12px; }
+    .lr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
+    .lr-card { border:1px solid var(--border); border-radius:10px; overflow:hidden; background:#fff; }
+    .lr-name { font-weight:600; font-size:13px; padding:9px 12px; background:#f8fafc; border-bottom:1px solid var(--border); }
+    .lr-img { width:100%; display:block; }
+    .lr-video { width:100%; display:block; background:#000; margin-top:8px; }
+    .lr-links { display:flex; gap:8px; padding:9px 12px; flex-wrap:wrap; }
+    .lr-link { font-size:12px; color:var(--primary); text-decoration:none; background:#eff6ff; padding:5px 11px; border-radius:7px; }
+    .lr-link:hover { background:#dbeafe; }
+    .lr-tip { font-size:12px; color:#64748b; margin-top:10px; line-height:1.6; }
+    .lr-empty { font-size:13px; color:#94a3b8; padding:12px 0; }
 
-    .refresh-info { text-align:center; font-size:11px; color:var(--text2); padding:16px 0 8px; }
+    .refresh-info { text-align:center; font-size:11px; color:var(--text2); padding:8px 0 4px; }
     .toast { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:#333; color:#fff; padding:10px 24px; border-radius:20px; font-size:13px; cursor:pointer; z-index:999; display:none; }
     .toast.show { display:block; animation:slide .3s ease; }
     @keyframes slide { from { transform:translateX(-50%) translateY(-40px); opacity:0; } to { transform:translateX(-50%) translateY(0); opacity:1; } }
-    .state-msg { text-align:center; padding:80px 20px; color:var(--text2); }
-  
+
     /* Follow-up */
-    .followup-stats { display:flex; gap:8px; justify-content:center; margin-bottom:14px; }
-    .fu-stat { text-align:center; padding:10px 14px; border-radius:8px; min-width:55px; cursor:pointer; transition:transform .15s, opacity .15s; opacity:.6; }
+    .followup-stats { display:flex; gap:8px; justify-content:center; margin-bottom:14px; flex-wrap:wrap; }
+    .fu-stat { text-align:center; padding:10px 16px; border-radius:9px; min-width:58px; cursor:pointer; transition:transform .15s, opacity .15s; opacity:.55; }
     .fu-stat:hover { opacity:.85; }
-    .fu-stat.active { opacity:1; transform:scale(1.08); box-shadow:0 0 0 2px currentColor; }
+    .fu-stat.active { opacity:1; transform:scale(1.06); box-shadow:0 0 0 2px currentColor; }
     .fu-stat .fu-num { font-size:22px; font-weight:700; }
     .fu-stat .fu-lbl { font-size:10px; margin-top:2px; }
     .fu-stat.lost { background:#fef2f2; color:#dc2626; }
     .fu-stat.critical { background:#fff7ed; color:#ea580c; }
     .fu-stat.high { background:#fefce8; color:#ca8a04; }
     .fu-stat.medium { background:#f0fdf4; color:#16a34a; }
-    .fu-stat.low { background:#f0f9ff; color:#0284c7; }
     .followup-list { margin-top:8px; }
-    .fu-header, .fu-row { display:flex; align-items:center; padding:6px 8px; font-size:12px; }
+    .fu-header, .fu-row { display:flex; align-items:center; padding:7px 8px; font-size:12px; }
     .fu-header { color:var(--text2); font-weight:600; border-bottom:2px solid var(--border); margin-bottom:4px; }
-    .fu-row { border-bottom:1px solid #f8f8f8; border-radius:4px; }
+    .fu-row { border-bottom:1px solid #f6f6f8; border-radius:4px; }
     .fu-row.lost { background:#fef2f2; }
     .fu-row.critical { background:#fff7ed; }
     .fu-row.high { background:#fefce8; }
     .fu-row.medium { background:#f0fdf4; }
-    .fu-row.low { background:#f0f9ff; }
-    .fu-badge { padding:2px 6px; border-radius:6px; font-size:10px; font-weight:600; }
-    .fu-badge.fu-lost { background:#fee2e2; color:#dc2626; }
-    .fu-badge.fu-critical { background:#ffedd5; color:#ea580c; }
-    .fu-badge.fu-high { background:#fef9c3; color:#ca8a04; }
-    .fu-badge.fu-medium { background:#dcfce7; color:#16a34a; }
-    .fu-badge.fu-low { background:#e0f2fe; color:#0284c7; }
 
-    /* 本周服务清单 */
-    .task-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid #f5f5f5; }
+    /* 本周服务 */
+    .task-item { display:flex; align-items:flex-start; gap:10px; padding:11px 0; border-bottom:1px solid #f3f3f5; }
     .task-item:last-child { border-bottom:none; }
     .task-icon { font-size:18px; flex-shrink:0; width:28px; text-align:center; }
     .task-text { font-size:13px; line-height:1.6; }
-    /* 客户洞察 */
-    .insight-item { padding:10px 14px; margin:6px 0; background:#f8f6ff; border-left:3px solid var(--primary); border-radius:4px; font-size:13px; line-height:1.7; }
-    .lr-intro { font-size:13px; line-height:1.7; color:#334155; margin-bottom:10px; }
-    .lr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
-    .lr-card { border:1px solid var(--border); border-radius:8px; overflow:hidden; background:#fff; }
-    .lr-name { font-weight:600; font-size:13px; padding:8px 10px; background:#f8fafc; border-bottom:1px solid var(--border); }
-    .lr-img { width:100%; display:block; }
-    .lr-video { width:100%; display:block; background:#000; margin-top:8px; border-radius:0; }
-    .lr-links { display:flex; gap:8px; padding:8px 10px; flex-wrap:wrap; }
-    .lr-link { font-size:12px; color:var(--primary); text-decoration:none; background:#eff6ff; padding:4px 10px; border-radius:6px; }
-    .lr-link:hover { background:#dbeafe; }
-    .lr-tip { font-size:12px; color:#64748b; margin-top:10px; line-height:1.6; }
-    .lr-empty { font-size:13px; color:#94a3b8; padding:12px 0; }
-</style>
+
+    /* ===== Responsive (mobile) ===== */
+    @media (max-width: 760px) {
+      .shell { flex-direction:column; }
+      .sidebar { width:100%; height:auto; position:static; flex-direction:row; align-items:center; border-right:none; border-bottom:1px solid var(--border); overflow-x:auto; padding:6px; }
+      .brand, .side-user, .side-foot { display:none; }
+      .nav { flex-direction:row; padding:0; overflow-x:auto; }
+      .nav-item { white-space:nowrap; margin:0 4px; padding:9px 14px; font-size:13px; }
+      .nav-item span { display:none; }
+      .view { padding:14px 14px 36px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="container" id="app">
-    <div class="state-msg"><h2>📊 加载中...</h2><p>正在获取最新数据</p></div>
+  <div id="app">
+    <div class="state-msg">📊 加载中...</div>
   </div>
   <div class="toast" id="toast" onclick="location.reload()">🔄 数据已更新，点击刷新 →</div>
 
@@ -130,6 +159,7 @@
 const VERSION_URL = 'data/version.json';
 const POLL = 60_000;
 let _currentData = null;
+let _currentView = 'overview';
 
 function $(id) { return document.getElementById(id); }
 function getParam(n) { return new URL(location.href).searchParams.get(n); }
@@ -137,47 +167,76 @@ function getParam(n) { return new URL(location.href).searchParams.get(n); }
 // Base64 UTF-8 decode for URL id parameter
 function decodeId(raw) {
   if (!raw) return null;
-  // Try base64 decode first
   try {
     const binary = atob(raw);
     const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
     const decoded = new TextDecoder('utf-8').decode(bytes);
-    // Sanity check: decoded should be reasonable text
     if (decoded && decoded.length > 0 && decoded.length < 50) return decoded;
   } catch(_) {}
-  // Fallback: use raw value (backward compatible with old ?id=店员名 URLs)
   return raw;
 }
 function fmtPct(v, raw) { if (v == null || isNaN(v)) return '—'; const p = raw ? v * 100 : v; return (p >= 0 ? '↑' : '↓') + Math.abs(p).toFixed(1) + '%'; }
-function fmtMoney(v) { if (v == null || isNaN(v)) return '¥0'; return '¥' + Number(v).toLocaleString('zh-CN', {minimumFractionDigits:2,maximumFractionDigits:2}); }
+function fmtMoney(v) { if (v == null || isNaN(v)) return '¥0'; return '¥' + Number(v).toLocaleString('zh-CN', {minimumFractionDigits:2, maximumFractionDigits:2}); }
 function fmtNum(v) { if (v == null || isNaN(v)) return '0'; return Number(v).toLocaleString('zh-CN'); }
 function momClass(v) { if (v == null || isNaN(v)) return 'mom-none'; return v >= 0 ? 'mom-up' : 'mom-down'; }
 function momLabel(v) { if (v == null || isNaN(v)) return '—'; return fmtPct(v, true); }
 
-function render(d) {
+const VIEW_TITLES = { overview:'运营概览', perf:'销售业绩', followup:'客户回访清单', learning:'学习资源', insight:'客户洞察', service:'用户服务', suggestion:'提升建议', weekly:'本周服务清单' };
+const VALID_VIEWS = ['overview','perf','followup','learning','insight','service','suggestion','weekly'];
+
+/* ===== Shell ===== */
+function buildShell(d) {
+  $('app').innerHTML = `
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">🚀 门店运营赋能</div>
+      <div class="side-user">
+        <div class="su-name">👤 ${d.name || '店员'}</div>
+        <div class="su-store">🏪 ${d.store || '未知门店'}</div>
+        <div class="su-meta">${d.region || ''} · ${d.zaidian ? '在店' : '离店'}</div>
+      </div>
+      <nav class="nav">
+        <div class="nav-item" data-view="overview" onclick="navTo('overview')"><span>🏠</span>运营概览</div>
+        <div class="nav-item" data-view="perf" onclick="navTo('perf')"><span>📈</span>销售业绩</div>
+        <div class="nav-item" data-view="followup" onclick="navTo('followup')"><span>📞</span>客户回访</div>
+        <div class="nav-item" data-view="learning" onclick="navTo('learning')"><span>📚</span>学习资源</div>
+        <div class="nav-item" data-view="insight" onclick="navTo('insight')"><span>🔍</span>客户洞察</div>
+        <div class="nav-item" data-view="service" onclick="navTo('service')"><span>👥</span>用户服务</div>
+        <div class="nav-item" data-view="suggestion" onclick="navTo('suggestion')"><span>💡</span>提升建议</div>
+        <div class="nav-item" data-view="weekly" onclick="navTo('weekly')"><span>📅</span>本周服务</div>
+      </nav>
+      <div class="side-foot">🕐 每60秒自动更新 · v${d.version || '-'}</div>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div>
+          <div class="tb-name">${d.name || '店员'}${d.isManager ? ' · 👔 见习店长' : ''}</div>
+          <div class="tb-title" id="viewTitle">运营概览</div>
+        </div>
+        <div class="tb-right"><span class="live-dot"></span> 实时</div>
+      </div>
+      <div class="view" id="view"></div>
+    </main>
+  </div>`;
+}
+
+function navTo(view) {
+  if (!VALID_VIEWS.includes(view)) view = 'overview';
+  _currentView = view;
+  const url = new URL(location.href); url.hash = view; history.replaceState(null, '', url);
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.view === view));
+  const vt = $('viewTitle'); if (vt) vt.textContent = VIEW_TITLES[view] || '';
+  renderView(view);
+  const main = document.querySelector('.main'); if (main) main.scrollTop = 0;
+}
+
+/* ===== Views ===== */
+function renderOverview(d) {
   const sa = d.storeAgg || {};
-  const storeMomMilk = sa.momMilkCans != null ? fmtPct(sa.momMilkCans, true) : '—';
-  const storeMomPush = sa.momPushCans != null ? fmtPct(sa.momPushCans, true) : '—';
   const storeRate = sa.achievementRate ? (sa.achievementRate*100).toFixed(1) + '%' : '—';
-  
-  // Suggestions
-  const suggestions = (d.suggestion || '').split('\n').filter(Boolean);
-
-  const html = `
-<!-- Header -->
-<div class="header">
-  <div class="header-row">
-    <div>
-      <div class="header-name">👤 ${d.name || '店员'}</div>
-      <div class="header-store">🏪 ${d.store || '未知门店'}</div>
-    </div>
-    <div class="header-badge">${d.region || ''} · ${d.zaidian ? '在店' : '离店'}</div>
-  </div>
-  <div class="header-meta">🕐 数据更新至 ${d.version || d.month || '-'}${d.isManager ? ' · 👔 见习店长' : ''}</div>
-</div>
-
-<!-- 业绩奖励 -->
-<div class="section">
+  const persRate = d.achievementRate ? (d.achievementRate*100).toFixed(1) + '%' : '—';
+  const gapColor = v => (v>=0 ? 'var(--success)' : 'var(--warning)');
+  return `
   <div class="card">
     <div class="section-title"><span class="icon">💰</span> 业绩奖励</div>
     <div class="reward-hero">
@@ -186,61 +245,35 @@ function render(d) {
     </div>
     <div class="rank-grid">
       <div class="rank-item">
-        <div class="rank-num">🥇 第${d.storeRank}名/${d.storeTotal}人</div>
-        <div class="rank-label">门店排名 · 榜首 ${d.storeTopName} ¥${fmtNum(d.storeTopComm?.toFixed(0))}</div>
-        <div style="font-size:12px;margin-top:2px;color:${(d.commission||0)>=(d.storeTopComm||0)?'var(--success)':'var(--warning)'}">
-          差距 ¥${fmtNum(((d.storeTopComm||0)-(d.commission||0)).toFixed(0))}
-        </div>
+        <div class="rank-num">🥇 第${d.storeRank}名 / ${d.storeTotal}人</div>
+        <div class="rank-label">门店排名 · 榜首 ${d.storeTopName||'-'}</div>
+        <div style="font-size:12px;margin-top:3px;color:${gapColor((d.commission||0)-(d.storeTopComm||0))}">差距 ¥${fmtNum(((d.storeTopComm||0)-(d.commission||0)).toFixed(0))}</div>
       </div>
       <div class="rank-item">
-        <div class="rank-num">🏆 第${d.regionRank}名/${d.regionTotal}人</div>
-        <div class="rank-label">区域排名 · 榜首 ${d.regionTopName} ¥${fmtNum(d.regionTopComm?.toFixed(0))}</div>
-        <div style="font-size:12px;margin-top:2px;color:${(d.commission||0)>=(d.regionTopComm||0)?'var(--success)':'var(--warning)'}">
-          差距 ¥${fmtNum(((d.regionTopComm||0)-(d.commission||0)).toFixed(0))}
-        </div>
+        <div class="rank-num">🏆 第${d.regionRank}名 / ${d.regionTotal}人</div>
+        <div class="rank-label">区域排名 · 榜首 ${d.regionTopName||'-'}</div>
+        <div style="font-size:12px;margin-top:3px;color:${gapColor((d.commission||0)-(d.regionTopComm||0))}">差距 ¥${fmtNum(((d.regionTopComm||0)-(d.commission||0)).toFixed(0))}</div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- 本周服务清单 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">📅</span> 本周服务清单</div>
-    ${(d.weeklyTasks||[]).map(t => `
-    <div class="task-item">
-      <span class="task-icon">${t.icon}</span>
-      <span class="task-text">${t.text}</span>
-    </div>`).join('')}
-  </div>
-</div>
+  <div class="section-title plain">📊 核心指标</div>
+  <div class="kpi-grid">
+    <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">门店均值 ${storeRate}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkCans)}</div><div class="kpi-lbl">奶粉销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momMilkCans)}">环比 ${momLabel(d.momMilkCans)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushCans)}</div><div class="kpi-lbl">主推销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momPushCans)}">环比 ${momLabel(d.momPushCans)}</div></div>
+    <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div></div>
+    <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
+  </div>`;
+}
 
-<!-- 客户洞察 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">🔍</span> 客户洞察</div>
-    ${(d.customerInsights||[]).map(ins => `
-    <div class="insight-item">${ins}</div>`).join('')}
-  </div>
-</div>
-
-<!-- 客户回访清单 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
-    <div class="followup-stats" id="fuStats">
-      <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
-      <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
-      <div class="fu-stat high" data-level="high" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
-      <div class="fu-stat medium" data-level="medium" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
-    </div>
-    <div id="fuContent">${renderFollowupList(d.followUp?.list||[], 'lost')}</div>
-  </div>
-</div>
-
-<!-- 销售业绩 -->
-<div class="section">
-  <div class="card">
+function renderPerf(d) {
+  const sa = d.storeAgg || {};
+  const storeMomMilk = sa.momMilkCans != null ? fmtPct(sa.momMilkCans, true) : '—';
+  const storeMomPush = sa.momPushCans != null ? fmtPct(sa.momPushCans, true) : '—';
+  const storeRate = sa.achievementRate ? (sa.achievementRate*100).toFixed(1) + '%' : '—';
+  return `<div class="card">
     <div class="section-title"><span class="icon">📈</span> 销售业绩</div>
     <table class="perf-table">
       <thead><tr><th>指标</th><th>本月</th><th>环比</th></tr></thead>
@@ -251,7 +284,6 @@ function render(d) {
         <tr><td>📈 目标达成率</td><td>${storeRate}</td><td>—</td></tr>
         <tr><td>🥛 本月奶粉销量</td><td>${fmtNum(sa.milkCans)}罐</td><td class="${momClass(sa.momMilkCans)} mom">${storeMomMilk}</td></tr>
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(sa.pushCans)}罐</td><td class="${momClass(sa.momPushCans)} mom">${storeMomPush}</td></tr>
-
         <tr class="section-row"><td colspan="3">二、个人业绩</td></tr>
         <tr><td>💰 本月销售目标</td><td>${fmtMoney(d.target)}</td><td></td></tr>
         <tr><td>💰 本月累计销售</td><td>${fmtMoney(d.achieved)}</td><td></td></tr>
@@ -260,80 +292,83 @@ function render(d) {
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(d.pushCans)}罐</td><td class="${momClass(d.momPushCans)} mom">${momLabel(d.momPushCans)}</td></tr>
       </tbody>
     </table>
-  </div>
-</div>
+  </div>`;
+}
 
-<!-- 用户服务 -->
-<div class="section">
-  <div class="card">
+function renderFollowup(d) {
+  return `<div class="card">
+    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
+    <div class="followup-stats" id="fuStats">
+      <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
+      <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
+      <div class="fu-stat high" data-level="high" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
+      <div class="fu-stat medium" data-level="medium" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
+    </div>
+    <div id="fuContent">${renderFollowupList(d.followUp?.list||[], 'lost')}</div>
+  </div>`;
+}
+
+function renderLearningView(d) {
+  return `<div class="card">
+    <div class="section-title"><span class="icon">📚</span> 学习资源</div>
+    ${renderLearning(d.learningResources)}
+  </div>`;
+}
+
+function renderInsight(d) {
+  const items = d.customerInsights || [];
+  return `<div class="card">
+    <div class="section-title"><span class="icon">🔍</span> 客户洞察</div>
+    ${items.length ? items.map(ins => `<div class="insight-item">${ins}</div>`).join('') : '<div class="insight-item">暂无洞察数据</div>'}
+  </div>`;
+}
+
+function renderService(d) {
+  return `<div class="card">
     <div class="section-title"><span class="icon">👥</span> 用户服务</div>
     <div class="service-grid">
-      <div class="service-item">
-        <div class="sv">${fmtNum(d.totalClients)}</div>
-        <div class="sl">本月成交用户</div>
-        <div class="sm ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div>
-      </div>
-      <div class="service-item">
-        <div class="sv">${fmtNum(d.milkClients)}</div>
-        <div class="sl">本月奶粉用户</div>
-        <div class="sm ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div>
-      </div>
-      <div class="service-item">
-        <div class="sv">${fmtNum(d.pushClients)}</div>
-        <div class="sl">本月主推用户</div>
-        <div class="sm ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div>
-      </div>
-      <div class="service-item">
-        <div class="sv">${fmtNum(d.depositCount)}</div>
-        <div class="sl">本月保证金用户</div>
-        <div class="sm">—</div>
-      </div>
-      <div class="service-item">
-        <div class="sv">${d.milkAvg ? d.milkAvg.toFixed(1)+'罐/人' : '—'}</div>
-        <div class="sl">奶粉客单量</div>
-        <div class="sm ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div>
-      </div>
-      <div class="service-item">
-        <div class="sv">${fmtNum(d.visitShould)} / ${fmtNum(d.visitDone)}</div>
-        <div class="sl">回访 应回/已回</div>
-        <div class="sm">待回访 ${fmtNum(d.visitPending)}</div>
-      </div>
+      <div class="service-item"><div class="sv">${fmtNum(d.totalClients)}</div><div class="sl">本月成交用户</div><div class="sm ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(d.milkClients)}</div><div class="sl">本月奶粉用户</div><div class="sm ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(d.pushClients)}</div><div class="sl">本月主推用户</div><div class="sm ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(d.depositCount)}</div><div class="sl">本月保证金用户</div><div class="sm">—</div></div>
+      <div class="service-item"><div class="sv">${d.milkAvg ? d.milkAvg.toFixed(1)+'罐/人' : '—'}</div><div class="sl">奶粉客单量</div><div class="sm ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(d.visitShould)} / ${fmtNum(d.visitDone)}</div><div class="sl">回访 应回/已回</div><div class="sm" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
     </div>
-  </div>
-</div>
+  </div>`;
+}
 
-<!-- 提升建议 -->
-<div class="section">
-  <div class="card">
+function renderSuggestion(d) {
+  const suggestions = (d.suggestion || '').split('\n').filter(Boolean);
+  return `<div class="card">
     <div class="section-title"><span class="icon">💡</span> 提升建议</div>
     <div class="suggestion">
-      ${suggestions.length > 0 ? suggestions.map(s => `<div class="suggestion-item">${s}</div>`).join('') : '<div class="suggestion-item">暂无建议，继续保持！</div>'}
+      ${suggestions.length ? suggestions.map(s => `<div class="suggestion-item">${s}</div>`).join('') : '<div class="suggestion-item">暂无建议，继续保持！</div>'}
     </div>
-  </div>
-</div>
-
-
-
-
-<!-- 学习资源 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">📚</span> 学习资源</div>
-    <div class="learning">${renderLearning(d.learningResources)}</div>
-  </div>
-</div>
-
-<div class="refresh-info">🕐 每60秒自动检查更新 · 版本 ${d.version||'-'}</div>
-`;
-
-  $('app').innerHTML = html;
+  </div>`;
 }
 
-function showError(msg) {
-  $('app').innerHTML = `<div class="state-msg"><h2>😔 暂无数据</h2><p>${msg||'未找到该店员的数据'}</p></div>`;
+function renderWeekly(d) {
+  const tasks = d.weeklyTasks || [];
+  return `<div class="card">
+    <div class="section-title"><span class="icon">📅</span> 本周服务清单</div>
+    ${tasks.length ? tasks.map(t => `<div class="task-item"><span class="task-icon">${t.icon}</span><span class="task-text">${t.text}</span></div>`).join('') : '<div class="task-item"><span class="task-text">本周暂无需办事项</span></div>'}
+  </div>`;
 }
 
-// 学习资源：内嵌展示一页纸图片 + 测试题下载（资源已入仓 GitHub Pages，不再依赖飞书权限）
+function renderView(view) {
+  const d = _currentData;
+  if (!d) return;
+  const map = { overview:renderOverview, perf:renderPerf, followup:renderFollowup, learning:renderLearningView, insight:renderInsight, service:renderService, suggestion:renderSuggestion, weekly:renderWeekly };
+  const fn = map[view] || renderOverview;
+  const viewEl = $('view');
+  if (viewEl) viewEl.innerHTML = fn(d);
+  if (view === 'followup') {
+    const first = document.querySelector('#fuStats .fu-stat.lost');
+    if (first) first.classList.add('active');
+  }
+}
+
+/* ===== Learning render (assets inlined) ===== */
 function renderLearning(lr) {
   if (!lr || !lr.items || !lr.items.length) return '<div class="lr-empty">主推产品资料正在更新中</div>';
   const cards = lr.items.map(it => `
@@ -350,30 +385,14 @@ function renderLearning(lr) {
   return `<div class="lr-intro">${lr.intro||''}</div><div class="lr-grid">${cards}</div><div class="lr-tip">${lr.tip||''}</div>`;
 }
 
-async function loadData(userId) {
-  try {
-    const resp = await fetch(`data/${encodeURIComponent(userId)}.json`);
-    if (!resp.ok) throw new Error('数据加载失败');
-    _currentData = await resp.json();
-    render(_currentData);
-    // Set default active tab
-    const firstTab = document.querySelector('#fuStats .fu-stat.lost');
-    if (firstTab) firstTab.classList.add('active');
-    return true;
-  } catch(e) { showError('未找到该店员数据，请联系管理员'); return false; }
-}
-
-async function checkVersion() {
-  let v = null;
-  try { v = (await (await fetch(VERSION_URL+'?t='+Date.now())).json()).version; } catch(_) {}
-  if (v && !checkVersion._last) checkVersion._last = v;
-  else if (v && v !== checkVersion._last) { $('toast').classList.add('show'); setTimeout(()=>location.reload(),3000); }
+function showError(msg) {
+  $('app').innerHTML = `<div class="state-msg"><h2>😔 暂无数据</h2><p>${msg||'未找到该店员的数据'}</p></div>`;
 }
 
 function renderFollowupList(list, level) {
   const filtered = (list || []).filter(c => c.level === level);
   if (!filtered.length) {
-    const emptyMsg = { lost:'暂无已流失客户', critical:'暂无高危客户', high:'暂无紧急回访客户', medium:'暂无本周回访客户', low:'暂无关注客户' };
+    const emptyMsg = { lost:'暂无已流失客户', critical:'暂无高危客户', high:'暂无紧急回访客户', medium:'暂无本周回访客户' };
     return '<div style="text-align:center;padding:24px 0;color:#94a3b8;font-size:13px;">' + (emptyMsg[level]||'暂无数据') + '</div>';
   }
   return `
@@ -399,7 +418,30 @@ function switchFollowupTab(el) {
   el.classList.add('active');
   const level = el.dataset.level;
   const list = (_currentData && _currentData.followUp && _currentData.followUp.list) || [];
-  $('fuContent').innerHTML = renderFollowupList(list, level);
+  const fc = $('fuContent');
+  if (fc) fc.innerHTML = renderFollowupList(list, level);
+}
+
+async function loadData(userId) {
+  try {
+    const resp = await fetch(`data/${encodeURIComponent(userId)}.json`);
+    if (!resp.ok) throw new Error('数据加载失败');
+    _currentData = await resp.json();
+    buildShell(_currentData);
+    const fromHash = (location.hash || '').replace('#', '');
+    _currentView = VALID_VIEWS.includes(fromHash) ? fromHash : 'overview';
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.view === _currentView));
+    const vt = $('viewTitle'); if (vt) vt.textContent = VIEW_TITLES[_currentView] || '';
+    renderView(_currentView);
+    return true;
+  } catch(e) { showError('未找到该店员数据，请联系管理员'); return false; }
+}
+
+async function checkVersion() {
+  let v = null;
+  try { v = (await (await fetch(VERSION_URL+'?t='+Date.now())).json()).version; } catch(_) {}
+  if (v && !checkVersion._last) checkVersion._last = v;
+  else if (v && v !== checkVersion._last) { $('toast').classList.add('show'); setTimeout(()=>location.reload(),3000); }
 }
 
 (async function() {
