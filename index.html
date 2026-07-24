@@ -63,6 +63,9 @@
     .suggestion { font-size:13px; line-height:1.8; white-space:pre-line; color:#334155; }
     .suggestion-item { padding:8px 12px; margin:4px 0; background:#fffbeb; border-left:3px solid var(--warning); border-radius:4px; }
 
+    /* 学习资源 */
+    .learning { font-size:13px; line-height:1.8; white-space:pre-line; color:#334155; }
+
     .refresh-info { text-align:center; font-size:11px; color:var(--text2); padding:16px 0 8px; }
     .toast { position:fixed; top:16px; left:50%; transform:translateX(-50%); background:#333; color:#fff; padding:10px 24px; border-radius:20px; font-size:13px; cursor:pointer; z-index:999; display:none; }
     .toast.show { display:block; animation:slide .3s ease; }
@@ -300,6 +303,14 @@ function render(d) {
 
 
 
+
+<!-- 学习资源 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📚</span> 学习资源</div>
+    <div class="learning">${(d.learningResources||'').replace(/\n/g,'<br>') || '主推产品资料正在更新中'}</div>
+  </div>
+</div>
 
 <div class="refresh-info">🕐 每60秒自动检查更新 · 版本 ${d.version||'-'}</div>
 `;
