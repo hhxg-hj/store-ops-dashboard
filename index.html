@@ -181,6 +181,61 @@ function render(d) {
   </div>
 </div>
 
+<!-- 本周服务清单 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📅</span> 本周服务清单</div>
+    ${(d.weeklyTasks||[]).map(t => `
+    <div class="task-item">
+      <span class="task-icon">${t.icon}</span>
+      <span class="task-text">${t.text}</span>
+    </div>`).join('')}
+  </div>
+</div>
+
+<!-- 客户洞察 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">🔍</span> 客户洞察</div>
+    ${(d.customerInsights||[]).map(ins => `
+    <div class="insight-item">${ins}</div>`).join('')}
+  </div>
+</div>
+
+<!-- 客户回访清单 -->
+<div class="section">
+  <div class="card">
+    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
+    <div class="followup-stats">
+      <div class="fu-stat lost"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
+      <div class="fu-stat critical"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
+      <div class="fu-stat high"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
+      <div class="fu-stat medium"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
+      <div class="fu-stat low"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
+    </div>
+    ${(d.followUp?.list||[]).length > 0 ? `
+    <div class="followup-list">
+      <div class="fu-header">
+        <span style="width:130px">手机号</span>
+        <span style="width:90px">上次购买</span>
+        <span style="width:90px">预计回访</span>
+        <span style="width:50px">天</span>
+        <span style="width:50px">级别</span>
+      </div>
+      ${(d.followUp?.list||[]).slice(0,10).map(f => `
+      <div class="fu-row ${f.level||''}">
+        <span style="width:130px;font-family:monospace">${f.phone||'-'}</span>
+        <span style="width:90px;font-size:12px">${f.lastBuy||'-'}</span>
+        <span style="width:90px;font-size:12px">${f.predicted||'-'}</span>
+        <span style="width:50px;font-weight:600" class="${f.daysAgo>60?'mom-up':f.daysAgo>30?'':'mom-down'}">${f.daysAgo||0}天</span>
+        <span style="width:50px" class="fu-badge fu-${f.level||''}">${f.urgency||''}</span>
+      </div>`).join('')}
+      ${(d.followUp?.list||[]).length > 10 ? `<div style="text-align:center;padding:8px;color:var(--text2);font-size:12px">... 共 ${d.followUp?.total||0} 条，仅显示前 10 条</div>` : ''}
+    </div>
+    ` : '<div style="text-align:center;color:var(--text2);padding:16px">暂无需要回访的客户</div>'}
+  </div>
+</div>
+
 <!-- 销售业绩 -->
 <div class="section">
   <div class="card">
@@ -265,27 +320,6 @@ function render(d) {
 
 
 
-<!-- 本周服务清单 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">📅</span> 本周服务清单</div>
-    ${(d.weeklyTasks||[]).map(t => `
-    <div class="task-item">
-      <span class="task-icon">${t.icon}</span>
-      <span class="task-text">${t.text}</span>
-    </div>`).join('')}
-  </div>
-</div>
-
-<!-- 客户洞察 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">🔍</span> 客户洞察</div>
-    ${(d.customerInsights||[]).map(ins => `
-    <div class="insight-item">${ins}</div>`).join('')}
-  </div>
-</div>
-
 <!-- 产品知识 -->
 <div class="section">
   <div class="card">
@@ -299,39 +333,6 @@ function render(d) {
         <div class="pk-links">${p.links || '资料更新中'}</div>
       </div>`).join('')}
     </div>
-  </div>
-</div>
-<!-- 回访清单 -->
-<div class="section">
-  <div class="card">
-    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
-    <div class="followup-stats">
-      <div class="fu-stat lost"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
-      <div class="fu-stat critical"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
-      <div class="fu-stat high"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
-      <div class="fu-stat medium"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
-      <div class="fu-stat low"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
-    </div>
-    ${(d.followUp?.list||[]).length > 0 ? `
-    <div class="followup-list">
-      <div class="fu-header">
-        <span style="width:130px">手机号</span>
-        <span style="width:90px">上次购买</span>
-        <span style="width:90px">预计回访</span>
-        <span style="width:50px">天</span>
-        <span style="width:50px">级别</span>
-      </div>
-      ${(d.followUp?.list||[]).slice(0,10).map(f => `
-      <div class="fu-row ${f.level||''}">
-        <span style="width:130px;font-family:monospace">${f.phone||'-'}</span>
-        <span style="width:90px;font-size:12px">${f.lastBuy||'-'}</span>
-        <span style="width:90px;font-size:12px">${f.predicted||'-'}</span>
-        <span style="width:50px;font-weight:600" class="${f.daysAgo>60?'mom-up':f.daysAgo>30?'':'mom-down'}">${f.daysAgo||0}天</span>
-        <span style="width:50px" class="fu-badge fu-${f.level||''}">${f.urgency||''}</span>
-      </div>`).join('')}
-      ${(d.followUp?.list||[]).length > 10 ? `<div style="text-align:center;padding:8px;color:var(--text2);font-size:12px">... 共 ${d.followUp?.total||0} 条，仅显示前 10 条</div>` : ''}
-    </div>
-    ` : '<div style="text-align:center;color:var(--text2);padding:16px">暂无需要回访的客户</div>'}
   </div>
 </div>
 <div class="refresh-info">🕐 每60秒自动检查更新 · 版本 ${d.version||'-'}</div>
