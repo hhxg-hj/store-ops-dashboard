@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 06-50",
+  "version": "2026-07-24 07-20",
   "storeRank": 6,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -113,6 +113,24 @@
       }
     ],
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "total": 1,
+    "list": [
+      {
+        "phone": "13193135885",
+        "lastBuy": "2026-06-01",
+        "daysAgo": 52,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      }
+    ]
   },
   "productKb": {
     "恩敏舒1+": {
@@ -1154,23 +1172,5 @@
     "momMilkCans": -0.38651315789473684,
     "pushCans": 80,
     "momPushCans": null
-  },
-  "followUp": {
-    "lost": 0,
-    "critical": 0,
-    "high": 1,
-    "medium": 0,
-    "total": 1,
-    "list": [
-      {
-        "phone": "13193135885",
-        "lastBuy": "2026-06-01",
-        "daysAgo": 52,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
-      }
-    ]
   }
 }

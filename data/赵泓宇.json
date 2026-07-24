@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 06-50",
+  "version": "2026-07-24 07-20",
   "storeRank": 9,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -113,6 +113,14 @@
       }
     ],
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
+  },
+  "followUp": {
+    "lost": 0,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "total": 0,
+    "list": []
   },
   "productKb": {
     "恩敏舒1+": {
@@ -1153,13 +1161,5 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
-  },
-  "followUp": {
-    "lost": 0,
-    "critical": 0,
-    "high": 0,
-    "medium": 0,
-    "total": 0,
-    "list": []
   }
 }
