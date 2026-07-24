@@ -399,7 +399,7 @@ function renderLearning(lr) {
   const cards = lr.items.map(it => `
     <div class="lr-card">
       <div class="lr-name">${it.name}</div>
-      ${it.video ? `<video class="lr-video" src="${it.video}" controls preload="metadata"></video>` : ''}
+      ${it.video ? `<video class="lr-video" src="${it.video}" controls preload="none" poster="${it.poster || ''}"></video>` : ''}
       ${it.onepager ? `<img class="lr-img" src="${it.onepager}" alt="${it.name}一页纸" loading="lazy">` : ''}
       <div class="lr-links">
         ${it.onepager ? `<a class="lr-link" href="${it.onepager}" target="_blank" rel="noopener">📄 一页纸</a>` : ''}

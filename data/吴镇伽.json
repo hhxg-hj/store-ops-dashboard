@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 06-16",
+  "version": "2026-07-24 06-50",
   "storeRank": 5,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -80,30 +80,35 @@
         "name": "能恩全护A2",
         "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
         "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
         "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
       },
       {
         "name": "臻护新笙·皇家A2",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
         "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
         "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·至尊A2",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
         "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
         "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·铂金",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
         "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
         "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
       },
       {
         "name": "臻护新笙·羊奶",
         "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
         "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
         "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
       }
     ],
@@ -113,6 +118,7 @@
     "恩敏舒1+": {
       "onepager": "[恩敏舒1+一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/ExVCbqDXKolrofxq2QecDZpZnJA?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[恩敏舒1+.xlsx](https://jvlcno43vsp.feishu.cn/file/WOqObZfBjozfyHxpGXQcEAYcne1?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -122,6 +128,7 @@
     "安敏速": {
       "onepager": "[安敏速一页纸.png](https://jvlcno43vsp.feishu.cn/file/ABYfbsC49opjCzxUscOcYk3dnRh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣安敏速随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/W9AvbeVEUomMv2xE9FwcQRcunnc?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -131,6 +138,7 @@
     "肽敏舒HMO": {
       "onepager": "[肽敏舒HMO 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/RGxqbKsTjoYsKsxYlhEct9KXnYb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[肽敏舒HMO.xlsx](https://jvlcno43vsp.feishu.cn/file/F6aPbSqUpon25Cxz19Ucqweinpb?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -140,6 +148,7 @@
     "恩敏舒HMO ": {
       "onepager": "[恩敏舒HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/UTiobFv1iot17UxQiZIcccCDnHc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[恩敏舒HMO.xlsx](https://jvlcno43vsp.feishu.cn/file/UwvNb6CwSoExYuxzdXucOVI4nVb?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -149,6 +158,7 @@
     "蔼儿舒HMO": {
       "onepager": "[蔼儿舒HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/I2aXbHBBoocuzKx9c90cKBE5nif?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[蔼儿舒HMO.xlsx](https://jvlcno43vsp.feishu.cn/file/Ey5tbqnD9ok4Sbxj63Lcx0vinYe?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -158,6 +168,7 @@
     "全护A2": {
       "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
       "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
       "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -167,6 +178,7 @@
     "能恩A2": {
       "onepager": "[能恩A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DMjgbakUWobCEWxJIXDcrQRon7d?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[能恩A2培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/YmQgbo79jomlogxuh9pcwik7ncf?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -176,6 +188,7 @@
     "能恩全护HA": {
       "onepager": "[能恩全护HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/IISjbgxNQoXEb7x6sgXcGGOvnhc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[港版能恩全护HA随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/TFbCbF2V9okJC6xg8CmcHGYLnrd?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -185,6 +198,7 @@
     "德白": {
       "onepager": "[一页纸【德国爱他美白金版】.png](https://jvlcno43vsp.feishu.cn/file/Yf9ibgmfCoI7yMxMwOScmrglnbc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[问卷星-德白.xlsx](https://jvlcno43vsp.feishu.cn/file/JIREbTKzconQK7x2o5icxlUHnYe?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -194,6 +208,7 @@
     "安敏健": {
       "onepager": "[安敏健一页纸.png](https://jvlcno43vsp.feishu.cn/file/ULuFbtAhvowy47xq7EQcUzLUnhe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣安敏健随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/Bc2sbGA8poAhbkxUr3rc2XAknBe?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -203,6 +218,7 @@
     "蔼儿舒": {
       "onepager": "[蔼儿舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Y8jYbZKsBoEtx0xjqbic0Md6no6?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[蔼儿舒.xlsx](https://jvlcno43vsp.feishu.cn/file/IARzbUHMjoXvwqxrE4PcGD09nLf?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -212,6 +228,7 @@
     "恩敏舒": {
       "onepager": "[恩敏舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QhIfbszI0omE1Gx46micJ8Aonlc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -221,6 +238,7 @@
     "美赞臣A2": {
       "onepager": "[港版美赞臣A2 专利版（36个月保质期）.png](https://jvlcno43vsp.feishu.cn/file/Cr8xbj63mo1ARVxqgozc5giZnig?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣考题.docx](https://jvlcno43vsp.feishu.cn/file/EAp1bBrsgoREFMxt3v8cFH8vnnc?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -230,6 +248,7 @@
     "澳白": {
       "onepager": "[一页纸【澳洲爱他美白金版】.png](https://jvlcno43vsp.feishu.cn/file/Rg7rbUnTnoYdaFxj1XncZJ1iny6?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[问卷星-澳白.xlsx](https://jvlcno43vsp.feishu.cn/file/Zh1Xb7f4Xob9yIx5Dtbc2oNcnlg?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -239,6 +258,7 @@
     "澳金": {
       "onepager": "[澳金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/EGrDbhyJXolIgIxobCzc9tEUn7g?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -248,6 +268,7 @@
     "英白": {
       "onepager": "[英白一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MtwIbEGLto189xxeMYUcScWrn3d?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[问卷星-英白.xlsx](https://jvlcno43vsp.feishu.cn/file/VG8GbQmfQoHuZQxTlmMcSDSynsb?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -257,6 +278,7 @@
     "卓徉": {
       "onepager": "[卓徉一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/KowWba4yhoru8ixKlnjcqcMJnTc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美卓徉随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/OkXcbOKSNoALfFxmBAyclXdanwe?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -266,6 +288,7 @@
     "卓傲": {
       "onepager": "[卓傲一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/I4S5bcXxCohwwOxT7srcw68kn8g?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美卓傲随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/KWtzbzD0eocizwxmMhkcevdLneh?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -275,6 +298,7 @@
     "德爱易乐罐": {
       "onepager": "[德爱一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/EOfAb2wksoDKV0xJCJJchxIgnqf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[德爱易乐罐.xlsx](https://jvlcno43vsp.feishu.cn/file/BmH7bFxJxoLRuVx0e1OcNfTenDb?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -284,6 +308,7 @@
     "奇迹白罐（老版）": {
       "onepager": "[奇迹白罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WIqAbb5AGoLZPAxuo9hctaqMnAb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美奇迹白罐小测题5道题.docx](https://jvlcno43vsp.feishu.cn/file/HkIAbfLG8o4rr4xKyRHcSaMEnof?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -293,6 +318,7 @@
     "奇迹蓝罐": {
       "onepager": "[奇迹蓝罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/OxcjbbnA0o1nB3xnZzTceqbonSV?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美奇迹蓝罐小测题5道.docx](https://jvlcno43vsp.feishu.cn/file/VN6Pbgc6woONVYxsM32cB8swnuf?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -302,6 +328,7 @@
     "奇迹绿罐": {
       "onepager": "[奇迹绿罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DMW1bWDLooBYznxB6Dpc31esnMh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美奇迹绿罐小测题5道题.docx](https://jvlcno43vsp.feishu.cn/file/R3jqbe6pUobUU8xDJtRcRECBn5f?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -311,6 +338,7 @@
     "英爱易乐罐": {
       "onepager": "[英爱易乐罐一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MtD5bEPpioc0FZx45VjccMAjnlf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[英爱易乐罐xlsx.xlsx](https://jvlcno43vsp.feishu.cn/file/ZiuNbPa8ZoL7HrxqM9ac0ZA3nAb?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -320,6 +348,7 @@
     "蓝臻": {
       "onepager": "[港版蓝臻一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/MUzWbGuv1o8I1FxYz3xcDlRNn8c?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -329,6 +358,7 @@
     "智睿": {
       "onepager": "[美赞臣智睿一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WfqZbR6R3oVmG7xjEmUcvFMLnKh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -338,6 +368,7 @@
     "诺优能有机A2": {
       "onepager": "[诺优能有机A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/FmFqbKGTmoBwJ0xWIymc9MSinMh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[诺优能有机A2考题.docx](https://jvlcno43vsp.feishu.cn/file/JILobpHSYoV4P3xUw9zcuYQ8nEc?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "诺优能",
@@ -347,6 +378,7 @@
     "DHA": {
       "onepager": "[Nature Made天维美DHA一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/VuZdbC4CkoH1eoxl4VecmdItn1d?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Nature Made天维美DHA藻油夹心软糖.xlsx](https://jvlcno43vsp.feishu.cn/file/YkzibP7KDoalH2xYlZacOXpGn4c?from=from_copylink)",
       "brand": "06、Nature Made天维美",
       "subBrand": "Nature Made天维美",
@@ -356,6 +388,7 @@
     "多维矿": {
       "onepager": "[Nature Made天维美多维矿一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/B8SSbXI4uoAPDLxEojJcRShPn4g?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Nature Made天维美多维矿软糖.xlsx](https://jvlcno43vsp.feishu.cn/file/EQW4bqsMjodYVdxDujbcuhbLnag?from=from_copylink)",
       "brand": "06、Nature Made天维美",
       "subBrand": "Nature Made天维美",
@@ -365,6 +398,7 @@
     "益生菌": {
       "onepager": "[Nature Made天维美益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Bu61bYK0wo6hvZx801oc5vi4n5e?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Nature Made天维美儿童益生菌考题.xlsx](https://jvlcno43vsp.feishu.cn/file/ZrDwbC03ZoAPKIxY2BTcjzG5nWa?from=from_copylink)",
       "brand": "06、Nature Made天维美",
       "subBrand": "Nature Made天维美",
@@ -374,6 +408,7 @@
     "叶黄素酯": {
       "onepager": "[Nature Made天维美叶黄素酯一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/GIt6blWQso7EVIxtRuvccq9rnHg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Nature Made天维美叶黄素酯 & DHA.xlsx](https://jvlcno43vsp.feishu.cn/file/FXcKb03jXorWuMx9eGVchVL1nWb?from=from_copylink)",
       "brand": "06、Nature Made天维美",
       "subBrand": "Nature Made天维美",
@@ -383,6 +418,7 @@
     "姜黄葛根": {
       "onepager": "[Nature Made天维美姜黄葛根一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/K9VYbQbC4oFAcMxH1vOcBOrCn2g?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Nature Made天维美姜黄培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/SpoibLbiYoVlPJxCRticL3X5n6b?from=from_copylink)",
       "brand": "06、Nature Made天维美",
       "subBrand": "Nature Made天维美",
@@ -392,6 +428,7 @@
     "DHA叶黄素": {
       "onepager": "[DHA叶黄素一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/FLaMb0OB5osqLdxce6Eczvz3nmb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -401,6 +438,7 @@
     "成长宝盒": {
       "onepager": "[成长宝盒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Px4Ob9dYdojBr3xOWw2copiFnwg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[成长宝盒培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/VAchbwQAxoTGuSxgpfHccBbUnEg?from=from_copylink)",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -410,6 +448,7 @@
     "蓝莓叶黄素益生菌": {
       "onepager": "[蓝莓叶黄素益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nynzbnm9ooX1lQxwqd5cOOwOnRh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -419,6 +458,7 @@
     "枇杷雪梨益生菌": {
       "onepager": "[枇杷雪梨益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/T3elbBIcvoIX2xxbY7Mc7kv0nBe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -428,6 +468,7 @@
     "乳铁蛋白": {
       "onepager": "",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -437,6 +478,7 @@
     "山楂茯苓益生菌": {
       "onepager": "[山楂茯苓益生菌一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DohnbcO6foTjyQxotm4cJWHXnLO?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -446,6 +488,7 @@
     "天才学霸": {
       "onepager": "[天才学霸一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/BH5CbzdwhoIvAdxUdqXcuQaKnDf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[天才学霸培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/Pj5WbvbLJoxNjgxOPhfcJE0jnvd?from=from_copylink)",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -455,6 +498,7 @@
     "婴配粉": {
       "onepager": "[茁依婴配一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/J466bqtLxoey8DxdWZEcDxlDnEi?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[妈咪爱茁依考题.docx](https://jvlcno43vsp.feishu.cn/file/NT0JbKcpsokp4nxEv2fc2V29ntg?from=from_copylink)",
       "brand": "05、妈咪爱",
       "subBrand": "茁依",
@@ -464,6 +508,7 @@
     "紫白金": {
       "onepager": "[澳洲A2紫白金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/SdKabFAfVoMrk2xXyc5cl50anlf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[澳洲A2紫白金随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/EwuhbnsopoxTXkxYfvGc6Ie3nVz?from=from_copylink)",
       "brand": "10、a2",
       "subBrand": "a2",
@@ -473,6 +518,7 @@
     "澳版小安素": {
       "onepager": "[澳版小安素一页纸-更新版.png](https://jvlcno43vsp.feishu.cn/file/BfJwbNnCpo06RFxjQlxczrRsnyh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[澳版小安素更新试题.xlsx](https://jvlcno43vsp.feishu.cn/file/PUQFb3FcTohzojx30Btcd9rknud?from=from_copylink)",
       "brand": "07、雅培",
       "subBrand": "雅培",
@@ -482,6 +528,7 @@
     "金钻（老版本）": {
       "onepager": "[hero金钻一页纸（老版）.png](https://jvlcno43vsp.feishu.cn/file/Y1PTbzPJ8oWxD3xJ0fbcXWmKnKc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[Hero 金钻培训测试xlsx.xlsx](https://jvlcno43vsp.feishu.cn/file/FEyjbEdokoN7HAxc4Lfc7Ulvnuf?from=from_copylink)",
       "brand": "12、Hero Baby",
       "subBrand": "Hero Baby",
@@ -491,6 +538,7 @@
     "初生娇贵": {
       "onepager": "[初生娇贵一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/TCU0bAXCXooXf9xWCX5cNETmnyg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[咔哆哆初生娇贵随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/XWUWb5mz8oJlihx7cEpcSNhonvb?from=from_copylink)",
       "brand": "08、咔哆哆",
       "subBrand": "咔哆哆",
@@ -500,6 +548,7 @@
     "云端宝贝": {
       "onepager": "[云端宝贝一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XGyyb9sSIo26iix5CkicCkyYn8d?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[咔哆哆云端宝贝随堂小测5道题.docx](https://jvlcno43vsp.feishu.cn/file/RXzAbPDiJocDKxxD6wjcrPIPnpe?from=from_copylink)",
       "brand": "08、咔哆哆",
       "subBrand": "咔哆哆",
@@ -509,6 +558,7 @@
     "纽康特星诺": {
       "onepager": "[纽康特星诺一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/JXCyba7ZBoAZOmxpJEecYg8Gnhc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[纽康特星诺随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/Upxebs0ZCocMwNxkyIGczgwPnNx?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "纽迪希亚",
@@ -518,6 +568,7 @@
     "至尊 HA": {
       "onepager": "[SMA至尊 HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/HwC2bU4q7ouQ9px4BfXcyzbinDe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -527,6 +578,7 @@
     "启赋敏适HA": {
       "onepager": "[惠氏启赋敏适HA 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/U8eZb6UW6oB7YVxM6a1cZdwznch?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[惠氏敏适HA培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/YBDNbhLeeotCD4xV8XNcaEtHnde?from=from_copylink)",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -536,6 +588,7 @@
     "启赋未来6HMO ": {
       "onepager": "[惠氏启赋未来6HMO一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/UdBRbCkI6o62rQxljAHcrUQDnGd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -545,6 +598,7 @@
     "启赋有机": {
       "onepager": "[港版启赋有机导图.jpg](https://jvlcno43vsp.feishu.cn/file/QpZTbRpTkoLRHsxKrOIcZxRwns1?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[惠氏启赋有机培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/SaFbbdAPBonyenx8owtcS5Lrnme?from=from_copylink)",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -554,6 +608,7 @@
     "纽康特1+": {
       "onepager": "[纽康特1+一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hgb3bEdSQoNK1qxESlqcSIWcnPf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[纽康特1+随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/HRtjbsFAZoZMAexy2qCcHg2NnZb?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "纽迪希亚",
@@ -563,6 +618,7 @@
     "纽太特": {
       "onepager": "[纽太特一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Qzc3bzMuXoKQXlxyUxOcHWEgn5e?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[纽太特随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/BYEEbf8qYoQNIbx8VUUcwvoNnIe?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "纽迪希亚",
@@ -572,6 +628,7 @@
     "太益启，太益加": {
       "onepager": "[太益启，太益加一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/OcZvbSR05ohPknx90iacCSyfnbJ?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[太益加太益启随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/NIqSb2bz9oZYTuxtpEqc0hYKnkh?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "纽迪希亚",
@@ -581,6 +638,7 @@
     "纽荃星1+": {
       "onepager": "[纽荃星一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/YEqub1QDCo42MCxrfYxcJg1Qnxd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[纽荃星随堂小测.xlsx](https://jvlcno43vsp.feishu.cn/file/Jxl5bMnI7omwzmxhJw2cS8pinXg?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "纽迪希亚",
@@ -590,6 +648,7 @@
     "儿童成长粉": {
       "onepager": "[小升高一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/BmiabUFG1oAzpxx9cGqctH7inbh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[小阩高培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/YWU4bw6VMomjS5xZjD7ce8D2nGh?from=from_copylink)",
       "brand": "11、小阩高",
       "subBrand": "小阩高",
@@ -599,6 +658,7 @@
     "皇家A2": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
       "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
       "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -608,6 +668,7 @@
     "至尊A2": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
       "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
       "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -617,6 +678,7 @@
     "铂金": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
       "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
       "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -626,6 +688,7 @@
     "羊奶": {
       "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
       "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
       "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
@@ -635,6 +698,7 @@
     "小佳膳": {
       "onepager": "[小佳膳一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DyfWbedGNoUCv9xfnXrca3IKnAe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[小佰太能+小佳膳.xlsx](https://jvlcno43vsp.feishu.cn/file/P1Cob9FhNox3SgxpqsLcwBZVnaf?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -644,6 +708,7 @@
     "小佰太能": {
       "onepager": "[小佰太能一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/GIMVblo0DohlDGxgjZNck5h5nrf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[小佰太能+小佳膳.xlsx](https://jvlcno43vsp.feishu.cn/file/P1Cob9FhNox3SgxpqsLcwBZVnaf?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -653,6 +718,7 @@
     "超启能恩": {
       "onepager": "[超启能恩.jpg](https://jvlcno43vsp.feishu.cn/file/QTpPbzo3OoOCTjxWwcycTxFAnac?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[超启能恩培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/FTAlb4WI9oR2Spxg4oOc6jqcn3f?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -662,6 +728,7 @@
     "超级能恩": {
       "onepager": "[超级能恩一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/CrTHbjM11oMLIOxTb9PcwhHtnDd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -671,6 +738,7 @@
     "BEBA": {
       "onepager": "[BEBA至尊.jpg](https://jvlcno43vsp.feishu.cn/file/GZDMbFt1JoXNXJxd9qCcegcEnIb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[BEBA.xlsx](https://jvlcno43vsp.feishu.cn/file/Fa8Cb6uVKo6pg4xLAWKcwGSen4g?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -680,6 +748,7 @@
     "肽敏舒": {
       "onepager": "[肽敏舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/WDbub0hbdo7Lbnx3ONoc2a6EnSf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -689,6 +758,7 @@
     "澳版安儿宁": {
       "onepager": "",
       "video": "",
+      "poster": "",
       "test": "[安儿宁随堂小测.xlsx](https://jvlcno43vsp.feishu.cn/file/Zv8ZbmoejortwOxr8k0clominae?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -698,6 +768,7 @@
     "领熠": {
       "onepager": "[领熠一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XKLhbFatQoILRIxVHGFcDbv9nSe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[爱他美领熠随堂小测题5道.docx](https://jvlcno43vsp.feishu.cn/file/WHUObYGdUoBsgnxDF35c1y5dng9?from=from_copylink)",
       "brand": "02、达能",
       "subBrand": "爱他美",
@@ -707,6 +778,7 @@
     "港版亲舒": {
       "onepager": "[港版亲舒一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/DwhUbYvTOocD56xneRXciAS6nZe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[港版亲舒系列.xlsx](https://jvlcno43vsp.feishu.cn/file/GtgjbmEjMolvdhx5hCccoRyYnNb?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -716,6 +788,7 @@
     "荷兰至臻": {
       "onepager": "[荷兰至臻一页纸.png](https://jvlcno43vsp.feishu.cn/file/CRxfbMlQnohETPxizuQcCQZmnve?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "14、喜宝",
       "subBrand": "喜宝",
@@ -725,6 +798,7 @@
     "德国珍宝": {
       "onepager": "[德国珍宝一页纸.png](https://jvlcno43vsp.feishu.cn/file/VFCObkQvDoInq4x9QspclQw8nEg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "14、喜宝",
       "subBrand": "喜宝",
@@ -734,6 +808,7 @@
     "SMA Pro": {
       "onepager": "[SMA Pro 一页纸.png](https://jvlcno43vsp.feishu.cn/file/JqThbsS3cosiyIxoCVncvQTXnoh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -743,6 +818,7 @@
     "萌趣呵护": {
       "onepager": "[萌趣呵护一页纸.png](https://jvlcno43vsp.feishu.cn/file/IvsBbhLV4o1KDexsVMhcYLD3nqg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[咔哆哆 萌趣系列试题.xlsx](https://jvlcno43vsp.feishu.cn/file/I0s8b9QD9oXY4wxTKSncmqsrn2e?from=from_copylink)",
       "brand": "08、咔哆哆",
       "subBrand": "咔哆哆",
@@ -752,6 +828,7 @@
     "安婴宝": {
       "onepager": "[安婴宝一页纸.png](https://jvlcno43vsp.feishu.cn/file/D3mmb1SZnomd0AxOFATcmTlYnCg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣安婴宝.xlsx](https://jvlcno43vsp.feishu.cn/file/Txfab4sNfohVHJxPy0dc7Klwnng?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -761,6 +838,7 @@
     "恬适": {
       "onepager": "[君乐宝恬适 一页纸.png](https://jvlcno43vsp.feishu.cn/file/Rohpbgm3doBtu6x8viAcv82inne?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[君乐宝恬适培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/NzBYbm9Wfo6KlQxHvo8cVjuYnUe?from=from_copylink)",
       "brand": "15、君乐宝",
       "subBrand": "君乐宝",
@@ -770,6 +848,7 @@
     "早启能恩": {
       "onepager": "[早启能恩一页纸.png](https://jvlcno43vsp.feishu.cn/file/GtBXb87m3oz4x3xHBBzcM0f7njb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[雀巢早启能恩xlsx.xlsx](https://jvlcno43vsp.feishu.cn/file/BqkDbEhQloLFguxEvQkc17Onnih?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -779,6 +858,7 @@
     "启赋蕴怡": {
       "onepager": "[启赋蕴怡一页纸.png](https://jvlcno43vsp.feishu.cn/file/Qe37bqjNEoOEkyxUuAqcyCfDnPc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[启赋蕴怡.xlsx](https://jvlcno43vsp.feishu.cn/file/VmdZbO32ooKkJMxtAl4cnapinQd?from=from_copylink)",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -788,6 +868,7 @@
     "皇家美素佳儿": {
       "onepager": "[皇家美素佳儿一页纸.png](https://jvlcno43vsp.feishu.cn/file/BVbAbbrPToyamgxFymmciovKnqe?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[皇家美素佳儿.xlsx](https://jvlcno43vsp.feishu.cn/file/PXzdb6fOeoVk2IxjWEwcWc1gnOc?from=from_copylink)",
       "brand": "16、皇家美素佳儿",
       "subBrand": "皇家美素佳儿",
@@ -797,6 +878,7 @@
     "国行版亲舒": {
       "onepager": "[国行版亲舒一页纸.png](https://jvlcno43vsp.feishu.cn/file/NztxbU9AsorS4cxS9dAcMSYXnab?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣亲舒.xlsx](https://jvlcno43vsp.feishu.cn/file/Q2smb1mA3o5ecRxtlgecPOOdnAd?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -806,6 +888,7 @@
     "国行版安儿宁": {
       "onepager": "[安儿宁一页纸.png](https://jvlcno43vsp.feishu.cn/file/IZ5xbZ9dkoiGvrxrr0Bc1CFunAg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[雀巢安儿宁.xlsx](https://jvlcno43vsp.feishu.cn/file/BjbubuS23oX34NxizmXczm0Wnoc?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
@@ -815,6 +898,7 @@
     "铂睿": {
       "onepager": "[铂睿一页纸.png](https://jvlcno43vsp.feishu.cn/file/UvS4bfXIZocNdFxwlnNcz9Gmneh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣铂睿.xlsx](https://jvlcno43vsp.feishu.cn/file/XqZnbYpquo90evxAtGvc7nEQnld?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -824,6 +908,7 @@
     "悦白": {
       "onepager": "[佳贝艾特一页纸.png](https://jvlcno43vsp.feishu.cn/file/AEKdbdjETowygPx8xgkcdTM7nPb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[佳贝艾特悦白.xlsx](https://jvlcno43vsp.feishu.cn/file/UFdIba3LboUaLyx2fUccJftmnpg?from=from_copylink)",
       "brand": "17、佳贝艾特",
       "subBrand": "佳贝艾特",
@@ -833,6 +918,7 @@
     "塞纳牧": {
       "onepager": "[塞纳牧有机一页纸.png](https://jvlcno43vsp.feishu.cn/file/ExSxbBnIkoxGtyxlmfbcsP6wnpl?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[金领冠塞纳牧有机.xlsx](https://jvlcno43vsp.feishu.cn/file/TkUYbqJ3uoJKRixOrCGc2MjjnTg?from=from_copylink)",
       "brand": "18、金领冠",
       "subBrand": "金领冠",
@@ -842,6 +928,7 @@
     "安儿宝": {
       "onepager": "[美赞臣安儿宝 5分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/CzCJbjZUUotaDWxJgdFcDRdynYb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣安儿宝.xlsx](https://jvlcno43vsp.feishu.cn/file/GQYGb7VmMoFZrWxvjV9cRNvkncd?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -851,6 +938,7 @@
     "星飞帆儿童奶粉": {
       "onepager": "[星飞帆儿童奶粉 一页纸.png](https://jvlcno43vsp.feishu.cn/file/FG7kbIPjMoq1tVxDvhgcr6cKnef?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[星飞帆儿童奶粉 测试题.xlsx](https://jvlcno43vsp.feishu.cn/file/Gg6Gb0zKSoCBiYxBz5ccEmM2nhf?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -860,6 +948,7 @@
     "卓睿": {
       "onepager": "[飞鹤星飞帆卓睿 一页纸.png](https://jvlcno43vsp.feishu.cn/file/JgHWbp1T8oVhGFxDwiqcWSWEnhd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤星飞帆卓睿培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/TXuhbQxGyo8i2Exn9HHcKQrgnGh?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -869,6 +958,7 @@
     "飞鹤飞帆": {
       "onepager": "[飞鹤飞帆奶粉.png](https://jvlcno43vsp.feishu.cn/file/Z5GObQBCpoKePExqiPCcdhgTnob?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤飞帆奶粉培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/Rz6rbuem6oeNoGxloZVcUTJen3e?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -878,6 +968,7 @@
     "卓耀": {
       "onepager": "[星飞帆卓耀 一页纸.png](https://jvlcno43vsp.feishu.cn/file/AipbbHLdEo7CISxUlaqcygudnY7?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤星飞帆卓耀 测试题.xlsx](https://jvlcno43vsp.feishu.cn/file/HHLwbgjw5oZwNcxQY2RcQFKwnBd?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -887,6 +978,7 @@
     "星飞帆": {
       "onepager": "[飞鹤星飞帆 一页纸.png](https://jvlcno43vsp.feishu.cn/file/WHApbPIVJoQKUdxNTbKcNzNxn2f?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤星飞帆培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/Uo5ibYGQYorXeixDErfcBK36nzd?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -896,6 +988,7 @@
     "臻爱倍护": {
       "onepager": "[飞鹤臻爱倍护  一页纸.png](https://jvlcno43vsp.feishu.cn/file/XBzNbHIZMoOs0NxYsa1cDIoznkb?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤 臻爱倍护培训测试.xlsx](https://jvlcno43vsp.feishu.cn/file/ANG6bdolpoIf9Gx3eZXcdI9qnIc?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -905,6 +998,7 @@
     "美素力源悦奶粉": {
       "onepager": "[美素佳儿源悦 五分钟视频.mp4](https://jvlcno43vsp.feishu.cn/file/XxbSbbfnso00gfxdg6rcZrpJnqh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[皇家美素佳儿 源悦.xlsx](https://jvlcno43vsp.feishu.cn/file/J1JUbKqvjoRcfsxTcNbctPH4nyg?from=from_copylink)",
       "brand": "16、皇家美素佳儿",
       "subBrand": "皇家美素佳儿",
@@ -914,6 +1008,7 @@
     "至初": {
       "onepager": "[a2至初一页纸.png](https://jvlcno43vsp.feishu.cn/file/Uw1bbql9goyYDMxgDyZcIIAkn1e?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[A2至初.xlsx](https://jvlcno43vsp.feishu.cn/file/JLxYbUlHho47lcxpaKYcda4InJf?from=from_copylink)",
       "brand": "10、a2",
       "subBrand": "a2",
@@ -923,6 +1018,7 @@
     "珍护": {
       "onepager": "[金领冠珍护一页纸.png](https://jvlcno43vsp.feishu.cn/file/CbMHbdMX8oxxlaxNQK8cysSlngg?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[金领冠珍护.xlsx](https://jvlcno43vsp.feishu.cn/file/O59RbRa4ko7xR0xMEbJcHxSandc?from=from_copylink)",
       "brand": "18、金领冠",
       "subBrand": "金领冠",
@@ -932,6 +1028,7 @@
     "优萃有机": {
       "onepager": "[君乐宝优萃一页纸.png](https://jvlcno43vsp.feishu.cn/file/Kom6bB6UmoXUAnxeLtZcATodnze?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[君乐宝优萃有机.xlsx](https://jvlcno43vsp.feishu.cn/file/SEdEbspO5oxAekxp4xzcyJPJnsb?from=from_copylink)",
       "brand": "15、君乐宝",
       "subBrand": "君乐宝",
@@ -941,6 +1038,7 @@
     "茁然茁护": {
       "onepager": "[飞鹤茁然茁护 一页纸.png](https://jvlcno43vsp.feishu.cn/file/EzJQbHgT8oLCjWxEKULcryMVnYd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[飞鹤茁然茁护.xlsx](https://jvlcno43vsp.feishu.cn/file/KI3ybnGGKoYgtVxFBZwcm9fBnq2?from=from_copylink)",
       "brand": "19、飞鹤",
       "subBrand": "飞鹤",
@@ -950,6 +1048,7 @@
     "儿童成长奶粉": {
       "onepager": "[合生元儿童成长奶粉 一页纸.png](https://jvlcno43vsp.feishu.cn/file/LutzbIp3loEwwJxZ5GBcDB6dnnc?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[合生元儿童成长奶粉.xlsx](https://jvlcno43vsp.feishu.cn/file/TWf1bsYIJolhmDxzH7ucjJ9InYd?from=from_copylink)",
       "brand": "20、合生元",
       "subBrand": "合生元",
@@ -959,6 +1058,7 @@
     "派星": {
       "onepager": "[合生元派星 一页纸.png](https://jvlcno43vsp.feishu.cn/file/QfHobYfU3o7KVSxgK1AcsqLxnne?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[合生元派星.xlsx](https://jvlcno43vsp.feishu.cn/file/HoOsbrcXPonassxrKQfcVb03nXg?from=from_copylink)",
       "brand": "20、合生元",
       "subBrand": "合生元",
@@ -968,6 +1068,7 @@
     "惠氏启赋蕴淳": {
       "onepager": "[惠氏启赋蕴淳一页纸.png](https://jvlcno43vsp.feishu.cn/file/MeExbEsgeoaTTGxiVjKcVX4fnNd?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[惠氏启赋蕴淳.xlsx](https://jvlcno43vsp.feishu.cn/file/EGyYboWjpo1hXcxK0Vic9Ce4nJd?from=from_copylink)",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -977,6 +1078,7 @@
     "惠氏启赋": {
       "onepager": "[惠氏启赋一页纸.png](https://jvlcno43vsp.feishu.cn/file/JGsvb1qjSoSL8yxlQRnckrxTnFf?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[惠氏启赋.xlsx](https://jvlcno43vsp.feishu.cn/file/XkYLbydQpogmZcx7E2ycaXT3nwf?from=from_copylink)",
       "brand": "04、惠氏",
       "subBrand": "惠氏",
@@ -986,6 +1088,7 @@
     "国行版蓝臻": {
       "onepager": "[国行版蓝臻一页纸.png](https://jvlcno43vsp.feishu.cn/file/UxFcbuO3EoJXl4x97BQcCqH2nVh?from=from_copylink)",
       "video": "",
+      "poster": "",
       "test": "[美赞臣蓝臻.xlsx](https://jvlcno43vsp.feishu.cn/file/W1W4b8aC6oqb0CxTVz1cylZ2nOc?from=from_copylink)",
       "brand": "09、美赞臣",
       "subBrand": "美赞臣",
@@ -1050,32 +1153,5 @@
     "momMilkCans": 0.3021276595744681,
     "pushCans": 50,
     "momPushCans": null
-  },
-  "followUp": {
-    "lost": 0,
-    "critical": 2,
-    "high": 0,
-    "medium": 0,
-    "total": 2,
-    "list": [
-      {
-        "phone": "15213327853",
-        "lastBuy": "2026-05-12",
-        "daysAgo": 72,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "15213084465",
-        "lastBuy": "2026-05-16",
-        "daysAgo": 68,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
-      }
-    ]
   }
 }
