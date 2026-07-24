@@ -24,10 +24,18 @@
       display:flex; flex-direction:column; position:sticky; top:0; height:100vh;
     }
     .brand { padding:18px 20px 14px; font-weight:800; font-size:16px; color:var(--primary); display:flex; align-items:center; gap:8px; }
-    .side-user { padding:0 20px 14px; border-bottom:1px solid var(--border); margin-bottom:10px; }
-    .su-name { font-size:15px; font-weight:700; }
-    .su-store { font-size:12px; color:var(--text2); margin-top:3px; }
-    .su-meta { font-size:11px; color:var(--text2); margin-top:4px; }
+    .side-user { padding:16px 20px 16px; border-bottom:1px solid var(--border); margin-bottom:10px; display:flex; align-items:center; gap:12px; }
+    .su-avatar {
+      width:48px; height:48px; border-radius:14px; flex-shrink:0;
+      background:linear-gradient(135deg,var(--primary),var(--accent));
+      color:#fff; font-size:21px; font-weight:800;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 5px 14px rgba(124,58,237,.32);
+    }
+    .su-info { min-width:0; }
+    .su-name { font-size:19px; font-weight:800; color:var(--text); line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .su-store { font-size:12px; color:var(--text2); margin-top:4px; }
+    .su-meta { font-size:11px; color:var(--text2); margin-top:3px; }
     .nav { flex:1; padding:6px 12px; overflow:auto; }
     .nav-item {
       padding:11px 14px; border-radius:10px; margin:3px 0; cursor:pointer; font-size:14px;
@@ -191,9 +199,12 @@ function buildShell(d) {
     <aside class="sidebar">
       <div class="brand">🚀 门店运营赋能</div>
       <div class="side-user">
-        <div class="su-name">👤 ${d.name || '店员'}</div>
-        <div class="su-store">🏪 ${d.store || '未知门店'}</div>
-        <div class="su-meta">${d.region || ''} · ${d.zaidian ? '在店' : '离店'}</div>
+        <div class="su-avatar">${(d.name || '店')[0]}</div>
+        <div class="su-info">
+          <div class="su-name">${d.name || '店员'}</div>
+          <div class="su-store">🏪 ${d.store || '未知门店'}</div>
+          <div class="su-meta">${d.region || ''} · ${d.zaidian ? '在店' : '离店'}</div>
+        </div>
       </div>
       <nav class="nav">
         <div class="nav-item" data-view="overview" onclick="navTo('overview')"><span>🏠</span>运营概览</div>
