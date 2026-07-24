@@ -654,8 +654,7 @@
     "critical": 0,
     "high": 4,
     "medium": 2,
-    "low": 1,
-    "total": 7,
+    "total": 6,
     "list": [
       {
         "phone": "17783820710",
@@ -710,15 +709,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "15112397253",
-        "lastBuy": "2026-07-11",
-        "daysAgo": 12,
-        "predicted": "2026-08-08",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

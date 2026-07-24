@@ -652,27 +652,7 @@
     "critical": 0,
     "high": 0,
     "medium": 0,
-    "low": 2,
-    "total": 2,
-    "list": [
-      {
-        "phone": "15756328934",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "17381959972",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      }
-    ]
+    "total": 0,
+    "list": []
   }
 }

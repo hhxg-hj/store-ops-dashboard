@@ -658,8 +658,7 @@
     "critical": 7,
     "high": 9,
     "medium": 4,
-    "low": 3,
-    "total": 28,
+    "total": 25,
     "list": [
       {
         "phone": "15683684128",
@@ -885,33 +884,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "13594162540",
-        "lastBuy": "2026-07-11",
-        "daysAgo": 12,
-        "predicted": "2026-08-08",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18883154305",
-        "lastBuy": "2026-07-13",
-        "daysAgo": 10,
-        "predicted": "2026-08-10",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18523007831",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

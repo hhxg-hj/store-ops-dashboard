@@ -222,7 +222,6 @@ function render(d) {
       <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
       <div class="fu-stat high" data-level="high" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.high||0}</div><div class="fu-lbl">紧急</div></div>
       <div class="fu-stat medium" data-level="medium" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.medium||0}</div><div class="fu-lbl">本周</div></div>
-      <div class="fu-stat low" data-level="low" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.low||0}</div><div class="fu-lbl">关注</div></div>
     </div>
     <div id="fuContent">${renderFollowupList(d.followUp?.list||[], 'lost')}</div>
   </div>
@@ -355,7 +354,7 @@ function renderFollowupList(list, level) {
         <div style="flex:1.3">客户手机</div>
         <div style="flex:1">上次购买</div>
         <div style="flex:0.5;text-align:center;">天数</div>
-        <div style="flex:1.5">回访建议</div>
+        <div style="flex:1.5">建议回访日期</div>
       </div>
       ${filtered.map(c => `
       <div class="fu-row ${c.level}">

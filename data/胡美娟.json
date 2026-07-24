@@ -654,8 +654,7 @@
     "critical": 25,
     "high": 49,
     "medium": 28,
-    "low": 14,
-    "total": 198,
+    "total": 184,
     "list": [
       {
         "phone": "13752870632",
@@ -2312,132 +2311,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "18883353771",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15178944481",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13193153288",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13983210273",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13983786521",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15569582509",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15723269875",
-        "lastBuy": "2026-07-10",
-        "daysAgo": 13,
-        "predicted": "2026-08-07",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13243570326",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18623437722",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18848521531",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15825978278",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15215032886",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18982991425",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15802373939",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

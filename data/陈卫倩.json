@@ -655,8 +655,7 @@
     "critical": 0,
     "high": 18,
     "medium": 0,
-    "low": 1,
-    "total": 19,
+    "total": 18,
     "list": [
       {
         "phone": "15823136680",
@@ -819,15 +818,6 @@
         "cycle": 45,
         "urgency": "紧急",
         "level": "high"
-      },
-      {
-        "phone": "15736191085",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

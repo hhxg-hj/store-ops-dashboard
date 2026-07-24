@@ -652,8 +652,7 @@
     "critical": 3,
     "high": 6,
     "medium": 2,
-    "low": 1,
-    "total": 12,
+    "total": 11,
     "list": [
       {
         "phone": "13308301601",
@@ -753,15 +752,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "17378312654",
-        "lastBuy": "2026-07-10",
-        "daysAgo": 13,
-        "predicted": "2026-08-07",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

@@ -652,8 +652,7 @@
     "critical": 12,
     "high": 32,
     "medium": 18,
-    "low": 9,
-    "total": 130,
+    "total": 121,
     "list": [
       {
         "phone": "17830451833",
@@ -1743,87 +1742,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "15885573504",
-        "lastBuy": "2026-07-11",
-        "daysAgo": 12,
-        "predicted": "2026-08-08",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "19112177114",
-        "lastBuy": "2026-07-11",
-        "daysAgo": 12,
-        "predicted": "2026-08-08",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15320260957",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13637820297",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "15213204695",
-        "lastBuy": "2026-07-12",
-        "daysAgo": 11,
-        "predicted": "2026-08-09",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "17772452317",
-        "lastBuy": "2026-07-13",
-        "daysAgo": 10,
-        "predicted": "2026-08-10",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "18523334242",
-        "lastBuy": "2026-07-14",
-        "daysAgo": 9,
-        "predicted": "2026-08-11",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "13350348090",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
-      },
-      {
-        "phone": "17302327739",
-        "lastBuy": "2026-07-15",
-        "daysAgo": 8,
-        "predicted": "2026-08-12",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }

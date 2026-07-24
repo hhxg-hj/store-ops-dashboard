@@ -69,8 +69,7 @@
     "critical": 5,
     "high": 1,
     "medium": 1,
-    "low": 1,
-    "total": 13,
+    "total": 12,
     "list": [
       {
         "phone": "18580621591",
@@ -179,15 +178,6 @@
         "cycle": 28,
         "urgency": "本周",
         "level": "medium"
-      },
-      {
-        "phone": "18183058555",
-        "lastBuy": "2026-07-09",
-        "daysAgo": 14,
-        "predicted": "2026-08-06",
-        "cycle": 28,
-        "urgency": "关注",
-        "level": "low"
       }
     ]
   }
