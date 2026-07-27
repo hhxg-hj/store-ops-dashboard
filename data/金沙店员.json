@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 6,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -1168,9 +1168,9 @@
     "target": 150000,
     "achieved": 141233.62,
     "achievementRate": 0.9415574666666666,
-    "milkCans": 373,
-    "momMilkCans": -0.38651315789473684,
-    "pushCans": 80,
+    "milkCans": 442,
+    "momMilkCans": -0.2730263157894737,
+    "pushCans": 106,
     "momPushCans": null
   }
 }

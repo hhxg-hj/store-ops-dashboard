@@ -15,47 +15,47 @@
   "achievementRate": 0,
   "mendianDachengLv": 0,
   "mendianStaffCount": 0,
-  "milkCans": 18,
+  "milkCans": 44,
   "milkCansLast": 0,
   "momMilkCans": null,
-  "pushCans": 0,
+  "pushCans": 3,
   "pushCansLast": 0,
   "momPushCans": null,
-  "totalClients": 29,
+  "totalClients": 56,
   "totalClientsLast": 0,
   "momClients": null,
-  "milkClients": 7,
+  "milkClients": 13,
   "milkClientsLast": 0,
   "momMilkClients": null,
-  "pushClients": 0,
+  "pushClients": 1,
   "pushClientsLast": 0,
   "momPushClients": null,
-  "milkAvg": 2.571428571,
+  "milkAvg": 3.384615385,
   "milkAvgLast": 0,
   "momMilkAvg": null,
   "depositCount": 0,
   "visitShould": 0,
   "visitDone": 0,
   "visitPending": 0,
-  "naifenUsers": 7,
+  "naifenUsers": 13,
   "naifenUsersLast": 0,
-  "naifenGuanshu": 18,
+  "naifenGuanshu": 44,
   "naifenGuanshuLast": 0,
-  "kedanjia": 174.2548276,
+  "kedanjia": 239.6496429,
   "kedanjiaQoq": null,
-  "kedanliang": 2.571428571,
+  "kedanliang": 3.384615385,
   "kedanliangLast": 0,
-  "chengjiaoNew": 29,
+  "chengjiaoNew": 56,
   "chengjiaoNewLast": 0,
-  "chengjiaoTotal": 28,
+  "chengjiaoTotal": 55,
   "fugouRate": 0,
-  "zhutuiUsers": 0,
+  "zhutuiUsers": 1,
   "zhutuiUsersLast": 0,
-  "tonghuoUsers": 7,
+  "tonghuoUsers": 13,
   "tonghuoUsersLast": 0,
   "bindWecom": 23,
   "haoyouTotal": 24,
-  "sankeUsers": 26,
+  "sankeUsers": 48,
   "sankeUsersLast": 0,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 3,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -72,9 +72,9 @@
   "regionTotal": 4,
   "regionTopName": "陈传勋",
   "regionTopComm": 0,
-  "suggestion": "🔄 你的 7 位奶粉客户中仅 0 位本月复购，7 位只买了一次。一次购买可能是试水——主动跟进这 7 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 7 位奶粉客户，但只有 0 位（0%）接触过主推产品。剩下 7 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 7 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
+  "suggestion": "🔄 你的 13 位奶粉客户中仅 0 位本月复购，13 位只买了一次。一次购买可能是试水——主动跟进这 13 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 13 位奶粉客户，但只有 1 位（8%）接触过主推产品。剩下 12 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 13 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（7 位奶粉客户中仅 0 位（0%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（13 位奶粉客户中仅 1 位（8%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
@@ -1107,23 +1107,23 @@
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 7 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 13 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 7 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 12 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔐",
-      "text": "从 7 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 13 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "你服务了 7 位奶粉客户，但只有 0 位（0%）接触过主推产品。其余 7 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
-    "你的 7 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "你服务了 13 位奶粉客户，但只有 1 位（8%）接触过主推产品。其余 12 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "你的 13 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你更好地为 7 位未接触主推产品的客户推荐合适的奶粉",
+    "intro": "了解这些产品能帮你更好地为 12 位未接触主推产品的客户推荐合适的奶粉",
     "products": [
       {
         "name": "能恩全护A2",
@@ -1166,9 +1166,9 @@
     "target": 0,
     "achieved": 0,
     "achievementRate": 0,
-    "milkCans": 57,
+    "milkCans": 94,
     "momMilkCans": null,
-    "pushCans": 4,
+    "pushCans": 6,
     "momPushCans": null
   }
 }

@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 1,
   "storeTotal": 4,
   "storeTopName": "（你）",
@@ -1157,9 +1157,9 @@
     "target": 0,
     "achieved": 0,
     "achievementRate": 0,
-    "milkCans": 57,
+    "milkCans": 94,
     "momMilkCans": null,
-    "pushCans": 4,
+    "pushCans": 6,
     "momPushCans": null
   }
 }

@@ -15,47 +15,47 @@
   "achievementRate": 0.187955783,
   "mendianDachengLv": 1.066318615,
   "mendianStaffCount": 6,
-  "milkCans": 17,
+  "milkCans": 18,
   "milkCansLast": 17,
-  "momMilkCans": 0,
+  "momMilkCans": 0.058823529411764705,
   "pushCans": 5,
   "pushCansLast": 3,
   "momPushCans": 0.6666666666666666,
-  "totalClients": 7,
+  "totalClients": 8,
   "totalClientsLast": 12,
-  "momClients": -0.4166666666666667,
-  "milkClients": 7,
+  "momClients": -0.3333333333333333,
+  "milkClients": 8,
   "milkClientsLast": 12,
-  "momMilkClients": -0.4166666666666667,
+  "momMilkClients": -0.3333333333333333,
   "pushClients": 2,
   "pushClientsLast": 2,
   "momPushClients": 0,
-  "milkAvg": 2.428571429,
+  "milkAvg": 2.25,
   "milkAvgLast": 1.416666667,
-  "momMilkAvg": 0.7142857141848736,
+  "momMilkAvg": 0.5882352937439446,
   "depositCount": 0,
   "visitShould": 0,
   "visitDone": 0,
   "visitPending": 0,
-  "naifenUsers": 7,
+  "naifenUsers": 8,
   "naifenUsersLast": 12,
-  "naifenGuanshu": 17,
+  "naifenGuanshu": 18,
   "naifenGuanshuLast": 17,
-  "kedanjia": 567.7971429,
-  "kedanjiaQoq": 0.673169799,
-  "kedanliang": 2.428571429,
+  "kedanjia": 524.64125,
+  "kedanjiaQoq": 0.545999141,
+  "kedanliang": 2.25,
   "kedanliangLast": 1.416666667,
-  "chengjiaoNew": 7,
+  "chengjiaoNew": 8,
   "chengjiaoNewLast": 12,
-  "chengjiaoTotal": 19,
-  "fugouRate": 0.052631579,
+  "chengjiaoTotal": 20,
+  "fugouRate": 0.05,
   "zhutuiUsers": 2,
   "zhutuiUsersLast": 2,
-  "tonghuoUsers": 5,
+  "tonghuoUsers": 6,
   "tonghuoUsersLast": 10,
   "bindWecom": 10,
   "haoyouTotal": 171,
-  "sankeUsers": 15,
+  "sankeUsers": 16,
   "sankeUsersLast": 9,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 2,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -72,9 +72,9 @@
   "regionTotal": 19,
   "regionTopName": "胡美娟",
   "regionTopComm": 5213.76,
-  "suggestion": "👶 你的奶粉客户从上月 12 位降到本月 7 位（减少 42%）。这 5 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n🔄 你的 7 位奶粉客户中仅 0 位本月复购，7 位只买了一次。一次购买可能是试水——主动跟进这 7 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 7 位奶粉客户，但只有 2 位（29%）接触过主推产品。剩下 5 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。",
+  "suggestion": "👶 你的奶粉客户从上月 12 位降到本月 8 位（减少 33%）。这 4 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n🔄 你的 8 位奶粉客户中仅 0 位本月复购，8 位只买了一次。一次购买可能是试水——主动跟进这 8 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 8 位奶粉客户，但只有 2 位（25%）接触过主推产品。剩下 6 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。",
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（7 位奶粉客户中仅 2 位（29%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（8 位奶粉客户中仅 2 位（25%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
@@ -117,10 +117,37 @@
   "followUp": {
     "lost": 0,
     "critical": 0,
-    "high": 4,
+    "high": 12,
     "medium": 2,
-    "total": 6,
+    "total": 14,
     "list": [
+      {
+        "phone": "13883602096",
+        "lastBuy": "2026-05-29",
+        "daysAgo": 55,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18225093227",
+        "lastBuy": "2026-06-02",
+        "daysAgo": 51,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18725676818",
+        "lastBuy": "2026-06-04",
+        "daysAgo": 49,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
       {
         "phone": "17783820710",
         "lastBuy": "2026-06-06",
@@ -158,7 +185,52 @@
         "level": "high"
       },
       {
-        "phone": "18716328558",
+        "phone": "18166476868",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "19112084946",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "13637840394",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18983878046",
+        "lastBuy": "2026-06-22",
+        "daysAgo": 31,
+        "predicted": "2026-08-06",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18423015325",
+        "lastBuy": "2026-06-22",
+        "daysAgo": 31,
+        "predicted": "2026-08-06",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "15213225911",
         "lastBuy": "2026-07-06",
         "daysAgo": 17,
         "predicted": "2026-08-03",
@@ -167,7 +239,7 @@
         "level": "medium"
       },
       {
-        "phone": "15213225911",
+        "phone": "18716328558",
         "lastBuy": "2026-07-06",
         "daysAgo": 17,
         "predicted": "2026-08-03",
@@ -1162,25 +1234,25 @@
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 7 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 8 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 5 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 6 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔐",
-      "text": "从 7 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 8 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "总体客户从 12 降至 7（↓42%），流失 5 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
-    "奶粉客户从 12 降至 7（↓42%），本月有 7 位未复购。宝宝月龄增长、口味变化、竞品活动都可能是原因——逐一了解才能留住客户。",
-    "你服务了 7 位奶粉客户，但只有 2 位（29%）接触过主推产品。其余 5 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
-    "你的 7 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "总体客户从 12 降至 8（↓33%），流失 4 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
+    "奶粉客户从 12 降至 8（↓33%），本月有 8 位未复购。宝宝月龄增长、口味变化、竞品活动都可能是原因——逐一了解才能留住客户。",
+    "你服务了 8 位奶粉客户，但只有 2 位（25%）接触过主推产品。其余 6 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "你的 8 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你更好地为 5 位未接触主推产品的客户推荐合适的奶粉",
+    "intro": "了解这些产品能帮你更好地为 6 位未接触主推产品的客户推荐合适的奶粉",
     "products": [
       {
         "name": "能恩全护A2",
@@ -1223,9 +1295,9 @@
     "target": 65000,
     "achieved": 22203.45,
     "achievementRate": 0.34159153846153845,
-    "milkCans": 306,
-    "momMilkCans": 0.3021276595744681,
-    "pushCans": 50,
+    "milkCans": 339,
+    "momMilkCans": 0.4425531914893617,
+    "pushCans": 54,
     "momPushCans": null
   }
 }

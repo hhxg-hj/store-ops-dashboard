@@ -63,7 +63,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 5,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -117,10 +117,19 @@
   "followUp": {
     "lost": 0,
     "critical": 0,
-    "high": 18,
+    "high": 20,
     "medium": 0,
-    "total": 18,
+    "total": 20,
     "list": [
+      {
+        "phone": "19280531092",
+        "lastBuy": "2026-06-01",
+        "daysAgo": 52,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
       {
         "phone": "15823136680",
         "lastBuy": "2026-06-02",
@@ -267,6 +276,15 @@
       },
       {
         "phone": "13872468337",
+        "lastBuy": "2026-06-11",
+        "daysAgo": 42,
+        "predicted": "2026-07-26",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "13594788808",
         "lastBuy": "2026-06-11",
         "daysAgo": 42,
         "predicted": "2026-07-26",
@@ -1332,9 +1350,9 @@
     "target": 150000,
     "achieved": 141233.62,
     "achievementRate": 0.9415574666666666,
-    "milkCans": 373,
-    "momMilkCans": -0.38651315789473684,
-    "pushCans": 80,
+    "milkCans": 442,
+    "momMilkCans": -0.2730263157894737,
+    "pushCans": 106,
     "momPushCans": null
   }
 }

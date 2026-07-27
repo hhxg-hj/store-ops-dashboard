@@ -59,11 +59,11 @@
   "sankeUsersLast": 152,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
-  "liushiUsers": 28,
+  "liushiUsers": 31,
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-24 08-57",
+  "version": "2026-07-27 04-07",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -72,7 +72,7 @@
   "regionTotal": 19,
   "regionTopName": "胡美娟",
   "regionTopComm": 5213.76,
-  "suggestion": "👶 你的奶粉客户从上月 4 位降到本月 0 位（减少 100%）。这 4 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n⚠️ 本月有 28 位客户流失。每一位流失背后都是一个宝宝的真实需求变化——可以梳理她们离开的原因：是品类不合适？还是服务体验有待提升？",
+  "suggestion": "👶 你的奶粉客户从上月 4 位降到本月 0 位（减少 100%）。这 4 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n⚠️ 本月有 31 位客户流失。每一位流失背后都是一个宝宝的真实需求变化——可以梳理她们离开的原因：是品类不合适？还是服务体验有待提升？",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（主推罐数环比下降 100%（9→0罐）；1 位成交客户中暂无奶粉用户——这些宝宝可能正在被竞品服务），以下产品资料能帮你更自信地推荐：",
     "items": [
@@ -115,16 +115,232 @@
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
   },
   "followUp": {
-    "lost": 91,
-    "critical": 45,
-    "high": 36,
+    "lost": 130,
+    "critical": 48,
+    "high": 38,
     "medium": 2,
-    "total": 174,
+    "total": 218,
     "list": [
+      {
+        "phone": "15696368762",
+        "lastBuy": "2025-11-19",
+        "daysAgo": 246,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15826488559",
+        "lastBuy": "2025-11-23",
+        "daysAgo": 242,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15223538716",
+        "lastBuy": "2025-11-23",
+        "daysAgo": 242,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15223742873",
+        "lastBuy": "2025-11-23",
+        "daysAgo": 242,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18723083836",
+        "lastBuy": "2025-11-23",
+        "daysAgo": 242,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15025341581",
+        "lastBuy": "2025-11-25",
+        "daysAgo": 240,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13640536231",
+        "lastBuy": "2025-11-25",
+        "daysAgo": 240,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13289211306",
+        "lastBuy": "2025-11-25",
+        "daysAgo": 240,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18580269009",
+        "lastBuy": "2025-11-25",
+        "daysAgo": 240,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
       {
         "phone": "13657659521",
         "lastBuy": "2025-11-28",
         "daysAgo": 237,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15213055202",
+        "lastBuy": "2025-11-30",
+        "daysAgo": 235,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "17783190820",
+        "lastBuy": "2025-12-01",
+        "daysAgo": 234,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18725722190",
+        "lastBuy": "2025-12-01",
+        "daysAgo": 234,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18748958601",
+        "lastBuy": "2025-12-03",
+        "daysAgo": 232,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13983129236",
+        "lastBuy": "2025-12-03",
+        "daysAgo": 232,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "17782363607",
+        "lastBuy": "2025-12-05",
+        "daysAgo": 230,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15023587865",
+        "lastBuy": "2025-12-09",
+        "daysAgo": 226,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18223588686",
+        "lastBuy": "2025-12-09",
+        "daysAgo": 226,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15086898686",
+        "lastBuy": "2025-12-11",
+        "daysAgo": 224,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18883321456",
+        "lastBuy": "2025-12-13",
+        "daysAgo": 222,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13883835709",
+        "lastBuy": "2025-12-14",
+        "daysAgo": 221,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "19123073557",
+        "lastBuy": "2025-12-15",
+        "daysAgo": 220,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18523992599",
+        "lastBuy": "2025-12-17",
+        "daysAgo": 218,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18702356425",
+        "lastBuy": "2025-12-19",
+        "daysAgo": 216,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18723414306",
+        "lastBuy": "2025-12-22",
+        "daysAgo": 213,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -143,6 +359,42 @@
         "phone": "18183058555",
         "lastBuy": "2025-12-25",
         "daysAgo": 210,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "17316789776",
+        "lastBuy": "2025-12-25",
+        "daysAgo": 210,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13896715056",
+        "lastBuy": "2025-12-25",
+        "daysAgo": 210,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15730269751",
+        "lastBuy": "2025-12-26",
+        "daysAgo": 209,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "17602356249",
+        "lastBuy": "2025-12-26",
+        "daysAgo": 209,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -179,6 +431,15 @@
         "phone": "13983990871",
         "lastBuy": "2025-12-29",
         "daysAgo": 206,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18623139357",
+        "lastBuy": "2025-12-30",
+        "daysAgo": 205,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -275,7 +536,7 @@
         "level": "lost"
       },
       {
-        "phone": "19112838813",
+        "phone": "15023639857",
         "lastBuy": "2026-01-16",
         "daysAgo": 188,
         "predicted": "尽快联系",
@@ -284,7 +545,7 @@
         "level": "lost"
       },
       {
-        "phone": "15023639857",
+        "phone": "19112838813",
         "lastBuy": "2026-01-16",
         "daysAgo": 188,
         "predicted": "尽快联系",
@@ -329,15 +590,6 @@
         "level": "lost"
       },
       {
-        "phone": "15922865255",
-        "lastBuy": "2026-01-25",
-        "daysAgo": 179,
-        "predicted": "尽快联系",
-        "cycle": 100,
-        "urgency": "已流失",
-        "level": "lost"
-      },
-      {
         "phone": "15523242267",
         "lastBuy": "2026-01-25",
         "daysAgo": 179,
@@ -348,6 +600,15 @@
       },
       {
         "phone": "13883859162",
+        "lastBuy": "2026-01-25",
+        "daysAgo": 179,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15922865255",
         "lastBuy": "2026-01-25",
         "daysAgo": 179,
         "predicted": "尽快联系",
@@ -392,9 +653,36 @@
         "level": "lost"
       },
       {
+        "phone": "15123073881",
+        "lastBuy": "2026-01-27",
+        "daysAgo": 177,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
         "phone": "18623064830",
         "lastBuy": "2026-01-28",
         "daysAgo": 176,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "18290475355",
+        "lastBuy": "2026-01-28",
+        "daysAgo": 176,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13638244158",
+        "lastBuy": "2026-02-01",
+        "daysAgo": 172,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -431,6 +719,15 @@
         "phone": "13983906366",
         "lastBuy": "2026-02-06",
         "daysAgo": 167,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "13310241583",
+        "lastBuy": "2026-02-07",
+        "daysAgo": 166,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -482,6 +779,24 @@
         "level": "lost"
       },
       {
+        "phone": "17834617495",
+        "lastBuy": "2026-02-09",
+        "daysAgo": 164,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15213020693",
+        "lastBuy": "2026-02-09",
+        "daysAgo": 164,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
         "phone": "19922391541",
         "lastBuy": "2026-02-11",
         "daysAgo": 162,
@@ -509,6 +824,15 @@
         "level": "lost"
       },
       {
+        "phone": "18716650871",
+        "lastBuy": "2026-02-12",
+        "daysAgo": 161,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
         "phone": "13594109102",
         "lastBuy": "2026-02-14",
         "daysAgo": 159,
@@ -518,9 +842,36 @@
         "level": "lost"
       },
       {
+        "phone": "17772310502",
+        "lastBuy": "2026-02-20",
+        "daysAgo": 153,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
         "phone": "13436270301",
         "lastBuy": "2026-02-22",
         "daysAgo": 151,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15111806658",
+        "lastBuy": "2026-02-24",
+        "daysAgo": 149,
+        "predicted": "尽快联系",
+        "cycle": 100,
+        "urgency": "已流失",
+        "level": "lost"
+      },
+      {
+        "phone": "15084423064",
+        "lastBuy": "2026-02-24",
+        "daysAgo": 149,
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
@@ -545,7 +896,7 @@
         "level": "lost"
       },
       {
-        "phone": "18523922122",
+        "phone": "18223389848",
         "lastBuy": "2026-03-01",
         "daysAgo": 144,
         "predicted": "尽快联系",
@@ -554,7 +905,7 @@
         "level": "lost"
       },
       {
-        "phone": "18223389848",
+        "phone": "18523922122",
         "lastBuy": "2026-03-01",
         "daysAgo": 144,
         "predicted": "尽快联系",
@@ -887,7 +1238,7 @@
         "level": "lost"
       },
       {
-        "phone": "15723393635",
+        "phone": "15310713888",
         "lastBuy": "2026-04-20",
         "daysAgo": 94,
         "predicted": "尽快联系",
@@ -896,7 +1247,7 @@
         "level": "lost"
       },
       {
-        "phone": "15310713888",
+        "phone": "15723393635",
         "lastBuy": "2026-04-20",
         "daysAgo": 94,
         "predicted": "尽快联系",
@@ -971,8 +1322,8 @@
         "phone": "18723482967",
         "lastBuy": "2026-04-24",
         "daysAgo": 90,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "predicted": "2026-08-02",
+        "cycle": 100,
         "urgency": "高危",
         "level": "critical"
       },
@@ -980,8 +1331,8 @@
         "phone": "19332855125",
         "lastBuy": "2026-04-26",
         "daysAgo": 88,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "predicted": "2026-08-04",
+        "cycle": 100,
         "urgency": "高危",
         "level": "critical"
       },
@@ -989,8 +1340,8 @@
         "phone": "13101230923",
         "lastBuy": "2026-04-26",
         "daysAgo": 88,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "predicted": "2026-08-04",
+        "cycle": 100,
         "urgency": "高危",
         "level": "critical"
       },
@@ -1292,9 +1643,36 @@
         "level": "critical"
       },
       {
+        "phone": "19111350669",
+        "lastBuy": "2026-05-19",
+        "daysAgo": 65,
+        "predicted": "2026-08-27",
+        "cycle": 100,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
         "phone": "18716370171",
         "lastBuy": "2026-05-20",
         "daysAgo": 64,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "18258556088",
+        "lastBuy": "2026-05-21",
+        "daysAgo": 63,
+        "predicted": "2026-08-29",
+        "cycle": 100,
+        "urgency": "高危",
+        "level": "critical"
+      },
+      {
+        "phone": "18883739959",
+        "lastBuy": "2026-05-21",
+        "daysAgo": 63,
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
@@ -1331,8 +1709,8 @@
         "phone": "15803651330",
         "lastBuy": "2026-05-23",
         "daysAgo": 61,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "predicted": "2026-08-31",
+        "cycle": 100,
         "urgency": "高危",
         "level": "critical"
       },
@@ -1340,8 +1718,8 @@
         "phone": "18875163475",
         "lastBuy": "2026-05-23",
         "daysAgo": 61,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "predicted": "2026-08-31",
+        "cycle": 100,
         "urgency": "高危",
         "level": "critical"
       },
@@ -1349,17 +1727,8 @@
         "phone": "15310663015",
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "18883776384",
-        "lastBuy": "2026-05-24",
-        "daysAgo": 60,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "predicted": "2026-09-01",
+        "cycle": 100,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1368,7 +1737,16 @@
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18883776384",
+        "lastBuy": "2026-05-24",
+        "daysAgo": 60,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1377,7 +1755,7 @@
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1386,7 +1764,7 @@
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1395,7 +1773,25 @@
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18785259656",
+        "lastBuy": "2026-05-24",
+        "daysAgo": 60,
+        "predicted": "2026-09-01",
+        "cycle": 100,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "18323361056",
+        "lastBuy": "2026-05-24",
+        "daysAgo": 60,
+        "predicted": "2026-09-01",
+        "cycle": 100,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1404,7 +1800,7 @@
         "lastBuy": "2026-05-24",
         "daysAgo": 60,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1412,8 +1808,8 @@
         "phone": "15123917960",
         "lastBuy": "2026-05-25",
         "daysAgo": 59,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "predicted": "2026-09-02",
+        "cycle": 100,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1422,7 +1818,7 @@
         "lastBuy": "2026-05-25",
         "daysAgo": 59,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1431,7 +1827,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1440,7 +1836,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1449,7 +1845,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1458,7 +1854,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1467,7 +1863,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1476,7 +1872,7 @@
         "lastBuy": "2026-05-26",
         "daysAgo": 58,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
@@ -1607,7 +2003,7 @@
         "level": "high"
       },
       {
-        "phone": "15111843173",
+        "phone": "18525171918",
         "lastBuy": "2026-05-30",
         "daysAgo": 54,
         "predicted": "已到期，立即联系",
@@ -1616,7 +2012,7 @@
         "level": "high"
       },
       {
-        "phone": "18525171918",
+        "phone": "15111843173",
         "lastBuy": "2026-05-30",
         "daysAgo": 54,
         "predicted": "已到期，立即联系",
@@ -2727,9 +3123,9 @@
     "target": 150000,
     "achieved": 141233.62,
     "achievementRate": 0.9415574666666666,
-    "milkCans": 373,
-    "momMilkCans": -0.38651315789473684,
-    "pushCans": 80,
+    "milkCans": 442,
+    "momMilkCans": -0.2730263157894737,
+    "pushCans": 106,
     "momPushCans": null
   }
 }
