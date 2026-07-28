@@ -186,8 +186,15 @@
     .milk-filter { display:flex; gap:6px; margin-bottom:8px; }
     .milk-filter-btn { font-size:11px; padding:4px 12px; border:1px solid var(--border); border-radius:99px; background:#fff; cursor:pointer; color:var(--text2); transition:all .15s; }
     .milk-filter-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); font-weight:600; }
-    .fu-milk-detail { font-size:10px; color:#059669; margin-top:1px; }
-    .fu-milk-badge { margin-right:3px; }
+    .fu-stats-bar { display:flex; align-items:center; gap:6px; padding:6px 10px; background:#f8fafc; border-radius:8px; margin-bottom:8px; }
+    .fu-stat-mini { font-size:11px; padding:2px 8px; border-radius:6px; font-weight:600; }
+    .fu-stat-mini.milk { background:#dcfce7; color:#059669; }
+    .fu-stat-mini.other { background:#fef3c7; color:#92400e; }
+    .fu-type { display:inline-block; font-size:10px; padding:1px 6px; border-radius:4px; font-weight:500; margin-left:4px; vertical-align:middle; }
+    .fu-type.milk { background:#ecfdf5; color:#059669; }
+    .fu-type.other { background:#f5f3ff; color:#7c3aed; }
+    .fu-milk-detail { font-size:10px; color:#059669; margin-top:2px; }
+    .fu-milk-detail.muted { color:var(--text2); font-style:italic; }
     .followup-list { margin-top:8px; }
     .fu-header, .fu-row { display:flex; align-items:center; padding:7px 8px; font-size:12px; }
     .fu-header { color:var(--text2); font-weight:600; border-bottom:2px solid var(--border); margin-bottom:4px; }
@@ -774,8 +781,14 @@ function renderView(view) {
   const viewEl = $('view');
   if (viewEl) viewEl.innerHTML = fn(d);
   if (view === 'followup') {
-    const first = document.querySelector('#fuStats .fu-stat.lost');
-    if (first) first.classList.add('active');
+    // 默认激活第一个有数据的紧急等级（避免停留在空表）
+    const stats = document.querySelectorAll('#fuStats .fu-stat');
+    const levels = ['lost','critical','high','medium'];
+    const counts = { lost: d.followUp?.lost||0, critical: d.followUp?.critical||0, high: d.followUp?.high||0, medium: d.followUp?.medium||0 };
+    let pickLevel = levels.find(l => (counts[l]||0) > 0) || 'critical';
+    const target = Array.from(stats).find(s => s.dataset.level === pickLevel);
+    if (target) target.classList.add('active');
+    switchFollowupTab(target, pickLevel);
   }
 }
 
@@ -804,22 +817,38 @@ function renderFollowupList(list, level, milkFilter) {
   let filtered = (list || []).filter(c => c.level === level);
   if (milkFilter === 'milk') filtered = filtered.filter(c => c.isMilk);
   if (milkFilter === 'other') filtered = filtered.filter(c => c.isMilk === false);
+  // 统计当前筛选下的奶粉/其他数量
+  const milkCount = filtered.filter(c => c.isMilk).length;
+  const otherCount = filtered.length - milkCount;
   if (!filtered.length) {
     const emptyMsg = { lost:'暂无已流失客户', critical:'暂无高危客户', high:'暂无紧急回访客户', medium:'暂无本周回访客户' };
     return '<div style="text-align:center;padding:24px 0;color:#94a3b8;font-size:13px;">' + (emptyMsg[level]||'暂无数据') + '</div>';
   }
   return `
+    <div class="fu-stats-bar">
+      <span class="fu-stat-mini milk">🥛 奶粉 ${milkCount}</span>
+      <span class="fu-stat-mini other">📦 其他 ${otherCount}</span>
+      <span style="font-size:11px;color:var(--text2);margin-left:auto;">共 ${filtered.length} 位</span>
+    </div>
     <div class="followup-list">
       <div class="fu-header">
-        <div style="flex:1.3">客户手机</div>
+        <div style="flex:1.5">客户手机 / 类型</div>
         <div style="flex:1">上次购买</div>
         <div style="flex:0.5;text-align:center;">天数</div>
         <div style="flex:1.5">建议回访日期</div>
       </div>
       ${filtered.map(c => {
-        const milkDetail = c.isMilk && c.lastBrand ? `<div class="fu-milk-detail"><span class="fu-milk-badge">🥛</span>${c.lastBrand.slice(0,18)} · ¥${(c.lastAmount||0).toFixed(0)} · ${c.lastCans||0}罐</div>` : '';
+        const typeBadge = c.isMilk
+          ? '<span class="fu-type milk" title="奶粉客户">🥛 奶粉</span>'
+          : '<span class="fu-type other" title="其他商品客户">📦 其他</span>';
+        const milkDetail = c.isMilk && c.lastBrand
+          ? `<div class="fu-milk-detail"><b>${c.lastCategory==='main'?'主推':c.lastCategory==='general'?'通货':c.lastCategory==='special'?'特配':c.lastCategory==='child'?'儿童':''}</b> · ${c.lastBrand.slice(0,18)} · ¥${(c.lastAmount||0).toFixed(0)} · ${c.lastCans||0}罐</div>`
+          : '<div class="fu-milk-detail muted">未发现奶粉购买记录</div>';
         return `<div class="fu-row ${c.level}">
-        <div style="flex:1.3;font-weight:600;">${c.phone||'—'}${milkDetail}</div>
+        <div style="flex:1.5;font-weight:600;">
+          <div>${c.phone||'—'} ${typeBadge}</div>
+          ${milkDetail}
+        </div>
         <div style="flex:1;">${c.lastBuy||'—'}</div>
         <div style="flex:0.5;text-align:center;color:var(--text2);">${c.daysAgo!=null?c.daysAgo+'天':'—'}</div>
         <div style="flex:1.5;font-size:11px;color:#64748b;">${c.predicted||'—'}</div>
