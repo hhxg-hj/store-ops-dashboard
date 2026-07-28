@@ -114,7 +114,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 09-11",
+  "version": "2026-07-28 10-22",
   "storeRank": 9,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -1212,5 +1212,10 @@
     "momMilkCans": 0.4425531914893617,
     "pushCans": 54,
     "momPushCans": null
+  },
+  "purchaseRecency": {
+    "m1": 0,
+    "m2_3": 0,
+    "m3plus": 0
   }
 }

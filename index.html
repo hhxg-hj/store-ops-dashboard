@@ -448,6 +448,13 @@ function renderFollowup(d) {
       <div class="service-item"><div class="sv" style="color:${frtColor}">${frt?frt:'—'}</div><div class="sl">平均首响(分)</div><div class="sm">分钟/次</div></div>
     </div>
 
+    <div class="section-title plain">🛒 客户购买时距分类（截至今日）</div>
+    <div class="service-grid service-grid-recency">
+      <div class="service-item"><div class="sv">${fmtNum(d.purchaseRecency?.m1 || 0)}</div><div class="sl">一个月内购买过</div><div class="sm">≤ 30 天</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(d.purchaseRecency?.m2_3 || 0)}</div><div class="sl">二至三个月内购买过</div><div class="sm">31–90 天</div></div>
+      <div class="service-item"><div class="sv" style="color:var(--warning)">${fmtNum(d.purchaseRecency?.m3plus || 0)}</div><div class="sl">三个月以上购买过</div><div class="sm">≥ 91 天</div></div>
+    </div>
+
     <div class="section-title plain">📋 客户回访清单</div>
     <div class="milk-filter">
       <button class="milk-filter-btn active" onclick="setMilkFilter('all')">全部</button>

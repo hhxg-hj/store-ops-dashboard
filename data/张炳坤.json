@@ -114,7 +114,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 09-11",
+  "version": "2026-07-28 10-22",
   "storeRank": 3,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -1221,5 +1221,10 @@
     "momMilkCans": null,
     "pushCans": 6,
     "momPushCans": null
+  },
+  "purchaseRecency": {
+    "m1": 55,
+    "m2_3": 0,
+    "m3plus": 0
   }
 }
