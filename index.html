@@ -259,6 +259,12 @@ function renderOverview(d) {
   const storeRate = sa.achievementRate ? (sa.achievementRate*100).toFixed(1) + '%' : '—';
   const persRate = d.achievementRate ? (d.achievementRate*100).toFixed(1) + '%' : '—';
   const gapColor = v => (v>=0 ? 'var(--success)' : 'var(--warning)');
+
+  // 用户指标统一目标：当月新增客户数（来自飞书「店员企微联系情况」表，按店员提取）。
+  // 目标为 0 或未配置时显示「目标未设置」，避免除零。
+  const userTarget = (d.userTarget && d.userTarget > 0) ? d.userTarget : null;
+  const reachRate = (val) => userTarget ? `${Math.round((val / userTarget) * 100)}%（目标 ${userTarget}）` : '目标未设置';
+
   return `
   <div class="card">
     <div class="section-title"><span class="icon">💰</span> 业绩奖励</div>
@@ -282,7 +288,7 @@ function renderOverview(d) {
 
   <div class="section-title plain">📈 业绩指标</div>
   <div class="kpi-grid">
-    <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">门店均值 ${storeRate}</div></div>
+    <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">目标 ¥${fmtNum(d.target)} · 达成 ¥${fmtNum(d.achieved)} · 门店均值 ${storeRate}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.milkCans)}</div><div class="kpi-lbl">奶粉销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momMilkCans)}">环比 ${momLabel(d.momMilkCans)}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.pushCans)}</div><div class="kpi-lbl">主推销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momPushCans)}">环比 ${momLabel(d.momPushCans)}</div></div>
     <div class="kpi"><div class="kpi-val">${d.milkAvg ? d.milkAvg.toFixed(1) : '—'}</div><div class="kpi-lbl">奶粉客单量 (罐/人)</div><div class="kpi-sub mom ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div></div>
@@ -290,11 +296,11 @@ function renderOverview(d) {
 
   <div class="section-title plain">👥 用户指标</div>
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkClients)}</div><div class="kpi-lbl">奶粉用户</div><div class="kpi-sub mom ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushClients)}</div><div class="kpi-lbl">主推用户</div><div class="kpi-sub mom ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
-    <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div></div>
-    <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkClients)}</div><div class="kpi-lbl">奶粉用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.milkClients)}</div><div class="kpi-sub mom ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushClients)}</div><div class="kpi-lbl">主推用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.pushClients)}</div><div class="kpi-sub mom ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
+    <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.depositCount)}</div></div>
+    <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.totalClients)}</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.visitDone)}</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
   </div>`;
 }
 
@@ -326,8 +332,24 @@ function renderPerf(d) {
 }
 
 function renderFollowup(d) {
+  const cs = d.customerService || {};
+  const rr = cs.replyRate || 0;
+  const frt = cs.firstReplyMin || 0;
+  const rrColor = rr >= 80 ? 'var(--success)' : rr >= 50 ? 'var(--warning)' : 'var(--danger)';
+  const frtColor = frt > 0 && frt <= 15 ? 'var(--success)' : frt > 30 ? 'var(--danger)' : 'var(--warning)';
   return `<div class="card">
-    <div class="section-title"><span class="icon">📞</span> 客户服务清单</div>
+    <div class="section-title"><span class="icon">📞</span> 客户服务</div>
+
+    <div class="section-title plain">📊 客服服务概览</div>
+    <div class="service-grid">
+      <div class="service-item"><div class="sv">${fmtNum(cs.newServiceCount)}</div><div class="sl">新增客服数</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(cs.chatTotal)}</div><div class="sl">聊天总数</div></div>
+      <div class="service-item"><div class="sv">${fmtNum(cs.msgSent)}</div><div class="sl">发送消息数</div></div>
+      <div class="service-item"><div class="sv" style="color:${rrColor}">${rr?rr.toFixed(0)+'%':'—'}</div><div class="sl">已回复占比</div></div>
+      <div class="service-item"><div class="sv" style="color:${frtColor}">${frt?frt:'—'}</div><div class="sl">平均首响(分)</div><div class="sm">分钟/次</div></div>
+    </div>
+
+    <div class="section-title plain">📋 客户回访清单</div>
     <div class="followup-stats" id="fuStats">
       <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
       <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
