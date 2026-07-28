@@ -94,6 +94,19 @@
     .perf-table th { text-align:left; color:var(--text2); font-weight:500; padding:7px 4px; border-bottom:1px solid var(--border); font-size:11px; }
     .perf-table td { padding:8px 4px; border-bottom:1px solid #f4f4f6; }
     .perf-table .section-row td { font-weight:700; padding-top:14px; font-size:14px; color:var(--primary); border-bottom:2px solid var(--primary-light); }
+    /* 奶粉品类拆解 */
+    .milk-cat-summary { display:flex; gap:10px; margin:10px 0 12px; }
+    .milk-cat-summary .mcs-item { flex:1; background:var(--primary-light,#f0ebff); border-radius:10px; padding:10px 12px; text-align:center; }
+    .milk-cat-summary .mcs-val { font-size:18px; font-weight:700; color:var(--primary); }
+    .milk-cat-summary .mcs-lbl { font-size:11px; color:var(--text2); margin-top:2px; }
+    .milk-cat-table { width:100%; font-size:13px; border-collapse:collapse; }
+    .milk-cat-table th { text-align:left; color:var(--text2); font-weight:500; padding:7px 4px; border-bottom:1px solid var(--border); font-size:11px; }
+    .milk-cat-table td { padding:9px 4px; border-bottom:1px solid #f4f4f6; vertical-align:middle; }
+    .milk-cat-name { font-weight:600; white-space:nowrap; }
+    .milk-share-bar { position:relative; background:#f0f0f4; border-radius:6px; height:16px; min-width:64px; overflow:hidden; }
+    .milk-share-bar .bar { position:absolute; left:0; top:0; bottom:0; border-radius:6px; }
+    .milk-share-bar .txt { position:relative; z-index:1; font-size:11px; line-height:16px; padding-left:6px; color:var(--text); }
+    .milk-margin { font-weight:600; white-space:nowrap; }
     .mom { font-size:12px; }
     .mom-up { color:var(--danger); } .mom-down { color:var(--success); } .mom-none { color:var(--text2); }
 
@@ -262,8 +275,9 @@ function renderOverview(d) {
 
   // 用户指标统一目标：当月新增客户数（来自飞书「店员企微联系情况」表，按店员提取）。
   // 目标为 0 或未配置时显示「目标未设置」，避免除零。
-  const userTarget = (d.userTarget && d.userTarget > 0) ? d.userTarget : null;
-  const reachRate = (val) => userTarget ? `${Math.round((val / userTarget) * 100)}%（目标 ${userTarget}）` : '目标未设置';
+  // 用户指标统一按门店定目标：大礼堂店 90，其余店 120
+  const userTarget = (d.store && String(d.store).includes('大礼堂')) ? 90 : 120;
+  const reachRate = (val) => `${Math.round((val / userTarget) * 100)}%（目标 ${userTarget}）`;
 
   return `
   <div class="card">
@@ -328,7 +342,43 @@ function renderPerf(d) {
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(d.pushCans)}罐</td><td class="${momClass(d.momPushCans)} mom">${momLabel(d.momPushCans)}</td></tr>
       </tbody>
     </table>
+    ${renderMilkCategories(d)}
   </div>`;
+}
+
+// 奶粉品类拆解：主推/儿童/特配/通货 四类的销量、占比、毛利率
+function renderMilkCategories(d) {
+  const mc = d.milkByCategory;
+  if (!mc || !mc.totalQty) return '';
+  const CATS = [
+    { key: 'main',    label: '主推奶粉', icon: '🎯', color: '#7c5cff' },
+    { key: 'child',   label: '儿童奶粉', icon: '🧒', color: '#3b82f6' },
+    { key: 'special', label: '特配奶粉', icon: '🧪', color: '#f59e0b' },
+    { key: 'general', label: '通货奶粉', icon: '📦', color: '#94a3b8' },
+  ];
+  const marginColor = r => r >= 0.25 ? 'var(--success)' : r >= 0.10 ? 'var(--text)' : 'var(--warning)';
+  const rows = CATS.map(c => {
+    const v = (mc.categories && mc.categories[c.key]) || { qty: 0, share: 0, marginRate: 0, amount: 0 };
+    const sharePct = (v.share * 100).toFixed(1);
+    const marginPct = v.amount > 0 ? (v.marginRate * 100).toFixed(1) + '%' : '—';
+    return `<tr>
+      <td class="milk-cat-name">${c.icon} ${c.label}</td>
+      <td>${fmtNum(v.qty)}罐</td>
+      <td><div class="milk-share-bar"><div class="bar" style="width:${Math.min(100, v.share * 100)}%;background:${c.color}33;border-left:3px solid ${c.color}"></div><div class="txt">${sharePct}%</div></div></td>
+      <td class="milk-margin" style="color:${marginColor(v.marginRate)}">${marginPct}</td>
+    </tr>`;
+  }).join('');
+  return `
+    <div class="section-title plain">🥛 奶粉品类拆解（个人）</div>
+    <div class="milk-cat-summary">
+      <div class="mcs-item"><div class="mcs-val">${fmtNum(mc.totalQty)}罐</div><div class="mcs-lbl">四类合计销量</div></div>
+      <div class="mcs-item"><div class="mcs-val">${fmtMoney(mc.totalAmount)}</div><div class="mcs-lbl">四类销售额</div></div>
+      <div class="mcs-item"><div class="mcs-val">${(mc.overallMargin * 100).toFixed(1)}%</div><div class="mcs-lbl">综合毛利率</div></div>
+    </div>
+    <table class="milk-cat-table">
+      <thead><tr><th>品类</th><th>销量</th><th>占比</th><th>毛利率</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
 }
 
 function renderFollowup(d) {
