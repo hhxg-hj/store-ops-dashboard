@@ -859,8 +859,14 @@ function renderFollowupList(list, level, milkFilter) {
 var _milkFilter = 'all';
 function setMilkFilter(f) {
   _milkFilter = f;
+  // 切换奶粉筛选按钮自身的 active 样式
+  document.querySelectorAll('.milk-filter-btn').forEach(b => b.classList.remove('active'));
+  const map = { all: '全部', milk: '🥛 奶粉客户', other: '📦 其他商品' };
+  const target = Array.from(document.querySelectorAll('.milk-filter-btn')).find(b => b.textContent.trim() === (map[f]||''));
+  if (target) target.classList.add('active');
+  // 保持当前紧急等级（如果当前 active 已不在或被切换）
   const activeLevel = document.querySelector('#fuStats .fu-stat.active');
-  const level = activeLevel ? activeLevel.dataset.level : 'lost';
+  const level = activeLevel ? activeLevel.dataset.level : 'critical';
   switchFollowupTab(activeLevel, level);
 }
 function switchFollowupTab(el, levelOverride) {
