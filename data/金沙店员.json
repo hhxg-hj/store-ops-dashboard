@@ -41,81 +41,30 @@
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0,
-        "momQty": null,
-        "momAmount": null,
-        "momMargin": 0
+        "marginRate": 0
       },
       "general": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0,
-        "momQty": null,
-        "momAmount": null,
-        "momMargin": 0
+        "marginRate": 0
       },
       "special": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0,
-        "momQty": null,
-        "momAmount": null,
-        "momMargin": 0
+        "marginRate": 0
       },
       "child": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0,
-        "momQty": null,
-        "momAmount": null,
-        "momMargin": 0
+        "marginRate": 0
       }
-    },
-    "lastMonth": {
-      "totalQty": 0,
-      "totalAmount": 0,
-      "totalProfit": 0,
-      "overallMargin": 0,
-      "categories": {
-        "main": {
-          "qty": 0,
-          "amount": 0,
-          "profit": 0,
-          "share": 0,
-          "marginRate": 0
-        },
-        "general": {
-          "qty": 0,
-          "amount": 0,
-          "profit": 0,
-          "share": 0,
-          "marginRate": 0
-        },
-        "special": {
-          "qty": 0,
-          "amount": 0,
-          "profit": 0,
-          "share": 0,
-          "marginRate": 0
-        },
-        "child": {
-          "qty": 0,
-          "amount": 0,
-          "profit": 0,
-          "share": 0,
-          "marginRate": 0
-        }
-      }
-    },
-    "momQty": null,
-    "momAmount": null,
-    "momMargin": 0
+    }
   },
   "totalClients": 0,
   "totalClientsLast": 1,
@@ -159,7 +108,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 08-16",
+  "version": "2026-07-28 08-27",
   "storeRank": 6,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
