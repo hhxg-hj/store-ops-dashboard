@@ -107,6 +107,25 @@
     .milk-share-bar .bar { position:absolute; left:0; top:0; bottom:0; border-radius:6px; }
     .milk-share-bar .txt { position:relative; z-index:1; font-size:11px; line-height:16px; padding-left:6px; color:var(--text); }
     .milk-margin { font-weight:600; white-space:nowrap; }
+    /* 每日行动建议 */
+    .dap-head { display:flex; align-items:center; gap:8px; margin:4px 0 10px; }
+    .dap-pill { font-size:11px; font-weight:700; padding:2px 10px; border-radius:999px; color:#fff; }
+    .dap-pill.p0 { background:var(--danger); } .dap-pill.p1 { background:var(--warning); }
+    .dap-pill.p2 { background:#3b82f6; } .dap-pill.p3 { background:var(--success); }
+    .dap-headline { font-size:17px; font-weight:700; color:var(--text); }
+    .dap-block { margin:10px 0; }
+    .dap-block-title { font-size:12px; font-weight:600; color:var(--text2); margin-bottom:6px; }
+    .dap-evidence { background:#f8fafc; border-left:3px solid var(--primary); border-radius:0 8px 8px 0; padding:8px 12px; margin-bottom:6px; font-size:13px; }
+    .dap-evidence b { color:var(--primary); }
+    .dap-opportunity { background:var(--primary-light); border-radius:10px; padding:10px 12px; font-size:13px; }
+    .dap-task { display:flex; gap:10px; border:1px solid var(--border); border-radius:10px; padding:10px 12px; margin-bottom:8px; align-items:flex-start; }
+    .dap-task-num { flex:none; width:22px; height:22px; border-radius:50%; background:var(--primary); color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+    .dap-task-action { font-size:14px; font-weight:600; }
+    .dap-task-def { font-size:12px; color:var(--text2); margin-top:3px; }
+    .dap-task-refs { font-size:12px; color:var(--text2); margin-top:3px; }
+    .dap-task-refs span { display:inline-block; background:#f0f0f4; border-radius:6px; padding:1px 7px; margin:2px 4px 0 0; }
+    .dap-warn { font-size:11px; color:var(--text2); background:#fffbeb; border:1px solid #fde68a; border-radius:8px; padding:6px 10px; margin-top:8px; }
+    .dap-note { font-size:11px; color:var(--text2); margin-top:6px; }
     .mom { font-size:12px; }
     .mom-up { color:var(--danger); } .mom-down { color:var(--success); } .mom-none { color:var(--text2); }
 
@@ -418,12 +437,228 @@ function renderLearningView(d) {
   </div>`;
 }
 
+/* ===== 每日行动建议引擎（确定性规则，见 store-ops-daily-action-advice-spec.md）===== */
+const DAP_CONFIG = {
+  maxTasksPerDay: 3, maxFollowupsPerDay: 5, minFollowupsPerDay: 2,
+  thresholds: {
+    clientMomDecline: -0.10, clientGrowthInsufficient: 0.10,
+    visitRateGood: 0.80, visitRateCritical: 0.50,
+    repurchaseLow: 0.15, aovDecline: -0.05, aovGrowthGood: 0.05,
+    milkAvgLow: 2, replyRateLow: 80, firstReplySlowMinutes: 30,
+  },
+  quotas: { newLead: 3, unconvertedFollowup: 3, bundle: 3, referral: 3, feedback: 2 },
+};
+function dapHash(str) { let h = 5381; for (let i = 0; i < str.length; i++) { h = ((h << 5) + h + str.charCodeAt(i)) >>> 0; } return h; }
+function dapNormRate(v) {
+  if (v === null || v === undefined || v === '' || isNaN(Number(String(v).replace('%','')))) return null;
+  if (typeof v === 'string' && v.includes('%')) return Number(v.replace('%','')) / 100;
+  const n = Number(v);
+  if (Math.abs(n) > 1.5) return n / 100; // 视为百分数
+  return n;
+}
+function dapBizDate() { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(new Date()); }
+function dapMaskPhone(p) { const s = String(p || ''); return s.length >= 7 ? s.slice(0, 3) + '****' + s.slice(-4) : s; }
+function dapPct(v, signed) { if (v === null || v === undefined) return '—'; const s = (v * 100).toFixed(1) + '%'; return signed && v > 0 ? '+' + s : s; }
+
+function buildDailyActionPlan(d) {
+  const T = DAP_CONFIG.thresholds;
+  const date = dapBizDate();
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Shanghai' }));
+  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+  const remainingDays = Math.max(daysInMonth - now.getDate() + 1, 1);
+  const warnings = [];
+
+  // ── ctx 派生指标（分母为 0 → null，绝不当 0% 或 100%）──
+  const visitRate = (d.visitShould > 0) ? d.visitDone / d.visitShould : null;
+  if (d.visitShould === 0 || d.visitShould == null) warnings.push('应回访人数为 0，回访率未知（不影响按高风险客户清单触发任务）');
+  const clientMom = (d.totalClientsLast > 0) ? (d.totalClients - d.totalClientsLast) / d.totalClientsLast : null;
+  const milkClientMom = (d.milkClientsLast > 0) ? (d.milkClients - d.milkClientsLast) / d.milkClientsLast : null;
+  const salesGap = Math.max((d.target || 0) - (d.achieved || 0), 0);
+  const dailySalesGap = Math.ceil(salesGap / remainingDays);
+  const repurchaseRate = dapNormRate(d.fugouRate);
+  const aovMom = dapNormRate(d.kedanjiaQoq);
+  const fu = d.followUp || {};
+  const followupUrgent = (fu.lost || 0) + (fu.critical || 0) + (fu.high || 0);
+  const list = Array.isArray(fu.list) ? fu.list : null;
+  const monthProgress = now.getDate() / daysInMonth;
+
+  // ── 今日回访对象（lost → critical → high → medium 排序）──
+  const LEVEL_ORDER = { lost: 0, critical: 1, high: 2, medium: 3 };
+  let todayRefs = [];
+  if (list && list.length) {
+    const sorted = [...list].sort((a, b) => (LEVEL_ORDER[a.level] ?? 9) - (LEVEL_ORDER[b.level] ?? 9) || (b.daysAgo || 0) - (a.daysAgo || 0));
+    const base = d.visitPending > 0 ? Math.max(DAP_CONFIG.minFollowupsPerDay, Math.min(d.visitPending, DAP_CONFIG.maxFollowupsPerDay)) : Math.min(followupUrgent, DAP_CONFIG.maxFollowupsPerDay);
+    todayRefs = sorted.slice(0, Math.min(base || 0, DAP_CONFIG.maxFollowupsPerDay));
+  }
+  const followupQuota = todayRefs.length || (d.visitPending > 0 ? Math.min(d.visitPending, DAP_CONFIG.maxFollowupsPerDay) : 0);
+
+  // ── 候选场景 ──
+  const candidates = [];
+  // P0 / R3：存在高风险客户且回访未达标（visitRate 未知时按清单降级触发）
+  const maintainAbnormal = (milkClientMom !== null && milkClientMom < 0) || (d.liushiUsers > 0) || (repurchaseRate !== null && repurchaseRate < T.repurchaseLow);
+  if (followupUrgent > 0 && (visitRate === null || visitRate < T.visitRateGood)) {
+    candidates.push({ scenario: 'R3_CUSTOMER_MAINTENANCE_VISIT_LOW', priority: 'P0', confidence: list ? 'high' : 'medium',
+      headline: '今天优先召回高风险客户', opportunity: '唤醒沉睡客户，在客户完全流失前恢复联系，盘活存量用户资源',
+      evidence: [
+        { metric: '高风险客户', current: `${followupUrgent}人`, detail: `流失 ${fu.lost || 0} 人、高危 ${fu.critical || 0} 人、紧急 ${fu.high || 0} 人` },
+        { metric: '回访完成率', current: visitRate === null ? '未知' : dapPct(visitRate), detail: visitRate === null ? '应回访人数为 0，按高风险清单直接触发' : `已回 ${d.visitDone} / 应回 ${d.visitShould}，待回 ${d.visitPending}` },
+      ] });
+  }
+  // P1 / R4+R7 合并：回访达标（或无回访任务）但复购偏低 / 客户维护信号弱
+  if (repurchaseRate !== null && repurchaseRate < T.repurchaseLow && !(followupUrgent > 0 && (visitRate === null || visitRate < T.visitRateGood))) {
+    const ev = [{ metric: '本月复购用户占比', current: dapPct(repurchaseRate), detail: `低于阈值 ${dapPct(T.repurchaseLow)}；仅有本月数据，只判断“偏低”，非“下降”` }];
+    if (milkClientMom !== null && milkClientMom < 0) ev.push({ metric: '奶粉客户数', current: `${d.milkClients}人`, detail: `上月 ${d.milkClientsLast} 人，环比 ${dapPct(milkClientMom, true)}` });
+    if (d.liushiUsers > 0) ev.push({ metric: '本月流失用户', current: `${d.liushiUsers}人`, detail: '存在流失，需要提前干预' });
+    candidates.push({ scenario: 'R4R7_REPURCHASE_LOW', priority: 'P1', confidence: 'high',
+      headline: '今天聚焦存量客户复购', opportunity: '抓住客户消费周期，提前补货提醒 + 需求匹配，增强老客户消费意愿', evidence: ev });
+  }
+  // P1 / R1：下单客户下降（代理指标）
+  if (clientMom !== null && clientMom <= T.clientMomDecline) {
+    const ev = [{ metric: '本月下单客户', current: `${d.totalClients}人`, detail: `上月 ${d.totalClientsLast} 人，环比 ${dapPct(clientMom, true)}（此字段暂作客户流量代理指标）` }];
+    if (d.sankeUsers < d.sankeUsersLast) ev.push({ metric: '散客用户', current: `${d.sankeUsers}人`, detail: `上月 ${d.sankeUsersLast} 人，同步走弱` });
+    candidates.push({ scenario: 'R1_CLIENT_DECLINE', priority: 'P1', confidence: 'medium',
+      headline: '今天重点补充新客源', opportunity: '挖掘外部增量客源，扩充门店潜在客户池', evidence: ev });
+  }
+  // P2 / R2：客户增长但不足（降级：“增长不足”，不说“增速放缓”）
+  if (clientMom !== null && clientMom > 0 && clientMom < T.clientGrowthInsufficient) {
+    candidates.push({ scenario: 'R2_CLIENT_GROWTH_INSUFFICIENT', priority: 'P2', confidence: 'medium',
+      headline: '客户仍在增长，今天优化新客转化', opportunity: '减少引流后的流失，提高新客转化率',
+      evidence: [{ metric: '本月下单客户', current: `${d.totalClients}人`, detail: `上月 ${d.totalClientsLast} 人，环比 ${dapPct(clientMom, true)}，增长幅度低于 ${dapPct(T.clientGrowthInsufficient)}（两期数据仅能判断增长不足）` }] });
+  }
+  // P2 / R5：客单价下降
+  if (aovMom !== null && aovMom <= T.aovDecline) {
+    candidates.push({ scenario: 'R5_AOV_DECLINE', priority: 'P2', confidence: 'medium',
+      headline: '今天抓单笔订单产出', opportunity: '抓住每一笔成交，通过连带推荐提高单笔订单产出',
+      evidence: [{ metric: '全品类客单价', current: `¥${(d.kedanjia || 0).toFixed(0)}`, detail: `上月环比 ${dapPct(aovMom, true)}，低于 ${dapPct(T.aovDecline)} 阈值` }] });
+  }
+  // P2：业绩追赶
+  if (d.target > 0 && (d.achievementRate || 0) < monthProgress && salesGap > 0) {
+    candidates.push({ scenario: 'P2_SALES_CATCHUP', priority: 'P2', confidence: 'high',
+      headline: '今天聚焦销售目标追赶', opportunity: '把月度缺口拆解为当天可完成的销售动作',
+      evidence: [{ metric: '目标达成率', current: dapPct(d.achievementRate), detail: `月进度 ${dapPct(monthProgress)}；缺口 ¥${salesGap.toFixed(0)}，剩余 ${remainingDays} 天日均需 ¥${dailySalesGap}` }] });
+  }
+  // P3 / R6：客单价上涨（复盘沉淀）
+  if (aovMom !== null && aovMom >= T.aovGrowthGood) {
+    candidates.push({ scenario: 'R6_AOV_GOOD', priority: 'P3', confidence: 'medium',
+      headline: '客单价上涨，今天沉淀方法', opportunity: '复制成功经验，把个人打法变成门店打法',
+      evidence: [{ metric: '全品类客单价', current: `¥${(d.kedanjia || 0).toFixed(0)}`, detail: `上月环比 ${dapPct(aovMom, true)}（仅两期数据，表述为“上涨”）` }] });
+  }
+
+  // ── 优先级排序，选一个主场景 ──
+  const PRIORITY_ORDER = { P0: 0, P1: 1, P2: 2, P3: 3 };
+  candidates.sort((a, b) => PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority]);
+  let primary = candidates[0] || null;
+  if (!primary) {
+    primary = { scenario: 'KEEP_STEADY', priority: 'P3', confidence: 'high',
+      headline: '指标健康，今天做好保持动作', opportunity: '巩固服务质量，沉淀成功经验',
+      evidence: [{ metric: '异常规则', current: '未触发', detail: '当前各项指标未命中任何异常场景' }] };
+  }
+
+  // ── 生成今日任务（最多 3 个；P0 客户清单优先于轮换）──
+  const rot = (n) => dapHash(d.name + '|' + date + '|' + primary.scenario) % n;
+  const Q = DAP_CONFIG.quotas;
+  const tasks = [];
+  const refs = todayRefs.map(c => `${dapMaskPhone(c.phone)}（${c.urgency}·${c.daysAgo}天未购）`);
+
+  if (primary.scenario === 'R3_CUSTOMER_MAINTENANCE_VISIT_LOW') {
+    tasks.push({ order: 1, action: `完成 ${followupQuota || followupUrgent} 位高优先级客户回访（电话或企微）`, targetRefs: refs,
+      completionDefinition: '每位填写「未购买原因、当前需求、下次跟进时间」三项，缺一不算完成；无法接通改企微留言并标记再联系时间', sourceRule: 'R3' });
+    const support = [
+      { action: `从今日回访对象中选 ${Math.min(3, followupQuota || 3)} 位，先查历史消费记录再做个性化沟通`, completionDefinition: '记录客户反馈；无历史记录数据时不虚构偏好', sourceRule: 'R4' },
+      { action: `对 ${Q.feedback} 位客户收集不满意点或未购买原因并同步店长`, completionDefinition: '每条原因需为客户原话记录，不做主观归因', sourceRule: 'R4' },
+      { action: '从「本周」清单中挑出临近预测补货日期的客户，提前发补货提醒', completionDefinition: '发送记录可查，标记客户回复状态', sourceRule: 'R7' },
+    ];
+    tasks.push({ order: 2, ...support[rot(support.length)] });
+  } else if (primary.scenario === 'R4R7_REPURCHASE_LOW') {
+    const pool = [
+      { action: `优先联系「本周」清单中接近预测补货日期的客户（最多 ${DAP_CONFIG.maxFollowupsPerDay} 位）`, targetRefs: refs.slice(0, DAP_CONFIG.maxFollowupsPerDay), completionDefinition: '核对补货周期并设置提醒，记录客户回复', sourceRule: 'R7' },
+      { action: `向 ${Q.bundle} 位符合条件的老会员说明专属福利或周期复购权益`, completionDefinition: '记录「已说明/感兴趣/暂不考虑」三态结果', sourceRule: 'R4' },
+      { action: '对近期成交客户完成售后使用体验跟进', completionDefinition: `至少 ${Q.feedback} 位，记录使用反馈与下次跟进时间`, sourceRule: 'R7' },
+      { action: '发布或私发 1 条与目标客户需求相关的育儿知识', completionDefinition: '无客户需求数据时选通用主题，不声称精准匹配', sourceRule: 'R7' },
+    ];
+    const i = rot(pool.length);
+    tasks.push({ order: 1, ...pool[i] });
+    tasks.push({ order: 2, ...pool[(i + 1) % pool.length] });
+  } else if (primary.scenario === 'R1_CLIENT_DECLINE') {
+    const pool = [
+      { action: `到店登记：完整登记至少 ${Q.newLead} 位新客的联系方式、宝宝月龄、核心需求，并全部添加企微`, completionDefinition: `${Q.newLead} 位信息完整且企微添加成功`, sourceRule: 'R1' },
+      { action: `未成交跟进：选择 ${Q.unconvertedFollowup} 位未成交客户，一对一了解未下单原因并记录`, completionDefinition: '每位记录未下单原因原话；项目无名单时按门店实际名单执行，不虚构客户', sourceRule: 'R1' },
+      { action: '线下拓客：完成一次社区/异业触点执行', completionDefinition: '记录触达人数和新增企微数', sourceRule: 'R1' },
+      { action: '线上获客：发布 1 条本地母婴短内容或参与 1 次直播承接', completionDefinition: '记录曝光/咨询数', sourceRule: 'R1' },
+      { action: `老带新宣导：向 ${Q.referral} 位服务满意的老客讲解老带新政策（固定运营动作，非裂变率异常触发）`, completionDefinition: '记录「已介绍/愿意推荐/暂不考虑」', sourceRule: 'R8-固定' },
+    ];
+    tasks.push({ order: 1, ...pool[rot(pool.length)] });
+  } else if (primary.scenario === 'R2_CLIENT_GROWTH_INSUFFICIENT') {
+    const pool = [
+      { action: `跟进 ${Q.unconvertedFollowup} 位近期未成交新客，记录未下单原因`, completionDefinition: '每位有原因记录', sourceRule: 'R2' },
+      { action: '演练并实际使用一次新客体验套餐/新人优惠标准话术', completionDefinition: '记录使用场景与客户反应', sourceRule: 'R2' },
+      { action: '复盘本月转化最好的一个获客渠道，向店长提交一条可复制做法', completionDefinition: '提交一条书面可复制做法', sourceRule: 'R2' },
+    ];
+    tasks.push({ order: 1, ...pool[rot(pool.length)] });
+  } else if (primary.scenario === 'R5_AOV_DECLINE') {
+    tasks.push({ order: 1, action: `完成 ${Q.bundle} 次关联商品推荐`, completionDefinition: '记录推荐商品、客户反馈、最终是否成交；不以勾选「已推荐」为完成', sourceRule: 'R5' });
+    const support = [
+      { action: '每笔主推商品成交时主动介绍一次组合套餐或满减方案', completionDefinition: '记录介绍次数与结果', sourceRule: 'R5' },
+      { action: '选择一个高客单商品，用「需求—优势—适用场景」三句话向客户完成介绍', completionDefinition: '至少完成 1 次并记录客户反应', sourceRule: 'R5' },
+    ];
+    tasks.push({ order: 2, ...support[rot(support.length)] });
+  } else if (primary.scenario === 'P2_SALES_CATCHUP') {
+    tasks.push({ order: 1, action: `今天需关注销售产出约 ¥${dailySalesGap}（月缺口 ¥${salesGap.toFixed(0)} ÷ 剩余 ${remainingDays} 天）`, completionDefinition: '此为当天关注值，不拆给单一客户；闭店前核对当日实际销售', sourceRule: 'P2' });
+    tasks.push({ order: 2, action: `完成 ${Q.bundle} 次连带推荐提高单笔产出`, completionDefinition: '记录推荐商品与结果', sourceRule: 'R5' });
+  } else if (primary.scenario === 'R6_AOV_GOOD') {
+    tasks.push({ order: 1, action: '复盘 1 个高客单成交案例，写出「客户需求、使用话术、连带商品、成交结果」四项，并在门店分享', completionDefinition: '四项齐全并完成分享', sourceRule: 'R6' });
+  } else {
+    tasks.push({ order: 1, action: `完成 ${Q.feedback} 位成交客户的售后跟进`, completionDefinition: '记录使用反馈与下次跟进时间', sourceRule: '保持' });
+    tasks.push({ order: 2, action: '复盘 1 个成功成交案例', completionDefinition: '写出关键动作一条', sourceRule: '保持' });
+  }
+  // 高风险客户存在但主场景不是 R3 时，附加提醒任务（不超过 3 个）
+  if (followupUrgent > 0 && primary.scenario !== 'R3_CUSTOMER_MAINTENANCE_VISIT_LOW' && tasks.length < DAP_CONFIG.maxTasksPerDay) {
+    tasks.push({ order: tasks.length + 1, action: `另有 ${followupUrgent} 位高风险客户，至少完成 ${Math.min(DAP_CONFIG.minFollowupsPerDay, followupUrgent)} 位回访`, targetRefs: refs.slice(0, DAP_CONFIG.minFollowupsPerDay),
+      completionDefinition: '填写未购买原因、当前需求、下次跟进时间', sourceRule: 'R3' });
+  }
+
+  return {
+    date, timezone: 'Asia/Shanghai', dataVersion: d.version || '',
+    primaryScenario: primary.scenario, priority: primary.priority, confidence: primary.confidence,
+    headline: primary.headline, opportunity: primary.opportunity, evidence: primary.evidence,
+    tasks: tasks.slice(0, DAP_CONFIG.maxTasksPerDay),
+    dataWarnings: warnings,
+    disabledScenarios: [
+      { scenario: 'R8_REFERRAL_RATE_LOW', reason: '当前没有裂变率和老带新成交归因数据，异常诊断禁用（老带新仅作为固定运营动作出现）' },
+      { scenario: '复购率趋势', reason: '仅有本月复购率，只能判断「偏低」，不能判断「下降」' },
+      { scenario: '新客增速放缓', reason: '缺少第三个月数据，只能判断「增长不足」' },
+    ],
+  };
+}
+
 function renderAction(d) {
+  const plan = buildDailyActionPlan(d);
   const insights = d.customerInsights || [];
   const suggestions = (d.suggestion || '').split('\n').filter(Boolean);
   const tasks = d.weeklyTasks || [];
+  const pillClass = plan.priority.toLowerCase();
+  const evHtml = plan.evidence.map(e => `<div class="dap-evidence"><b>${e.metric}：${e.current}</b> — ${e.detail}</div>`).join('');
+  const taskHtml = plan.tasks.map(t => `
+    <div class="dap-task">
+      <div class="dap-task-num">${t.order}</div>
+      <div>
+        <div class="dap-task-action">${t.action}</div>
+        <div class="dap-task-def">✅ 完成标准：${t.completionDefinition}</div>
+        ${t.targetRefs && t.targetRefs.length ? `<div class="dap-task-refs">今日对象：${t.targetRefs.map(r => `<span>${r}</span>`).join('')}</div>` : ''}
+      </div>
+    </div>`).join('');
   return `<div class="card">
-    <div class="section-title"><span class="icon">💡</span> 行动建议</div>
+    <div class="section-title"><span class="icon">🎯</span> 今日行动建议</div>
+    <div class="dap-head"><span class="dap-pill ${pillClass}">${plan.priority}</span><span class="dap-headline">${plan.headline}</span></div>
+    <div class="dap-block"><div class="dap-block-title">📊 为什么（数据证据）</div>${evHtml}</div>
+    <div class="dap-block"><div class="dap-block-title">💡 你的机会</div><div class="dap-opportunity">${plan.opportunity}</div></div>
+    <div class="dap-block"><div class="dap-block-title">✍️ 今天完成（最多 ${DAP_CONFIG.maxTasksPerDay} 项）</div>${taskHtml}</div>
+    ${plan.dataWarnings.length ? `<div class="dap-warn">⚠️ ${plan.dataWarnings.join('；')}</div>` : ''}
+    <div class="dap-note">业务日期 ${plan.date} · 数据版本 ${plan.dataVersion || '—'} · 同日同数据建议保持一致，次日自动轮换 · 未启用：裂变率异常/复购趋势/新客增速（数据不足）</div>
+  </div>
+
+  <div class="card">
+    <div class="section-title"><span class="icon">💡</span> 更多参考</div>
 
     <div class="section-title plain">🔍 客户洞察</div>
     ${insights.length ? insights.map(ins => `<div class="insight-item">${ins}</div>`).join('') : '<div class="insight-item">暂无洞察数据</div>'}
