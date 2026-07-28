@@ -14,6 +14,7 @@
   "achieved": 0,
   "achievementRate": 0,
   "userTarget": 120,
+  "newCustomers": 23,
   "customerService": {
     "newServiceCount": 23,
     "chatTotal": 2,
@@ -107,7 +108,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-21",
+  "version": "2026-07-28 07-34",
   "storeRank": 2,
   "storeTotal": 4,
   "storeTopName": "陈传勋",

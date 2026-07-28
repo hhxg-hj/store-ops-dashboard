@@ -275,9 +275,9 @@ function renderOverview(d) {
 
   // 用户指标统一目标：当月新增客户数（来自飞书「店员企微联系情况」表，按店员提取）。
   // 目标为 0 或未配置时显示「目标未设置」，避免除零。
-  // 用户指标统一按门店定目标：大礼堂店 90，其余店 120
+  // 用户指标里只有「新增客户数」带目标：大礼堂店 90，其余店 120
   const userTarget = (d.store && String(d.store).includes('大礼堂')) ? 90 : 120;
-  const reachRate = (val) => `${Math.round((val / userTarget) * 100)}%（目标 ${userTarget}）`;
+  const newCustRate = d.newCustomers > 0 ? `${Math.round((d.newCustomers / userTarget) * 100)}%（目标 ${userTarget}）` : `0%（目标 ${userTarget}）`;
 
   return `
   <div class="card">
@@ -310,11 +310,12 @@ function renderOverview(d) {
 
   <div class="section-title plain">👥 用户指标</div>
   <div class="kpi-grid">
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkClients)}</div><div class="kpi-lbl">奶粉用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.milkClients)}</div><div class="kpi-sub mom ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushClients)}</div><div class="kpi-lbl">主推用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.pushClients)}</div><div class="kpi-sub mom ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
-    <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.depositCount)}</div></div>
-    <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.totalClients)}</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${reachRate(d.visitDone)}</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.newCustomers)}</div><div class="kpi-lbl">新增客户数</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${newCustRate}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkClients)}</div><div class="kpi-lbl">奶粉用户</div><div class="kpi-sub mom ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushClients)}</div><div class="kpi-lbl">主推用户</div><div class="kpi-sub mom ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
+    <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div></div>
+    <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
+    <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
   </div>`;
 }
 

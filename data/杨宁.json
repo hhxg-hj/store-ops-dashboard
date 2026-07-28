@@ -14,6 +14,7 @@
   "achieved": 34062.04,
   "achievementRate": 0.851551,
   "userTarget": 120,
+  "newCustomers": 21,
   "customerService": {
     "newServiceCount": 21,
     "chatTotal": 50,
@@ -107,7 +108,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-21",
+  "version": "2026-07-28 07-34",
   "storeRank": 2,
   "storeTotal": 6,
   "storeTopName": "胡美娟",

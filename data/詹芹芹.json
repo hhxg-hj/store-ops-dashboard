@@ -14,6 +14,7 @@
   "achieved": 87583.29,
   "achievementRate": 1.251189857,
   "userTarget": 90,
+  "newCustomers": 16,
   "customerService": {
     "newServiceCount": 16,
     "chatTotal": 87,
@@ -107,7 +108,7 @@
   "liushiUsersLast": 27,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-21",
+  "version": "2026-07-28 07-34",
   "storeRank": 1,
   "storeTotal": 3,
   "storeTopName": "（你）",

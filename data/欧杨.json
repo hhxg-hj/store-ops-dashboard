@@ -14,6 +14,7 @@
   "achieved": 4072.25,
   "achievementRate": 0.187955783,
   "userTarget": 120,
+  "newCustomers": 10,
   "customerService": {
     "newServiceCount": 10,
     "chatTotal": 39,
@@ -107,7 +108,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-21",
+  "version": "2026-07-28 07-34",
   "storeRank": 2,
   "storeTotal": 10,
   "storeTopName": "陈丹",
