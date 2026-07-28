@@ -63,7 +63,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-27 04-07",
+  "version": "2026-07-28 03-59",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -1881,7 +1881,7 @@
         "lastBuy": "2026-05-27",
         "daysAgo": 57,
         "predicted": "已到期，立即联系",
-        "cycle": 45,
+        "cycle": 30,
         "urgency": "紧急",
         "level": "high"
       },
