@@ -201,7 +201,7 @@ function fmtNum(v) { if (v == null || isNaN(v)) return '0'; return Number(v).toL
 function momClass(v) { if (v == null || isNaN(v)) return 'mom-none'; return v >= 0 ? 'mom-up' : 'mom-down'; }
 function momLabel(v) { if (v == null || isNaN(v)) return '—'; return fmtPct(v, true); }
 
-const VIEW_TITLES = { overview:'运营概览', perf:'销售业绩', followup:'客户回访', action:'行动建议', learning:'学习资源' };
+const VIEW_TITLES = { overview:'运营概览', perf:'销售业绩', followup:'客户服务', action:'行动建议', learning:'学习资源' };
 const VALID_VIEWS = ['overview','perf','followup','action','learning'];
 
 /* ===== Shell ===== */
@@ -221,7 +221,7 @@ function buildShell(d) {
       <nav class="nav">
         <div class="nav-item" data-view="overview" onclick="navTo('overview')"><span>🏠</span>运营概览</div>
         <div class="nav-item" data-view="perf" onclick="navTo('perf')"><span>📈</span>销售业绩</div>
-        <div class="nav-item" data-view="followup" onclick="navTo('followup')"><span>📞</span>客户回访</div>
+        <div class="nav-item" data-view="followup" onclick="navTo('followup')"><span>📞</span>客户服务</div>
         <div class="nav-item" data-view="action" onclick="navTo('action')"><span>💡</span>行动建议</div>
         <div class="nav-item" data-view="learning" onclick="navTo('learning')"><span>📚</span>学习资源</div>
       </nav>
@@ -280,15 +280,19 @@ function renderOverview(d) {
     </div>
   </div>
 
-  <div class="section-title plain">📊 核心指标</div>
+  <div class="section-title plain">📈 业绩指标</div>
   <div class="kpi-grid">
     <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">门店均值 ${storeRate}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.milkCans)}</div><div class="kpi-lbl">奶粉销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momMilkCans)}">环比 ${momLabel(d.momMilkCans)}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.pushCans)}</div><div class="kpi-lbl">主推销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momPushCans)}">环比 ${momLabel(d.momPushCans)}</div></div>
+    <div class="kpi"><div class="kpi-val">${d.milkAvg ? d.milkAvg.toFixed(1) : '—'}</div><div class="kpi-lbl">奶粉客单量 (罐/人)</div><div class="kpi-sub mom ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div></div>
+  </div>
+
+  <div class="section-title plain">👥 用户指标</div>
+  <div class="kpi-grid">
     <div class="kpi"><div class="kpi-val">${fmtNum(d.milkClients)}</div><div class="kpi-lbl">奶粉用户</div><div class="kpi-sub mom ${momClass(d.momMilkClients)}">环比 ${momLabel(d.momMilkClients)}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.pushClients)}</div><div class="kpi-lbl">主推用户</div><div class="kpi-sub mom ${momClass(d.momPushClients)}">环比 ${momLabel(d.momPushClients)}</div></div>
     <div class="kpi orange"><div class="kpi-val">${fmtNum(d.depositCount)}</div><div class="kpi-lbl">保证金用户</div></div>
-    <div class="kpi"><div class="kpi-val">${d.milkAvg ? d.milkAvg.toFixed(1) : '—'}</div><div class="kpi-lbl">奶粉客单量 (罐/人)</div><div class="kpi-sub mom ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div></div>
     <div class="kpi green"><div class="kpi-val">${fmtNum(d.totalClients)}</div><div class="kpi-lbl">成交用户</div><div class="kpi-sub mom ${momClass(d.momClients)}">环比 ${momLabel(d.momClients)}</div></div>
     <div class="kpi"><div class="kpi-val">${fmtNum(d.visitDone)}<span style="font-size:14px;color:var(--text2)"> / ${fmtNum(d.visitShould)}</span></div><div class="kpi-lbl">回访 已回/应回</div><div class="kpi-sub" style="color:var(--warning)">待回 ${fmtNum(d.visitPending)}</div></div>
   </div>`;
@@ -323,7 +327,7 @@ function renderPerf(d) {
 
 function renderFollowup(d) {
   return `<div class="card">
-    <div class="section-title"><span class="icon">📞</span> 客户回访清单</div>
+    <div class="section-title"><span class="icon">📞</span> 客户服务清单</div>
     <div class="followup-stats" id="fuStats">
       <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
       <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
