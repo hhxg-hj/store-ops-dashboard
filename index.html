@@ -183,6 +183,11 @@
     .fu-stat.critical { background:#fff7ed; color:#ea580c; }
     .fu-stat.high { background:#fefce8; color:#ca8a04; }
     .fu-stat.medium { background:#f0fdf4; color:#16a34a; }
+    .milk-filter { display:flex; gap:6px; margin-bottom:8px; }
+    .milk-filter-btn { font-size:11px; padding:4px 12px; border:1px solid var(--border); border-radius:99px; background:#fff; cursor:pointer; color:var(--text2); transition:all .15s; }
+    .milk-filter-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); font-weight:600; }
+    .fu-milk-detail { font-size:10px; color:#059669; margin-top:1px; }
+    .fu-milk-badge { margin-right:3px; }
     .followup-list { margin-top:8px; }
     .fu-header, .fu-row { display:flex; align-items:center; padding:7px 8px; font-size:12px; }
     .fu-header { color:var(--text2); font-weight:600; border-bottom:2px solid var(--border); margin-bottom:4px; }
@@ -373,6 +378,10 @@ function renderPerf(d) {
         <tr><td>📈 目标达成率</td><td>${d.achievementRate ? (d.achievementRate*100).toFixed(1)+'%' : '—'}</td><td>—</td></tr>
         <tr><td>🥛 本月奶粉销量</td><td>${fmtNum(d.milkCans)}罐</td><td class="${momClass(d.momMilkCans)} mom">${momLabel(d.momMilkCans)}</td></tr>
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(d.pushCans)}罐</td><td class="${momClass(d.momPushCans)} mom">${momLabel(d.momPushCans)}</td></tr>
+        <tr class="section-row"><td colspan="3">三、核心销售指标</td></tr>
+        <tr><td>💳 全品类客单价</td><td>${fmtMoney(d.kedanjia)}</td><td class="${momClass(d.kedanjiaQoq)} mom">${momLabel(d.kedanjiaQoq)}</td></tr>
+        <tr><td>📈 销售额环比</td><td>上月 ${fmtMoney(d.lastMonthAchieved)}</td><td class="${momClass(d.salesMom)} mom">${momLabel(d.salesMom)}</td></tr>
+        <tr><td>📊 日均销售额</td><td>${fmtMoney(d.dailyAvg)}</td><td class="${momClass(d.dailyAvgMom)} mom">${momLabel(d.dailyAvgMom)}</td></tr>
       </tbody>
     </table>
     ${renderMilkCategories(d)}
@@ -418,8 +427,8 @@ function renderFollowup(d) {
   const cs = d.customerService || {};
   const rr = cs.replyRate || 0;
   const frt = cs.firstReplyMin || 0;
-  const rrColor = rr >= 80 ? 'var(--success)' : rr >= 50 ? 'var(--warning)' : 'var(--danger)';
-  const frtColor = frt > 0 && frt <= 15 ? 'var(--success)' : frt > 30 ? 'var(--danger)' : 'var(--warning)';
+  const rrColor = rr >= 90 ? 'var(--success)' : rr >= 70 ? 'var(--warning)' : 'var(--danger)';
+  const frtColor = frt > 0 && frt <= 10 ? 'var(--success)' : frt > 20 ? 'var(--danger)' : 'var(--warning)';
   return `<div class="card">
     <div class="section-title"><span class="icon">📞</span> 客户服务</div>
 
@@ -433,6 +442,11 @@ function renderFollowup(d) {
     </div>
 
     <div class="section-title plain">📋 客户回访清单</div>
+    <div class="milk-filter">
+      <button class="milk-filter-btn active" onclick="setMilkFilter('all')">全部</button>
+      <button class="milk-filter-btn" onclick="setMilkFilter('milk')">🥛 奶粉客户</button>
+      <button class="milk-filter-btn" onclick="setMilkFilter('other')">📦 其他商品</button>
+    </div>
     <div class="followup-stats" id="fuStats">
       <div class="fu-stat lost" data-level="lost" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.lost||0}</div><div class="fu-lbl">已流失</div></div>
       <div class="fu-stat critical" data-level="critical" onclick="switchFollowupTab(this)"><div class="fu-num">${d.followUp?.critical||0}</div><div class="fu-lbl">高危</div></div>
@@ -786,8 +800,10 @@ function showError(msg) {
   $('app').innerHTML = `<div class="state-msg"><h2>😔 暂无数据</h2><p>${msg||'未找到该店员的数据'}</p></div>`;
 }
 
-function renderFollowupList(list, level) {
-  const filtered = (list || []).filter(c => c.level === level);
+function renderFollowupList(list, level, milkFilter) {
+  let filtered = (list || []).filter(c => c.level === level);
+  if (milkFilter === 'milk') filtered = filtered.filter(c => c.isMilk);
+  if (milkFilter === 'other') filtered = filtered.filter(c => c.isMilk === false);
   if (!filtered.length) {
     const emptyMsg = { lost:'暂无已流失客户', critical:'暂无高危客户', high:'暂无紧急回访客户', medium:'暂无本周回访客户' };
     return '<div style="text-align:center;padding:24px 0;color:#94a3b8;font-size:13px;">' + (emptyMsg[level]||'暂无数据') + '</div>';
@@ -800,23 +816,33 @@ function renderFollowupList(list, level) {
         <div style="flex:0.5;text-align:center;">天数</div>
         <div style="flex:1.5">建议回访日期</div>
       </div>
-      ${filtered.map(c => `
-      <div class="fu-row ${c.level}">
-        <div style="flex:1.3;font-weight:600;">${c.phone||'—'}</div>
+      ${filtered.map(c => {
+        const milkDetail = c.isMilk && c.lastBrand ? `<div class="fu-milk-detail"><span class="fu-milk-badge">🥛</span>${c.lastBrand.slice(0,18)} · ¥${(c.lastAmount||0).toFixed(0)} · ${c.lastCans||0}罐</div>` : '';
+        return `<div class="fu-row ${c.level}">
+        <div style="flex:1.3;font-weight:600;">${c.phone||'—'}${milkDetail}</div>
         <div style="flex:1;">${c.lastBuy||'—'}</div>
         <div style="flex:0.5;text-align:center;color:var(--text2);">${c.daysAgo!=null?c.daysAgo+'天':'—'}</div>
         <div style="flex:1.5;font-size:11px;color:#64748b;">${c.predicted||'—'}</div>
-      </div>`).join('')}
+      </div>`;
+      }).join('')}
     </div>`;
 }
-
-function switchFollowupTab(el) {
-  document.querySelectorAll('#fuStats .fu-stat').forEach(s => s.classList.remove('active'));
-  el.classList.add('active');
-  const level = el.dataset.level;
+var _milkFilter = 'all';
+function setMilkFilter(f) {
+  _milkFilter = f;
+  const activeLevel = document.querySelector('#fuStats .fu-stat.active');
+  const level = activeLevel ? activeLevel.dataset.level : 'lost';
+  switchFollowupTab(activeLevel, level);
+}
+function switchFollowupTab(el, levelOverride) {
+  if (el) {
+    document.querySelectorAll('#fuStats .fu-stat').forEach(s => s.classList.remove('active'));
+    el.classList.add('active');
+  }
+  const level = levelOverride || (el ? el.dataset.level : 'lost');
   const list = (_currentData && _currentData.followUp && _currentData.followUp.list) || [];
   const fc = $('fuContent');
-  if (fc) fc.innerHTML = renderFollowupList(list, level);
+  if (fc) fc.innerHTML = renderFollowupList(list, level, _milkFilter);
 }
 
 async function loadData(userId) {

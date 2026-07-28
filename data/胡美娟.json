@@ -4,15 +4,21 @@
   "region": "重庆区域",
   "zaidian": true,
   "isManager": true,
-  "commission": 5213.76,
-  "commissionShangpin": 2211.62,
-  "commissionFujian": 2115,
-  "commissionBaojin": 300,
-  "commissionJishi": 1.33,
-  "commissionManager": 579.13,
-  "target": 70000,
-  "achieved": 99945.51,
-  "achievementRate": 1.427793,
+  "commission": 2774.75,
+  "commissionShangpin": 1121.36,
+  "commissionFujian": 1242.5,
+  "commissionBaojin": 80,
+  "commissionJishi": 3.25,
+  "commissionManager": 311.39,
+  "target": 80000,
+  "achieved": 68404.33,
+  "achievementRate": 0.855054125,
+  "lastMonthAchieved": 99945.51,
+  "lastMonthTarget": 70000,
+  "salesMom": -0.31558376159169127,
+  "dailyAvg": 2443.011785714286,
+  "dailyAvgLast": 3331.517,
+  "dailyAvgMom": -0.2666968874196692,
   "userTarget": 120,
   "newCustomers": 27,
   "customerService": {
@@ -22,7 +28,7 @@
     "replyRate": 75,
     "firstReplyMin": 14
   },
-  "mendianDachengLv": 1.0560332,
+  "mendianDachengLv": 0.733972313,
   "mendianStaffCount": 6,
   "milkCans": 257,
   "milkCansLast": 388,
@@ -108,15 +114,15 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 08-27",
+  "version": "2026-07-28 09-11",
   "storeRank": 1,
   "storeTotal": 6,
   "storeTopName": "（你）",
-  "storeTopComm": 5213.76,
-  "regionRank": 1,
+  "storeTopComm": 2774.75,
+  "regionRank": 2,
   "regionTotal": 19,
-  "regionTopName": "（你）",
-  "regionTopComm": 5213.76,
+  "regionTopName": "詹芹芹",
+  "regionTopComm": 3816.65,
   "suggestion": "👶 你的奶粉客户从上月 77 位降到本月 52 位（减少 32%）。这 25 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n🔄 你的 52 位奶粉客户中仅 7 位本月复购，45 位只买了一次。一次购买可能是试水——主动跟进这 45 位的使用体验，帮助她们建立持续购买习惯。\n⚠️ 本月有 30 位客户流失。每一位流失背后都是一个宝宝的真实需求变化——可以梳理她们离开的原因：是品类不合适？还是服务体验有待提升？",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（52 位奶粉客户中仅 15 位（29%）使用过主推产品；主推罐数环比下降 39%（121→74罐）），以下产品资料能帮你更自信地推荐：",
@@ -173,7 +179,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "妈咪爱茁依天才学霸儿童成长配方奶粉 25g*22条 550g",
+        "lastAmount": 298,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 298
       },
       {
         "phone": "18223306206",
@@ -182,7 +194,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲爱他美Aptamil白金幼儿配方奶粉3段900g 1-3周岁",
+        "lastAmount": 1350,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1350
       },
       {
         "phone": "17782007783",
@@ -191,7 +209,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲Bellamy's 贝拉米OMNI-PURE有机婴儿配方奶粉2段 6-12个",
+        "lastAmount": 496,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 496
       },
       {
         "phone": "15723366694",
@@ -200,7 +224,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国BEBA贝巴至尊版SUPREME婴幼儿奶粉 1段 0-6月龄 800g",
+        "lastAmount": 576,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 576
       },
       {
         "phone": "13648476897",
@@ -209,7 +239,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "雀巢健康科学蔼儿舒特殊医学用途婴儿乳蛋白深度水解配方食品 0-12个月 400g",
+        "lastAmount": 1872,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 1872
       },
       {
         "phone": "17725074060",
@@ -218,7 +254,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g（新包",
+        "lastAmount": 430,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1290
       },
       {
         "phone": "13648403911",
@@ -227,7 +269,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 1782,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 4142
       },
       {
         "phone": "18580048866",
@@ -236,7 +284,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护婴儿配方奶粉 1段 0-6月龄 800g",
+        "lastAmount": 398,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 398
       },
       {
         "phone": "15178762108",
@@ -245,7 +299,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "15826272813",
@@ -254,7 +314,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 1290,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1290
       },
       {
         "phone": "18623560524",
@@ -263,7 +329,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17754973504",
@@ -272,7 +339,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 308,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 308
       },
       {
         "phone": "18875054969",
@@ -281,7 +354,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国BEBA贝巴至尊版SUPREME婴幼儿奶粉 PRE段 0-6月龄 800g",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1290
       },
       {
         "phone": "15679140560",
@@ -290,7 +369,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲爱他美Aptamil白金幼儿配方奶粉3段900g 1-3周岁",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "15330349312",
@@ -299,7 +384,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15196223440",
@@ -308,7 +394,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 2段 6-12月龄 800g",
+        "lastAmount": 3874,
+        "lastCans": 13,
+        "lastCategory": "main",
+        "totalMilkAmount": 5364
       },
       {
         "phone": "18225163546",
@@ -317,7 +409,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13330307493",
@@ -326,7 +419,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版婴儿配方牛奶粉 1段 0-6月龄 900g（新包装）",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "18875121028",
@@ -335,7 +434,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 398,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 398
       },
       {
         "phone": "13867709037",
@@ -344,7 +449,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 215,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1720.01
       },
       {
         "phone": "13638337777",
@@ -353,7 +464,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "妈咪爱茁依天才学霸儿童成长配方奶粉 25g*22条 550g",
+        "lastAmount": 298,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 2982
       },
       {
         "phone": "17353149466",
@@ -362,7 +479,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 2580,
+        "lastCans": 12,
+        "lastCategory": "general",
+        "totalMilkAmount": 2580
       },
       {
         "phone": "13752870632",
@@ -371,7 +494,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15082682602",
@@ -380,7 +504,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩婴儿配方奶粉1段 800g（0-12月）",
+        "lastAmount": 796,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 796
       },
       {
         "phone": "13628324253",
@@ -389,7 +519,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13330325961",
@@ -398,7 +529,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "18202399753",
@@ -407,7 +544,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13660808064",
@@ -416,7 +554,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠1段 800g/罐",
+        "lastAmount": 366,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 366
       },
       {
         "phone": "15683451994",
@@ -425,7 +569,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 1段 0-6月龄 800g",
+        "lastAmount": 339,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 678
       },
       {
         "phone": "15215178426",
@@ -434,7 +584,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护婴儿配方奶粉 1段 0-6月龄 800g",
+        "lastAmount": 816,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 816
       },
       {
         "phone": "18328819232",
@@ -443,7 +599,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴幼儿配方奶粉2段6-12月800g",
+        "lastAmount": -1134,
+        "lastCans": -6,
+        "lastCategory": "main",
+        "totalMilkAmount": 0
       },
       {
         "phone": "18523099127",
@@ -452,7 +614,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g（新包",
+        "lastAmount": -215,
+        "lastCans": -1,
+        "lastCategory": "general",
+        "totalMilkAmount": 3049.1000000000004
       },
       {
         "phone": "15086838550",
@@ -461,7 +629,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 1段 0-6月龄 800g",
+        "lastAmount": -339,
+        "lastCans": -1,
+        "lastCategory": "main",
+        "totalMilkAmount": 248
       },
       {
         "phone": "18953611115",
@@ -470,7 +644,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13810559453",
@@ -479,7 +654,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 1625.12,
+        "lastCans": 7,
+        "lastCategory": "child",
+        "totalMilkAmount": 2786
       },
       {
         "phone": "13272693152",
@@ -488,7 +669,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15922832634",
@@ -497,7 +679,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15086874012",
@@ -506,7 +689,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护婴儿配方奶粉 2段 6-12月龄 800g",
+        "lastAmount": 1552,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 3104
       },
       {
         "phone": "15909359744",
@@ -515,7 +704,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17784441999",
@@ -524,7 +714,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴幼儿配方奶粉2段6-12月800g",
+        "lastAmount": -1512,
+        "lastCans": -8,
+        "lastCategory": "main",
+        "totalMilkAmount": 3624
       },
       {
         "phone": "17623518996",
@@ -533,7 +729,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 238
       },
       {
         "phone": "15123325564",
@@ -542,7 +744,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 238
       },
       {
         "phone": "13989091833",
@@ -551,7 +759,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 238
       },
       {
         "phone": "17830864664",
@@ -560,7 +774,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲雀巢NAN能恩A2奶粉 3段 12-36个月 800g",
+        "lastAmount": 260,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 260
       },
       {
         "phone": "19942230066",
@@ -569,7 +789,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17323584426",
@@ -578,7 +799,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 228,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 684
       },
       {
         "phone": "13647678360",
@@ -587,7 +814,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13628313908",
@@ -596,7 +824,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "Neocate纽太特 深度水解 400g",
+        "lastAmount": 1932,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 3840
       },
       {
         "phone": "18983838463",
@@ -605,7 +839,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "麦蔻乐芬幼儿配方奶粉二段",
+        "lastAmount": 852.84,
+        "lastCans": 3,
+        "lastCategory": "special",
+        "totalMilkAmount": 1990
       },
       {
         "phone": "19920203114",
@@ -614,7 +854,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "荷兰Nutrilon牛栏诺优能经典版奶粉 3段 10-12月 800g",
+        "lastAmount": 1008.02,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1680.04
       },
       {
         "phone": "13657633522",
@@ -623,7 +869,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "19112425779",
@@ -632,7 +879,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 744
       },
       {
         "phone": "15123073881",
@@ -641,7 +894,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 645,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 2580.0299999999997
       },
       {
         "phone": "18875554840",
@@ -650,7 +909,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美 白金版婴儿配方奶粉 1段 0-6月龄 800g",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1210.01
       },
       {
         "phone": "15310303877",
@@ -659,7 +924,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 1段 0-6月 800g",
+        "lastAmount": 476.01,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 476.01
       },
       {
         "phone": "13450188082",
@@ -668,7 +939,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 238
       },
       {
         "phone": "15696074137",
@@ -677,7 +954,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g",
+        "lastAmount": 1380.03,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1380.03
       },
       {
         "phone": "13571874416",
@@ -686,7 +969,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "a2至初奶粉3段 850g（ 12-36月）",
+        "lastAmount": 308,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 308
       },
       {
         "phone": "13140383343",
@@ -695,7 +984,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓睿奶粉2段 750g（ 6-12月）",
+        "lastAmount": 940,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 6909
       },
       {
         "phone": "18392151413",
@@ -704,7 +999,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩幼儿配方奶粉3段 780g（ 12-36月）",
+        "lastAmount": 288,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 288
       },
       {
         "phone": "18223441749",
@@ -713,7 +1014,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "18580508148",
@@ -722,7 +1029,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15881609959",
@@ -731,7 +1039,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 899.99,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 1349.99
       },
       {
         "phone": "15223498624",
@@ -740,7 +1054,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15123575068",
@@ -749,7 +1064,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g",
+        "lastAmount": 460.01,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1380.03
       },
       {
         "phone": "15980296852",
@@ -758,7 +1079,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 672,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1344
       },
       {
         "phone": "17783192369",
@@ -767,7 +1094,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 450,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1349.99
       },
       {
         "phone": "15730491525",
@@ -776,7 +1109,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 656,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1968
       },
       {
         "phone": "13658350919",
@@ -785,7 +1124,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美 白金版婴儿配方奶粉 1段 0-6月龄 800g",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 258
       },
       {
         "phone": "17828794449",
@@ -794,7 +1139,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩幼儿配方奶粉3段 780g（ 12-36月）",
+        "lastAmount": 1100,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 1650
       },
       {
         "phone": "15213319229",
@@ -803,7 +1154,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g（新包",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 258
       },
       {
         "phone": "13637852100",
@@ -812,7 +1169,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲爱他美Aptamil白金婴儿配方奶粉1段900g 0-6月龄",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 516.55
       },
       {
         "phone": "13989055962",
@@ -821,7 +1184,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版婴儿配方牛奶粉 2段 6-12月龄 900g（新包装）",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "17726675908",
@@ -830,7 +1199,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓睿奶粉3段 750g（ 12-36月）",
+        "lastAmount": 520,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1560
       },
       {
         "phone": "15178848889",
@@ -839,7 +1214,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 2段 6-12月龄 800g",
+        "lastAmount": 339,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 339
       },
       {
         "phone": "18223389848",
@@ -848,7 +1229,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "a2至初奶粉4段 850g（3-6岁）",
+        "lastAmount": 1608,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1608
       },
       {
         "phone": "18325177376",
@@ -857,7 +1244,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "金领冠珍护 奶粉3段 800g（12-36月）",
+        "lastAmount": 208,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 208
       },
       {
         "phone": "15922861792",
@@ -866,7 +1259,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "18223449736",
@@ -875,7 +1269,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 298,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 298
       },
       {
         "phone": "15823870127",
@@ -884,7 +1284,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g（新包装",
+        "lastAmount": 596,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 596
       },
       {
         "phone": "13637878101",
@@ -893,7 +1299,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 636,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 636
       },
       {
         "phone": "13637758859",
@@ -902,7 +1314,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13458254050",
@@ -911,7 +1324,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17784338455",
@@ -920,7 +1334,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "ARIEL澳甄爱芮尔儿童成长奶粉 800g",
+        "lastAmount": 939,
+        "lastCans": 5,
+        "lastCategory": "child",
+        "totalMilkAmount": 1192
       },
       {
         "phone": "15923970075",
@@ -929,7 +1349,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15213491758",
@@ -938,7 +1359,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "19923694545",
@@ -947,7 +1369,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15730424382",
@@ -956,7 +1379,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "19823232365",
@@ -965,7 +1389,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17830815673",
@@ -974,7 +1399,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15730663330",
@@ -983,7 +1409,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力太 特殊医学用途全营养配方食品",
+        "lastAmount": 1872,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 1872
       },
       {
         "phone": "18223237358",
@@ -992,7 +1424,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 3段 1-3岁 800g",
+        "lastAmount": -596,
+        "lastCans": -2,
+        "lastCategory": "main",
+        "totalMilkAmount": 1788
       },
       {
         "phone": "13883783656",
@@ -1001,7 +1439,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 2段 6-12月龄 800g",
+        "lastAmount": -1110,
+        "lastCans": -4,
+        "lastCategory": "main",
+        "totalMilkAmount": 2138
       },
       {
         "phone": "18883301689",
@@ -1010,7 +1454,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g（新包",
+        "lastAmount": -1000,
+        "lastCans": -5,
+        "lastCategory": "general",
+        "totalMilkAmount": 1200
       },
       {
         "phone": "18696539115",
@@ -1019,7 +1469,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13996492773",
@@ -1028,7 +1479,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 477.6,
+        "lastCans": 2,
+        "lastCategory": "special",
+        "totalMilkAmount": 1592
       },
       {
         "phone": "17764832878",
@@ -1037,7 +1494,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 398,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 398
       },
       {
         "phone": "18883399095",
@@ -1046,7 +1509,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "18580007183",
@@ -1055,7 +1519,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13696420349",
@@ -1064,7 +1529,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 338,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 688
       },
       {
         "phone": "18623480419",
@@ -1073,7 +1544,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15513751659",
@@ -1082,7 +1554,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿婴儿奶粉2段 400g（ 6-12月）",
+        "lastAmount": 178,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 178
       },
       {
         "phone": "17580959560",
@@ -1091,7 +1569,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 975,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 975
       },
       {
         "phone": "17338671374",
@@ -1100,7 +1584,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13883859162",
@@ -1109,7 +1594,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "17764883117",
@@ -1118,7 +1604,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "纽康特 特殊医学用途婴儿氨基酸配方食品400g",
+        "lastAmount": -320,
+        "lastCans": -1,
+        "lastCategory": "special",
+        "totalMilkAmount": 129
       },
       {
         "phone": "13637884854",
@@ -1127,7 +1619,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13996062472",
@@ -1136,7 +1629,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 398,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 398
       },
       {
         "phone": "13896021652",
@@ -1145,7 +1644,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "纽康特 特殊医学用途婴儿氨基酸配方食品400g",
+        "lastAmount": 368,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 368
       },
       {
         "phone": "18723414306",
@@ -1154,7 +1659,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "13452471290",
@@ -1163,7 +1669,13 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": true,
+        "lastBrand": "ARIEL澳甄爱芮尔儿童成长奶粉 800g",
+        "lastAmount": 253,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 253
       },
       {
         "phone": "17720225403",
@@ -1172,7 +1684,8 @@
         "predicted": "尽快联系",
         "cycle": 100,
         "urgency": "已流失",
-        "level": "lost"
+        "level": "lost",
+        "isMilk": false
       },
       {
         "phone": "15084490399",
@@ -1181,7 +1694,8 @@
         "predicted": "2026-08-02",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15911330236",
@@ -1190,7 +1704,13 @@
         "predicted": "2026-08-02",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 3段 1-3岁 800g",
+        "lastAmount": -596,
+        "lastCans": -2,
+        "lastCategory": "main",
+        "totalMilkAmount": 3576
       },
       {
         "phone": "18725959295",
@@ -1199,7 +1719,8 @@
         "predicted": "2026-08-03",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15084423064",
@@ -1208,7 +1729,13 @@
         "predicted": "2026-08-06",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴幼儿配方奶粉2段6-12月800g",
+        "lastAmount": 476,
+        "lastCans": 2,
+        "lastCategory": "main",
+        "totalMilkAmount": 5746
       },
       {
         "phone": "13696476277",
@@ -1217,7 +1744,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18165175258",
@@ -1226,7 +1754,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15025584582",
@@ -1235,7 +1764,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18813044819",
@@ -1244,7 +1774,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15523975508",
@@ -1253,7 +1784,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 338,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 338
       },
       {
         "phone": "18859729596",
@@ -1262,7 +1799,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13310236506",
@@ -1271,7 +1809,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13883494625",
@@ -1280,7 +1819,13 @@
         "predicted": "2026-08-13",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢安儿宁能恩 特殊医学用途婴儿无乳糖配方食品 400g",
+        "lastAmount": -178,
+        "lastCans": -1,
+        "lastCategory": "special",
+        "totalMilkAmount": 1903.01
       },
       {
         "phone": "18523547365",
@@ -1289,7 +1834,13 @@
         "predicted": "2026-08-14",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "ARIEL澳甄爱芮尔儿童成长奶粉 800g",
+        "lastAmount": 363.6,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 798.4000000000001
       },
       {
         "phone": "15002309359",
@@ -1298,7 +1849,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15023122091",
@@ -1307,7 +1859,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13320251009",
@@ -1316,7 +1869,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13527393747",
@@ -1325,7 +1879,13 @@
         "predicted": "2026-08-19",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠1段 800g/罐",
+        "lastAmount": 2720,
+        "lastCans": 8,
+        "lastCategory": "general",
+        "totalMilkAmount": 3415
       },
       {
         "phone": "18883783089",
@@ -1334,7 +1894,13 @@
         "predicted": "2026-08-19",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 939.99,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 11904
       },
       {
         "phone": "18580269009",
@@ -1343,7 +1909,13 @@
         "predicted": "2026-08-19",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 1326.65,
+        "lastCans": 5,
+        "lastCategory": "child",
+        "totalMilkAmount": 3449
       },
       {
         "phone": "18716625708",
@@ -1352,7 +1924,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢安儿宁能恩 特殊医学用途婴儿无乳糖配方食品 400g",
+        "lastAmount": 198,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 198
       },
       {
         "phone": "15102329193",
@@ -1361,7 +1939,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 464.32,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 696.52
       },
       {
         "phone": "15696139548",
@@ -1370,7 +1954,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15384157104",
@@ -1379,7 +1964,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17725020571",
@@ -1388,7 +1974,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲Bellamy's 贝拉米卓越OMNI-PURE有机婴儿配方奶粉1段 0-6",
+        "lastAmount": 248,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 248
       },
       {
         "phone": "18696997087",
@@ -1397,7 +1989,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18723734810",
@@ -1406,7 +1999,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "法国圣元优博剖蓓舒欧盟白金版6HMO奶粉3段（1-3岁）",
+        "lastAmount": 828.01,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1380.02
       },
       {
         "phone": "15086759326",
@@ -1415,7 +2014,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美白金版婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 235.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 235.55
       },
       {
         "phone": "15723234353",
@@ -1424,7 +2029,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15223712371",
@@ -1433,7 +2039,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 3段12-36个月 800g",
+        "lastAmount": 1787.98,
+        "lastCans": 6,
+        "lastCategory": "main",
+        "totalMilkAmount": 1787.98
       },
       {
         "phone": "15102311791",
@@ -1442,7 +2054,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g",
+        "lastAmount": 215.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 215.55
       },
       {
         "phone": "13983636451",
@@ -1451,7 +2069,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15123843060",
@@ -1460,7 +2079,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18883872519",
@@ -1469,7 +2089,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13638333211",
@@ -1478,7 +2099,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 338,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 338
       },
       {
         "phone": "15608357105",
@@ -1487,7 +2114,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版婴儿配方牛奶粉 1段 0-6月龄 900g（新包装）",
+        "lastAmount": 255,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 255
       },
       {
         "phone": "18598789412",
@@ -1496,7 +2129,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 240.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 240.55
       },
       {
         "phone": "13658442823",
@@ -1505,7 +2144,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 336,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1002
       },
       {
         "phone": "13251335346",
@@ -1514,7 +2159,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 442.01,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 2652.06
       },
       {
         "phone": "13883882019",
@@ -1523,7 +2174,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 1段 0-6月 800g",
+        "lastAmount": 244.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 244.55
       },
       {
         "phone": "15730299967",
@@ -1532,7 +2189,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲CareBirth臻护新苼  Premium铂金奶粉2HMO 2段 6-12",
+        "lastAmount": 251,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 251
       },
       {
         "phone": "19111302516",
@@ -1541,7 +2204,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13684305955",
@@ -1550,7 +2214,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩幼儿配方奶粉3段 780g（ 12-36月）",
+        "lastAmount": 265,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1905
       },
       {
         "phone": "15310094842",
@@ -1559,7 +2229,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18523850017",
@@ -1568,7 +2239,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18883522252",
@@ -1577,7 +2249,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "a2至初奶粉3段 850g（ 12-36月）",
+        "lastAmount": 894,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1788
       },
       {
         "phone": "13228577978",
@@ -1586,7 +2264,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "金领冠 塞纳牧有机 奶粉2段 130g（6-12月）",
+        "lastAmount": -59,
+        "lastCans": -1,
+        "lastCategory": "general",
+        "totalMilkAmount": 0
       },
       {
         "phone": "18996089202",
@@ -1595,7 +2279,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18580992954",
@@ -1604,7 +2289,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 1956,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 10460
       },
       {
         "phone": "19196355958",
@@ -1613,7 +2304,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 860,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 5542.12
       },
       {
         "phone": "13657692171",
@@ -1622,7 +2319,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版婴儿配方牛奶粉 2段 6-12月龄 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1362
       },
       {
         "phone": "13658328029",
@@ -1631,7 +2334,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢能恩全护7HMO婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 796,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 796
       },
       {
         "phone": "18002334081",
@@ -1640,7 +2349,13 @@
         "predicted": "2026-07-24",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美白金版婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 254.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 254.55
       },
       {
         "phone": "18315122589",
@@ -1649,7 +2364,13 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Neocate纽太特 深度水解 400g",
+        "lastAmount": 676,
+        "lastCans": 2,
+        "lastCategory": "special",
+        "totalMilkAmount": 1192
       },
       {
         "phone": "15823966420",
@@ -1658,7 +2379,13 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g",
+        "lastAmount": 1152.04,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2304.08
       },
       {
         "phone": "18875278268",
@@ -1667,7 +2394,8 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "19123141484",
@@ -1676,7 +2404,13 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢安儿宁能恩 特殊医学用途婴儿无乳糖配方食品 400g",
+        "lastAmount": 168,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 1176
       },
       {
         "phone": "15802310364",
@@ -1685,7 +2419,13 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 1591.98,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 6978
       },
       {
         "phone": "17772310502",
@@ -1694,7 +2434,13 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 1段 0-6月 800g（新包装）",
+        "lastAmount": 952,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 7126.160000000001
       },
       {
         "phone": "15823136680",
@@ -1703,7 +2449,13 @@
         "predicted": "2026-07-27",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "金领冠珍护铂萃婴儿配方奶粉750g 1段（0-6月）",
+        "lastAmount": 684,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1901
       },
       {
         "phone": "13206019157",
@@ -1712,7 +2464,13 @@
         "predicted": "2026-07-27",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g",
+        "lastAmount": 1152.04,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2304.08
       },
       {
         "phone": "15002373556",
@@ -1721,7 +2479,13 @@
         "predicted": "2026-07-27",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 216,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 216
       },
       {
         "phone": "18323445120",
@@ -1730,7 +2494,8 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13883062720",
@@ -1739,7 +2504,13 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g（新包",
+        "lastAmount": 1075,
+        "lastCans": 5,
+        "lastCategory": "general",
+        "totalMilkAmount": 1866.02
       },
       {
         "phone": "13462596595",
@@ -1748,7 +2519,13 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美经典版幼儿配方奶粉1+段1岁及以上800g",
+        "lastAmount": 1020,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2999.98
       },
       {
         "phone": "13883876889",
@@ -1757,7 +2534,13 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 1295.98,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1295.98
       },
       {
         "phone": "18883768761",
@@ -1766,7 +2549,8 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18562008387",
@@ -1775,7 +2559,8 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15025513648",
@@ -1784,7 +2569,13 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国BEBA贝巴至尊版SUPREME婴幼儿奶粉 3段 12个月以上 830g 新",
+        "lastAmount": 516,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1548
       },
       {
         "phone": "18302367625",
@@ -1793,7 +2584,8 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15730289696",
@@ -1802,7 +2594,13 @@
         "predicted": "2026-08-01",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "ARIEL澳甄爱芮尔儿童成长奶粉 800g",
+        "lastAmount": 427.32,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 894
       },
       {
         "phone": "13629720056",
@@ -1811,7 +2609,8 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18723118921",
@@ -1820,7 +2619,13 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 928.64,
+        "lastCans": 4,
+        "lastCategory": "child",
+        "totalMilkAmount": 5572
       },
       {
         "phone": "13656669896",
@@ -1829,7 +2634,13 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 1194,
+        "lastCans": 5,
+        "lastCategory": "special",
+        "totalMilkAmount": 4158
       },
       {
         "phone": "13452854078",
@@ -1838,7 +2649,13 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲CareBirth臻护新苼 Royale皇家A2奶粉2HMO 1段 0-6月",
+        "lastAmount": 99,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 3017.96
       },
       {
         "phone": "18085621188",
@@ -1847,7 +2664,13 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 2段6-12个月 800g",
+        "lastAmount": 1787.98,
+        "lastCans": 6,
+        "lastCategory": "main",
+        "totalMilkAmount": 1787.98
       },
       {
         "phone": "15241557987",
@@ -1856,7 +2679,13 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 179.01,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 179.01
       },
       {
         "phone": "18883147021",
@@ -1865,7 +2694,13 @@
         "predicted": "2026-08-03",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "纽太特 特殊医学用途婴儿乳蛋白深度水解配方食品450g",
+        "lastAmount": -338,
+        "lastCans": -1,
+        "lastCategory": "special",
+        "totalMilkAmount": 710.01
       },
       {
         "phone": "13308263373",
@@ -1874,7 +2709,8 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18580179417",
@@ -1883,7 +2719,13 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 1344.03,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1344.03
       },
       {
         "phone": "18227755880",
@@ -1892,7 +2734,8 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18723119521",
@@ -1901,7 +2744,8 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18883359650",
@@ -1910,7 +2754,8 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13631710716",
@@ -1919,7 +2764,13 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 634,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 4936.02
       },
       {
         "phone": "13658323047",
@@ -1928,7 +2779,13 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "新西兰 澳甄爱芮尔 HMO乳铁蛋白调制乳粉",
+        "lastAmount": 498,
+        "lastCans": 2,
+        "lastCategory": "child",
+        "totalMilkAmount": 498
       },
       {
         "phone": "15123246759",
@@ -1937,7 +2794,13 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "港版雀巢NAN能恩全护A2奶粉6HMO 2段 6-12月龄 800g",
+        "lastAmount": -298,
+        "lastCans": -1,
+        "lastCategory": "main",
+        "totalMilkAmount": 7349.959999999999
       },
       {
         "phone": "18302384132",
@@ -1946,7 +2809,13 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版婴儿配方牛奶粉 1段 0-6月龄 900g（新包装）",
+        "lastAmount": 252,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 252
       },
       {
         "phone": "18716372285",
@@ -1955,7 +2824,8 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18696668026",
@@ -1964,7 +2834,13 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠1段 800g/罐",
+        "lastAmount": 1029,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 2401
       },
       {
         "phone": "18725840201",
@@ -1973,7 +2849,13 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲CareBirth臻护新苼 Royale皇家A2奶粉2HMO 2段 6-12",
+        "lastAmount": -289,
+        "lastCans": -1,
+        "lastCategory": "main",
+        "totalMilkAmount": 0
       },
       {
         "phone": "18323856431",
@@ -1982,7 +2864,13 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴幼儿配方奶粉3段1-3岁800g",
+        "lastAmount": 687.01,
+        "lastCans": 3,
+        "lastCategory": "main",
+        "totalMilkAmount": 2748.0299999999997
       },
       {
         "phone": "15775567885",
@@ -1991,7 +2879,8 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18875265984",
@@ -2000,7 +2889,13 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠1段 800g/罐",
+        "lastAmount": 2022,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2022
       },
       {
         "phone": "15123972240",
@@ -2009,7 +2904,13 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 1326.65,
+        "lastCans": 5,
+        "lastCategory": "special",
+        "totalMilkAmount": 6368
       },
       {
         "phone": "15220156675",
@@ -2018,7 +2919,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "金领冠珍护铂萃较大婴儿配方奶粉750g 2段（6-12月）",
+        "lastAmount": 912,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 1368
       },
       {
         "phone": "13399894491",
@@ -2027,7 +2934,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力太 特殊医学用途全营养配方食品",
+        "lastAmount": 1872,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 2668
       },
       {
         "phone": "17711241372",
@@ -2036,7 +2949,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲A2白金版婴儿配方牛奶粉 2段 6-12月龄 900g（新包装）",
+        "lastAmount": 238,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 8573.970000000001
       },
       {
         "phone": "15223116100",
@@ -2045,7 +2964,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲CareBirth臻护新苼  A2山羊奶2HMO 3段 12-36月 800",
+        "lastAmount": 269,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 837
       },
       {
         "phone": "18716586818",
@@ -2054,7 +2979,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 3段12-36个月 800g",
+        "lastAmount": 893.99,
+        "lastCans": 3,
+        "lastCategory": "main",
+        "totalMilkAmount": 1787.98
       },
       {
         "phone": "18580893006",
@@ -2063,7 +2994,13 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 240,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 240
       },
       {
         "phone": "17783983936",
@@ -2072,7 +3009,13 @@
         "predicted": "2026-07-25",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢早启能恩特殊医学用途早产低出生体重婴儿配方食品 400g",
+        "lastAmount": 210,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 210
       },
       {
         "phone": "18996396655",
@@ -2081,7 +3024,8 @@
         "predicted": "2026-07-25",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "15923847043",
@@ -2090,7 +3034,13 @@
         "predicted": "2026-07-25",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢早启能恩特殊医学用途早产低出生体重婴儿配方食品 400g",
+        "lastAmount": 594,
+        "lastCans": 3,
+        "lastCategory": "special",
+        "totalMilkAmount": 792
       },
       {
         "phone": "18875231769",
@@ -2099,7 +3049,13 @@
         "predicted": "2026-07-25",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢安儿宁能恩 特殊医学用途婴儿无乳糖配方食品 400g",
+        "lastAmount": 510,
+        "lastCans": 3,
+        "lastCategory": "special",
+        "totalMilkAmount": 1142.01
       },
       {
         "phone": "15023562022",
@@ -2108,7 +3064,13 @@
         "predicted": "2026-07-25",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲CareBirth臻护新苼  Premium铂金奶粉2HMO 3段 12-3",
+        "lastAmount": 265.01,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 265.01
       },
       {
         "phone": "17823987105",
@@ -2117,7 +3079,13 @@
         "predicted": "2026-07-26",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 1385.99,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1385.99
       },
       {
         "phone": "15223163417",
@@ -2126,7 +3094,13 @@
         "predicted": "2026-07-27",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g",
+        "lastAmount": 1182.02,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2364.04
       },
       {
         "phone": "17302396959",
@@ -2135,7 +3109,13 @@
         "predicted": "2026-07-28",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱优诺优益力特殊医学用途全营养配方食品",
+        "lastAmount": 3979.95,
+        "lastCans": 15,
+        "lastCategory": "special",
+        "totalMilkAmount": 6368
       },
       {
         "phone": "13330224219",
@@ -2144,7 +3124,13 @@
         "predicted": "2026-07-28",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 1385.99,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1385.99
       },
       {
         "phone": "18908999651",
@@ -2153,7 +3139,13 @@
         "predicted": "2026-07-28",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 3段12-36个月 800g",
+        "lastAmount": 339,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 339
       },
       {
         "phone": "18883296581",
@@ -2162,7 +3154,13 @@
         "predicted": "2026-07-30",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉1段 800g（ 0-6月）",
+        "lastAmount": 350,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 350
       },
       {
         "phone": "15730740881",
@@ -2171,7 +3169,13 @@
         "predicted": "2026-07-30",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 2段6-12个月 800g",
+        "lastAmount": 339,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 3914.96
       },
       {
         "phone": "15520009263",
@@ -2180,7 +3184,8 @@
         "predicted": "2026-07-31",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "15310907881",
@@ -2189,7 +3194,8 @@
         "predicted": "2026-07-31",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18716684315",
@@ -2198,7 +3204,13 @@
         "predicted": "2026-07-31",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "纽康特 特殊医学用途婴儿氨基酸配方食品400g",
+        "lastAmount": 1980,
+        "lastCans": 6,
+        "lastCategory": "special",
+        "totalMilkAmount": 1980
       },
       {
         "phone": "13620349542",
@@ -2207,7 +3219,13 @@
         "predicted": "2026-07-31",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美白金版婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 442.01,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 2914.54
       },
       {
         "phone": "13627695112",
@@ -2216,7 +3234,13 @@
         "predicted": "2026-08-01",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "港版Neocate纽康特 氨基酸无敏配方 1岁以上 400g",
+        "lastAmount": 1839.95,
+        "lastCans": 5,
+        "lastCategory": "special",
+        "totalMilkAmount": 6623.98
       },
       {
         "phone": "13638314091",
@@ -2225,7 +3249,13 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 890.16,
+        "lastCans": 4,
+        "lastCategory": "child",
+        "totalMilkAmount": 1450.76
       },
       {
         "phone": "13629714029",
@@ -2234,7 +3264,13 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版婴儿配方奶粉 Pre段 0-6月 800g",
+        "lastAmount": 232.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 232.55
       },
       {
         "phone": "13452175308",
@@ -2243,7 +3279,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲雀巢NAN能恩A2奶粉 3段 12-36个月 800g",
+        "lastAmount": 192.36,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1991.2800000000002
       },
       {
         "phone": "18323996109",
@@ -2252,7 +3294,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 232.16,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 464.4
       },
       {
         "phone": "15923941973",
@@ -2261,7 +3309,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲爱他美Aptamil白金幼儿配方奶粉3段900g 1-3周岁",
+        "lastAmount": 900,
+        "lastCans": 4,
+        "lastCategory": "general",
+        "totalMilkAmount": 3887.96
       },
       {
         "phone": "13896635590",
@@ -2270,7 +3324,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 1187.97,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1187.97
       },
       {
         "phone": "13101340072",
@@ -2279,7 +3339,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 1074.01,
+        "lastCans": 6,
+        "lastCategory": "child",
+        "totalMilkAmount": 1074.01
       },
       {
         "phone": "18290475355",
@@ -2288,7 +3354,13 @@
         "predicted": "2026-08-04",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲爱他美Aptamil白金幼儿配方奶粉3段900g 1-3周岁",
+        "lastAmount": 1350,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 4337.96
       },
       {
         "phone": "19112656173",
@@ -2297,7 +3369,13 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g",
+        "lastAmount": 384.02,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 384.02
       },
       {
         "phone": "13638218339",
@@ -2306,7 +3384,13 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 1187.97,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1979.95
       }
     ]
   },
@@ -3353,9 +4437,9 @@
     ]
   },
   "storeAgg": {
-    "target": 150000,
-    "achieved": 141233.62,
-    "achievementRate": 0.9415574666666666,
+    "target": 160000,
+    "achieved": 116402.91,
+    "achievementRate": 0.7275181875,
     "milkCans": 442,
     "momMilkCans": -0.2730263157894737,
     "pushCans": 106,

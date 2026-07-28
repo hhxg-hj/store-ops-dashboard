@@ -4,15 +4,21 @@
   "region": "重庆区域",
   "zaidian": true,
   "isManager": false,
-  "commission": 149.16,
-  "commissionShangpin": 65.16,
-  "commissionFujian": 35,
+  "commission": 156.15,
+  "commissionShangpin": 67.15,
+  "commissionFujian": 30,
   "commissionBaojin": 0,
-  "commissionJishi": 8.17,
+  "commissionJishi": 9.83,
   "commissionManager": 0,
-  "target": 21666,
-  "achieved": 4072.25,
-  "achievementRate": 0.187955783,
+  "target": 25000,
+  "achieved": 4197.13,
+  "achievementRate": 0.1678852,
+  "lastMonthAchieved": 4072.25,
+  "lastMonthTarget": 21666,
+  "salesMom": 0.030666093682853487,
+  "dailyAvg": 149.8975,
+  "dailyAvgLast": 135.74166666666667,
+  "dailyAvgMom": 0.10428510037448585,
   "userTarget": 120,
   "newCustomers": 10,
   "customerService": {
@@ -22,7 +28,7 @@
     "replyRate": 100,
     "firstReplyMin": 18
   },
-  "mendianDachengLv": 1.066318615,
+  "mendianDachengLv": 1.2489724,
   "mendianStaffCount": 6,
   "milkCans": 18,
   "milkCansLast": 17,
@@ -108,15 +114,15 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 08-27",
-  "storeRank": 2,
+  "version": "2026-07-28 09-11",
+  "storeRank": 3,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 638.55,
-  "regionRank": 6,
+  "storeTopComm": 1742.78,
+  "regionRank": 8,
   "regionTotal": 19,
-  "regionTopName": "胡美娟",
-  "regionTopComm": 5213.76,
+  "regionTopName": "詹芹芹",
+  "regionTopComm": 3816.65,
   "suggestion": "👶 你的奶粉客户从上月 12 位降到本月 8 位（减少 33%）。这 4 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n🔄 你的 8 位奶粉客户中仅 0 位本月复购，8 位只买了一次。一次购买可能是试水——主动跟进这 8 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 8 位奶粉客户，但只有 2 位（25%）接触过主推产品。剩下 6 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（8 位奶粉客户中仅 2 位（25%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
@@ -173,7 +179,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 1段 0-6个月 800g",
+        "lastAmount": 298,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 596
       },
       {
         "phone": "18225093227",
@@ -182,7 +194,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 456,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 584
       },
       {
         "phone": "18725676818",
@@ -191,7 +209,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Wyeth惠氏启赋未来婴幼儿配方奶粉3段1-3岁800g",
+        "lastAmount": 262,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1834.03
       },
       {
         "phone": "17783820710",
@@ -200,7 +224,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩婴儿配方奶粉1段 800g（0-12月）",
+        "lastAmount": 371,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 669
       },
       {
         "phone": "17623202637",
@@ -209,7 +239,13 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 10.01,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 250.01
       },
       {
         "phone": "18923878046",
@@ -218,7 +254,13 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 241.01,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 241.01
       },
       {
         "phone": "13609404977",
@@ -227,7 +269,13 @@
         "predicted": "2026-08-03",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g",
+        "lastAmount": 214.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 214.55
       },
       {
         "phone": "18166476868",
@@ -236,7 +284,13 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 464.01,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 949.03
       },
       {
         "phone": "19112084946",
@@ -245,7 +299,13 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 240.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 240.55
       },
       {
         "phone": "13637840394",
@@ -254,7 +314,13 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 1295.98,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2807.96
       },
       {
         "phone": "18983878046",
@@ -263,7 +329,13 @@
         "predicted": "2026-08-06",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 240,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 240
       },
       {
         "phone": "18423015325",
@@ -272,7 +344,13 @@
         "predicted": "2026-08-06",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 239.01,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 1195.05
       },
       {
         "phone": "15213225911",
@@ -281,7 +359,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 2段6-12个月 800g",
+        "lastAmount": 298,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 298
       },
       {
         "phone": "18716328558",
@@ -290,7 +374,13 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 229.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 680.6500000000001
       }
     ]
   },
@@ -1337,9 +1427,9 @@
     ]
   },
   "storeAgg": {
-    "target": 65000,
-    "achieved": 22203.45,
-    "achievementRate": 0.34159153846153845,
+    "target": 75000,
+    "achieved": 39589.13,
+    "achievementRate": 0.5278550666666666,
     "milkCans": 339,
     "momMilkCans": 0.4425531914893617,
     "pushCans": 54,

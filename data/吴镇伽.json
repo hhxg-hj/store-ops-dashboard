@@ -13,6 +13,12 @@
   "target": 0,
   "achieved": 0,
   "achievementRate": 0,
+  "lastMonthAchieved": 0,
+  "lastMonthTarget": 0,
+  "salesMom": null,
+  "dailyAvg": 0,
+  "dailyAvgLast": 0,
+  "dailyAvgMom": null,
   "userTarget": 120,
   "newCustomers": 0,
   "customerService": {
@@ -108,15 +114,15 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 08-27",
+  "version": "2026-07-28 09-11",
   "storeRank": 5,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 638.55,
+  "storeTopComm": 1742.78,
   "regionRank": 11,
   "regionTotal": 19,
-  "regionTopName": "胡美娟",
-  "regionTopComm": 5213.76,
+  "regionTopName": "詹芹芹",
+  "regionTopComm": 3816.65,
   "suggestion": "💡 当前奶粉客户数量较少。建议通过企微主动触达散客和潜在客户，了解宝宝月龄和喂养需求，用专业知识建立信任——每一位新客户都是一段长期关系的开始。",
   "learningResources": {
     "intro": "✅ 你的客户对主推产品的接受度良好。以下 5 款主推产品资料供日常参考，随时准备回答客户的个性化问题 👇",
@@ -173,7 +179,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 10.01,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 10.01
       },
       {
         "phone": "15213084465",
@@ -182,7 +194,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 228,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 456
       }
     ]
   },
@@ -1218,9 +1236,9 @@
     ]
   },
   "storeAgg": {
-    "target": 65000,
-    "achieved": 22203.45,
-    "achievementRate": 0.34159153846153845,
+    "target": 75000,
+    "achieved": 39589.13,
+    "achievementRate": 0.5278550666666666,
     "milkCans": 339,
     "momMilkCans": 0.4425531914893617,
     "pushCans": 54,
