@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 28,
+    "totalAmount": 578.4399999999998,
+    "totalProfit": 146.0676,
+    "overallMargin": 0.2525198810594012,
+    "categories": {
+      "nutrition": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      },
+      "supplies": {
+        "qty": 22,
+        "amount": 461.1999999999999,
+        "profit": 102.2696,
+        "share": 0.7857142857142857,
+        "marginRate": 0.22174674761491767
+      },
+      "snacks": {
+        "qty": 6,
+        "amount": 117.24000000000001,
+        "profit": 43.798,
+        "share": 0.21428571428571427,
+        "marginRate": 0.37357557147731146
+      }
+    }
+  },
   "totalClients": 14,
   "totalClientsLast": 0,
   "momClients": null,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 2,
   "storeTotal": 4,
   "storeTopName": "陈传勋",

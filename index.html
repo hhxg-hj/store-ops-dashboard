@@ -392,6 +392,7 @@ function renderPerf(d) {
       </tbody>
     </table>
     ${renderMilkCategories(d)}
+    ${renderNonMilkCategories(d)}
   </div>`;
 }
 
@@ -422,6 +423,38 @@ function renderMilkCategories(d) {
     <div class="milk-cat-summary">
       <div class="mcs-item"><div class="mcs-val">${fmtNum(mc.totalQty)}罐</div><div class="mcs-lbl">四类合计销量</div></div>
       <div class="mcs-item"><div class="mcs-val">${fmtMoney(mc.totalAmount)}</div><div class="mcs-lbl">四类销售额</div></div>
+      <div class="mcs-item"><div class="mcs-val">${(mc.overallMargin * 100).toFixed(1)}%</div><div class="mcs-lbl">综合毛利率</div></div>
+    </div>
+    <table class="milk-cat-table">
+      <thead><tr><th>品类</th><th>销量</th><th>占比</th><th>毛利率</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+function renderNonMilkCategories(d) {
+  const mc = d.nonMilkByCategory;
+  if (!mc || !mc.totalQty) return '';
+  const CATS = [
+    { key: 'nutrition', label: '营养品', icon: '💊', color: '#f59e0b' },
+    { key: 'supplies',  label: '纸品用品', icon: '🧻', color: '#3b82f6' },
+    { key: 'snacks',    label: '零辅食', icon: '🍪', color: '#10b981' },
+  ];
+  const marginColor = r => r >= 0.25 ? 'var(--success)' : r >= 0.10 ? 'var(--text)' : 'var(--warning)';
+  const rows = CATS.map(c => {
+    const v = (mc.categories && mc.categories[c.key]) || { qty: 0, share: 0, marginRate: 0, amount: 0 };
+    const sharePct = (v.share * 100).toFixed(1);
+    const marginPct = v.amount > 0 ? (v.marginRate * 100).toFixed(1) + '%' : '—';
+    return `<tr>
+      <td class="milk-cat-name">${c.icon} ${c.label}</td>
+      <td>${fmtNum(v.qty)}件</td>
+      <td><div class="milk-share-bar"><div class="bar" style="width:${Math.min(100, v.share * 100)}%;background:${c.color}33;border-left:3px solid ${c.color}"></div><div class="txt">${sharePct}%</div></div></td>
+      <td class="milk-margin" style="color:${marginColor(v.marginRate)}">${marginPct}</td>
+    </tr>`;
+  }).join('');
+  return `
+    <div class="section-title plain">🛒 非奶粉品类（个人）</div>
+    <div class="milk-cat-summary">
+      <div class="mcs-item"><div class="mcs-val">${fmtNum(mc.totalQty)}件</div><div class="mcs-lbl">三品类合计销量</div></div>
+      <div class="mcs-item"><div class="mcs-val">${fmtMoney(mc.totalAmount)}</div><div class="mcs-lbl">三品类销售额</div></div>
       <div class="mcs-item"><div class="mcs-val">${(mc.overallMargin * 100).toFixed(1)}%</div><div class="mcs-lbl">综合毛利率</div></div>
     </div>
     <table class="milk-cat-table">

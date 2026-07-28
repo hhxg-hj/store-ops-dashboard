@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 274,
+    "totalAmount": 9176.34,
+    "totalProfit": 2371.7405,
+    "overallMargin": 0.2584625787623388,
+    "categories": {
+      "nutrition": {
+        "qty": 15,
+        "amount": 3027.3199999999997,
+        "profit": 1052.1799999999998,
+        "share": 0.05474452554744526,
+        "marginRate": 0.3475615395795621
+      },
+      "supplies": {
+        "qty": 192,
+        "amount": 4919.6,
+        "profit": 999.9585000000004,
+        "share": 0.7007299270072993,
+        "marginRate": 0.20326012277420935
+      },
+      "snacks": {
+        "qty": 67,
+        "amount": 1229.4199999999998,
+        "profit": 319.6020000000001,
+        "share": 0.24452554744525548,
+        "marginRate": 0.25996160791267436
+      }
+    }
+  },
   "totalClients": 69,
   "totalClientsLast": 40,
   "momClients": 0.725,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 16,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 3,
   "storeTotal": 3,
   "storeTopName": "詹芹芹",

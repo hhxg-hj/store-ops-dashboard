@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 3,
+    "totalAmount": 128,
+    "totalProfit": 32.7,
+    "overallMargin": 0.25546875,
+    "categories": {
+      "nutrition": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      },
+      "supplies": {
+        "qty": 3,
+        "amount": 128,
+        "profit": 32.7,
+        "share": 1,
+        "marginRate": 0.25546875
+      },
+      "snacks": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      }
+    }
+  },
   "totalClients": 1,
   "totalClientsLast": 4,
   "momClients": -0.75,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",

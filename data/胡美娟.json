@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 75,
+    "totalAmount": 4015.500000000001,
+    "totalProfit": 1089,
+    "overallMargin": 0.27119910347403803,
+    "categories": {
+      "nutrition": {
+        "qty": 9,
+        "amount": 2020.8,
+        "profit": 1023.33,
+        "share": 0.12,
+        "marginRate": 0.5063984560570072
+      },
+      "supplies": {
+        "qty": 57,
+        "amount": 1773.7000000000007,
+        "profit": -19.099999999999987,
+        "share": 0.76,
+        "marginRate": -0.01076845013249139
+      },
+      "snacks": {
+        "qty": 9,
+        "amount": 221,
+        "profit": 84.77,
+        "share": 0.12,
+        "marginRate": 0.38357466063348417
+      }
+    }
+  },
   "totalClients": 74,
   "totalClientsLast": 98,
   "momClients": -0.24489795918367346,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 1,
   "storeTotal": 6,
   "storeTopName": "（你）",

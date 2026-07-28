@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 171,
+    "totalAmount": 6267.799999999999,
+    "totalProfit": 2072.79,
+    "overallMargin": 0.3307045534318262,
+    "categories": {
+      "nutrition": {
+        "qty": 1,
+        "amount": 200,
+        "profit": 145,
+        "share": 0.005847953216374269,
+        "marginRate": 0.725
+      },
+      "supplies": {
+        "qty": 112,
+        "amount": 4721.84,
+        "profit": 1288.9399999999998,
+        "share": 0.6549707602339181,
+        "marginRate": 0.2729740948443827
+      },
+      "snacks": {
+        "qty": 58,
+        "amount": 1345.9599999999996,
+        "profit": 638.8499999999999,
+        "share": 0.3391812865497076,
+        "marginRate": 0.4746426342536183
+      }
+    }
+  },
   "totalClients": 89,
   "totalClientsLast": 96,
   "momClients": -0.07291666666666667,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",

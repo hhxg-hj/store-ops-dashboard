@@ -72,6 +72,35 @@
       }
     }
   },
+  "nonMilkByCategory": {
+    "totalQty": 0,
+    "totalAmount": 0,
+    "totalProfit": 0,
+    "overallMargin": 0,
+    "categories": {
+      "nutrition": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      },
+      "supplies": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      },
+      "snacks": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      }
+    }
+  },
   "totalClients": 0,
   "totalClientsLast": 0,
   "momClients": null,
@@ -114,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-22",
+  "version": "2026-07-28 10-35",
   "storeRank": 9,
   "storeTotal": 10,
   "storeTopName": "陈丹",
