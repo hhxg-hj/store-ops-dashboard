@@ -41,30 +41,81 @@
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0
       },
       "general": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": -1,
+        "momAmount": -1,
+        "momMargin": -0.02584428715874621
       },
       "special": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0
       },
       "child": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": -1,
+        "momAmount": -1,
+        "momMargin": -0.5735699517574087
       }
-    }
+    },
+    "lastMonth": {
+      "totalQty": 17,
+      "totalAmount": 4878.4400000000005,
+      "totalProfit": 1247.1200000000001,
+      "overallMargin": 0.2556390977443609,
+      "categories": {
+        "main": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        },
+        "general": {
+          "qty": 9,
+          "amount": 2967,
+          "profit": 76.68,
+          "share": 0.5294117647058824,
+          "marginRate": 0.02584428715874621
+        },
+        "special": {
+          "qty": -1,
+          "amount": -178,
+          "profit": -28,
+          "share": -0.058823529411764705,
+          "marginRate": 0
+        },
+        "child": {
+          "qty": 9,
+          "amount": 2089.44,
+          "profit": 1198.44,
+          "share": 0.5294117647058824,
+          "marginRate": 0.5735699517574087
+        }
+      }
+    },
+    "momQty": -1,
+    "momAmount": -1,
+    "momMargin": -0.2556390977443609
   },
   "totalClients": 1,
   "totalClientsLast": 4,
@@ -108,7 +159,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-34",
+  "version": "2026-07-28 08-16",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",

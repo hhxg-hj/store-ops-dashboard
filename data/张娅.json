@@ -41,30 +41,81 @@
         "amount": 14878.019999999999,
         "profit": 5486.920000000001,
         "share": 0.40310077519379844,
-        "marginRate": 0.36879369701075826
+        "marginRate": 0.36879369701075826,
+        "momQty": -0.5398230088495575,
+        "momAmount": -0.5456771288836338,
+        "momMargin": -0.002226784440141627
       },
       "general": {
         "qty": 75,
         "amount": 17108.7,
         "profit": 3097.6199999999994,
         "share": 0.5813953488372093,
-        "marginRate": 0.1810552525907871
+        "marginRate": 0.1810552525907871,
+        "momQty": 1.027027027027027,
+        "momAmount": 1.653869421564521,
+        "momMargin": -0.03582159913179958
       },
       "special": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0
       },
       "child": {
         "qty": 2,
         "amount": 358.02,
         "profit": 36.66,
         "share": 0.015503875968992248,
-        "marginRate": 0.10239651416122005
+        "marginRate": 0.10239651416122005,
+        "momQty": -0.6666666666666666,
+        "momAmount": -0.6946238026595246,
+        "momMargin": 0.0814137353930627
       }
-    }
+    },
+    "lastMonth": {
+      "totalQty": 156,
+      "totalAmount": 40366.76999999999,
+      "totalProfit": 13572.800000000003,
+      "overallMargin": 0.33623695926129354,
+      "categories": {
+        "main": {
+          "qty": 113,
+          "amount": 32747.679999999993,
+          "profit": 12150.060000000003,
+          "share": 0.7243589743589743,
+          "marginRate": 0.3710204814508999
+        },
+        "general": {
+          "qty": 37,
+          "amount": 6446.700000000001,
+          "profit": 1398.1399999999999,
+          "share": 0.23717948717948717,
+          "marginRate": 0.2168768517225867
+        },
+        "special": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        },
+        "child": {
+          "qty": 6,
+          "amount": 1172.39,
+          "profit": 24.6,
+          "share": 0.038461538461538464,
+          "marginRate": 0.020982778768157354
+        }
+      }
+    },
+    "momQty": -0.17307692307692307,
+    "momAmount": -0.19872855816801765,
+    "momMargin": -0.06969593899030047
   },
   "totalClients": 34,
   "totalClientsLast": 33,
@@ -108,7 +159,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-34",
+  "version": "2026-07-28 08-16",
   "storeRank": 2,
   "storeTotal": 3,
   "storeTopName": "詹芹芹",

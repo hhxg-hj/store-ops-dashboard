@@ -41,30 +41,81 @@
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0
       },
       "general": {
         "qty": 9,
         "amount": 2122.5299999999997,
         "profit": 184.85,
         "share": 0.8181818181818182,
-        "marginRate": 0.08708946398873044
+        "marginRate": 0.08708946398873044,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0.08708946398873044
       },
       "special": {
         "qty": 0,
         "amount": 0,
         "profit": 0,
         "share": 0,
-        "marginRate": 0
+        "marginRate": 0,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0
       },
       "child": {
         "qty": 2,
         "amount": 358.01,
         "profit": 36.66,
         "share": 0.18181818181818182,
-        "marginRate": 0.1023993743191531
+        "marginRate": 0.1023993743191531,
+        "momQty": null,
+        "momAmount": null,
+        "momMargin": 0.1023993743191531
       }
-    }
+    },
+    "lastMonth": {
+      "totalQty": 0,
+      "totalAmount": 0,
+      "totalProfit": 0,
+      "overallMargin": 0,
+      "categories": {
+        "main": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        },
+        "general": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        },
+        "special": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        },
+        "child": {
+          "qty": 0,
+          "amount": 0,
+          "profit": 0,
+          "share": 0,
+          "marginRate": 0
+        }
+      }
+    },
+    "momQty": null,
+    "momAmount": null,
+    "momMargin": 0.08929910422730535
   },
   "totalClients": 14,
   "totalClientsLast": 0,
@@ -108,7 +159,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 07-34",
+  "version": "2026-07-28 08-16",
   "storeRank": 2,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
