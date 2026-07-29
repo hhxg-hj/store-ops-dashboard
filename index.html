@@ -843,10 +843,10 @@ function renderAction(d) {
 
     <div class="section-title plain">🧮 GMV 拆解</div>
     <div class="gmv-bars">
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div><div class="gmv-bar-tag ${plan.gmv.components.traffic.strength}">${plan.gmv.components.traffic.strength === 'weak' ? '薄弱' : plan.gmv.components.traffic.strength === 'strong' ? '良好' : plan.gmv.components.traffic.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 客单价</div><div class="gmv-bar-val">¥${plan.gmv.aov.toFixed(0)}</div><div class="gmv-bar-tag ${plan.gmv.components.aov.strength}">${plan.gmv.components.aov.strength === 'weak' ? '薄弱' : plan.gmv.components.aov.strength === 'strong' ? '良好' : '正常'}</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div><div class="gmv-bar-tag ${plan.gmv.components.repurchase.strength}">${plan.gmv.components.repurchase.strength === 'weak' ? '薄弱' : plan.gmv.components.repurchase.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div><div class="gmv-bar-tag unknown">暂不可用</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 客单价</div><div class="gmv-bar-val">¥${plan.gmv.aov.toFixed(0)}</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
       <div class="gmv-bar-result">≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
       ${plan.gmv.benchmark?.topSales?.name ? `
       <div class="gmv-bench-section">
