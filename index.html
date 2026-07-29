@@ -830,11 +830,14 @@ function buildDailyActionPlan(d) {
       { scenario: '复购率趋势', reason: '仅有本月复购率，只能判断「偏低」，不能判断「下降」' },
       { scenario: '新客增速放缓', reason: '缺少第三个月数据，只能判断「增长不足」' },
     ],
+    gmv: { traffic, aov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, components: gmvComp, benchmark: bm },
+    insightsText, refSuggestions, refWeekActions,
   };
 }
 
 function renderAction(d) {
   const plan = buildDailyActionPlan(d);
+  const perc = (v, sign) => dapPct(v, sign); // shorthand
   const pillClass = plan.priority.toLowerCase();
   const evHtml = plan.evidence.map(e => `<div class="dap-evidence"><b>${e.metric}：${e.current}</b> — ${e.detail}</div>`).join('');
   const taskHtml = plan.tasks.map(t => `
@@ -846,9 +849,6 @@ function renderAction(d) {
         ${t.targetRefs && t.targetRefs.length ? `<div class="dap-task-refs">今日对象：${t.targetRefs.map(r => `<span>${r}</span>`).join('')}</div>` : ''}
       </div>
     </div>`).join('');
-  const insights = d.customerInsights || [];
-  const suggestions = (d.suggestion || '').split('\n').filter(Boolean);
-  const tasks = d.weeklyTasks || [];
   return `<div class="card">
     <div class="section-title"><span class="icon">🎯</span> 今日行动建议</div>
     <div class="dap-head"><span class="dap-pill ${pillClass}">${plan.priority}</span><span class="dap-headline">${plan.headline}</span></div>
@@ -862,16 +862,58 @@ function renderAction(d) {
   <div class="card">
     <div class="section-title"><span class="icon">💡</span> 更多参考</div>
 
+    <div class="section-title plain">🧮 GMV 拆解</div>
+    <div class="gmv-bars">
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div><div class="gmv-bar-tag ${plan.gmv.components.traffic.strength}">${plan.gmv.components.traffic.strength === 'weak' ? '薄弱' : plan.gmv.components.traffic.strength === 'strong' ? '良好' : plan.gmv.components.traffic.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 客单价</div><div class="gmv-bar-val">¥${plan.gmv.aov.toFixed(0)}</div><div class="gmv-bar-tag ${plan.gmv.components.aov.strength}">${plan.gmv.components.aov.strength === 'weak' ? '薄弱' : plan.gmv.components.aov.strength === 'strong' ? '良好' : '正常'}</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div><div class="gmv-bar-tag ${plan.gmv.components.repurchase.strength}">${plan.gmv.components.repurchase.strength === 'weak' ? '薄弱' : plan.gmv.components.repurchase.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
+      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div><div class="gmv-bar-tag unknown">暂不可用</div></div>
+      <div class="gmv-bar-result">≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
+      ${plan.gmv.benchmark?.topSales?.name ? `
+      <div class="gmv-bench-section">
+        <div class="gmv-bench-title">🏆 区域标杆：每个 GMV 组件对比</div>
+        <table class="gmv-bench-table">
+          <thead><tr><th></th><th>你的</th><th>${plan.gmv.benchmark.topSales.name}</th><th>差距</th><th>${plan.gmv.benchmark.topPush?.name||''}</th><th>差距</th></tr></tr></thead>
+          <tbody>
+            <tr>
+              <td>流量</td>
+              <td>${plan.gmv.traffic}人</td>
+              <td>${plan.gmv.benchmark.topSales.components?.traffic ?? 0}人</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.traffic != null ? (plan.gmv.benchmark.topSales.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+              <td>${plan.gmv.benchmark.topPush.components?.traffic ?? 0}人</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.traffic != null ? (plan.gmv.benchmark.topPush.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+            <tr>
+              <td>客单价</td>
+              <td>¥${plan.gmv.aov.toFixed(0)}</td>
+              <td>¥${(plan.gmv.benchmark.topSales.components?.aov ?? 0).toFixed(0)}</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.aov != null ? (plan.gmv.benchmark.topSales.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+              <td>¥${(plan.gmv.benchmark.topPush.components?.aov ?? 0).toFixed(0)}</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.aov != null ? (plan.gmv.benchmark.topPush.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+            <tr>
+              <td>复购率</td>
+              <td>${perc(plan.gmv.repurchaseRate)}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.repRate != null ? perc(plan.gmv.benchmark.topSales.components.repRate) : '—'}</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.repRate != null ? (plan.gmv.benchmark.topSales.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+              <td>${plan.gmv.benchmark.topPush.components?.repRate != null ? perc(plan.gmv.benchmark.topPush.components.repRate) : '—'}</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.repRate != null ? (plan.gmv.benchmark.topPush.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>` : ''}
+    </div>
+
     <div class="section-title plain">🔍 客户洞察</div>
-    ${insights.length ? insights.map(ins => `<div class="insight-item">${ins}</div>`).join('') : '<div class="insight-item">暂无洞察数据</div>'}
+    <div class="insight-item">${plan.insightsText}</div>
 
     <div class="section-title plain">💡 提升建议</div>
     <div class="suggestion">
-      ${suggestions.length ? suggestions.map(s => `<div class="suggestion-item">${s}</div>`).join('') : '<div class="suggestion-item">暂无建议，继续保持！</div>'}
+      ${plan.refSuggestions.map(s => `<div class="suggestion-item"><span class="sugg-rule">[${s.rule}]</span> ${s.text}</div>`).join('')}
     </div>
 
     <div class="section-title plain">📅 本周服务清单</div>
-    ${tasks.length ? tasks.map(t => `<div class="task-item"><span class="task-icon">${t.icon}</span><span class="task-text">${t.text}</span></div>`).join('') : '<div class="task-item"><span class="task-text">本周暂无需办事项</span></div>'}
+    ${plan.refWeekActions.map(t => `<div class="task-item"><span class="task-icon">${t.icon}</span><span class="task-text">${t.text}</span></div>`).join('')}
   </div>`;
 }
 
