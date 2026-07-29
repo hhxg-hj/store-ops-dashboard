@@ -783,7 +783,7 @@ function buildDailyActionPlan(d) {
         const labs = cmpLabels[key];
         refSuggestions.push({
           comp: 'benchSales',
-          text: `📊 ${labs}落后胡美娟${dapPct(Math.abs(gap), true)}（她${key==='aov'?'¥'+(bmSales.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmSales.components?.[key]):(bmSales.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?perc(repRate):traffic+'人'}）→ 重点${cfg.low}（${cfg.rule}：${cfg.text}）`,
+          text: `📊 ${labs}落后胡美娟${dapPct(Math.abs(gap), true)}（她${key==='aov'?'¥'+(bmSales.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmSales.components?.[key]):(bmSales.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?dapPct(repRate):traffic+'人'}）→ 重点${cfg.low}（${cfg.rule}：${cfg.text}）`,
           rule: `对标销售-${labs}`
         });
       }
@@ -797,7 +797,7 @@ function buildDailyActionPlan(d) {
         const labs = cmpLabels[key];
         refSuggestions.push({
           comp: 'benchPush',
-          text: `🎯 ${labs}落后主推最多${bmPush.name}${dapPct(Math.abs(gap), true)}（ta${key==='aov'?'¥'+(bmPush.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmPush.components?.[key]):(bmPush.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?perc(repRate):traffic+'人'}）→ 参考ta的主推打法（${cfg.text}）`,
+          text: `🎯 ${labs}落后主推最多${bmPush.name}${dapPct(Math.abs(gap), true)}（ta${key==='aov'?'¥'+(bmPush.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmPush.components?.[key]):(bmPush.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?dapPct(repRate):traffic+'人'}）→ 参考ta的主推打法（${cfg.text}）`,
           rule: `对标主推-${labs}`
         });
       }
