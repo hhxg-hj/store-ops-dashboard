@@ -143,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 01-23",
+  "version": "2026-07-29 01-37",
   "storeRank": 5,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -1449,14 +1449,39 @@
     "topSales": {
       "name": "胡美娟",
       "gmv": 9043.28431630853,
-      "gap": -0.9972057138614885
+      "gap": -0.9972057138614885,
+      "components": {
+        "traffic": 74,
+        "aov": 924.3828378,
+        "repRate": 0.13220339
+      },
+      "componentGaps": {
+        "traffic": -0.9864864864864865,
+        "aov": -0.4259304929730706,
+        "repRate": -0.6398046373848659
+      }
     },
     "topPush": {
       "name": "詹芹芹",
       "gmv": 4894.34492534724,
-      "gap": -0.9948369956762115
+      "gap": -0.9948369956762115,
+      "components": {
+        "traffic": 60,
+        "aov": 887.409,
+        "repRate": 0.091922006
+      },
+      "componentGaps": {
+        "traffic": -0.9833333333333333,
+        "aov": -0.4020119246029734,
+        "repRate": -0.48196248023569027
+      }
     },
-    "myGmv": 25.269524011679998
+    "myGmv": 25.269524011679998,
+    "myComponents": {
+      "traffic": 1,
+      "aov": 530.66,
+      "repRate": 0.047619048
+    }
   },
   "weeklyTasks": [
     {

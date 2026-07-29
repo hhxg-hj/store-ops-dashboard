@@ -140,6 +140,17 @@
     .gmv-bar-result { width:100%; font-size:15px; font-weight:700; color:var(--primary); margin-top:4px; }
     .gmv-bench-row { width:100%; font-size:11px; color:var(--text2); padding-top:6px; border-top:1px dashed var(--border); margin-top:6px; }
     .gmv-bench-label { font-weight:600; color:var(--warning); margin-right:6px; }
+    .gmv-bench-section { width:100%; margin-top:10px; padding-top:8px; border-top:1px solid var(--border); }
+    .gmv-bench-title { font-size:11px; font-weight:600; color:var(--text2); margin-bottom:4px; }
+    .gmv-bench-table { width:100%; font-size:11px; border-collapse:collapse; }
+    .gmv-bench-table th { color:var(--text2); font-weight:500; padding:4px 2px; border-bottom:1px solid var(--border); font-size:10px; text-align:center; }
+    .gmv-bench-table th:first-child { text-align:left; }
+    .gmv-bench-table td { padding:5px 2px; border-bottom:1px solid #f4f4f6; text-align:center; }
+    .gmv-bench-table td:first-child { text-align:left; color:var(--text2); font-weight:500; }
+    .gmv-bench-table tr:last-child td { border-bottom:none; }
+    .gmv-gap-bad { color:var(--danger); font-weight:600; }
+    .gmv-gap-good { color:var(--success); font-weight:600; }
+    .gmv-gap-ok { color:var(--text2); }
     .sugg-rule { display:inline-block; font-size:10px; background:var(--primary-light,#f0ebff); color:var(--primary); border-radius:5px; padding:0 5px; margin-right:4px; font-weight:500; }
     .mom { font-size:12px; }
     .mom-up { color:var(--danger); } .mom-down { color:var(--success); } .mom-none { color:var(--text2); }
@@ -756,7 +767,42 @@ function buildDailyActionPlan(d) {
       refSuggestions.push({ comp, ...pool[idx] });
     }
   }
-  // ── 区域标杆差距建议（GMV 低于标杆 >20% 时触发）──
+  // ── 区域标杆差距建议（每个组件分别给出动作）──
+  const cmpAdviceMap = {
+    traffic: { low: '拓客', rule: 'R1/R2', text: '到店登记至少3位新客并添加企微' },
+    aov:     { low: '客单价', rule: 'R5', text: '完成3次关联商品推荐，提高单笔产出' },
+    repRate: { low: '复购', rule: 'R4/R7', text: '优先联系本周补货预测清单的客户，提前做复购提醒' },
+  };
+  const cmpLabels = { traffic: '流量', aov: '客单价', repRate: '复购率' };
+  // 与胡美娟（销售最好）逐项对比
+  if (bmSales?.name && bmSales.name !== d.name && bmSales.componentGaps) {
+    for (const [key, gap] of Object.entries(bmSales.componentGaps)) {
+      if (gap != null && gap < -0.2) {
+        const cfg = cmpAdviceMap[key];
+        const labs = cmpLabels[key];
+        refSuggestions.push({
+          comp: 'benchSales',
+          text: `📊 ${labs}落后胡美娟${dapPct(Math.abs(gap), true)}（她${key==='aov'?'¥'+(bmSales.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmSales.components?.[key]):(bmSales.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+(plan.gmv[key]||plan.gmv.aov).toFixed(0):key==='repRate'?perc(plan.gmv.repurchaseRate):plan.gmv.traffic+'人'}）→ 重点${cfg.low}（${cfg.rule}：${cfg.text}）`,
+          rule: `对标销售-${labs}`
+        });
+      }
+    }
+  }
+  // 与詹芹芹（主推最多）逐项对比（如果和胡美娟是同一人则跳过重复）
+  if (bmPush?.name && bmPush.name !== d.name && bmPush.name !== bmSales?.name && bmPush.componentGaps) {
+    for (const [key, gap] of Object.entries(bmPush.componentGaps)) {
+      if (gap != null && gap < -0.2) {
+        const cfg = cmpAdviceMap[key];
+        const labs = cmpLabels[key];
+        refSuggestions.push({
+          comp: 'benchPush',
+          text: `🎯 ${labs}落后主推最多${bmPush.name}${dapPct(Math.abs(gap), true)}（ta${key==='aov'?'¥'+(bmPush.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmPush.components?.[key]):(bmPush.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+(plan.gmv[key]||plan.gmv.aov).toFixed(0):key==='repRate'?perc(plan.gmv.repurchaseRate):plan.gmv.traffic+'人'}）→ 参考ta的主推打法（${cfg.text}）`,
+          rule: `对标主推-${labs}`
+        });
+      }
+    }
+  }
+  // 整体汇总
   if (bmSales?.gap != null && bmSales.gap < -0.2 && bmSales.name !== d.name) {
     refSuggestions.push({ comp: 'benchmark', text: `📊 你的GMV比区域内销售最好的${bmSales.name}低${dapPct(Math.abs(bmSales.gap), true)}，今天重点提升${primary.scenario.includes('AOV')?'客单价':primary.scenario.includes('CLIENT')?'拓客':'促复购'}`, rule: '标杆跟进' });
   }
@@ -823,9 +869,38 @@ function renderAction(d) {
       <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div><div class="gmv-bar-tag ${plan.gmv.components.repurchase.strength}">${plan.gmv.components.repurchase.strength === 'weak' ? '薄弱' : plan.gmv.components.repurchase.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
       <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div><div class="gmv-bar-tag unknown">暂不可用</div></div>
       <div class="gmv-bar-result">≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
-      ${plan.gmv.benchmark?.topSales?.name ? `<div class="gmv-bench-row">
-        <span class="gmv-bench-label">🏆 区域标杆</span>
-        <span>销售最好：${plan.gmv.benchmark.topSales.name}（GMV≈¥${(plan.gmv.benchmark.topSales.gmv || 0).toLocaleString()}） | 主推最多：${plan.gmv.benchmark.topPush?.name || ''}（GMV≈¥${(plan.gmv.benchmark.topPush?.gmv || 0).toLocaleString()}）</span>
+      ${plan.gmv.benchmark?.topSales?.name ? `
+      <div class="gmv-bench-section">
+        <div class="gmv-bench-title">🏆 区域标杆：每个 GMV 组件对比</div>
+        <table class="gmv-bench-table">
+          <thead><tr><th></th><th>你的</th><th>胡美娟</th><th>差距</th><th>主推最多</th><th>差距</th></tr></tr></thead>
+          <tbody>
+            <tr>
+              <td>流量</td>
+              <td>${plan.gmv.traffic}人</td>
+              <td>${plan.gmv.benchmark.topSales.components?.traffic ?? 0}人</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.traffic != null ? (plan.gmv.benchmark.topSales.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+              <td>${plan.gmv.benchmark.topPush.components?.traffic ?? 0}人</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.traffic != null ? (plan.gmv.benchmark.topPush.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+            <tr>
+              <td>客单价</td>
+              <td>¥${plan.gmv.aov.toFixed(0)}</td>
+              <td>¥${(plan.gmv.benchmark.topSales.components?.aov ?? 0).toFixed(0)}</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.aov != null ? (plan.gmv.benchmark.topSales.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+              <td>¥${(plan.gmv.benchmark.topPush.components?.aov ?? 0).toFixed(0)}</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.aov != null ? (plan.gmv.benchmark.topPush.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+            <tr>
+              <td>复购率</td>
+              <td>${perc(plan.gmv.repurchaseRate)}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.repRate != null ? perc(plan.gmv.benchmark.topSales.components.repRate) : '—'}</td>
+              <td class="${plan.gmv.benchmark.topSales.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.repRate != null ? (plan.gmv.benchmark.topSales.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+              <td>${plan.gmv.benchmark.topPush.components?.repRate != null ? perc(plan.gmv.benchmark.topPush.components.repRate) : '—'}</td>
+              <td class="${plan.gmv.benchmark.topPush.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.repRate != null ? (plan.gmv.benchmark.topPush.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>` : ''}
     </div>
 

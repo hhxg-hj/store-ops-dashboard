@@ -143,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 01-23",
+  "version": "2026-07-29 01-37",
   "storeRank": 2,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -1204,14 +1204,39 @@
     "topSales": {
       "name": "陈传勋",
       "gmv": 0,
-      "gap": null
+      "gap": null,
+      "components": {
+        "traffic": 0,
+        "aov": 0,
+        "repRate": 0
+      },
+      "componentGaps": {
+        "traffic": null,
+        "aov": null,
+        "repRate": null
+      }
     },
     "topPush": {
       "name": "张炳坤",
       "gmv": 0,
-      "gap": null
+      "gap": null,
+      "components": {
+        "traffic": 56,
+        "aov": 239.6496429,
+        "repRate": 0
+      },
+      "componentGaps": {
+        "traffic": -0.75,
+        "aov": -0.08825830593382453,
+        "repRate": null
+      }
     },
-    "myGmv": 0
+    "myGmv": 0,
+    "myComponents": {
+      "traffic": 14,
+      "aov": 218.4985714,
+      "repRate": 0
+    }
   },
   "weeklyTasks": [
     {
