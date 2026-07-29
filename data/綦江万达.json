@@ -13,32 +13,14 @@
   "target": 0,
   "achieved": 0,
   "achievementRate": 0,
+  "lastMonthAchieved": 0,
+  "lastMonthTarget": 0,
+  "salesMom": null,
+  "dailyAvg": 0,
+  "dailyAvgLast": 0,
+  "dailyAvgMom": null,
   "userTarget": 120,
   "newCustomers": 0,
-  "mendianDachengLv": 0,
-  "mendianStaffCount": 0,
-  "milkCans": 191,
-  "milkCansLast": 144,
-  "momMilkCans": 0.3263888888888889,
-  "pushCans": 0,
-  "pushCansLast": 3,
-  "momPushCans": -1,
-  "totalClients": 92,
-  "totalClientsLast": 96,
-  "momClients": -0.041666666666666664,
-  "milkClients": 52,
-  "milkClientsLast": 49,
-  "momMilkClients": 0.061224489795918366,
-  "pushClients": 0,
-  "pushClientsLast": 1,
-  "momPushClients": -1,
-  "milkAvg": 3.673076923,
-  "milkAvgLast": 2.93877551,
-  "momMilkAvg": 0.249866453052074,
-  "depositCount": 0,
-  "visitShould": 0,
-  "visitDone": 0,
-  "visitPending": 0,
   "customerService": {
     "newServiceCount": 0,
     "chatTotal": 1,
@@ -46,25 +28,114 @@
     "replyRate": 0,
     "firstReplyMin": 0
   },
-  "naifenUsers": 52,
+  "mendianDachengLv": 0,
+  "mendianStaffCount": 0,
+  "milkCans": 181,
+  "milkCansLast": 144,
+  "momMilkCans": 0.2569444444444444,
+  "pushCans": 0,
+  "pushCansLast": 3,
+  "momPushCans": -1,
+  "milkByCategory": {
+    "totalQty": 178,
+    "totalAmount": 47805,
+    "totalProfit": 2504.146,
+    "overallMargin": 0.05238251228950947,
+    "categories": {
+      "main": {
+        "qty": 0,
+        "amount": 0,
+        "profit": 0,
+        "share": 0,
+        "marginRate": 0
+      },
+      "general": {
+        "qty": 136,
+        "amount": 35604,
+        "profit": 1849.4460000000001,
+        "share": 0.7640449438202247,
+        "marginRate": 0.05194489383215369
+      },
+      "special": {
+        "qty": 34,
+        "amount": 10437,
+        "profit": 634.7,
+        "share": 0.19101123595505617,
+        "marginRate": 0.060812494011689186
+      },
+      "child": {
+        "qty": 8,
+        "amount": 1764,
+        "profit": 20,
+        "share": 0.0449438202247191,
+        "marginRate": 0.011337868480725623
+      }
+    }
+  },
+  "nonMilkByCategory": {
+    "totalQty": 171,
+    "totalAmount": 6267.799999999999,
+    "totalProfit": 2072.79,
+    "overallMargin": 0.3307045534318262,
+    "categories": {
+      "nutrition": {
+        "qty": 1,
+        "amount": 200,
+        "profit": 145,
+        "share": 0.005847953216374269,
+        "marginRate": 0.725
+      },
+      "supplies": {
+        "qty": 112,
+        "amount": 4721.84,
+        "profit": 1288.9399999999998,
+        "share": 0.6549707602339181,
+        "marginRate": 0.2729740948443827
+      },
+      "snacks": {
+        "qty": 58,
+        "amount": 1345.9599999999996,
+        "profit": 638.8499999999999,
+        "share": 0.3391812865497076,
+        "marginRate": 0.4746426342536183
+      }
+    }
+  },
+  "totalClients": 89,
+  "totalClientsLast": 96,
+  "momClients": -0.07291666666666667,
+  "milkClients": 50,
+  "milkClientsLast": 49,
+  "momMilkClients": 0.02040816326530612,
+  "pushClients": 0,
+  "pushClientsLast": 1,
+  "momPushClients": -1,
+  "milkAvg": 3.62,
+  "milkAvgLast": 2.93877551,
+  "momMilkAvg": 0.2318055556410976,
+  "depositCount": 0,
+  "visitShould": 0,
+  "visitDone": 0,
+  "visitPending": 0,
+  "naifenUsers": 50,
   "naifenUsersLast": 49,
-  "naifenGuanshu": 191,
+  "naifenGuanshu": 181,
   "naifenGuanshuLast": 144,
-  "kedanjia": 625.3028261,
-  "kedanjiaQoq": 0.291579116,
-  "kedanliang": 3.673076923,
+  "kedanjia": 607.6831461,
+  "kedanjiaQoq": 0.255185213,
+  "kedanliang": 3.62,
   "kedanliangLast": 2.93877551,
-  "chengjiaoNew": 92,
+  "chengjiaoNew": 89,
   "chengjiaoNewLast": 96,
-  "chengjiaoTotal": 253,
-  "fugouRate": 0.162055336,
+  "chengjiaoTotal": 250,
+  "fugouRate": 0.164,
   "zhutuiUsers": 0,
   "zhutuiUsersLast": 1,
-  "tonghuoUsers": 52,
+  "tonghuoUsers": 50,
   "tonghuoUsersLast": 51,
   "bindWecom": 0,
   "haoyouTotal": 5,
-  "sankeUsers": 171,
+  "sankeUsers": 168,
   "sankeUsersLast": 142,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -72,53 +143,53 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 04-00",
+  "version": "2026-07-29 04-33",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 638.55,
+  "storeTopComm": 1742.78,
   "regionRank": 19,
   "regionTotal": 19,
-  "regionTopName": "胡美娟",
-  "regionTopComm": 5213.76,
-  "suggestion": "📋 你服务了 52 位奶粉客户，但只有 0 位（0%）接触过主推产品。剩下 52 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 52 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
+  "regionTopName": "詹芹芹",
+  "regionTopComm": 3816.65,
+  "suggestion": "📋 你服务了 50 位奶粉客户，但只有 0 位（0%）接触过主推产品。剩下 50 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 50 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（52 位奶粉客户中仅 0 位（0%）使用过主推产品；主推罐数环比下降 100%（3→0罐）），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（50 位奶粉客户中仅 0 位（0%）使用过主推产品；主推罐数环比下降 100%（3→0罐）），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
-        "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
-        "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
-        "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
-        "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
+        "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
+        "video": "",
+        "poster": "",
+        "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)"
       },
       {
         "name": "臻护新笙·皇家A2",
-        "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
-        "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
-        "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
-        "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
+        "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
+        "video": "",
+        "poster": "",
+        "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)"
       },
       {
         "name": "臻护新笙·至尊A2",
-        "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
-        "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
-        "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
-        "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
+        "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
+        "video": "",
+        "poster": "",
+        "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)"
       },
       {
         "name": "臻护新笙·铂金",
-        "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
-        "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
-        "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
-        "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
+        "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
+        "video": "",
+        "poster": "",
+        "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)"
       },
       {
         "name": "臻护新笙·羊奶",
-        "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
-        "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
-        "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
-        "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
+        "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
+        "video": "",
+        "poster": "",
+        "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)"
       }
     ],
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
@@ -137,7 +208,8 @@
         "predicted": "2026-08-03",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13577772015",
@@ -146,7 +218,13 @@
         "predicted": "2026-08-04",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版婴儿配方牛奶粉 1段 0-6月龄 900g（新包装）",
+        "lastAmount": 238.01,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 238.01
       },
       {
         "phone": "13983743331",
@@ -155,7 +233,8 @@
         "predicted": "2026-08-05",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18602390000",
@@ -164,7 +243,8 @@
         "predicted": "2026-08-05",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "19960204050",
@@ -173,52 +253,58 @@
         "predicted": "2026-08-05",
         "cycle": 100,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13678408708",
         "lastBuy": "2026-04-28",
         "daysAgo": 86,
-        "predicted": "2026-08-06",
-        "cycle": 100,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15215099004",
         "lastBuy": "2026-04-28",
         "daysAgo": 86,
-        "predicted": "2026-08-06",
-        "cycle": 100,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18323218347",
         "lastBuy": "2026-04-28",
         "daysAgo": 86,
-        "predicted": "2026-08-06",
-        "cycle": 100,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13594375270",
         "lastBuy": "2026-04-28",
         "daysAgo": 86,
-        "predicted": "2026-08-06",
-        "cycle": 100,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18184787810",
         "lastBuy": "2026-04-28",
         "daysAgo": 86,
-        "predicted": "2026-08-06",
-        "cycle": 100,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13098765722",
@@ -227,16 +313,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "13648308636",
-        "lastBuy": "2026-04-29",
-        "daysAgo": 85,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17702045401",
@@ -245,7 +323,28 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "港版Friso美素佳儿皇家婴幼儿配方奶粉 2段 6-12月龄 800g",
+        "lastAmount": 1848.01,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1848.01
+      },
+      {
+        "phone": "13648308636",
+        "lastBuy": "2026-04-29",
+        "daysAgo": 85,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿幼儿配方奶粉3段 800g（ 12-36月）",
+        "lastAmount": 640,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 640
       },
       {
         "phone": "19221839113",
@@ -254,7 +353,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17702385963",
@@ -263,7 +363,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲较大婴儿配方奶粉（6-12月龄，2段）800g",
+        "lastAmount": 268,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 268
       },
       {
         "phone": "13116494218",
@@ -272,7 +378,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18875151838",
@@ -281,7 +388,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "19923480048",
@@ -290,7 +398,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18883285985",
@@ -299,7 +408,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18883092725",
@@ -308,7 +418,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17383102690",
@@ -317,7 +428,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18580516426",
@@ -326,7 +438,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18996039817",
@@ -335,7 +448,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13167951380",
@@ -344,7 +458,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17783931097",
@@ -353,7 +468,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15802311420",
@@ -362,7 +478,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 15.01,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 15.01
       },
       {
         "phone": "18680718659",
@@ -371,7 +493,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17502302387",
@@ -380,7 +503,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15287967218",
@@ -389,7 +513,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18723011140",
@@ -398,7 +523,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "19112329303",
@@ -407,7 +533,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13272895064",
@@ -416,7 +543,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18725673963",
@@ -425,7 +553,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18008380599",
@@ -434,7 +563,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 293,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 293
       },
       {
         "phone": "19123155756",
@@ -443,16 +578,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "19946907941",
-        "lastBuy": "2026-05-04",
-        "daysAgo": 80,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17815377993",
@@ -461,7 +588,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17623579673",
@@ -470,7 +598,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15213057403",
@@ -479,7 +608,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "19946907941",
+        "lastBuy": "2026-05-04",
+        "daysAgo": 80,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩幼儿配方奶粉3段 780g（ 12-36月）",
+        "lastAmount": 265,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 530
       },
       {
         "phone": "15823886958",
@@ -488,16 +633,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "19112298421",
-        "lastBuy": "2026-05-06",
-        "daysAgo": 78,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "17815017806",
@@ -506,7 +643,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18716388093",
@@ -515,7 +653,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "19112298421",
+        "lastBuy": "2026-05-06",
+        "daysAgo": 78,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "纽太特 特殊医学用途婴儿乳蛋白深度水解配方食品450g",
+        "lastAmount": 676,
+        "lastCans": 2,
+        "lastCategory": "special",
+        "totalMilkAmount": 676
       },
       {
         "phone": "13883983316",
@@ -524,16 +678,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "13274001507",
-        "lastBuy": "2026-05-08",
-        "daysAgo": 76,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15823569968",
@@ -542,7 +688,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18580715583",
@@ -551,16 +698,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
-        "phone": "15808097505",
-        "lastBuy": "2026-05-09",
-        "daysAgo": 75,
+        "phone": "13274001507",
+        "lastBuy": "2026-05-08",
+        "daysAgo": 76,
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "金领冠珍护 奶粉1段 800g（0-6月）",
+        "lastAmount": 110,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 110
       },
       {
         "phone": "18883799944",
@@ -569,7 +723,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18223135588",
@@ -578,7 +733,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "15808097505",
+        "lastBuy": "2026-05-09",
+        "daysAgo": 75,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 265,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 265
       },
       {
         "phone": "13110181240",
@@ -587,7 +758,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15703077304",
@@ -596,7 +768,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "19112289147",
@@ -605,7 +778,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 3段12-36个月 800g",
+        "lastAmount": 298,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 1126.99
       },
       {
         "phone": "17783457981",
@@ -614,7 +793,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15922636158",
@@ -623,7 +803,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15213327853",
@@ -632,7 +813,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "澳洲ABBOTT雅培Pediasure小安素全营养配方粉 香草味 850g",
+        "lastAmount": 10.01,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 10.01
       },
       {
         "phone": "15395001131",
@@ -641,7 +828,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15923262379",
@@ -650,16 +838,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "15983604759",
-        "lastBuy": "2026-05-15",
-        "daysAgo": 69,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15023117918",
@@ -668,7 +848,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "15983604759",
+        "lastBuy": "2026-05-15",
+        "daysAgo": 69,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "a2至初奶粉1段 850g（ 0-6月）",
+        "lastAmount": 346,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 346
       },
       {
         "phone": "15823491203",
@@ -677,7 +873,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15111951855",
@@ -686,7 +883,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "金领冠 塞纳牧有机 奶粉2段 130g（6-12月）",
+        "lastAmount": 35,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 35
       },
       {
         "phone": "15207728870",
@@ -695,7 +898,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "法国圣元优博剖蓓舒欧盟白金版6HMO奶粉3段（1-3岁）",
+        "lastAmount": -288,
+        "lastCans": -1,
+        "lastCategory": "general",
+        "totalMilkAmount": 288.01
       },
       {
         "phone": "15696878770",
@@ -704,16 +913,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "18716236414",
-        "lastBuy": "2026-05-19",
-        "daysAgo": 65,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "飞鹤臻爱倍护 3段幼儿配方奶粉 800g（ 12-36月）",
+        "lastAmount": 990,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 990
       },
       {
         "phone": "15823926103",
@@ -722,7 +928,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "19146095950",
@@ -731,7 +938,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18723086820",
@@ -740,7 +948,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "18716236414",
+        "lastBuy": "2026-05-19",
+        "daysAgo": 65,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲幼儿配方奶粉（12-36月龄，3段）800g",
+        "lastAmount": 502,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 502
       },
       {
         "phone": "18215563407",
@@ -749,7 +973,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18583092725",
@@ -758,16 +983,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "13640517698",
-        "lastBuy": "2026-05-21",
-        "daysAgo": 63,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13512336055",
@@ -776,7 +993,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "13640517698",
+        "lastBuy": "2026-05-21",
+        "daysAgo": 63,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠1段 800g/罐",
+        "lastAmount": 335,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 335
       },
       {
         "phone": "13896184634",
@@ -785,7 +1018,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "13657615963",
@@ -794,7 +1028,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15320357385",
@@ -803,7 +1038,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "港版NAN能恩全护A2奶粉6HMO 1段 0-6个月 350g",
+        "lastAmount": 195.01,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 195.01
       },
       {
         "phone": "15310280736",
@@ -812,7 +1053,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "18723366820",
@@ -821,16 +1063,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
-      },
-      {
-        "phone": "18323453200",
-        "lastBuy": "2026-05-23",
-        "daysAgo": 61,
-        "predicted": "已到期，立即联系",
-        "cycle": 30,
-        "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
       },
       {
         "phone": "15922623292",
@@ -839,7 +1073,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "高危",
-        "level": "critical"
+        "level": "critical",
+        "isMilk": false
+      },
+      {
+        "phone": "18323453200",
+        "lastBuy": "2026-05-23",
+        "daysAgo": 61,
+        "predicted": "已到期，立即联系",
+        "cycle": 30,
+        "urgency": "高危",
+        "level": "critical",
+        "isMilk": true,
+        "lastBrand": "金领冠 育护 奶粉3段 900g（12-36月）",
+        "lastAmount": -132,
+        "lastCans": -1,
+        "lastCategory": "general",
+        "totalMilkAmount": 0
       },
       {
         "phone": "18523587458",
@@ -848,7 +1098,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13594617051",
@@ -857,7 +1108,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "19923444415",
@@ -866,7 +1118,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15909353015",
@@ -875,7 +1128,8 @@
         "predicted": "2026-09-02",
         "cycle": 100,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18306002747",
@@ -884,7 +1138,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15775960935",
@@ -893,7 +1148,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "19922358911",
@@ -902,61 +1158,78 @@
         "predicted": "已到期，立即联系",
         "cycle": 30,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 652,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 972
       },
       {
         "phone": "18580206506",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13996084918",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "19922255980",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲婴儿配方奶粉（0-6月龄，1段）800g",
+        "lastAmount": 266,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 266
       },
       {
         "phone": "17782004927",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "17347916846",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13983459860",
         "lastBuy": "2026-05-28",
         "daysAgo": 56,
         "predicted": "已到期，立即联系",
-        "cycle": 30,
+        "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18225093228",
@@ -965,7 +1238,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15723689032",
@@ -974,7 +1248,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "19112721232",
@@ -983,7 +1258,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18716823006",
@@ -992,16 +1268,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "13528188589",
-        "lastBuy": "2026-05-31",
-        "daysAgo": 53,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15736357955",
@@ -1010,7 +1278,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "13528188589",
+        "lastBuy": "2026-05-31",
+        "daysAgo": 53,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩婴儿配方奶粉1段 800g（0-12月）",
+        "lastAmount": 360,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 530
       },
       {
         "phone": "18284578711",
@@ -1019,7 +1303,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "金领冠 育护 奶粉3段 900g（12-36月）",
+        "lastAmount": 132,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 132
       },
       {
         "phone": "13696270000",
@@ -1028,7 +1318,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓耀奶粉3段 750g（ 12-36月）",
+        "lastAmount": 175,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 175
       },
       {
         "phone": "18725886921",
@@ -1037,7 +1333,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18883774200",
@@ -1046,7 +1343,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲婴儿配方奶粉（0-6月龄，1段）800g",
+        "lastAmount": 1300,
+        "lastCans": 5,
+        "lastCategory": "general",
+        "totalMilkAmount": 1560
       },
       {
         "phone": "15823340441",
@@ -1055,7 +1358,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18302367041",
@@ -1064,7 +1368,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18375895942",
@@ -1073,7 +1378,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版较大婴儿配方奶粉 2段 6-12月 800g",
+        "lastAmount": 1182.02,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 2334.06
       },
       {
         "phone": "18323082752",
@@ -1082,7 +1393,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15683905919",
@@ -1091,16 +1403,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "19123105420",
-        "lastBuy": "2026-06-06",
-        "daysAgo": 47,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 1902,
+        "lastCans": 6,
+        "lastCategory": "general",
+        "totalMilkAmount": 1902
       },
       {
         "phone": "18375937027",
@@ -1109,7 +1418,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "荷兰版Kabrita佳贝艾特羊奶粉白金版1段 800g",
+        "lastAmount": 228,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 228
       },
       {
         "phone": "17745087397",
@@ -1118,25 +1433,23 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
-        "phone": "18883996632",
-        "lastBuy": "2026-06-07",
-        "daysAgo": 46,
+        "phone": "19123105420",
+        "lastBuy": "2026-06-06",
+        "daysAgo": 47,
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "13883454710",
-        "lastBuy": "2026-06-07",
-        "daysAgo": 46,
-        "predicted": "已到期，立即联系",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "飞鹤臻爱倍护 1段婴幼儿配方奶粉 800g（0-6月）",
+        "lastAmount": 185,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 370
       },
       {
         "phone": "15310847427",
@@ -1145,7 +1458,8 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "17723628300",
@@ -1154,7 +1468,38 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "18883996632",
+        "lastBuy": "2026-06-07",
+        "daysAgo": 46,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿幼儿配方奶粉3段 800g（ 12-36月）",
+        "lastAmount": 315,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 315
+      },
+      {
+        "phone": "13883454710",
+        "lastBuy": "2026-06-07",
+        "daysAgo": 46,
+        "predicted": "已到期，立即联系",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓耀奶粉1段 750g（ 0-6月）",
+        "lastAmount": 195,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 370
       },
       {
         "phone": "15111952257",
@@ -1163,7 +1508,13 @@
         "predicted": "已到期，立即联系",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "雀巢健康科学肽敏舒特殊医学用途婴儿乳蛋白深度水解配方食品 0-12个月 400g",
+        "lastAmount": 338,
+        "lastCans": 1,
+        "lastCategory": "special",
+        "totalMilkAmount": 338
       },
       {
         "phone": "18523980145",
@@ -1172,7 +1523,8 @@
         "predicted": "2026-07-24",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15213496543",
@@ -1181,7 +1533,8 @@
         "predicted": "2026-07-24",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18672942871",
@@ -1190,7 +1543,8 @@
         "predicted": "2026-07-24",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15213347541",
@@ -1199,7 +1553,8 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15023101117",
@@ -1208,7 +1563,13 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩幼儿配方奶粉3段 780g（ 12-36月）",
+        "lastAmount": 258,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 523
       },
       {
         "phone": "17783820710",
@@ -1217,7 +1578,13 @@
         "predicted": "2026-07-25",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "Nestle雀巢超启能恩婴儿配方奶粉1段 800g（0-12月）",
+        "lastAmount": 371,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 669
       },
       {
         "phone": "15736222377",
@@ -1226,7 +1593,13 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
+        "lastAmount": 262,
+        "lastCans": 1,
+        "lastCategory": "child",
+        "totalMilkAmount": 262
       },
       {
         "phone": "15826295942",
@@ -1235,7 +1608,8 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18182375902",
@@ -1244,7 +1618,13 @@
         "predicted": "2026-07-26",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 324,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 643
       },
       {
         "phone": "18324158710",
@@ -1253,7 +1633,8 @@
         "predicted": "2026-07-27",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "17708343865",
@@ -1262,16 +1643,8 @@
         "predicted": "2026-07-27",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "13637854136",
-        "lastBuy": "2026-06-13",
-        "daysAgo": 40,
-        "predicted": "2026-07-28",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18623225264",
@@ -1280,7 +1653,23 @@
         "predicted": "2026-07-28",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "13637854136",
+        "lastBuy": "2026-06-13",
+        "daysAgo": 40,
+        "predicted": "2026-07-28",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿幼儿配方奶粉3段 800g（ 12-36月）",
+        "lastAmount": 640,
+        "lastCans": 2,
+        "lastCategory": "general",
+        "totalMilkAmount": 1920
       },
       {
         "phone": "18875257260",
@@ -1289,16 +1678,13 @@
         "predicted": "2026-07-28",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "18723079752",
-        "lastBuy": "2026-06-14",
-        "daysAgo": 39,
-        "predicted": "2026-07-29",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 951,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1902
       },
       {
         "phone": "15702323783",
@@ -1307,16 +1693,8 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "13594635085",
-        "lastBuy": "2026-06-14",
-        "daysAgo": 39,
-        "predicted": "2026-07-29",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18983878046",
@@ -1325,7 +1703,13 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲a2白金版幼儿配方牛奶粉 3段 1-4岁 900g（新包装）",
+        "lastAmount": 240,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 240
       },
       {
         "phone": "13637993731",
@@ -1334,7 +1718,8 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "18375760429",
@@ -1343,7 +1728,38 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "18723079752",
+        "lastBuy": "2026-06-14",
+        "daysAgo": 39,
+        "predicted": "2026-07-29",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "金领冠 塞纳牧有机 奶粉3段 800g（12-36月）",
+        "lastAmount": 235,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 235
+      },
+      {
+        "phone": "13594635085",
+        "lastBuy": "2026-06-14",
+        "daysAgo": 39,
+        "predicted": "2026-07-29",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆奶粉2段700g（ 6-12月）",
+        "lastAmount": 180,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 180
       },
       {
         "phone": "19923606774",
@@ -1352,16 +1768,13 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "13250995783",
-        "lastBuy": "2026-06-18",
-        "daysAgo": 35,
-        "predicted": "2026-08-02",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "美赞臣蓝臻 奶粉2段 820g（6-12月）",
+        "lastAmount": 289,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 578
       },
       {
         "phone": "18323294905",
@@ -1370,7 +1783,8 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15703052896",
@@ -1379,7 +1793,23 @@
         "predicted": "2026-08-02",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "13250995783",
+        "lastBuy": "2026-06-18",
+        "daysAgo": 35,
+        "predicted": "2026-08-02",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "金领冠育护婴儿配方奶粉1段(听装)130g",
+        "lastAmount": 39,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 39
       },
       {
         "phone": "15102339856",
@@ -1388,7 +1818,13 @@
         "predicted": "2026-08-03",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "德国Aptamil爱他美白金版幼儿配方奶粉 1+段 1周岁及以上 800g",
+        "lastAmount": 208.05,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 208.05
       },
       {
         "phone": "19922154295",
@@ -1397,7 +1833,8 @@
         "predicted": "2026-08-03",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15523418502",
@@ -1406,7 +1843,8 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "13896184624",
@@ -1415,16 +1853,8 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
-      },
-      {
-        "phone": "18815167020",
-        "lastBuy": "2026-06-20",
-        "daysAgo": 33,
-        "predicted": "2026-08-04",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15320268861",
@@ -1433,7 +1863,8 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15334502341",
@@ -1442,7 +1873,23 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
+      },
+      {
+        "phone": "18815167020",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 325,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1950
       },
       {
         "phone": "15922565653",
@@ -1451,7 +1898,13 @@
         "predicted": "2026-08-05",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 225,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 225
       },
       {
         "phone": "13075435180",
@@ -1460,7 +1913,13 @@
         "predicted": "2026-08-06",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": true,
+        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
+        "lastAmount": 226.55,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 452.56
       },
       {
         "phone": "18375967890",
@@ -1469,7 +1928,8 @@
         "predicted": "2026-08-06",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high"
+        "level": "high",
+        "isMilk": false
       },
       {
         "phone": "15320238558",
@@ -1478,7 +1938,8 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "19111238179",
@@ -1487,7 +1948,8 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18716205834",
@@ -1496,7 +1958,8 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "15322088070",
@@ -1505,7 +1968,8 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "17623637765",
@@ -1514,7 +1978,13 @@
         "predicted": "2026-08-08",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠3段 800g/罐",
+        "lastAmount": 906,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1812
       },
       {
         "phone": "15213051618",
@@ -1523,7 +1993,13 @@
         "predicted": "2026-08-09",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆奶粉1段 700g（ 0-6月）",
+        "lastAmount": 210,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 210
       },
       {
         "phone": "15086869118",
@@ -1532,25 +2008,43 @@
         "predicted": "2026-08-10",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓睿奶粉1段 750g（ 0-6月）",
+        "lastAmount": 270,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 270
       },
       {
         "phone": "15123287669",
         "lastBuy": "2026-06-27",
         "daysAgo": 26,
-        "predicted": "2026-08-11",
-        "cycle": 45,
+        "predicted": "2026-07-25",
+        "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美领熠2段 800g/罐",
+        "lastAmount": 324,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 3888
       },
       {
         "phone": "15102316497",
         "lastBuy": "2026-06-27",
         "daysAgo": 26,
-        "predicted": "2026-08-11",
-        "cycle": 45,
+        "predicted": "2026-07-25",
+        "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿幼儿配方奶粉3段 800g（ 12-36月）",
+        "lastAmount": 325,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 325
       },
       {
         "phone": "17823636891",
@@ -1559,7 +2053,13 @@
         "predicted": "2026-07-26",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 329,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 329
       },
       {
         "phone": "17784074331",
@@ -1568,7 +2068,8 @@
         "predicted": "2026-07-28",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "17358307029",
@@ -1577,25 +2078,8 @@
         "predicted": "2026-07-28",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
-      },
-      {
-        "phone": "13678451141",
-        "lastBuy": "2026-07-01",
-        "daysAgo": 22,
-        "predicted": "2026-07-29",
-        "cycle": 28,
-        "urgency": "本周",
-        "level": "medium"
-      },
-      {
-        "phone": "15223413230",
-        "lastBuy": "2026-07-01",
-        "daysAgo": 22,
-        "predicted": "2026-07-29",
-        "cycle": 28,
-        "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "15922631192",
@@ -1604,7 +2088,43 @@
         "predicted": "2026-07-29",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲婴儿配方奶粉（0-6月龄，1段）800g",
+        "lastAmount": 276,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 276
+      },
+      {
+        "phone": "13678451141",
+        "lastBuy": "2026-07-01",
+        "daysAgo": 22,
+        "predicted": "2026-07-29",
+        "cycle": 28,
+        "urgency": "本周",
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓睿奶粉3段 750g（ 12-36月）",
+        "lastAmount": 233,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 466
+      },
+      {
+        "phone": "15223413230",
+        "lastBuy": "2026-07-01",
+        "daysAgo": 22,
+        "predicted": "2026-07-29",
+        "cycle": 28,
+        "urgency": "本周",
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "爱他美卓傲婴儿配方奶粉（0-6月龄，1段）800g",
+        "lastAmount": 262,
+        "lastCans": 1,
+        "lastCategory": "general",
+        "totalMilkAmount": 1572
       },
       {
         "phone": "17823660721",
@@ -1613,7 +2133,13 @@
         "predicted": "2026-08-01",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "皇家美素佳儿奶粉2段 800g（ 6-12月）",
+        "lastAmount": 951,
+        "lastCans": 3,
+        "lastCategory": "general",
+        "totalMilkAmount": 1902
       },
       {
         "phone": "13368211876",
@@ -1622,16 +2148,13 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
-      },
-      {
-        "phone": "19302341776",
-        "lastBuy": "2026-07-05",
-        "daysAgo": 18,
-        "predicted": "2026-08-02",
-        "cycle": 28,
-        "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "飞鹤星飞帆卓耀奶粉2段 750g（ 6-12月）",
+        "lastAmount": -190,
+        "lastCans": -1,
+        "lastCategory": "general",
+        "totalMilkAmount": 0
       },
       {
         "phone": "15702384167",
@@ -1640,7 +2163,23 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
+      },
+      {
+        "phone": "19302341776",
+        "lastBuy": "2026-07-05",
+        "daysAgo": 18,
+        "predicted": "2026-08-02",
+        "cycle": 28,
+        "urgency": "本周",
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "雀巢健康科学肽敏舒特殊医学用途婴儿乳蛋白深度水解配方食品 0-12个月 400g",
+        "lastAmount": 984,
+        "lastCans": 3,
+        "lastCategory": "special",
+        "totalMilkAmount": 4178
       },
       {
         "phone": "18996165849",
@@ -1649,7 +2188,13 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "雀巢健康科学蔼儿舒特殊医学用途婴儿乳蛋白深度水解配方食品 0-12个月 400g",
+        "lastAmount": -293,
+        "lastCans": -1,
+        "lastCategory": "special",
+        "totalMilkAmount": 293
       },
       {
         "phone": "13703945969",
@@ -1658,7 +2203,8 @@
         "predicted": "2026-08-03",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18324162824",
@@ -1667,7 +2213,13 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": true,
+        "lastBrand": "雀巢惠氏SMA至尊HA婴儿配方奶粉1段0-6月800g",
+        "lastAmount": 229.01,
+        "lastCans": 1,
+        "lastCategory": "main",
+        "totalMilkAmount": 229.01
       },
       {
         "phone": "15111866989",
@@ -1676,7 +2228,8 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       },
       {
         "phone": "18883303350",
@@ -1685,7 +2238,8 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium"
+        "level": "medium",
+        "isMilk": false
       }
     ]
   },
@@ -1741,10 +2295,10 @@
       "speech": ""
     },
     "全护A2": {
-      "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
-      "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
-      "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
-      "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
+      "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
+      "video": "",
+      "poster": "",
+      "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
       "comp": "",
@@ -2231,40 +2785,40 @@
       "speech": ""
     },
     "皇家A2": {
-      "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
-      "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
-      "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
-      "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
+      "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
+      "video": "",
+      "poster": "",
+      "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "[臻护新苼皇家 - 竞品分析](https://yuoukuajing.feishu.cn/sheets/YWYFseHuShQddwtPHorcZVSWnvd?from=from_copylink)",
       "speech": "[臻护新苼皇家A2 产品推荐话术](https://yuoukuajing.feishu.cn/file/DBcdb0tKCobcY8x2qC0cGSownTd?from=from_copylink)"
     },
     "至尊A2": {
-      "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
-      "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
-      "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
-      "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
+      "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
+      "video": "",
+      "poster": "",
+      "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "铂金": {
-      "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
-      "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
-      "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
-      "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
+      "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
+      "video": "",
+      "poster": "",
+      "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "羊奶": {
-      "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
-      "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
-      "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
-      "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
+      "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
+      "video": "",
+      "poster": "",
+      "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
@@ -2671,14 +3225,52 @@
       "speech": ""
     }
   },
+  "regionalBM": {
+    "topSales": {
+      "name": "胡美娟",
+      "gmv": 9043.28431630853,
+      "gap": -0.019190054162066785,
+      "components": {
+        "traffic": 74,
+        "aov": 924.3828378,
+        "repRate": 0.13220339
+      },
+      "componentGaps": {
+        "traffic": 0.20270270270270271,
+        "aov": -0.34260663304149447,
+        "repRate": 0.2405128189224195
+      }
+    },
+    "topPush": {
+      "name": "詹芹芹",
+      "gmv": 4894.34492534724,
+      "gap": 0.8122431777417726,
+      "components": {
+        "traffic": 60,
+        "aov": 887.409,
+        "repRate": 0.091922006
+      },
+      "componentGaps": {
+        "traffic": 0.48333333333333334,
+        "aov": -0.3152163815106675,
+        "repRate": 0.7841212037953132
+      }
+    },
+    "myGmv": 8869.743200475601,
+    "myComponents": {
+      "traffic": 89,
+      "aov": 607.6831461,
+      "repRate": 0.164
+    }
+  },
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 44 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 42 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 52 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 50 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔄",
@@ -2686,62 +3278,67 @@
     },
     {
       "icon": "🔐",
-      "text": "从 52 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 50 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "总体客户从 96 降至 92（↓4%），流失 4 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
-    "你服务了 52 位奶粉客户，但只有 0 位（0%）接触过主推产品。其余 52 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "总体客户从 96 降至 89（↓7%），流失 7 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
+    "你服务了 50 位奶粉客户，但只有 0 位（0%）接触过主推产品。其余 50 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
     "有 1 位客户停止了主推产品购买（1→0，↓100%），可能是不适应口感或宝宝需求变化——建议逐一了解原因。",
-    "你的 52 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "你的 50 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 52 位奶粉客户未接触过主推产品，1 位客户停止了主推产品）",
+    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 50 位奶粉客户未接触过主推产品，1 位客户停止了主推产品）",
     "products": [
       {
         "name": "能恩全护A2",
         "brand": "03、雀巢",
         "scenario": "消化吸收、免疫支持",
         "age": "0-3岁",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx)"
+        "links": "[一页纸]([全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)) · [测试题]([港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink))"
       },
       {
         "name": "臻护新笙·皇家A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx)"
+        "links": "[一页纸]([臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)) · [测试题]([臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink))"
       },
       {
         "name": "臻护新笙·至尊A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx)"
+        "links": "[一页纸]([臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)) · [测试题]([臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink))"
       },
       {
         "name": "臻护新笙·铂金",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx)"
+        "links": "[一页纸]([铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)) · [测试题]([臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink))"
       },
       {
         "name": "臻护新笙·羊奶",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx)"
+        "links": "[一页纸]([臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)) · [测试题]([臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink))"
       }
     ]
   },
   "storeAgg": {
-    "target": 65000,
-    "achieved": 22203.45,
-    "achievementRate": 0.34159153846153845,
-    "milkCans": 361,
-    "momMilkCans": 0.5361702127659574,
-    "pushCans": 63,
+    "target": 75000,
+    "achieved": 39589.13,
+    "achievementRate": 0.5278550666666666,
+    "milkCans": 339,
+    "momMilkCans": 0.4425531914893617,
+    "pushCans": 54,
     "momPushCans": null
+  },
+  "purchaseRecency": {
+    "m1": 91,
+    "m2_3": 146,
+    "m3plus": 13
   }
 }
