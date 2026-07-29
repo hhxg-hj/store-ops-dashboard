@@ -270,6 +270,7 @@ function fmtMoney(v) { if (v == null || isNaN(v)) return '¥0'; return '¥' + Nu
 function fmtNum(v) { if (v == null || isNaN(v)) return '0'; return Number(v).toLocaleString('zh-CN'); }
 function momClass(v) { if (v == null || isNaN(v)) return 'mom-none'; return v >= 0 ? 'mom-up' : 'mom-down'; }
 function momLabel(v) { if (v == null || isNaN(v)) return '—'; return fmtPct(v, true); }
+function gapCell(g) { if (g == null) return '<td class="gmv-gap-ok">—</td>'; if (g === 0) return '<td class="gmv-gap-ok">0.0%</td>'; return `<td class="${g > 0 ? 'gmv-gap-good' : 'gmv-gap-bad'}">${(g > 0 ? '+' : '') + (g * 100).toFixed(1) + '%'}</td>`; }
 
 const VIEW_TITLES = { overview:'运营概览', perf:'销售业绩', followup:'客户服务', action:'行动建议', learning:'学习资源' };
 const VALID_VIEWS = ['overview','perf','followup','action','learning'];
@@ -858,25 +859,25 @@ function renderAction(d) {
               <td>流量</td>
               <td>${plan.gmv.traffic}人</td>
               <td>${plan.gmv.benchmark.topSales.components?.traffic ?? 0}人</td>
-              <td class="${plan.gmv.benchmark.topSales.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.traffic != null ? (plan.gmv.benchmark.topSales.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.traffic)}
               <td>${plan.gmv.benchmark.topPush.components?.traffic ?? 0}人</td>
-              <td class="${plan.gmv.benchmark.topPush.componentGaps?.traffic < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.traffic > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.traffic != null ? (plan.gmv.benchmark.topPush.componentGaps.traffic >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.traffic * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.traffic)}
             </tr>
             <tr>
               <td>客单价</td>
               <td>¥${plan.gmv.aov.toFixed(0)}</td>
               <td>¥${(plan.gmv.benchmark.topSales.components?.aov ?? 0).toFixed(0)}</td>
-              <td class="${plan.gmv.benchmark.topSales.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.aov != null ? (plan.gmv.benchmark.topSales.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.aov)}
               <td>¥${(plan.gmv.benchmark.topPush.components?.aov ?? 0).toFixed(0)}</td>
-              <td class="${plan.gmv.benchmark.topPush.componentGaps?.aov < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.aov > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.aov != null ? (plan.gmv.benchmark.topPush.componentGaps.aov >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.aov * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.aov)}
             </tr>
             <tr>
               <td>复购率</td>
               <td>${perc(plan.gmv.repurchaseRate)}</td>
               <td>${plan.gmv.benchmark.topSales.components?.repRate != null ? perc(plan.gmv.benchmark.topSales.components.repRate) : '—'}</td>
-              <td class="${plan.gmv.benchmark.topSales.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topSales.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topSales.componentGaps?.repRate != null ? (plan.gmv.benchmark.topSales.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topSales.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.repRate)}
               <td>${plan.gmv.benchmark.topPush.components?.repRate != null ? perc(plan.gmv.benchmark.topPush.components.repRate) : '—'}</td>
-              <td class="${plan.gmv.benchmark.topPush.componentGaps?.repRate < -0.2 ? 'gmv-gap-bad' : plan.gmv.benchmark.topPush.componentGaps?.repRate > 0.1 ? 'gmv-gap-good' : 'gmv-gap-ok'}">${plan.gmv.benchmark.topPush.componentGaps?.repRate != null ? (plan.gmv.benchmark.topPush.componentGaps.repRate >= 0 ? '+' : '') + (plan.gmv.benchmark.topPush.componentGaps.repRate * 100).toFixed(1) + '%' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.repRate)}
             </tr>
           </tbody>
         </table>
