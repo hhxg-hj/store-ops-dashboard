@@ -16,9 +16,9 @@
   "lastMonthAchieved": 4072.25,
   "lastMonthTarget": 21666,
   "salesMom": 0.030666093682853487,
-  "dailyAvg": 149.8975,
+  "dailyAvg": 144.72862068965517,
   "dailyAvgLast": 135.74166666666667,
-  "dailyAvgMom": 0.10428510037448585,
+  "dailyAvgMom": 0.06620630380984835,
   "userTarget": 120,
   "newCustomers": 10,
   "customerService": {
@@ -143,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-35",
+  "version": "2026-07-29 01-23",
   "storeRank": 3,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -1394,6 +1394,19 @@
       "comp": "",
       "speech": ""
     }
+  },
+  "regionalBM": {
+    "topSales": {
+      "name": "胡美娟",
+      "gmv": 9043.28431630853,
+      "gap": -0.976794216275878
+    },
+    "topPush": {
+      "name": "詹芹芹",
+      "gmv": 4894.34492534724,
+      "gap": -0.9571226582513265
+    },
+    "myGmv": 209.8565
   },
   "weeklyTasks": [
     {

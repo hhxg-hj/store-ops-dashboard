@@ -143,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-35",
+  "version": "2026-07-29 01-23",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -3225,6 +3225,19 @@
       "speech": ""
     }
   },
+  "regionalBM": {
+    "topSales": {
+      "name": "胡美娟",
+      "gmv": 9043.28431630853,
+      "gap": -0.019190054162066785
+    },
+    "topPush": {
+      "name": "詹芹芹",
+      "gmv": 4894.34492534724,
+      "gap": 0.8122431777417726
+    },
+    "myGmv": 8869.743200475601
+  },
   "weeklyTasks": [
     {
       "icon": "📋",
@@ -3299,8 +3312,8 @@
     "momPushCans": null
   },
   "purchaseRecency": {
-    "m1": 92,
-    "m2_3": 148,
-    "m3plus": 10
+    "m1": 91,
+    "m2_3": 146,
+    "m3plus": 13
   }
 }

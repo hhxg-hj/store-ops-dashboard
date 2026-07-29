@@ -138,6 +138,8 @@
     .gmv-bar-tag.strong { background:#dcfce7; color:var(--success); }
     .gmv-bar-tag.unknown { background:#f0f0f4; color:var(--text2); }
     .gmv-bar-result { width:100%; font-size:15px; font-weight:700; color:var(--primary); margin-top:4px; }
+    .gmv-bench-row { width:100%; font-size:11px; color:var(--text2); padding-top:6px; border-top:1px dashed var(--border); margin-top:6px; }
+    .gmv-bench-label { font-weight:600; color:var(--warning); margin-right:6px; }
     .sugg-rule { display:inline-block; font-size:10px; background:var(--primary-light,#f0ebff); color:var(--primary); border-radius:5px; padding:0 5px; margin-right:4px; font-weight:500; }
     .mom { font-size:12px; }
     .mom-up { color:var(--danger); } .mom-down { color:var(--success); } .mom-none { color:var(--text2); }
@@ -569,6 +571,16 @@ function buildDailyActionPlan(d) {
     referral: { value: null, strength: 'unknown' },
   };
 
+  // ── 区域标杆对比（销售业绩最好 + 主推卖最多）──
+  const bm = d.regionalBM || {};
+  const bmLabel = (g, name) => {
+    if (g == null) return '无法比较';
+    if (g >= 0) return `超过 ${name}`;
+    const pct = Math.abs(g * 100).toFixed(0);
+    return `低于 ${name} ${pct}%`;
+  };
+  const bmStatus = (g) => (g == null ? 'normal' : g < -0.3 ? 'weak' : g < -0.1 ? 'normal' : 'strong');
+
   // ── 今日回访对象（lost → critical → high → medium 排序）──
   const LEVEL_ORDER = { lost: 0, critical: 1, high: 2, medium: 3 };
   let todayRefs = [];
@@ -709,7 +721,13 @@ function buildDailyActionPlan(d) {
   const weakComps = Object.entries(gmvComp).filter(([,c]) => c.strength === 'weak').map(([k]) => compLabels[k] || k);
   const gmvy = gmvApprox !== null ? `¥${gmvApprox.toLocaleString()}` : '（数据不足）';
   const weakText = weakComps.length ? `，目前${weakComps.join('、')}相对薄弱` : '，各指标基本健康';
-  const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 客单价¥${aov.toFixed(0)} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}。${primary.headline}。`;
+  // 区域标杆对比文案
+  const bmSales = bm.topSales;
+  const bmPush = bm.topPush;
+  const bmText = bmSales?.name
+    ? ` | 区域标杆：${bmSales.name}（销售最好，GMV≈¥${(bmSales.gmv||0).toLocaleString()}）· ${bmPush?.name||''}（主推最多）| 你的GMV差距：${bmSales?.gap != null ? dapPct(bmSales.gap, true) : '—'}`
+    : '';
+  const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 客单价¥${aov.toFixed(0)} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}${bmText}。${primary.headline}。`;
 
   const Qs = DAP_CONFIG.quotas;
   const suggTemplates = {
@@ -738,6 +756,13 @@ function buildDailyActionPlan(d) {
       refSuggestions.push({ comp, ...pool[idx] });
     }
   }
+  // ── 区域标杆差距建议（GMV 低于标杆 >20% 时触发）──
+  if (bmSales?.gap != null && bmSales.gap < -0.2 && bmSales.name !== d.name) {
+    refSuggestions.push({ comp: 'benchmark', text: `📊 你的GMV比区域内销售最好的${bmSales.name}低${dapPct(Math.abs(bmSales.gap), true)}，今天重点提升${primary.scenario.includes('AOV')?'客单价':primary.scenario.includes('CLIENT')?'拓客':'促复购'}`, rule: '标杆跟进' });
+  }
+  if (bmPush?.gap != null && bmPush.gap < -0.2 && bmPush.name !== d.name && bmPush.name !== bmSales?.name) {
+    refSuggestions.push({ comp: 'benchmark', text: `🎯 你的GMV比主推最多的${bmPush.name}低${dapPct(Math.abs(bmPush.gap), true)}，建议参考ta的主推策略`, rule: '主推标杆' });
+  }
   if (!refSuggestions.length) {
     refSuggestions.push({ comp: 'general', text: `完成${Qs.feedback}位成交客户售后跟进，记录使用反馈`, rule: '保持' });
     refSuggestions.push({ comp: 'general', text: `向${Qs.referral}位满意客户说明老带新双向奖励（固定运营动作）`, rule: 'R8-固定' });
@@ -759,7 +784,7 @@ function buildDailyActionPlan(d) {
       { scenario: '复购率趋势', reason: '仅有本月复购率，只能判断「偏低」，不能判断「下降」' },
       { scenario: '新客增速放缓', reason: '缺少第三个月数据，只能判断「增长不足」' },
     ],
-    gmv: { traffic, aov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, components: gmvComp },
+    gmv: { traffic, aov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, components: gmvComp, benchmark: bm },
     insightsText, refSuggestions, refWeekActions,
   };
 }
@@ -798,6 +823,10 @@ function renderAction(d) {
       <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div><div class="gmv-bar-tag ${plan.gmv.components.repurchase.strength}">${plan.gmv.components.repurchase.strength === 'weak' ? '薄弱' : plan.gmv.components.repurchase.strength === 'unknown' ? '缺数据' : '正常'}</div></div>
       <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div><div class="gmv-bar-tag unknown">暂不可用</div></div>
       <div class="gmv-bar-result">≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
+      ${plan.gmv.benchmark?.topSales?.name ? `<div class="gmv-bench-row">
+        <span class="gmv-bench-label">🏆 区域标杆</span>
+        <span>销售最好：${plan.gmv.benchmark.topSales.name}（GMV≈¥${(plan.gmv.benchmark.topSales.gmv || 0).toLocaleString()}） | 主推最多：${plan.gmv.benchmark.topPush?.name || ''}（GMV≈¥${(plan.gmv.benchmark.topPush?.gmv || 0).toLocaleString()}）</span>
+      </div>` : ''}
     </div>
 
     <div class="section-title plain">🔍 客户洞察</div>

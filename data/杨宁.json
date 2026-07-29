@@ -16,9 +16,9 @@
   "lastMonthAchieved": 34062.04,
   "lastMonthTarget": 40000,
   "salesMom": -0.024237244745176734,
-  "dailyAvg": 1187.0167857142858,
+  "dailyAvg": 1146.085172413793,
   "dailyAvgLast": 1135.4013333333335,
-  "dailyAvgMom": 0.045460094915882,
+  "dailyAvgMom": 0.00940974681533427,
   "userTarget": 120,
   "newCustomers": 21,
   "customerService": {
@@ -143,7 +143,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-35",
+  "version": "2026-07-29 01-23",
   "storeRank": 2,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -1915,6 +1915,19 @@
       "speech": ""
     }
   },
+  "regionalBM": {
+    "topSales": {
+      "name": "胡美娟",
+      "gmv": 9043.28431630853,
+      "gap": -0.5676158339858566
+    },
+    "topPush": {
+      "name": "詹芹芹",
+      "gmv": 4894.34492534724,
+      "gap": -0.20108349395533626
+    },
+    "myGmv": 3910.1729471358476
+  },
   "weeklyTasks": [
     {
       "icon": "📋",
@@ -1979,8 +1992,8 @@
     "momPushCans": null
   },
   "purchaseRecency": {
-    "m1": 47,
-    "m2_3": 39,
+    "m1": 46,
+    "m2_3": 40,
     "m3plus": 0
   }
 }

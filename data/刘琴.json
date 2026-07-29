@@ -143,7 +143,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-28 10-35",
+  "version": "2026-07-29 01-23",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -4085,6 +4085,19 @@
       "speech": ""
     }
   },
+  "regionalBM": {
+    "topSales": {
+      "name": "胡美娟",
+      "gmv": 9043.28431630853,
+      "gap": -1
+    },
+    "topPush": {
+      "name": "詹芹芹",
+      "gmv": 4894.34492534724,
+      "gap": -1
+    },
+    "myGmv": 0
+  },
   "weeklyTasks": [
     {
       "icon": "🔄",
@@ -4148,7 +4161,7 @@
   },
   "purchaseRecency": {
     "m1": 2,
-    "m2_3": 80,
-    "m3plus": 137
+    "m2_3": 79,
+    "m3plus": 138
   }
 }
