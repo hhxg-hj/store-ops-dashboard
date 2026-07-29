@@ -162,7 +162,7 @@
         "level": "lost"
       },
       {
-        "phone": "18580621591",
+        "phone": "18728610629",
         "lastBuy": "2026-01-20",
         "daysAgo": 184,
         "predicted": "尽快联系",
@@ -171,7 +171,7 @@
         "level": "lost"
       },
       {
-        "phone": "18728610629",
+        "phone": "18580621591",
         "lastBuy": "2026-01-20",
         "daysAgo": 184,
         "predicted": "尽快联系",
@@ -189,7 +189,7 @@
         "level": "lost"
       },
       {
-        "phone": "15998965524",
+        "phone": "13631710716",
         "lastBuy": "2026-01-22",
         "daysAgo": 182,
         "predicted": "尽快联系",
@@ -198,7 +198,7 @@
         "level": "lost"
       },
       {
-        "phone": "13631710716",
+        "phone": "15998965524",
         "lastBuy": "2026-01-22",
         "daysAgo": 182,
         "predicted": "尽快联系",
@@ -216,7 +216,7 @@
         "level": "lost"
       },
       {
-        "phone": "18702314098",
+        "phone": "15213491709",
         "lastBuy": "2026-01-24",
         "daysAgo": 180,
         "predicted": "尽快联系",
@@ -225,7 +225,7 @@
         "level": "lost"
       },
       {
-        "phone": "15213491709",
+        "phone": "18702314098",
         "lastBuy": "2026-01-24",
         "daysAgo": 180,
         "predicted": "尽快联系",
@@ -243,7 +243,7 @@
         "level": "lost"
       },
       {
-        "phone": "18083001223",
+        "phone": "18323361056",
         "lastBuy": "2026-01-27",
         "daysAgo": 177,
         "predicted": "尽快联系",
@@ -252,7 +252,7 @@
         "level": "lost"
       },
       {
-        "phone": "18323361056",
+        "phone": "18083001223",
         "lastBuy": "2026-01-27",
         "daysAgo": 177,
         "predicted": "尽快联系",
@@ -306,7 +306,7 @@
         "level": "lost"
       },
       {
-        "phone": "13440043821",
+        "phone": "15023010181",
         "lastBuy": "2026-03-17",
         "daysAgo": 128,
         "predicted": "尽快联系",
@@ -315,7 +315,7 @@
         "level": "lost"
       },
       {
-        "phone": "15023010181",
+        "phone": "13440043821",
         "lastBuy": "2026-03-17",
         "daysAgo": 128,
         "predicted": "尽快联系",
@@ -387,7 +387,7 @@
         "level": "critical"
       },
       {
-        "phone": "13648350995",
+        "phone": "13167955682",
         "lastBuy": "2026-05-15",
         "daysAgo": 69,
         "predicted": "已到期，立即联系",
@@ -396,7 +396,7 @@
         "level": "critical"
       },
       {
-        "phone": "13167955682",
+        "phone": "13648350995",
         "lastBuy": "2026-05-15",
         "daysAgo": 69,
         "predicted": "已到期，立即联系",
@@ -453,8 +453,8 @@
         "phone": "13983946699",
         "lastBuy": "2026-06-27",
         "daysAgo": 26,
-        "predicted": "2026-07-25",
-        "cycle": 28,
+        "predicted": "2026-08-11",
+        "cycle": 45,
         "urgency": "本周",
         "level": "medium"
       },
@@ -468,7 +468,7 @@
         "level": "medium"
       },
       {
-        "phone": "15123838255",
+        "phone": "13983606368",
         "lastBuy": "2026-07-03",
         "daysAgo": 20,
         "predicted": "2026-07-31",
@@ -477,7 +477,7 @@
         "level": "medium"
       },
       {
-        "phone": "13983606368",
+        "phone": "15123838255",
         "lastBuy": "2026-07-03",
         "daysAgo": 20,
         "predicted": "2026-07-31",

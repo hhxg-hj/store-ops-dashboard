@@ -13,14 +13,32 @@
   "target": 0,
   "achieved": 0,
   "achievementRate": 0,
-  "lastMonthAchieved": 0,
-  "lastMonthTarget": 0,
-  "salesMom": null,
-  "dailyAvg": 0,
-  "dailyAvgLast": 0,
-  "dailyAvgMom": null,
   "userTarget": 120,
   "newCustomers": 23,
+  "mendianDachengLv": 0,
+  "mendianStaffCount": 0,
+  "milkCans": 47,
+  "milkCansLast": 0,
+  "momMilkCans": null,
+  "pushCans": 3,
+  "pushCansLast": 0,
+  "momPushCans": null,
+  "totalClients": 65,
+  "totalClientsLast": 0,
+  "momClients": null,
+  "milkClients": 16,
+  "milkClientsLast": 0,
+  "momMilkClients": null,
+  "pushClients": 1,
+  "pushClientsLast": 0,
+  "momPushClients": null,
+  "milkAvg": 2.9375,
+  "milkAvgLast": 0,
+  "momMilkAvg": null,
+  "depositCount": 0,
+  "visitShould": 0,
+  "visitDone": 0,
+  "visitPending": 0,
   "customerService": {
     "newServiceCount": 23,
     "chatTotal": 5,
@@ -28,114 +46,25 @@
     "replyRate": 66,
     "firstReplyMin": 0
   },
-  "mendianDachengLv": 0,
-  "mendianStaffCount": 0,
-  "milkCans": 44,
-  "milkCansLast": 0,
-  "momMilkCans": null,
-  "pushCans": 3,
-  "pushCansLast": 0,
-  "momPushCans": null,
-  "milkByCategory": {
-    "totalQty": 44,
-    "totalAmount": 10696.24,
-    "totalProfit": 874.37,
-    "overallMargin": 0.081745547968258,
-    "categories": {
-      "main": {
-        "qty": 1,
-        "amount": 103.65,
-        "profit": 0,
-        "share": 0.022727272727272728,
-        "marginRate": 0
-      },
-      "general": {
-        "qty": 42,
-        "amount": 10384.59,
-        "profit": 829.46,
-        "share": 0.9545454545454546,
-        "marginRate": 0.07987412117377769
-      },
-      "special": {
-        "qty": 0,
-        "amount": 0,
-        "profit": 0,
-        "share": 0,
-        "marginRate": 0
-      },
-      "child": {
-        "qty": 1,
-        "amount": 208,
-        "profit": 44.91,
-        "share": 0.022727272727272728,
-        "marginRate": 0.21591346153846153
-      }
-    }
-  },
-  "nonMilkByCategory": {
-    "totalQty": 140,
-    "totalAmount": 2723.1400000000003,
-    "totalProfit": 765.3990000000003,
-    "overallMargin": 0.28107221810116273,
-    "categories": {
-      "nutrition": {
-        "qty": 0,
-        "amount": 0,
-        "profit": 0,
-        "share": 0,
-        "marginRate": 0
-      },
-      "supplies": {
-        "qty": 78,
-        "amount": 1557.5400000000004,
-        "profit": 382.3610000000003,
-        "share": 0.5571428571428572,
-        "marginRate": 0.24549032448604863
-      },
-      "snacks": {
-        "qty": 62,
-        "amount": 1165.5999999999997,
-        "profit": 383.038,
-        "share": 0.44285714285714284,
-        "marginRate": 0.3286187371310914
-      }
-    }
-  },
-  "totalClients": 56,
-  "totalClientsLast": 0,
-  "momClients": null,
-  "milkClients": 13,
-  "milkClientsLast": 0,
-  "momMilkClients": null,
-  "pushClients": 1,
-  "pushClientsLast": 0,
-  "momPushClients": null,
-  "milkAvg": 3.384615385,
-  "milkAvgLast": 0,
-  "momMilkAvg": null,
-  "depositCount": 0,
-  "visitShould": 0,
-  "visitDone": 0,
-  "visitPending": 0,
-  "naifenUsers": 13,
+  "naifenUsers": 16,
   "naifenUsersLast": 0,
-  "naifenGuanshu": 44,
+  "naifenGuanshu": 47,
   "naifenGuanshuLast": 0,
-  "kedanjia": 239.6496429,
+  "kedanjia": 203.8458462,
   "kedanjiaQoq": null,
-  "kedanliang": 3.384615385,
+  "kedanliang": 2.9375,
   "kedanliangLast": 0,
-  "chengjiaoNew": 56,
+  "chengjiaoNew": 65,
   "chengjiaoNewLast": 0,
-  "chengjiaoTotal": 55,
+  "chengjiaoTotal": 64,
   "fugouRate": 0,
   "zhutuiUsers": 1,
   "zhutuiUsersLast": 0,
-  "tonghuoUsers": 13,
+  "tonghuoUsers": 16,
   "tonghuoUsersLast": 0,
   "bindWecom": 23,
   "haoyouTotal": 24,
-  "sankeUsers": 48,
+  "sankeUsers": 54,
   "sankeUsersLast": 0,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -143,7 +72,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 01-37",
+  "version": "2026-07-29 04-00",
   "storeRank": 3,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -152,44 +81,44 @@
   "regionTotal": 4,
   "regionTopName": "陈传勋",
   "regionTopComm": 0,
-  "suggestion": "🔄 你的 13 位奶粉客户中仅 0 位本月复购，13 位只买了一次。一次购买可能是试水——主动跟进这 13 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 13 位奶粉客户，但只有 1 位（8%）接触过主推产品。剩下 12 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 13 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
+  "suggestion": "🔄 你的 16 位奶粉客户中仅 0 位本月复购，16 位只买了一次。一次购买可能是试水——主动跟进这 16 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 16 位奶粉客户，但只有 1 位（6%）接触过主推产品。剩下 15 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 16 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（13 位奶粉客户中仅 1 位（8%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（16 位奶粉客户中仅 1 位（6%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
-        "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
       },
       {
         "name": "臻护新笙·皇家A2",
-        "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·至尊A2",
-        "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·铂金",
-        "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
       },
       {
         "name": "臻护新笙·羊奶",
-        "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
       }
     ],
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
@@ -254,10 +183,10 @@
       "speech": ""
     },
     "全护A2": {
-      "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
       "comp": "",
@@ -744,40 +673,40 @@
       "speech": ""
     },
     "皇家A2": {
-      "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "[臻护新苼皇家 - 竞品分析](https://yuoukuajing.feishu.cn/sheets/YWYFseHuShQddwtPHorcZVSWnvd?from=from_copylink)",
       "speech": "[臻护新苼皇家A2 产品推荐话术](https://yuoukuajing.feishu.cn/file/DBcdb0tKCobcY8x2qC0cGSownTd?from=from_copylink)"
     },
     "至尊A2": {
-      "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "铂金": {
-      "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "羊奶": {
-      "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
@@ -1184,99 +1113,61 @@
       "speech": ""
     }
   },
-  "regionalBM": {
-    "topSales": {
-      "name": "陈传勋",
-      "gmv": 0,
-      "gap": null,
-      "components": {
-        "traffic": 0,
-        "aov": 0,
-        "repRate": 0
-      },
-      "componentGaps": {
-        "traffic": null,
-        "aov": null,
-        "repRate": null
-      }
-    },
-    "topPush": {
-      "name": "张炳坤",
-      "gmv": 0,
-      "gap": null,
-      "components": {
-        "traffic": 56,
-        "aov": 239.6496429,
-        "repRate": 0
-      },
-      "componentGaps": {
-        "traffic": 0,
-        "aov": 0,
-        "repRate": null
-      }
-    },
-    "myGmv": 0,
-    "myComponents": {
-      "traffic": 56,
-      "aov": 239.6496429,
-      "repRate": 0
-    }
-  },
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 13 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 16 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 12 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 15 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔐",
-      "text": "从 13 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 16 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "你服务了 13 位奶粉客户，但只有 1 位（8%）接触过主推产品。其余 12 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
-    "你的 13 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "你服务了 16 位奶粉客户，但只有 1 位（6%）接触过主推产品。其余 15 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "你的 16 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你更好地为 12 位未接触主推产品的客户推荐合适的奶粉",
+    "intro": "了解这些产品能帮你更好地为 15 位未接触主推产品的客户推荐合适的奶粉",
     "products": [
       {
         "name": "能恩全护A2",
         "brand": "03、雀巢",
         "scenario": "消化吸收、免疫支持",
         "age": "0-3岁",
-        "links": "[一页纸]([全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)) · [测试题]([港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx)"
       },
       {
         "name": "臻护新笙·皇家A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)) · [测试题]([臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·至尊A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)) · [测试题]([臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·铂金",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)) · [测试题]([臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx)"
       },
       {
         "name": "臻护新笙·羊奶",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)) · [测试题]([臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx)"
       }
     ]
   },
@@ -1284,14 +1175,9 @@
     "target": 0,
     "achieved": 0,
     "achievementRate": 0,
-    "milkCans": 94,
+    "milkCans": 97,
     "momMilkCans": null,
     "pushCans": 6,
     "momPushCans": null
-  },
-  "purchaseRecency": {
-    "m1": 55,
-    "m2_3": 0,
-    "m3plus": 0
   }
 }

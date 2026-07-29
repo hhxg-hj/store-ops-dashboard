@@ -4,23 +4,41 @@
   "region": "重庆区域",
   "zaidian": true,
   "isManager": false,
-  "commission": 369.93,
-  "commissionShangpin": 170.43,
-  "commissionFujian": 180,
+  "commission": 101.46,
+  "commissionShangpin": 68.46,
+  "commissionFujian": 25,
   "commissionBaojin": 0,
-  "commissionJishi": 3.25,
+  "commissionJishi": 1.33,
   "commissionManager": 0,
   "target": 40000,
-  "achieved": 14762.11,
-  "achievementRate": 0.36905275,
-  "lastMonthAchieved": 7226.07,
-  "lastMonthTarget": 40000,
-  "salesMom": 1.0428960693710414,
-  "dailyAvg": 509.038275862069,
-  "dailyAvgLast": 240.869,
-  "dailyAvgMom": 1.1133407614183184,
+  "achieved": 7226.07,
+  "achievementRate": 0.18065175,
   "userTarget": 120,
   "newCustomers": 34,
+  "mendianDachengLv": 1.0560332,
+  "mendianStaffCount": 6,
+  "milkCans": 56,
+  "milkCansLast": 25,
+  "momMilkCans": 1.24,
+  "pushCans": 12,
+  "pushCansLast": 6,
+  "momPushCans": 1,
+  "totalClients": 35,
+  "totalClientsLast": 15,
+  "momClients": 1.3333333333333333,
+  "milkClients": 14,
+  "milkClientsLast": 8,
+  "momMilkClients": 0.75,
+  "pushClients": 3,
+  "pushClientsLast": 2,
+  "momPushClients": 0.5,
+  "milkAvg": 4,
+  "milkAvgLast": 3.125,
+  "momMilkAvg": 0.28,
+  "depositCount": 0,
+  "visitShould": 0,
+  "visitDone": 0,
+  "visitPending": 0,
   "customerService": {
     "newServiceCount": 34,
     "chatTotal": 70,
@@ -28,114 +46,25 @@
     "replyRate": 66,
     "firstReplyMin": 15
   },
-  "mendianDachengLv": 0.733972313,
-  "mendianStaffCount": 6,
-  "milkCans": 50,
-  "milkCansLast": 25,
-  "momMilkCans": 1,
-  "pushCans": 12,
-  "pushCansLast": 6,
-  "momPushCans": 1,
-  "milkByCategory": {
-    "totalQty": 50,
-    "totalAmount": 13085.62,
-    "totalProfit": 2410.97,
-    "overallMargin": 0.18424575984936134,
-    "categories": {
-      "main": {
-        "qty": 10,
-        "amount": 2979.98,
-        "profit": 955.4,
-        "share": 0.2,
-        "marginRate": 0.3206061785649568
-      },
-      "general": {
-        "qty": 36,
-        "amount": 9030.630000000001,
-        "profit": 818.24,
-        "share": 0.72,
-        "marginRate": 0.09060718908869037
-      },
-      "special": {
-        "qty": 0,
-        "amount": 0,
-        "profit": 0,
-        "share": 0,
-        "marginRate": 0
-      },
-      "child": {
-        "qty": 4,
-        "amount": 1075.01,
-        "profit": 637.33,
-        "share": 0.08,
-        "marginRate": 0.5928596013060344
-      }
-    }
-  },
-  "nonMilkByCategory": {
-    "totalQty": 39,
-    "totalAmount": 1676.4899999999998,
-    "totalProfit": 449.7200000000001,
-    "overallMargin": 0.2682509290243307,
-    "categories": {
-      "nutrition": {
-        "qty": 2,
-        "amount": 219.99,
-        "profit": 25.12,
-        "share": 0.05128205128205128,
-        "marginRate": 0.11418700850038638
-      },
-      "supplies": {
-        "qty": 22,
-        "amount": 1163.9999999999998,
-        "profit": 342.43000000000006,
-        "share": 0.5641025641025641,
-        "marginRate": 0.29418384879725096
-      },
-      "snacks": {
-        "qty": 15,
-        "amount": 292.5,
-        "profit": 82.17,
-        "share": 0.38461538461538464,
-        "marginRate": 0.28092307692307694
-      }
-    }
-  },
-  "totalClients": 34,
-  "totalClientsLast": 15,
-  "momClients": 1.2666666666666666,
-  "milkClients": 13,
-  "milkClientsLast": 8,
-  "momMilkClients": 0.625,
-  "pushClients": 3,
-  "pushClientsLast": 2,
-  "momPushClients": 0.5,
-  "milkAvg": 3.846153846,
-  "milkAvgLast": 3.125,
-  "momMilkAvg": 0.23076923072,
-  "depositCount": 0,
-  "visitShould": 0,
-  "visitDone": 0,
-  "visitPending": 0,
-  "naifenUsers": 13,
+  "naifenUsers": 14,
   "naifenUsersLast": 8,
-  "naifenGuanshu": 50,
+  "naifenGuanshu": 56,
   "naifenGuanshuLast": 25,
-  "kedanjia": 434.1797059,
-  "kedanjiaQoq": -0.098722322,
-  "kedanliang": 3.846153846,
+  "kedanjia": 462.0602857,
+  "kedanjiaQoq": -0.040847337,
+  "kedanliang": 4,
   "kedanliangLast": 3.125,
-  "chengjiaoNew": 34,
+  "chengjiaoNew": 35,
   "chengjiaoNewLast": 15,
   "chengjiaoTotal": 48,
-  "fugouRate": 0.020833333,
+  "fugouRate": 0.041666667,
   "zhutuiUsers": 3,
   "zhutuiUsersLast": 2,
-  "tonghuoUsers": 10,
+  "tonghuoUsers": 11,
   "tonghuoUsersLast": 6,
   "bindWecom": 34,
   "haoyouTotal": 105,
-  "sankeUsers": 45,
+  "sankeUsers": 44,
   "sankeUsersLast": 14,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -143,53 +72,53 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 01-37",
+  "version": "2026-07-29 04-00",
   "storeRank": 3,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
-  "storeTopComm": 2774.75,
+  "storeTopComm": 5213.76,
   "regionRank": 7,
   "regionTotal": 19,
-  "regionTopName": "詹芹芹",
-  "regionTopComm": 3816.65,
-  "suggestion": "🔄 你的 13 位奶粉客户中仅 0 位本月复购，13 位只买了一次。一次购买可能是试水——主动跟进这 13 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 13 位奶粉客户，但只有 3 位（23%）接触过主推产品。剩下 10 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 13 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
+  "regionTopName": "胡美娟",
+  "regionTopComm": 5213.76,
+  "suggestion": "🔄 你的 14 位奶粉客户中仅 1 位本月复购，13 位只买了一次。一次购买可能是试水——主动跟进这 13 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 14 位奶粉客户，但只有 3 位（21%）接触过主推产品。剩下 11 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。\n🔐 保证金用户的平均复购周期比普通用户短约 40%。你的 14 位奶粉客户中还没有人开通保证金——这意味着你可能每个月都要花更多精力去追复购。建议优先看看购买最规律的几位客户，帮她们算一笔长期省钱的账。",
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（13 位奶粉客户中仅 3 位（23%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（14 位奶粉客户中仅 3 位（21%）使用过主推产品），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
-        "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx"
       },
       {
         "name": "臻护新笙·皇家A2",
-        "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·至尊A2",
-        "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx"
       },
       {
         "name": "臻护新笙·铂金",
-        "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx"
       },
       {
         "name": "臻护新笙·羊奶",
-        "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
-        "video": "",
-        "poster": "",
-        "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)"
+        "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
+        "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+        "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
+        "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx"
       }
     ],
     "tip": "💡 不需要全部背下来——每次服务客户前花 2 分钟复习一个产品，逐步建立专业自信。"
@@ -197,20 +126,10 @@
   "followUp": {
     "lost": 0,
     "critical": 0,
-    "high": 10,
+    "high": 9,
     "medium": 14,
-    "total": 24,
+    "total": 23,
     "list": [
-      {
-        "phone": "13983369924",
-        "lastBuy": "2026-06-14",
-        "daysAgo": 39,
-        "predicted": "2026-07-29",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high",
-        "isMilk": false
-      },
       {
         "phone": "13983210273",
         "lastBuy": "2026-06-14",
@@ -218,13 +137,16 @@
         "predicted": "2026-07-29",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "新西兰Masiray小阩高紫罐A2儿童成长奶粉 3岁以上 700g",
-        "lastAmount": 464.32,
-        "lastCans": 2,
-        "lastCategory": "child",
-        "totalMilkAmount": 2768.85
+        "level": "high"
+      },
+      {
+        "phone": "13983369924",
+        "lastBuy": "2026-06-14",
+        "daysAgo": 39,
+        "predicted": "2026-07-29",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
       },
       {
         "phone": "15025513648",
@@ -233,23 +155,7 @@
         "predicted": "2026-07-30",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "德国BEBA贝巴至尊版SUPREME婴幼儿奶粉 3段 12个月以上 830g 新",
-        "lastAmount": 516,
-        "lastCans": 2,
-        "lastCategory": "general",
-        "totalMilkAmount": 1548
-      },
-      {
-        "phone": "13996010505",
-        "lastBuy": "2026-06-17",
-        "daysAgo": 36,
-        "predicted": "2026-08-01",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high",
-        "isMilk": false
+        "level": "high"
       },
       {
         "phone": "15025498289",
@@ -258,63 +164,16 @@
         "predicted": "2026-08-01",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "纽康特 特殊医学用途婴儿氨基酸配方食品400g",
-        "lastAmount": 1320,
-        "lastCans": 4,
-        "lastCategory": "special",
-        "totalMilkAmount": 1980
+        "level": "high"
       },
       {
-        "phone": "13212327185",
+        "phone": "13996010505",
         "lastBuy": "2026-06-17",
         "daysAgo": 36,
         "predicted": "2026-08-01",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "金领冠珍护铂萃婴儿配方奶粉750g 1段（0-6月）",
-        "lastAmount": 1410,
-        "lastCans": 6,
-        "lastCategory": "general",
-        "totalMilkAmount": 1410
-      },
-      {
-        "phone": "18996324560",
-        "lastBuy": "2026-06-20",
-        "daysAgo": 33,
-        "predicted": "2026-08-04",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high",
-        "isMilk": false
-      },
-      {
-        "phone": "15823111567",
-        "lastBuy": "2026-06-20",
-        "daysAgo": 33,
-        "predicted": "2026-08-04",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high",
-        "isMilk": false
-      },
-      {
-        "phone": "17783983936",
-        "lastBuy": "2026-06-20",
-        "daysAgo": 33,
-        "predicted": "2026-08-04",
-        "cycle": 45,
-        "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "Nestle雀巢早启能恩特殊医学用途早产低出生体重婴儿配方食品 400g",
-        "lastAmount": 210,
-        "lastCans": 1,
-        "lastCategory": "special",
-        "totalMilkAmount": 210
+        "level": "high"
       },
       {
         "phone": "18782954789",
@@ -323,13 +182,34 @@
         "predicted": "2026-08-04",
         "cycle": 45,
         "urgency": "紧急",
-        "level": "high",
-        "isMilk": true,
-        "lastBrand": "皇家美素佳儿幼儿配方奶粉3段 800g（ 12-36月）",
-        "lastAmount": 330,
-        "lastCans": 1,
-        "lastCategory": "general",
-        "totalMilkAmount": 330
+        "level": "high"
+      },
+      {
+        "phone": "18996324560",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "15823111567",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
+      },
+      {
+        "phone": "17783983936",
+        "lastBuy": "2026-06-20",
+        "daysAgo": 33,
+        "predicted": "2026-08-04",
+        "cycle": 45,
+        "urgency": "紧急",
+        "level": "high"
       },
       {
         "phone": "15310713888",
@@ -338,13 +218,7 @@
         "predicted": "2026-08-07",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": true,
-        "lastBrand": "澳洲Aptamil爱他美白金版较大婴儿配方奶粉2段6-12月800g",
-        "lastAmount": 468,
-        "lastCans": 2,
-        "lastCategory": "general",
-        "totalMilkAmount": 4002.0000000000005
+        "level": "medium"
       },
       {
         "phone": "13594788808",
@@ -353,23 +227,16 @@
         "predicted": "2026-08-09",
         "cycle": 45,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": true,
-        "lastBrand": "澳洲a2白金版婴儿配方牛奶粉 2段 6-12月龄 900g（新包装）",
-        "lastAmount": 1367.99,
-        "lastCans": 6,
-        "lastCategory": "general",
-        "totalMilkAmount": 1860.99
+        "level": "medium"
       },
       {
         "phone": "13206048606",
         "lastBuy": "2026-06-27",
         "daysAgo": 26,
-        "predicted": "2026-07-25",
-        "cycle": 28,
+        "predicted": "2026-08-11",
+        "cycle": 45,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "13551979334",
@@ -378,8 +245,7 @@
         "predicted": "2026-07-27",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "13678292119",
@@ -388,8 +254,7 @@
         "predicted": "2026-07-30",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "15102390513",
@@ -398,8 +263,7 @@
         "predicted": "2026-08-01",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "13310247649",
@@ -408,8 +272,7 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "17300259243",
@@ -418,8 +281,7 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "17883686662",
@@ -428,8 +290,7 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "15823136680",
@@ -438,13 +299,7 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": true,
-        "lastBrand": "金领冠珍护铂萃婴儿配方奶粉750g 1段（0-6月）",
-        "lastAmount": 684,
-        "lastCans": 3,
-        "lastCategory": "general",
-        "totalMilkAmount": 1901
+        "level": "medium"
       },
       {
         "phone": "15111898004",
@@ -453,8 +308,7 @@
         "predicted": "2026-08-02",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       },
       {
         "phone": "17302303536",
@@ -463,13 +317,7 @@
         "predicted": "2026-08-04",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": true,
-        "lastBrand": "澳洲Aptamil爱他美 白金版幼儿配方奶粉 3段 1-3周岁 900g",
-        "lastAmount": 395.99,
-        "lastCans": 2,
-        "lastCategory": "general",
-        "totalMilkAmount": 395.99
+        "level": "medium"
       },
       {
         "phone": "13983433502",
@@ -478,13 +326,7 @@
         "predicted": "2026-08-04",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": true,
-        "lastBrand": "爱他美领熠3段 800g/罐",
-        "lastAmount": 1812,
-        "lastCans": 6,
-        "lastCategory": "general",
-        "totalMilkAmount": 1812
+        "level": "medium"
       },
       {
         "phone": "18580383988",
@@ -493,8 +335,7 @@
         "predicted": "2026-08-05",
         "cycle": 28,
         "urgency": "本周",
-        "level": "medium",
-        "isMilk": false
+        "level": "medium"
       }
     ]
   },
@@ -550,10 +391,10 @@
       "speech": ""
     },
     "全护A2": {
-      "onepager": "[全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
       "brand": "03、雀巢",
       "subBrand": "雀巢",
       "comp": "",
@@ -1040,40 +881,40 @@
       "speech": ""
     },
     "皇家A2": {
-      "onepager": "[臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "[臻护新苼皇家 - 竞品分析](https://yuoukuajing.feishu.cn/sheets/YWYFseHuShQddwtPHorcZVSWnvd?from=from_copylink)",
       "speech": "[臻护新苼皇家A2 产品推荐话术](https://yuoukuajing.feishu.cn/file/DBcdb0tKCobcY8x2qC0cGSownTd?from=from_copylink)"
     },
     "至尊A2": {
-      "onepager": "[臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "铂金": {
-      "onepager": "[铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
       "speech": ""
     },
     "羊奶": {
-      "onepager": "[臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)",
-      "video": "",
-      "poster": "",
-      "test": "[臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink)",
+      "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
+      "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4",
+      "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
+      "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
       "brand": "01、臻护新苼",
       "subBrand": "臻护新苼",
       "comp": "",
@@ -1480,44 +1321,6 @@
       "speech": ""
     }
   },
-  "regionalBM": {
-    "topSales": {
-      "name": "胡美娟",
-      "gmv": 9043.28431630853,
-      "gap": -0.9659920065909561,
-      "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
-        "repRate": 0.13220339
-      },
-      "componentGaps": {
-        "traffic": -0.5405405405405406,
-        "aov": -0.5303031513075978,
-        "repRate": -0.8424145326379301
-      }
-    },
-    "topPush": {
-      "name": "詹芹芹",
-      "gmv": 4894.34492534724,
-      "gap": -0.9371634083588192,
-      "components": {
-        "traffic": 60,
-        "aov": 887.409,
-        "repRate": 0.091922006
-      },
-      "componentGaps": {
-        "traffic": -0.43333333333333335,
-        "aov": -0.5107332629035766,
-        "repRate": -0.7733585905425084
-      }
-    },
-    "myGmv": 307.54395342513,
-    "myComponents": {
-      "traffic": 34,
-      "aov": 434.1797059,
-      "repRate": 0.020833333
-    }
-  },
   "weeklyTasks": [
     {
       "icon": "📋",
@@ -1525,69 +1328,64 @@
     },
     {
       "icon": "🎯",
-      "text": "向 10 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 11 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔐",
-      "text": "从 13 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 14 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "你服务了 13 位奶粉客户，但只有 3 位（23%）接触过主推产品。其余 10 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
-    "你的 13 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "你服务了 14 位奶粉客户，但只有 3 位（21%）接触过主推产品。其余 11 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "你的 14 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你更好地为 10 位未接触主推产品的客户推荐合适的奶粉",
+    "intro": "了解这些产品能帮你更好地为 11 位未接触主推产品的客户推荐合适的奶粉",
     "products": [
       {
         "name": "能恩全护A2",
         "brand": "03、雀巢",
         "scenario": "消化吸收、免疫支持",
         "age": "0-3岁",
-        "links": "[一页纸]([全护A2 一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Hfvtbz8t8oH0YHxMOThcMINNnMc?from=from_copylink)) · [测试题]([港版能恩全护A2随堂小测.docx](https://jvlcno43vsp.feishu.cn/file/XJA3bjDKIoKoE2xvalqcE1xonLe?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx)"
       },
       {
         "name": "臻护新笙·皇家A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼皇家一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/Nb8AbwCpDoVYkBxukXCcz5Iznyb?from=from_copylink)) · [测试题]([臻护新苼皇家（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/XraibA0RFopcPWxtI3bcZdh8nRh?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·至尊A2",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼至尊一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/AtzobmRBWor3RKx8C2QcSdi6nxc?from=from_copylink)) · [测试题]([臻护新苼至尊（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/V2G0bZwXvo5pyqx4wXCcSccKnEc?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx)"
       },
       {
         "name": "臻护新笙·铂金",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([铂金一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/QmvnbwRMDoeeNbxs7BocXC7dnce?from=from_copylink)) · [测试题]([臻护新苼铂金（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/SMG2bOSE4o2dPqxqX5DcB0U8nTe?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx)"
       },
       {
         "name": "臻护新笙·羊奶",
         "brand": "01、臻护新苼",
         "scenario": "新生儿、早产儿、敏感体质",
         "age": "0-12个月",
-        "links": "[一页纸]([臻护新苼羊奶一页纸.jpg](https://jvlcno43vsp.feishu.cn/file/XqlebPZxroTkelxmRkDcI0kvnPm?from=from_copylink)) · [测试题]([臻护新苼羊奶（呆鸟）.xlsx](https://jvlcno43vsp.feishu.cn/file/Sac3bjnjloy9rJxBrK7cicuwnkf?from=from_copylink))"
+        "links": "[一页纸](/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg) · [五分钟视频](/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4) · [测试题](/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx)"
       }
     ]
   },
   "storeAgg": {
-    "target": 160000,
-    "achieved": 116402.91,
-    "achievementRate": 0.7275181875,
-    "milkCans": 442,
-    "momMilkCans": -0.2730263157894737,
-    "pushCans": 106,
+    "target": 150000,
+    "achieved": 141233.62,
+    "achievementRate": 0.9415574666666666,
+    "milkCans": 465,
+    "momMilkCans": -0.23519736842105263,
+    "pushCans": 112,
     "momPushCans": null
-  },
-  "purchaseRecency": {
-    "m1": 35,
-    "m2_3": 13,
-    "m3plus": 0
   }
 }
