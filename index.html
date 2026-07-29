@@ -837,29 +837,8 @@ function buildDailyActionPlan(d) {
 
 function renderAction(d) {
   const plan = buildDailyActionPlan(d);
-  const perc = (v, sign) => dapPct(v, sign); // shorthand
-  const pillClass = plan.priority.toLowerCase();
-  const evHtml = plan.evidence.map(e => `<div class="dap-evidence"><b>${e.metric}：${e.current}</b> — ${e.detail}</div>`).join('');
-  const taskHtml = plan.tasks.map(t => `
-    <div class="dap-task">
-      <div class="dap-task-num">${t.order}</div>
-      <div>
-        <div class="dap-task-action">${t.action}</div>
-        <div class="dap-task-def">✅ 完成标准：${t.completionDefinition}</div>
-        ${t.targetRefs && t.targetRefs.length ? `<div class="dap-task-refs">今日对象：${t.targetRefs.map(r => `<span>${r}</span>`).join('')}</div>` : ''}
-      </div>
-    </div>`).join('');
-  return `<div class="card">
-    <div class="section-title"><span class="icon">🎯</span> 今日行动建议</div>
-    <div class="dap-head"><span class="dap-pill ${pillClass}">${plan.priority}</span><span class="dap-headline">${plan.headline}</span></div>
-    <div class="dap-block"><div class="dap-block-title">📊 为什么（数据证据）</div>${evHtml}</div>
-    <div class="dap-block"><div class="dap-block-title">💡 你的机会</div><div class="dap-opportunity">${plan.opportunity}</div></div>
-    <div class="dap-block"><div class="dap-block-title">✍️ 今天完成（最多 ${DAP_CONFIG.maxTasksPerDay} 项）</div>${taskHtml}</div>
-    ${plan.dataWarnings.length ? `<div class="dap-warn">⚠️ ${plan.dataWarnings.join('；')}</div>` : ''}
-    <div class="dap-note">业务日期 ${plan.date} · 数据版本 ${plan.dataVersion || '—'} · 同日同数据建议保持一致，次日自动轮换 · 未启用：裂变率异常/复购趋势/新客增速（数据不足）</div>
-  </div>
-
-  <div class="card">
+  const perc = (v, sign) => dapPct(v, sign);
+  return `
     <div class="section-title"><span class="icon">💡</span> 更多参考</div>
 
     <div class="section-title plain">🧮 GMV 拆解</div>
