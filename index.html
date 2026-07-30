@@ -384,6 +384,15 @@ function renderOverview(d) {
   const umQw = umx.qwTotal != null ? umx.qwTotal : null;
   const umQwNew = umx.qwTodayNew != null ? umx.qwTodayNew : null;
 
+  // ── 业绩指标（精简+新增）──
+  // 用户目标：实际新增(newCustomers) / 目标(userTarget) / 达成率
+  const userTargetNum = userTarget;
+  const userAchieved = d.newCustomers || 0;
+  const userAchieveRate = userTargetNum > 0 ? Math.round((userAchieved / userTargetNum) * 100) : 0;
+  // 转化率 = 本月新增成交(newThisMonth) ÷ 企微新增客户数(newCustomers)
+  const convNew = umx.newThisMonth != null ? umx.newThisMonth : 0;
+  const convRate = userAchieved > 0 ? ((convNew / userAchieved) * 100).toFixed(1) + '%' : '—';
+
   return `
   <div class="card">
     <div class="section-title"><span class="icon">💰</span> 业绩奖励</div>
@@ -413,9 +422,11 @@ function renderOverview(d) {
   <div class="section-title plain">📈 业绩指标</div>
   <div class="kpi-grid">
     <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">目标 ¥${fmtNum(d.target)} · 达成 ¥${fmtNum(d.achieved)} · 门店均值 ${storeRate}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.milkCans)}</div><div class="kpi-lbl">奶粉销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momMilkCans)}">环比 ${momLabel(d.momMilkCans)}</div></div>
-    <div class="kpi"><div class="kpi-val">${fmtNum(d.pushCans)}</div><div class="kpi-lbl">主推销量 (罐)</div><div class="kpi-sub mom ${momClass(d.momPushCans)}">环比 ${momLabel(d.momPushCans)}</div></div>
-    <div class="kpi"><div class="kpi-val">${d.milkAvg ? d.milkAvg.toFixed(1) : '—'}</div><div class="kpi-lbl">奶粉客单量 (罐/人)</div><div class="kpi-sub mom ${momClass(d.momMilkAvg)}">环比 ${momLabel(d.momMilkAvg)}</div></div>
+    <div class="kpi green"><div class="kpi-val">${fmtNum(userAchieved)}<span style="font-size:14px;color:var(--text2)"> / ${userTargetNum}</span></div><div class="kpi-lbl">👥 用户目标（新增客户）</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${userAchieveRate}%</div></div>
+    <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">📣 地推任务</div><div class="kpi-sub" style="color:var(--text2)">每天需完成 1 次</div></div>
+    <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎥 直播任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
+    <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎬 视频任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
+    <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🔀 转化率</div><div class="kpi-sub" style="color:var(--text2)">新增成交 ${fmtNum(convNew)} ÷ 新增客户 ${fmtNum(userAchieved)}</div></div>
   </div>
 
   <div class="section-title plain">👥 用户指标</div>
