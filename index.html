@@ -128,10 +128,15 @@
     .um-leaf { flex:1; min-width:70px; display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px dashed var(--border); border-radius:8px; padding:7px 10px; }
     .um-leaf-lbl { font-size:11.5px; color:var(--text2); }
     .um-leaf-val { font-size:16px; font-weight:700; color:var(--primary); }
-    /* 用户指标 细节展开/收起 */
-    .um-toggle { margin-top:10px; width:100%; padding:8px 12px; background:#fff; border:1px dashed var(--border); border-radius:8px; color:var(--primary); font-size:12.5px; font-weight:500; cursor:pointer; transition:background .15s; }
-    .um-toggle:hover { background:var(--primary-light,#f7f5ff); }
-    .um-detail { margin-top:10px; animation:umFade .2s ease; }
+    /* 用户指标 单指标详情按钮 + 卡内展开 */
+    .um-node { position:relative; }
+    .um-detail-btn { position:absolute; top:6px; right:6px; padding:2px 8px; background:var(--primary-light,#f7f5ff); border:1px solid var(--border); border-radius:6px; color:var(--primary); font-size:10.5px; font-weight:500; line-height:1.4; cursor:pointer; transition:background .15s; }
+    .um-detail-btn:hover { background:var(--primary); color:#fff; }
+    .um-detail-btn.open { background:var(--primary); color:#fff; }
+    .um-detail-inline { flex-basis:100%; margin-top:8px; padding:10px 12px 12px; background:#f7f9fc; border:1px dashed var(--border); border-radius:10px; animation:umFade .2s ease; }
+    .um-detail-inline .um-detail-title { font-size:11.5px; font-weight:600; color:var(--text2); margin-bottom:8px; }
+    .um-detail-inline .um-branch { margin-top:0; padding-left:0; }
+    .um-detail-inline .um-branch::before { display:none; }
     @keyframes umFade { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:none; } }
     /* 奶粉品类拆解 */
     .milk-cat-summary { display:flex; gap:10px; margin:10px 0 12px; }
@@ -438,56 +443,71 @@ function renderOverview(d) {
 
   <div class="section-title plain">👥 用户指标</div>
 
-  <!-- 摘要层：核心数字（默认显示） -->
+  <!-- 第一行：总量指标 -->
   <div class="um-group">
     <div class="um-row">
       <div class="um-node um-root green"><div class="um-val">${fmtNum(umTotal)}</div><div class="um-lbl">成交用户总量</div><div class="um-sub">历史去重客户</div></div>
       <div class="um-node um-root"><div class="um-val">${umQw != null ? fmtNum(umQw) : '—'}</div><div class="um-lbl">企微用户总量</div><div class="um-sub">${umQwNew != null ? '今日新增 +' + fmtNum(umQwNew) : '企微客户总数'}</div></div>
     </div>
-    <div class="um-row" style="margin-top:8px">
-      <div class="um-node um-root accent"><div class="um-val">${fmtNum(umToday.total)}</div><div class="um-lbl">📅 当日成交用户</div><div class="um-sub">${umToday.date || ''}</div></div>
-      <div class="um-node um-root"><div class="um-val">${fmtNum(umRep.total)}</div><div class="um-lbl">🔁 复购用户</div><div class="um-sub">历史累计≥2次</div></div>
-      <div class="um-node um-root orange"><div class="um-val">${fmtNum(umx.newThisMonth != null ? umx.newThisMonth : 0)}</div><div class="um-lbl">🌱 本月新增成交</div><div class="um-sub">历史首单在本月</div></div>
-    </div>
-    <button class="um-toggle" id="umToggleBtn" onclick="umToggleDetail()">▾ 展开细节（奶粉/其他·复购分类）</button>
   </div>
 
-  <!-- 拆解细节（默认收起，点击按钮展开） -->
-  <div class="um-detail" id="umDetail" style="display:none">
-    <!-- ② 当日成交拆解 -->
-    <div class="um-group">
-      <div class="um-group-title">📅 当日成交拆解 <span class="um-date">${umToday.date || ''}</span></div>
-      <div class="um-branch">
-        <div class="um-node"><div class="um-val">${fmtNum(umToday.milk)}</div><div class="um-lbl">🥛 奶粉用户</div></div>
-        <div class="um-node"><div class="um-val">${fmtNum(umToday.nonMilk)}</div><div class="um-lbl">🛒 其他用户</div></div>
+  <!-- 第二行：当日成交 + 拆解（奶粉/其他，奶粉带详情按钮） -->
+  <div class="um-group">
+    <div class="um-group-title">📅 当日成交 <span class="um-date">${umToday.date || ''}</span></div>
+    <div class="um-row">
+      <div class="um-node um-root accent"><div class="um-val">${fmtNum(umToday.total)}</div><div class="um-lbl">当日成交用户</div><div class="um-sub">${umToday.date || ''}</div></div>
+      <div class="um-node">
+        <button class="um-detail-btn" id="umMilkBtn" onclick="umToggleCard('milk')">详情 ▾</button>
+        <div class="um-val">${fmtNum(umToday.milk)}</div><div class="um-lbl">🥛 奶粉用户</div><div class="um-sub">当日成交中含奶粉</div>
       </div>
-      <div class="um-branch um-branch-sub">
-        <div class="um-leaf"><span class="um-leaf-lbl">主推</span><span class="um-leaf-val">${fmtNum(umCat.zhutui)}</span></div>
-        <div class="um-leaf"><span class="um-leaf-lbl">通货</span><span class="um-leaf-val">${fmtNum(umCat.tonghuo)}</span></div>
-        <div class="um-leaf"><span class="um-leaf-lbl">儿童奶粉</span><span class="um-leaf-val">${fmtNum(umCat.ertong)}</span></div>
-        <div class="um-leaf"><span class="um-leaf-lbl">特配奶粉</span><span class="um-leaf-val">${fmtNum(umCat.tepei)}</span></div>
+      <div class="um-node"><div class="um-val">${fmtNum(umToday.nonMilk)}</div><div class="um-lbl">🛒 其他用户</div><div class="um-sub">当日仅成交非奶粉</div></div>
+      <!-- 奶粉四类细分：默认隐藏，点击「奶粉用户」卡的详情按钮展开 -->
+      <div class="um-detail-inline" id="umMilkDetail" style="display:none">
+        <div class="um-detail-title">🥛 奶粉用户 · 四类细分（互斥口径）</div>
+        <div class="um-row">
+          <div class="um-leaf"><span class="um-leaf-lbl">主推</span><span class="um-leaf-val">${fmtNum(umCat.zhutui)}</span></div>
+          <div class="um-leaf"><span class="um-leaf-lbl">通货</span><span class="um-leaf-val">${fmtNum(umCat.tonghuo)}</span></div>
+          <div class="um-leaf"><span class="um-leaf-lbl">儿童奶粉</span><span class="um-leaf-val">${fmtNum(umCat.ertong)}</span></div>
+          <div class="um-leaf"><span class="um-leaf-lbl">特配奶粉</span><span class="um-leaf-val">${fmtNum(umCat.tepei)}</span></div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <!-- ③ 复购拆解 -->
-    <div class="um-group">
-      <div class="um-group-title">🔁 复购用户拆解（历史累计≥2次）</div>
-      <div class="um-branch">
-        <div class="um-node um-active"><div class="um-val">${fmtNum(umRep.active)}</div><div class="um-lbl">🟢 活跃用户</div><div class="um-sub">90天内≥3次</div></div>
-        <div class="um-node um-stable"><div class="um-val">${fmtNum(umRep.stable)}</div><div class="um-lbl">🟡 稳定用户</div><div class="um-sub">90天内1-2次</div></div>
-        <div class="um-node um-churned"><div class="um-val">${fmtNum(umRep.churned)}</div><div class="um-lbl">🔴 流失用户</div><div class="um-sub">90天前购买</div></div>
+  <!-- 第三行：复购（带详情按钮） + 本月新增 -->
+  <div class="um-group">
+    <div class="um-row">
+      <div class="um-node um-root">
+        <button class="um-detail-btn" id="umRepBtn" onclick="umToggleCard('rep')">详情 ▾</button>
+        <div class="um-val">${fmtNum(umRep.total)}</div><div class="um-lbl">🔁 复购用户</div><div class="um-sub">历史累计≥2次</div>
+      </div>
+      <div class="um-node um-root orange"><div class="um-val">${fmtNum(umx.newThisMonth != null ? umx.newThisMonth : 0)}</div><div class="um-lbl">🌱 本月新增成交</div><div class="um-sub">历史首单在本月</div></div>
+      <!-- 复购三类细分：默认隐藏，点击「复购用户」卡的详情按钮展开 -->
+      <div class="um-detail-inline" id="umRepDetail" style="display:none">
+        <div class="um-detail-title">🔁 复购用户 · 活跃度细分</div>
+        <div class="um-row">
+          <div class="um-node um-active"><div class="um-val">${fmtNum(umRep.active)}</div><div class="um-lbl">🟢 活跃用户</div><div class="um-sub">90天内≥3次</div></div>
+          <div class="um-node um-stable"><div class="um-val">${fmtNum(umRep.stable)}</div><div class="um-lbl">🟡 稳定用户</div><div class="um-sub">90天内1-2次</div></div>
+          <div class="um-node um-churned"><div class="um-val">${fmtNum(umRep.churned)}</div><div class="um-lbl">🔴 流失用户</div><div class="um-sub">90天前购买</div></div>
+        </div>
       </div>
     </div>
   </div>`;
 }
 
-function umToggleDetail() {
-  const el = document.getElementById('umDetail');
-  const btn = document.getElementById('umToggleBtn');
+function umToggleCard(which) {
+  const map = { milk: ['umMilkDetail', 'umMilkBtn'], rep: ['umRepDetail', 'umRepBtn'] };
+  const pair = map[which];
+  if (!pair) return;
+  const el = document.getElementById(pair[0]);
+  const btn = document.getElementById(pair[1]);
   if (!el) return;
   const show = el.style.display === 'none';
   el.style.display = show ? '' : 'none';
-  if (btn) btn.textContent = show ? '▴ 收起细节' : '▾ 展开细节（奶粉/其他·复购分类）';
+  if (btn) {
+    btn.textContent = show ? '收起 ▴' : '详情 ▾';
+    btn.classList.toggle('open', show);
+  }
 }
 
 function renderPerf(d) {
