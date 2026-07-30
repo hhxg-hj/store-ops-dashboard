@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 08-57",
+  "version": "2026-07-30 11-15",
   "storeRank": 2,
   "storeTotal": 3,
   "storeTopName": "詹芹芹",
@@ -162,7 +162,6 @@
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
   "nationTopComm": 3816.64949,
-  "suggestion": "⚠️ 本月有 1 位客户流失。每一位流失背后都是一个宝宝的真实需求变化——可以梳理她们离开的原因：是品类不合适？还是服务体验有待提升？",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（主推罐数环比下降 39%（106→65罐）），以下产品资料能帮你更自信地推荐：",
     "items": [
@@ -2194,6 +2193,8 @@
       "total": 0,
       "milk": 0,
       "nonMilk": 0,
+      "new": 0,
+      "rep": 0,
       "milkCat": {
         "zhutui": 0,
         "tepei": 0,
@@ -2328,10 +2329,5 @@
     "momMilkCans": -0.04048582995951417,
     "pushCans": 168,
     "momPushCans": null
-  },
-  "purchaseRecency": {
-    "m1": 33,
-    "m2_3": 43,
-    "m3plus": 12
   }
 }

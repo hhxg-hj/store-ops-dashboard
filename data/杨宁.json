@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 08-57",
+  "version": "2026-07-30 11-15",
   "storeRank": 2,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -162,7 +162,6 @@
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
   "nationTopComm": 3816.64949,
-  "suggestion": "🔄 你的 34 位奶粉客户中仅 4 位本月复购，30 位只买了一次。一次购买可能是试水——主动跟进这 30 位的使用体验，帮助她们建立持续购买习惯。\n📋 你服务了 34 位奶粉客户，但只有 5 位（15%）接触过主推产品。剩下 29 位可能不知道有更适合宝宝的选项——可以从客单量高的客户开始，逐个介绍主推产品的差异化优势。",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（34 位奶粉客户中仅 5 位（15%）使用过主推产品；主推罐数环比下降 5%（21→20罐）），以下产品资料能帮你更自信地推荐：",
     "items": [
@@ -1934,6 +1933,8 @@
       "total": 2,
       "milk": 2,
       "nonMilk": 0,
+      "new": 0,
+      "rep": 2,
       "milkCat": {
         "zhutui": 0,
         "tepei": 0,
@@ -2059,10 +2060,5 @@
     "momMilkCans": -0.2730263157894737,
     "pushCans": 106,
     "momPushCans": null
-  },
-  "purchaseRecency": {
-    "m1": 45,
-    "m2_3": 41,
-    "m3plus": 0
   }
 }

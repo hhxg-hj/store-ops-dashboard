@@ -149,7 +149,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 08-57",
+  "version": "2026-07-30 11-15",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -162,7 +162,6 @@
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
   "nationTopComm": 3816.64949,
-  "suggestion": "👶 你的奶粉客户从上月 4 位降到本月 0 位（减少 100%）。这 4 位客户可能遇到了喂养问题或转去了其他渠道——建议逐一回访了解：宝宝适应情况？段数是否需要升级？\n⚠️ 本月有 31 位客户流失。每一位流失背后都是一个宝宝的真实需求变化——可以梳理她们离开的原因：是品类不合适？还是服务体验有待提升？",
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（主推罐数环比下降 100%（9→0罐）；1 位成交客户中暂无奶粉用户——这些宝宝可能正在被竞品服务），以下产品资料能帮你更自信地推荐：",
     "items": [
@@ -4104,6 +4103,8 @@
       "total": 0,
       "milk": 0,
       "nonMilk": 0,
+      "new": 0,
+      "rep": 0,
       "milkCat": {
         "zhutui": 0,
         "tepei": 0,
@@ -4227,10 +4228,5 @@
     "momMilkCans": -0.2730263157894737,
     "pushCans": 106,
     "momPushCans": null
-  },
-  "purchaseRecency": {
-    "m1": 1,
-    "m2_3": 78,
-    "m3plus": 140
   }
 }

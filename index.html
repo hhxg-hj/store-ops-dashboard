@@ -451,16 +451,27 @@ function renderOverview(d) {
     </div>
   </div>
 
-  <!-- 第二行：当日成交 + 拆解（奶粉/其他，奶粉带详情按钮） -->
+  <!-- 第二行：当日成交 + 拆解（当日成交带详情按钮展开新增/复购，奶粉带详情按钮） -->
   <div class="um-group">
     <div class="um-group-title">📅 当日成交 <span class="um-date">${umToday.date || ''}</span></div>
     <div class="um-row">
-      <div class="um-node um-root accent"><div class="um-val">${fmtNum(umToday.total)}</div><div class="um-lbl">当日成交用户</div><div class="um-sub">${umToday.date || ''}</div></div>
+      <div class="um-node um-root accent">
+        <button class="um-detail-btn" id="umTodayBtn" onclick="umToggleCard('today')">详情 ▾</button>
+        <div class="um-val">${fmtNum(umToday.total)}</div><div class="um-lbl">当日成交用户</div><div class="um-sub">${umToday.date || ''}</div>
+      </div>
       <div class="um-node">
         <button class="um-detail-btn" id="umMilkBtn" onclick="umToggleCard('milk')">详情 ▾</button>
         <div class="um-val">${fmtNum(umToday.milk)}</div><div class="um-lbl">🥛 奶粉用户</div><div class="um-sub">当日成交中含奶粉</div>
       </div>
       <div class="um-node"><div class="um-val">${fmtNum(umToday.nonMilk)}</div><div class="um-lbl">🛒 其他用户</div><div class="um-sub">当日仅成交非奶粉</div></div>
+      <!-- 当日成交用户细分：新增（首单日期=当日）vs 复购（首单日期<当日），默认隐藏 -->
+      <div class="um-detail-inline" id="umTodayDetail" style="display:none">
+        <div class="um-detail-title">📅 当日成交用户 · 新增/复购细分</div>
+        <div class="um-row">
+          <div class="um-node" style="border-left:3px solid var(--success)"><div class="um-val" style="color:var(--success)">${fmtNum(umToday.new || 0)}</div><div class="um-lbl">🌱 新增客户</div><div class="um-sub">首单日期=当日</div></div>
+          <div class="um-node" style="border-left:3px solid var(--warning)"><div class="um-val" style="color:var(--warning)">${fmtNum(umToday.rep || 0)}</div><div class="um-lbl">🔁 复购客户</div><div class="um-sub">首单日期<当日</div></div>
+        </div>
+      </div>
       <!-- 奶粉四类细分：默认隐藏，点击「奶粉用户」卡的详情按钮展开 -->
       <div class="um-detail-inline" id="umMilkDetail" style="display:none">
         <div class="um-detail-title">🥛 奶粉用户 · 四类细分（互斥口径）</div>
@@ -496,7 +507,11 @@ function renderOverview(d) {
 }
 
 function umToggleCard(which) {
-  const map = { milk: ['umMilkDetail', 'umMilkBtn'], rep: ['umRepDetail', 'umRepBtn'] };
+  const map = {
+    milk: ['umMilkDetail', 'umMilkBtn'],
+    rep: ['umRepDetail', 'umRepBtn'],
+    today: ['umTodayDetail', 'umTodayBtn'],
+  };
   const pair = map[which];
   if (!pair) return;
   const el = document.getElementById(pair[0]);
