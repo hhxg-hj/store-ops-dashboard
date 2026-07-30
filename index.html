@@ -631,13 +631,6 @@ function renderFollowup(d) {
       <div class="service-item"><div class="sv" style="color:${frtColor}">${frt?frt:'—'}</div><div class="sl">平均首响(分)</div><div class="sm">分钟/次</div></div>
     </div>
 
-    <div class="section-title plain">🛒 客户购买时距分类（截至今日）</div>
-    <div class="service-grid service-grid-recency">
-      <div class="service-item"><div class="sv">${fmtNum(d.purchaseRecency?.m1 || 0)}</div><div class="sl">一个月内购买过</div><div class="sm">≤ 30 天</div></div>
-      <div class="service-item"><div class="sv">${fmtNum(d.purchaseRecency?.m2_3 || 0)}</div><div class="sl">二至三个月内购买过</div><div class="sm">31–90 天</div></div>
-      <div class="service-item"><div class="sv" style="color:var(--warning)">${fmtNum(d.purchaseRecency?.m3plus || 0)}</div><div class="sl">三个月以上购买过</div><div class="sm">≥ 91 天</div></div>
-    </div>
-
     <div class="section-title plain">📋 客户回访清单</div>
     <div class="milk-filter">
       <button class="milk-filter-btn active" onclick="setMilkFilter('all')">全部</button>
@@ -887,16 +880,17 @@ function buildDailyActionPlan(d) {
   const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 全品类客单价¥${aov.toFixed(0)}，${aovBreakText} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}${bmText}。${primary.headline}。`;
 
   const Qs = DAP_CONFIG.quotas;
+  // ── 建议文案来源：skills/store-action-advisor/references/playbook.md ──
   const suggTemplates = {
     traffic: [
-      { text: `登记至少${Qs.newLead}位新客的联系方式、宝宝月龄和核心需求，并添加企微`, rule: 'R1' },
-      { text: `从门店未成交名单中选择${Qs.unconvertedFollowup}位，一对一了解未下单原因并记录`, rule: 'R1' },
-      { text: '完成一次社区/异业触点执行，记录触达人数和新增企微数', rule: 'R1' },
+      { text: `今日完成${Qs.newLead}位到店新客的信息登记（联系方式+宝宝月龄+核心需求），并全部添加企微拉入门店社群`, rule: 'R1-新客' },
+      { text: `从门店未成交名单中选择${Qs.unconvertedFollowup}位，一对一微信跟进了解未下单原因并记录，针对性推送新人优惠`, rule: 'R1-新客' },
+      { text: '完成一次社区/异业触点执行（地推/异业联动），记录触达人数和新增企微数', rule: 'R1-新客' },
     ],
     aov: [
-      { text: `完成${Qs.bundle}次关联商品推荐，记录推荐商品、客户反馈和成交结果`, rule: 'R5' },
-      { text: '每笔主推商品成交时主动介绍一次组合套餐或满减方案', rule: 'R5' },
-      { text: '选一个高客单商品，用「需求—优势—适用场景」三句话向客户介绍', rule: 'R5' },
+      { text: `每笔主推商品成交时，主动搭配 1 款关联商品做连带推荐，记录推荐商品和客户反馈`, rule: 'R5-客单价' },
+      { text: `完成${Qs.bundle}次关联商品推荐，记录推荐商品、客户反馈和成交结果`, rule: 'R5-客单价' },
+      { text: '选一个高客单商品，用「需求—优势—适用场景」三句话向客户介绍，引导一站式选购', rule: 'R5-客单价' },
     ],
     milkAov: [
       { text: `完成${Qs.bundle}次奶粉连带推荐：在客户选购奶粉时主动推荐同段位或跨段位升级方案`, rule: 'R5-奶粉' },
@@ -909,10 +903,10 @@ function buildDailyActionPlan(d) {
       { text: '针对零辅食/纸品客户设计满减或组合套餐，提高单笔非奶粉产出', rule: 'R5-其他' },
     ],
     repurchase: [
-      { text: '联系本周清单中临近补货日期的客户，提前做补货提醒', rule: 'R7' },
-      { text: `向${Qs.bundle}位符合条件的老会员说明专属福利或周期复购权益`, rule: 'R4' },
-      { text: `对近期成交客户完成售后体验跟进（至少${Qs.feedback}位，记录反馈）`, rule: 'R7' },
-      { text: '发布或私发1条与目标客户需求相关的育儿知识（无数据时选通用主题）', rule: 'R7' },
+      { text: '标记奶粉/纸尿裤客户的预估补货时间，今日联系本周清单中临近补货日期的客户提前做补货提醒', rule: 'R7-复购' },
+      { text: `向${Qs.bundle}位符合条件的老会员说明专属福利或周期复购权益`, rule: 'R4-复购' },
+      { text: `对近期成交客户完成售后体验跟进（至少${Qs.feedback}位，记录反馈）`, rule: 'R7-复购' },
+      { text: '发布或私发1条与目标客户需求相关的育儿知识（无数据时选通用主题）', rule: 'R7-复购' },
     ],
   };
   const refSuggestions = [];
@@ -924,12 +918,13 @@ function buildDailyActionPlan(d) {
     }
   }
   // ── 区域标杆差距建议（每个组件分别给出动作，含奶粉/其他客单价）──
+  // 文案来源：skills/store-action-advisor/references/playbook.md
   const cmpAdviceMap = {
-    traffic: { low: '拓客', rule: 'R1/R2', text: '到店登记至少3位新客并添加企微' },
-    aov:     { low: '客单价', rule: 'R5', text: '完成3次关联商品推荐，提高单笔产出' },
-    milkAov: { low: '奶粉客单价', rule: 'R5-奶粉', text: '奶粉连带/段数升级/特配粉推荐' },
-    nonMilkAov: { low: '其他产品客单价', rule: 'R5-其他', text: '奶粉成交时搭配营养品/纸品/零辅食' },
-    repRate: { low: '复购', rule: 'R4/R7', text: '优先联系本周补货预测清单的客户，提前做复购提醒' },
+    traffic: { low: '拓客', rule: 'R1-新客', text: '今日完成3位到店新客信息登记并添加企微，参与地推/短视频引流，宣导老带新活动' },
+    aov:     { low: '客单价', rule: 'R5-客单价', text: '每笔主推商品成交时主动搭配关联商品做连带推荐，完成3次关联商品推荐' },
+    milkAov: { low: '奶粉客单价', rule: 'R5-奶粉', text: '奶粉连带（同段位/跨段位升级）+ 段数月龄适配盘点 + 特配粉/高毛利主推奶粉推荐' },
+    nonMilkAov: { low: '其他产品客单价', rule: 'R5-其他', text: '奶粉成交时搭配营养品/纸品/零辅食，向奶粉客户推荐互补营养品（DHA/益生菌/钙铁锌）' },
+    repRate: { low: '复购', rule: 'R4/R7-复购', text: '标记奶粉/纸尿裤客户预估补货时间，今日联系本周清单中临近补货日期的客户提前做补货提醒' },
   };
   const cmpLabels = { traffic: '流量', aov: '客单价', milkAov: '奶粉客单价', nonMilkAov: '其他产品客单价', repRate: '复购率' };
   // 格式化组件值（流量/客单价/复购率/奶粉客单价/其他客单价）
