@@ -431,7 +431,7 @@ function renderOverview(d) {
     </div>
   </div>
 
-  <div class="section-title plain">📈 业绩指标</div>
+  <div class="section-title plain">📈 指标</div>
   <div class="kpi-grid">
     <div class="kpi accent"><div class="kpi-val">${persRate}</div><div class="kpi-lbl">个人目标达成率</div><div class="kpi-sub" style="color:var(--text2)">目标 ¥${fmtNum(d.target)} · 达成 ¥${fmtNum(d.achieved)} · 门店均值 ${storeRate}</div></div>
     <div class="kpi green"><div class="kpi-val">${fmtNum(userAchieved)}<span style="font-size:14px;color:var(--text2)"> / ${userTargetNum}</span></div><div class="kpi-lbl">👥 用户目标（新增客户）</div><div class="kpi-sub" style="color:var(--text2)">达成率 ${userAchieveRate}%</div></div>
@@ -441,7 +441,7 @@ function renderOverview(d) {
     <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🌱 新客成交占比</div><div class="kpi-sub" style="color:var(--text2)">本月新增成交 ${fmtNum(convNew)} ÷ 成交用户总量 ${fmtNum(convTotal)}</div></div>
   </div>
 
-  <div class="section-title plain">👥 用户指标</div>
+  <div class="section-title plain">👥 用户</div>
 
   <!-- 第一行：总量指标 -->
   <div class="um-group">
