@@ -16,9 +16,9 @@
   "lastMonthAchieved": 87583.29,
   "lastMonthTarget": 70000,
   "salesMom": -0.39206965164245366,
-  "dailyAvg": 1836.018620689655,
+  "dailyAvg": 1774.818,
   "dailyAvgLast": 2919.4429999999998,
-  "dailyAvgMom": -0.37110653618184863,
+  "dailyAvgMom": -0.39206965164245366,
   "userTarget": 90,
   "newCustomers": 16,
   "customerService": {
@@ -123,6 +123,10 @@
   "naifenGuanshuLast": 309,
   "kedanjia": 887.409,
   "kedanjiaQoq": 0.165199834,
+  "milkAov": 665.0585135135136,
+  "milkOrderCnt": 74,
+  "nonMilkAov": 73.5942,
+  "nonMilkOrderCnt": 50,
   "kedanliang": 3.76,
   "kedanliangLast": 3.961538462,
   "chengjiaoNew": 60,
@@ -143,7 +147,7 @@
   "liushiUsersLast": 27,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 04-33",
+  "version": "2026-07-30 02-59",
   "storeRank": 1,
   "storeTotal": 3,
   "storeTopName": "（你）",
@@ -5593,8 +5597,8 @@
     "momPushCans": null
   },
   "purchaseRecency": {
-    "m1": 67,
-    "m2_3": 177,
-    "m3plus": 115
+    "m1": 65,
+    "m2_3": 178,
+    "m3plus": 116
   }
 }

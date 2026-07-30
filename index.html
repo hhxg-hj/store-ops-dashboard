@@ -94,6 +94,12 @@
     .perf-table th { text-align:left; color:var(--text2); font-weight:500; padding:7px 4px; border-bottom:1px solid var(--border); font-size:11px; }
     .perf-table td { padding:8px 4px; border-bottom:1px solid #f4f4f6; }
     .perf-table .section-row td { font-weight:700; padding-top:14px; font-size:14px; color:var(--primary); border-bottom:2px solid var(--primary-light); }
+    /* 客单价拆分（奶粉 / 其他产品） */
+    .perf-table .sub-aov td { padding:6px 4px 6px 18px; color:var(--text); background:var(--primary-light,#f7f5ff); font-size:12.5px; }
+    .perf-table .sub-aov td:first-child { border-left:3px solid var(--primary); }
+    .perf-table .aov-denom { color:var(--text2); font-size:11px; }
+    .perf-table .aov-note-row td { padding:7px 4px; color:var(--text2); font-size:11.5px; border-bottom:1px solid #f4f4f6; background:#fafafa; }
+    .perf-table .aov-note-row b { color:var(--primary); }
     /* 奶粉品类拆解 */
     .milk-cat-summary { display:flex; gap:10px; margin:10px 0 12px; }
     .milk-cat-summary .mcs-item { flex:1; background:var(--primary-light,#f0ebff); border-radius:10px; padding:10px 12px; text-align:center; }
@@ -401,6 +407,9 @@ function renderPerf(d) {
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(d.pushCans)}罐</td><td class="${momClass(d.momPushCans)} mom">${momLabel(d.momPushCans)}</td></tr>
         <tr class="section-row"><td colspan="3">三、核心销售指标</td></tr>
         <tr><td>💳 全品类客单价</td><td>${fmtMoney(d.kedanjia)}</td><td class="${momClass(d.kedanjiaQoq)} mom">${momLabel(d.kedanjiaQoq)}</td></tr>
+        <tr class="sub-aov"><td>　🥛 奶粉客单价</td><td>${fmtMoney(d.milkAov)}</td><td class="mom aov-denom">${d.milkOrderCnt ? d.milkOrderCnt + ' 笔订单' : '—'}</td></tr>
+        <tr class="sub-aov"><td>　🛒 其他产品客单价</td><td>${fmtMoney(d.nonMilkAov)}</td><td class="mom aov-denom">${d.nonMilkOrderCnt ? d.nonMilkOrderCnt + ' 笔订单' : '—'}</td></tr>
+        <tr class="aov-note-row"><td colspan="3">📐 客单价 = 销售额 ÷ 订单数，已按 <b>奶粉</b> / <b>其他产品</b>（营养品·纸品用品·零辅食）拆分开</td></tr>
         <tr><td>📈 销售额环比</td><td>上月 ${fmtMoney(d.lastMonthAchieved)}</td><td class="${momClass(d.salesMom)} mom">${momLabel(d.salesMom)}</td></tr>
         <tr><td>📊 日均销售额</td><td>${fmtMoney(d.dailyAvg)}</td><td class="${momClass(d.dailyAvgMom)} mom">${momLabel(d.dailyAvgMom)}</td></tr>
       </tbody>

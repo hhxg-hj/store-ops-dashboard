@@ -123,6 +123,10 @@
   "naifenGuanshuLast": 144,
   "kedanjia": 607.6831461,
   "kedanjiaQoq": 0.255185213,
+  "milkAov": 620.8441558441558,
+  "milkOrderCnt": 77,
+  "nonMilkAov": 60.85242718446601,
+  "nonMilkOrderCnt": 103,
   "kedanliang": 3.62,
   "kedanliangLast": 2.93877551,
   "chengjiaoNew": 89,
@@ -143,7 +147,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-29 04-33",
+  "version": "2026-07-30 02-59",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -3338,7 +3342,7 @@
   },
   "purchaseRecency": {
     "m1": 91,
-    "m2_3": 146,
-    "m3plus": 13
+    "m2_3": 144,
+    "m3plus": 15
   }
 }
