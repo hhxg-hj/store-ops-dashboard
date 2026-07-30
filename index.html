@@ -402,6 +402,11 @@ function renderOverview(d) {
         <div class="rank-label">区域排名 · 榜首 ${d.regionTopName||'-'}</div>
         <div style="font-size:12px;margin-top:3px;color:${gapColor((d.commission||0)-(d.regionTopComm||0))}">差距 ¥${fmtNum(((d.regionTopComm||0)-(d.commission||0)).toFixed(0))}</div>
       </div>
+      <div class="rank-item">
+        <div class="rank-num">🌏 第${d.nationRank}名 / ${d.nationTotal}人</div>
+        <div class="rank-label">全国排名 · 榜首 ${d.nationTopName||'-'}</div>
+        <div style="font-size:12px;margin-top:3px;color:${gapColor((d.commission||0)-(d.nationTopComm||0))}">差距 ¥${fmtNum(((d.nationTopComm||0)-(d.commission||0)).toFixed(0))}</div>
+      </div>
     </div>
   </div>
 
