@@ -134,6 +134,9 @@
     .dap-note { font-size:11px; color:var(--text2); margin-top:6px; }
     /* GMV 拆解小面板 */
     .gmv-bars { display:flex; flex-wrap:wrap; align-items:center; gap:6px 0; font-size:12px; margin:4px 0 8px; padding:10px 12px; background:#f8fafc; border-radius:10px; }
+    .gmv-bar-row { width:100%; display:flex; flex-wrap:wrap; align-items:center; gap:6px 0; padding:6px 0; border-top:1px dashed var(--border); }
+    .gmv-bar-row:first-child { border-top:none; padding-top:0; }
+    .gmv-bar-row:last-child { padding-bottom:0; }
     .gmv-bar-item { display:flex; align-items:center; gap:4px; margin-right:12px; }
     .gmv-bar-item:last-of-type { margin-right:0; }
     .gmv-bar-lbl { color:var(--text2); font-size:11px; }
@@ -143,7 +146,8 @@
     .gmv-bar-tag.normal { background:#e0f2fe; color:#0284c7; }
     .gmv-bar-tag.strong { background:#dcfce7; color:var(--success); }
     .gmv-bar-tag.unknown { background:#f0f0f4; color:var(--text2); }
-    .gmv-bar-result { width:100%; font-size:15px; font-weight:700; color:var(--primary); margin-top:4px; }
+    .gmv-bar-result { font-size:14px; font-weight:700; color:var(--primary); margin-left:auto; }
+    .gmv-bar-result.total { width:100%; font-size:15px; margin-top:4px; margin-left:0; border-top:1px dashed var(--border); padding-top:6px; }
     .gmv-bench-row { width:100%; font-size:11px; color:var(--text2); padding-top:6px; border-top:1px dashed var(--border); margin-top:6px; }
     .gmv-bench-label { font-weight:600; color:var(--warning); margin-right:6px; }
     .gmv-bench-section { width:100%; margin-top:10px; padding-top:8px; border-top:1px solid var(--border); }
@@ -574,20 +578,28 @@ function buildDailyActionPlan(d) {
   const dailySalesGap = Math.ceil(salesGap / remainingDays);
   const repurchaseRate = dapNormRate(d.fugouRate);
   const aovMom = dapNormRate(d.kedanjiaQoq);
+  const milkAovMom = dapNormRate(d.milkAovQoq);
+  const nonMilkAovMom = dapNormRate(d.nonMilkAovQoq);
   const fu = d.followUp || {};
   const followupUrgent = (fu.lost || 0) + (fu.critical || 0) + (fu.high || 0);
   const list = Array.isArray(fu.list) ? fu.list : null;
   const monthProgress = now.getDate() / daysInMonth;
 
-  // ── GMV 分解：GMV ≈ 流量 × 客单价 × 复购率 × 裂变率 ──
+  // ── GMV 分解：GMV ≈ 流量 × 客单价 × 复购率 × 裂变率；客单价拆分为奶粉/其他 ──
   const traffic = d.totalClients; // 本月下单客户数（流量代理指标）
   const aov = d.kedanjia || 0;   // 本月全品类客单价
+  const milkAov = d.milkAov || 0;
+  const nonMilkAov = d.nonMilkAov || 0;
   const repRate = repurchaseRate; // 本月复购用户占比（0-1）
   const refRate = null;           // 裂变率数据缺失（R8 禁用）
   const gmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * aov * repRate) : null;
+  const milkGmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * milkAov * repRate) : null;
+  const nonMilkGmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * nonMilkAov * repRate) : null;
   const gmvComp = {
     traffic: { value: traffic, strength: traffic === 0 ? 'unknown' : clientMom !== null ? (clientMom <= T.clientMomDecline ? 'weak' : clientMom < 0 ? 'normal' : clientMom >= T.clientGrowthInsufficient ? 'strong' : 'normal') : 'normal' },
     aov: { value: aov, strength: aovMom !== null ? (aovMom <= T.aovDecline ? 'weak' : aovMom >= T.aovGrowthGood ? 'strong' : 'normal') : 'normal' },
+    milkAov: { value: milkAov, strength: milkAovMom !== null ? (milkAovMom <= T.aovDecline ? 'weak' : milkAovMom >= T.aovGrowthGood ? 'strong' : 'normal') : 'normal' },
+    nonMilkAov: { value: nonMilkAov, strength: nonMilkAovMom !== null ? (nonMilkAovMom <= T.aovDecline ? 'weak' : nonMilkAovMom >= T.aovGrowthGood ? 'strong' : 'normal') : 'normal' },
     repurchase: { value: repRate, strength: repRate !== null ? (repRate < T.repurchaseLow ? 'weak' : 'normal') : 'unknown' },
     referral: { value: null, strength: 'unknown' },
   };
@@ -738,7 +750,7 @@ function buildDailyActionPlan(d) {
   }
 
   // ── GMV 驱动：客户洞察、提升建议、本周服务清单 ──
-  const compLabels = { traffic: '客户流量', aov: '客单价', repurchase: '复购率', referral: '裂变率' };
+  const compLabels = { traffic: '客户流量', aov: '全品类客单价', milkAov: '奶粉客单价', nonMilkAov: '其他产品客单价', repurchase: '复购率', referral: '裂变率' };
   const weakComps = Object.entries(gmvComp).filter(([,c]) => c.strength === 'weak').map(([k]) => compLabels[k] || k);
   const gmvy = gmvApprox !== null ? `¥${gmvApprox.toLocaleString()}` : '（数据不足）';
   const weakText = weakComps.length ? `，目前${weakComps.join('、')}相对薄弱` : '，各指标基本健康';
@@ -748,12 +760,13 @@ function buildDailyActionPlan(d) {
   const bmText = bmSales?.name
     ? ` | 区域标杆：${bmSales.name}（销售最好，GMV≈¥${(bmSales.gmv||0).toLocaleString()}）· ${bmPush?.name||''}（主推最多）| 你的GMV差距：${bmSales?.gap != null ? dapPct(bmSales.gap, true) : '—'}`
     : '';
-  const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 客单价¥${aov.toFixed(0)} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}${bmText}。${primary.headline}。`;
+  const aovBreakText = `其中奶粉客单价¥${milkAov.toFixed(0)}、其他产品客单价¥${nonMilkAov.toFixed(0)}`;
+  const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 全品类客单价¥${aov.toFixed(0)}，${aovBreakText} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}${bmText}。${primary.headline}。`;
 
   const Qs = DAP_CONFIG.quotas;
   const suggTemplates = {
     traffic: [
-      { text: `登记至少${Qs.newLead}位新客的联系方式、宝宝月龄和核��需求，并添加企微`, rule: 'R1' },
+      { text: `登记至少${Qs.newLead}位新客的联系方式、宝宝月龄和核心需求，并添加企微`, rule: 'R1' },
       { text: `从门店未成交名单中选择${Qs.unconvertedFollowup}位，一对一了解未下单原因并记录`, rule: 'R1' },
       { text: '完成一次社区/异业触点执行，记录触达人数和新增企微数', rule: 'R1' },
     ],
@@ -761,6 +774,16 @@ function buildDailyActionPlan(d) {
       { text: `完成${Qs.bundle}次关联商品推荐，记录推荐商品、客户反馈和成交结果`, rule: 'R5' },
       { text: '每笔主推商品成交时主动介绍一次组合套餐或满减方案', rule: 'R5' },
       { text: '选一个高客单商品，用「需求—优势—适用场景」三句话向客户介绍', rule: 'R5' },
+    ],
+    milkAov: [
+      { text: `完成${Qs.bundle}次奶粉连带推荐：在客户选购奶粉时主动推荐同段位或跨段位升级方案`, rule: 'R5-奶粉' },
+      { text: '针对奶粉客户做一次「段数/月龄适配」盘点，推荐更合适的主力奶粉或配方升级', rule: 'R5-奶粉' },
+      { text: '向有过敏/消化等特殊需求的奶粉客户介绍特配粉或高毛利主推奶粉', rule: 'R5-奶粉' },
+    ],
+    nonMilkAov: [
+      { text: `完成${Qs.bundle}次非奶粉连带：在奶粉成交时主动搭配营养品/纸品/零辅食`, rule: 'R5-其他' },
+      { text: '向购买奶粉的客户推荐一款互补营养品（如DHA、益生菌、钙铁锌）或高频消耗纸品', rule: 'R5-其他' },
+      { text: '针对零辅食/纸品客户设计满减或组合套餐，提高单笔非奶粉产出', rule: 'R5-其他' },
     ],
     repurchase: [
       { text: '联系本周清单中临近补货日期的客户，提前做补货提醒', rule: 'R7' },
@@ -777,13 +800,31 @@ function buildDailyActionPlan(d) {
       refSuggestions.push({ comp, ...pool[idx] });
     }
   }
-  // ── 区域标杆差距建议（每个组件分别给出动作）──
+  // ── 区域标杆差距建议（每个组件分别给出动作，含奶粉/其他客单价）──
   const cmpAdviceMap = {
     traffic: { low: '拓客', rule: 'R1/R2', text: '到店登记至少3位新客并添加企微' },
     aov:     { low: '客单价', rule: 'R5', text: '完成3次关联商品推荐，提高单笔产出' },
+    milkAov: { low: '奶粉客单价', rule: 'R5-奶粉', text: '奶粉连带/段数升级/特配粉推荐' },
+    nonMilkAov: { low: '其他产品客单价', rule: 'R5-其他', text: '奶粉成交时搭配营养品/纸品/零辅食' },
     repRate: { low: '复购', rule: 'R4/R7', text: '优先联系本周补货预测清单的客户，提前做复购提醒' },
   };
-  const cmpLabels = { traffic: '流量', aov: '客单价', repRate: '复购率' };
+  const cmpLabels = { traffic: '流量', aov: '客单价', milkAov: '奶粉客单价', nonMilkAov: '其他产品客单价', repRate: '复购率' };
+  // 格式化组件值（流量/客单价/复购率/奶粉客单价/其他客单价）
+  const fmtCompVal = (src, key) => {
+    const v = src?.components?.[key];
+    if (key === 'repRate') return v != null ? dapPct(v) : '—';
+    if (key === 'traffic') return (v ?? 0) + '人';
+    if (['aov', 'milkAov', 'nonMilkAov'].includes(key)) return '¥' + (v ?? 0).toFixed(0);
+    return v ?? '—';
+  };
+  const myCompVal = (key) => {
+    if (key === 'repRate') return repRate != null ? dapPct(repRate) : '—';
+    if (key === 'traffic') return traffic + '人';
+    if (key === 'aov') return '¥' + aov.toFixed(0);
+    if (key === 'milkAov') return '¥' + milkAov.toFixed(0);
+    if (key === 'nonMilkAov') return '¥' + nonMilkAov.toFixed(0);
+    return '—';
+  };
   // 与胡美娟（销售最好）逐项对比
   if (bmSales?.name && bmSales.name !== d.name && bmSales.componentGaps) {
     for (const [key, gap] of Object.entries(bmSales.componentGaps)) {
@@ -792,13 +833,13 @@ function buildDailyActionPlan(d) {
         const labs = cmpLabels[key];
         refSuggestions.push({
           comp: 'benchSales',
-          text: `📊 ${labs}落后胡美娟${dapPct(Math.abs(gap), true)}（她${key==='aov'?'¥'+(bmSales.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmSales.components?.[key]):(bmSales.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?dapPct(repRate):traffic+'人'}）→ 重点${cfg.low}（${cfg.rule}：${cfg.text}）`,
+          text: `📊 ${labs}落后${bmSales.name}${dapPct(Math.abs(gap), true)}（她${fmtCompVal(bmSales, key)} vs 你${myCompVal(key)}）→ 重点${cfg.low}（${cfg.rule}：${cfg.text}）`,
           rule: `对标销售-${labs}`
         });
       }
     }
   }
-  // 与詹芹芹（主推最多）逐项对比（如果和胡美娟是同一人则跳过重复）
+  // 与主推最多标杆逐项对比（如果和销售最好是同一人则跳过重复）
   if (bmPush?.name && bmPush.name !== d.name && bmPush.name !== bmSales?.name && bmPush.componentGaps) {
     for (const [key, gap] of Object.entries(bmPush.componentGaps)) {
       if (gap != null && gap < -0.2) {
@@ -806,7 +847,7 @@ function buildDailyActionPlan(d) {
         const labs = cmpLabels[key];
         refSuggestions.push({
           comp: 'benchPush',
-          text: `🎯 ${labs}落后主推最多${bmPush.name}${dapPct(Math.abs(gap), true)}（ta${key==='aov'?'¥'+(bmPush.components?.[key]||0).toFixed(0):key==='repRate'?dapPct(bmPush.components?.[key]):(bmPush.components?.[key]||0)+'人'} vs 你${key==='aov'?'¥'+aov.toFixed(0):key==='repRate'?dapPct(repRate):traffic+'人'}）→ 参考ta的主推打法（${cfg.text}）`,
+          text: `🎯 ${labs}落后主推最多${bmPush.name}${dapPct(Math.abs(gap), true)}（ta${fmtCompVal(bmPush, key)} vs 你${myCompVal(key)}）→ 参考ta的主推打法（${cfg.text}）`,
           rule: `对标主推-${labs}`
         });
       }
@@ -840,7 +881,7 @@ function buildDailyActionPlan(d) {
       { scenario: '复购率趋势', reason: '仅有本月复购率，只能判断「偏低」，不能判断「下降」' },
       { scenario: '新客增速放缓', reason: '缺少第三个月数据，只能判断「增长不足」' },
     ],
-    gmv: { traffic, aov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, components: gmvComp, benchmark: bm },
+    gmv: { traffic, aov, milkAov, nonMilkAov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, milkGmvApprox, nonMilkGmvApprox, components: gmvComp, benchmark: bm },
     insightsText, refSuggestions, refWeekActions,
   };
 }
@@ -853,11 +894,21 @@ function renderAction(d) {
 
     <div class="section-title plain">🧮 GMV 拆解</div>
     <div class="gmv-bars">
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 客单价</div><div class="gmv-bar-val">¥${plan.gmv.aov.toFixed(0)}</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
-      <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
-      <div class="gmv-bar-result">≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
+      <div class="gmv-bar-row">
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 奶粉客单价</div><div class="gmv-bar-val">¥${plan.gmv.milkAov.toFixed(0)}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
+        <div class="gmv-bar-result">≈ 奶粉类 ${plan.gmv.milkGmvApprox !== null ? '¥' + plan.gmv.milkGmvApprox.toLocaleString() : '—'}</div>
+      </div>
+      <div class="gmv-bar-row">
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 其他客单价</div><div class="gmv-bar-val">¥${plan.gmv.nonMilkAov.toFixed(0)}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
+        <div class="gmv-bar-result">≈ 其他类 ${plan.gmv.nonMilkGmvApprox !== null ? '¥' + plan.gmv.nonMilkGmvApprox.toLocaleString() : '—'}</div>
+      </div>
+      <div class="gmv-bar-result total">全品类口径 ≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
       ${plan.gmv.benchmark?.topSales?.name ? `
       <div class="gmv-bench-section">
         <div class="gmv-bench-title">🏆 区域标杆：每个 GMV 组件对比</div>
@@ -873,12 +924,28 @@ function renderAction(d) {
               ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.traffic)}
             </tr>
             <tr>
-              <td>客单价</td>
+              <td>全品类客单价</td>
               <td>¥${plan.gmv.aov.toFixed(0)}</td>
               <td>¥${(plan.gmv.benchmark.topSales.components?.aov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.aov)}
               <td>¥${(plan.gmv.benchmark.topPush.components?.aov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.aov)}
+            </tr>
+            <tr>
+              <td>奶粉客单价</td>
+              <td>¥${plan.gmv.milkAov.toFixed(0)}</td>
+              <td>¥${(plan.gmv.benchmark.topSales.components?.milkAov ?? 0).toFixed(0)}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.milkAov)}
+              <td>¥${(plan.gmv.benchmark.topPush.components?.milkAov ?? 0).toFixed(0)}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.milkAov)}
+            </tr>
+            <tr>
+              <td>其他产品客单价</td>
+              <td>¥${plan.gmv.nonMilkAov.toFixed(0)}</td>
+              <td>¥${(plan.gmv.benchmark.topSales.components?.nonMilkAov ?? 0).toFixed(0)}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.nonMilkAov)}
+              <td>¥${(plan.gmv.benchmark.topPush.components?.nonMilkAov ?? 0).toFixed(0)}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.nonMilkAov)}
             </tr>
             <tr>
               <td>复购率</td>

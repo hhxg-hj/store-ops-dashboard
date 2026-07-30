@@ -149,7 +149,7 @@
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 06-12",
+  "version": "2026-07-30 06-57",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -4099,11 +4099,15 @@
       "components": {
         "traffic": 74,
         "aov": 924.3828378,
+        "milkAov": 825.4978205128206,
+        "nonMilkAov": 102.96153846153848,
         "repRate": 0.13220339
       },
       "componentGaps": {
         "traffic": -0.9864864864864865,
         "aov": -0.8615292335969417,
+        "milkAov": -1,
+        "nonMilkAov": -0.3784086664176318,
         "repRate": -1
       }
     },
@@ -4114,11 +4118,15 @@
       "components": {
         "traffic": 60,
         "aov": 887.409,
+        "milkAov": 665.0585135135136,
+        "nonMilkAov": 73.5942,
         "repRate": 0.091922006
       },
       "componentGaps": {
         "traffic": -0.9833333333333333,
         "aov": -0.8557598581939105,
+        "milkAov": -1,
+        "nonMilkAov": -0.1303662516883124,
         "repRate": -1
       }
     },
@@ -4126,6 +4134,8 @@
     "myComponents": {
       "traffic": 1,
       "aov": 128,
+      "milkAov": 0,
+      "nonMilkAov": 64,
       "repRate": 0
     }
   },
