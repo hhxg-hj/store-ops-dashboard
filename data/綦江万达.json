@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 08-06",
+  "version": "2026-07-30 08-16",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -3236,22 +3236,22 @@
     "qwTotal": 5,
     "qwTodayNew": 0,
     "today": {
-      "date": "2026-07-30",
-      "total": 0,
-      "milk": 0,
-      "nonMilk": 0,
+      "date": "2026-07-26",
+      "total": 9,
+      "milk": 6,
+      "nonMilk": 3,
       "milkCat": {
         "zhutui": 0,
-        "tepei": 0,
+        "tepei": 2,
         "ertong": 0,
-        "tonghuo": 0
+        "tonghuo": 4
       }
     },
     "repurchase": {
       "total": 116,
-      "active": 73,
-      "stable": 42,
-      "churned": 1
+      "active": 75,
+      "stable": 41,
+      "churned": 0
     },
     "newThisMonth": 53
   },

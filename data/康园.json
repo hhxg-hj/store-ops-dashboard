@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 08-06",
+  "version": "2026-07-30 08-16",
   "storeRank": 4,
   "storeTotal": 4,
   "storeTopName": "陈传勋",
@@ -1195,15 +1195,15 @@
     "qwTotal": 18,
     "qwTodayNew": 0,
     "today": {
-      "date": "2026-07-30",
-      "total": 0,
-      "milk": 0,
+      "date": "2026-07-26",
+      "total": 2,
+      "milk": 2,
       "nonMilk": 0,
       "milkCat": {
         "zhutui": 0,
         "tepei": 0,
         "ertong": 0,
-        "tonghuo": 0
+        "tonghuo": 2
       }
     },
     "repurchase": {
