@@ -389,9 +389,11 @@ function renderOverview(d) {
   const userTargetNum = userTarget;
   const userAchieved = d.newCustomers || 0;
   const userAchieveRate = userTargetNum > 0 ? Math.round((userAchieved / userTargetNum) * 100) : 0;
-  // 转化率 = 本月新增成交(newThisMonth) ÷ 企微新增客户数(newCustomers)
+  // 新客成交占比 = 本月新增成交(newThisMonth) ÷ 成交用户总量(totalClients)
+  // 口径同源（均来自销售明细按客户手机统计），必然 ≤100%；含义=本月拉新占存量的比重
   const convNew = umx.newThisMonth != null ? umx.newThisMonth : 0;
-  const convRate = userAchieved > 0 ? ((convNew / userAchieved) * 100).toFixed(1) + '%' : '—';
+  const convTotal = umTotal > 0 ? umTotal : 0;
+  const convRate = convTotal > 0 ? ((convNew / convTotal) * 100).toFixed(1) + '%' : '—';
 
   return `
   <div class="card">
@@ -426,7 +428,7 @@ function renderOverview(d) {
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">📣 地推任务</div><div class="kpi-sub" style="color:var(--text2)">每天需完成 1 次</div></div>
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎥 直播任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎬 视频任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
-    <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🔀 转化率</div><div class="kpi-sub" style="color:var(--text2)">新增成交 ${fmtNum(convNew)} ÷ 新增客户 ${fmtNum(userAchieved)}</div></div>
+    <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🌱 新客成交占比</div><div class="kpi-sub" style="color:var(--text2)">本月新增成交 ${fmtNum(convNew)} ÷ 成交用户总量 ${fmtNum(convTotal)}</div></div>
   </div>
 
   <div class="section-title plain">👥 用户指标</div>
