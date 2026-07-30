@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 07-02",
+  "version": "2026-07-30 08-06",
   "storeRank": 1,
   "storeTotal": 10,
   "storeTopName": "（你）",
@@ -1680,6 +1680,30 @@
       "comp": "",
       "speech": ""
     }
+  },
+  "userMetrics": {
+    "totalClients": 44,
+    "qwTotal": 198,
+    "qwTodayNew": 0,
+    "today": {
+      "date": "2026-07-30",
+      "total": 0,
+      "milk": 0,
+      "nonMilk": 0,
+      "milkCat": {
+        "zhutui": 0,
+        "tepei": 0,
+        "ertong": 0,
+        "tonghuo": 0
+      }
+    },
+    "repurchase": {
+      "total": 13,
+      "active": 5,
+      "stable": 8,
+      "churned": 0
+    },
+    "newThisMonth": 14
   },
   "regionalBM": {
     "topSales": {

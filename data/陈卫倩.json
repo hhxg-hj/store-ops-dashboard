@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-30 07-02",
+  "version": "2026-07-30 08-06",
   "storeRank": 5,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
@@ -1450,6 +1450,30 @@
       "comp": "",
       "speech": ""
     }
+  },
+  "userMetrics": {
+    "totalClients": 23,
+    "qwTotal": null,
+    "qwTodayNew": null,
+    "today": {
+      "date": "2026-07-30",
+      "total": 0,
+      "milk": 0,
+      "nonMilk": 0,
+      "milkCat": {
+        "zhutui": 0,
+        "tepei": 0,
+        "ertong": 0,
+        "tonghuo": 0
+      }
+    },
+    "repurchase": {
+      "total": 8,
+      "active": 3,
+      "stable": 5,
+      "churned": 0
+    },
+    "newThisMonth": 0
   },
   "regionalBM": {
     "topSales": {
