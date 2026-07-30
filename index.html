@@ -407,8 +407,8 @@ function renderPerf(d) {
         <tr><td>🎯 本月主推销量</td><td>${fmtNum(d.pushCans)}罐</td><td class="${momClass(d.momPushCans)} mom">${momLabel(d.momPushCans)}</td></tr>
         <tr class="section-row"><td colspan="3">三、核心销售指标</td></tr>
         <tr><td>💳 全品类客单价</td><td>${fmtMoney(d.kedanjia)}</td><td class="${momClass(d.kedanjiaQoq)} mom">${momLabel(d.kedanjiaQoq)}</td></tr>
-        <tr class="sub-aov"><td>　🥛 奶粉客单价</td><td>${fmtMoney(d.milkAov)}</td><td class="mom aov-denom">${d.milkOrderCnt ? d.milkOrderCnt + ' 笔订单' : '—'}</td></tr>
-        <tr class="sub-aov"><td>　🛒 其他产品客单价</td><td>${fmtMoney(d.nonMilkAov)}</td><td class="mom aov-denom">${d.nonMilkOrderCnt ? d.nonMilkOrderCnt + ' 笔订单' : '—'}</td></tr>
+        <tr class="sub-aov"><td>　🥛 奶粉客单价</td><td>${fmtMoney(d.milkAov)}</td><td class="mom aov-denom">${d.milkOrderCnt ? d.milkOrderCnt + ' 笔 · ' : ''}<span class="${momClass(d.milkAovQoq)}">${momLabel(d.milkAovQoq)}</span></td></tr>
+        <tr class="sub-aov"><td>　🛒 其他产品客单价</td><td>${fmtMoney(d.nonMilkAov)}</td><td class="mom aov-denom">${d.nonMilkOrderCnt ? d.nonMilkOrderCnt + ' 笔 · ' : ''}<span class="${momClass(d.nonMilkAovQoq)}">${momLabel(d.nonMilkAovQoq)}</span></td></tr>
         <tr class="aov-note-row"><td colspan="3">📐 客单价 = 销售额 ÷ 订单数，已按 <b>奶粉</b> / <b>其他产品</b>（营养品·纸品用品·零辅食）拆分开</td></tr>
         <tr><td>📈 销售额环比</td><td>上月 ${fmtMoney(d.lastMonthAchieved)}</td><td class="${momClass(d.salesMom)} mom">${momLabel(d.salesMom)}</td></tr>
         <tr><td>📊 日均销售额</td><td>${fmtMoney(d.dailyAvg)}</td><td class="${momClass(d.dailyAvgMom)} mom">${momLabel(d.dailyAvgMom)}</td></tr>
