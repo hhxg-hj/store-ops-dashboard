@@ -1,32 +1,34 @@
 {
+  "_comment": "请将以下 OSS 域名替换为实际 Bucket 域名，然后删除本字段。当前为模板。",
+  "_oss_domain": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com",
   "全护A2": {
-    "onepager": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-onepager.jpg",
-    "poster": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-poster.jpg",
-    "test": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-test.docx",
-    "video": "/store-ops-dashboard/assets/products/nestle-quanhua-a2-video.mp4"
+    "onepager": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/nestle-quanhua-a2-onepager.jpg",
+    "poster": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/nestle-quanhua-a2-poster.jpg",
+    "test": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/nestle-quanhua-a2-test.docx",
+    "video": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/nestle-quanhua-a2-video.mp4"
   },
   "羊奶": {
-    "onepager": "/store-ops-dashboard/assets/products/zhenhu-goat-onepager.jpg",
-    "poster": "/store-ops-dashboard/assets/products/zhenhu-goat-poster.jpg",
-    "test": "/store-ops-dashboard/assets/products/zhenhu-goat-test.xlsx",
-    "video": "/store-ops-dashboard/assets/products/zhenhu-goat-video.mp4"
+    "onepager": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-goat-onepager.jpg",
+    "poster": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-goat-poster.jpg",
+    "test": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-goat-test.xlsx",
+    "video": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-goat-video.mp4"
   },
   "铂金": {
-    "onepager": "/store-ops-dashboard/assets/products/zhenhu-platinum-onepager.jpg",
-    "poster": "/store-ops-dashboard/assets/products/zhenhu-platinum-poster.jpg",
-    "test": "/store-ops-dashboard/assets/products/zhenhu-platinum-test.xlsx",
-    "video": "/store-ops-dashboard/assets/products/zhenhu-platinum-video.mp4"
+    "onepager": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-platinum-onepager.jpg",
+    "poster": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-platinum-poster.jpg",
+    "test": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-platinum-test.xlsx",
+    "video": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-platinum-video.mp4"
   },
   "皇家A2": {
-    "onepager": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-onepager.jpg",
-    "poster": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-poster.jpg",
-    "test": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-test.xlsx",
-    "video": "/store-ops-dashboard/assets/products/zhenhu-royal-a2-video.mp4"
+    "onepager": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-royal-a2-onepager.jpg",
+    "poster": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-royal-a2-poster.jpg",
+    "test": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-royal-a2-test.xlsx",
+    "video": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-royal-a2-video.mp4"
   },
   "至尊A2": {
-    "onepager": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-onepager.jpg",
-    "poster": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-poster.jpg",
-    "test": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-test.xlsx",
-    "video": "/store-ops-dashboard/assets/products/zhenhu-supreme-a2-video.mp4"
+    "onepager": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-supreme-a2-onepager.jpg",
+    "poster": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-supreme-a2-poster.jpg",
+    "test": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-supreme-a2-test.xlsx",
+    "video": "https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/zhenhu-supreme-a2-video.mp4"
   }
 }
