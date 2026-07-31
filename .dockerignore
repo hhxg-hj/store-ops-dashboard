@@ -1,0 +1,15 @@
+# Git 目录不进镜像
+.git
+.gitignore
+
+# 原始视频 1.5GB 不进镜像（仅保留压缩后产品视频）
+assets/_raw_videos/
+
+# 文档
+DEPLOY.md
+README.md
+
+# Docker 自身
+Dockerfile
+.dockerignore
+docker-compose.yml
