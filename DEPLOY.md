@@ -76,7 +76,9 @@
      }
      ```
 
-### 1.4 上传视频/图片/文档到 OSS（一次性，约 10 分钟）
+### 1.4 上传视频/图片/文档到 OSS（**可选，验证通过后再执行**，约 10 分钟）
+
+> **建议**：先跳过本步骤，直接执行「二、Codeup 流水线配置」并验证部署成功。确认看板能正常访问后，再回来上传视频/图片/文档。
 
 **方式 A：OSS 控制台上传（推荐，适合文件少）**
 
@@ -125,7 +127,9 @@ ossutil cp -r deploy/assets/products/ oss://store-ops-dashboard/products/ --upda
 curl -I https://store-ops-dashboard.oss-cn-chengdu.aliyuncs.com/products/nestle-quanhua-a2-video.mp4
 ```
 
-### 1.5 更新 manifest.json（一次性）
+### 1.5 更新 manifest.json（**可选，与 1.4 一起执行**）
+
+> **建议**：如果跳过了 1.4，本步骤也跳过。当前 `manifest.json` 里的 OSS 地址是模板，parse 脚本会回退到飞书链接（有权限限制，但看板主功能不受影响）。
 
 上传完成后，修改仓库 `deploy/assets/manifest.json`，将路径改为 OSS 绝对地址：
 
