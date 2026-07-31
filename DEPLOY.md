@@ -73,16 +73,19 @@
 3. 输出目录：`deploy`
 4. 部署即可
 
-### 方式 D：Docker 容器
+### 方式 D：Docker 容器（已验证 ✅）
 
-1. 创建 `Dockerfile`：
-   ```dockerfile
-   FROM nginx:alpine
-   COPY deploy/ /usr/share/nginx/html/
-   EXPOSE 80
-   ```
-2. 构建镜像：`docker build -t store-ops-dashboard .`
-3. 运行容器：`docker run -d -p 80:80 store-ops-dashboard`
+仓库已包含 `Dockerfile` + `nginx.conf` + `.dockerignore`，开箱即用。
+
+1. 构建镜像：`docker build -t store-ops-dashboard .`
+2. 运行容器：`docker run -d -p 80:80 --name store-ops store-ops-dashboard`
+3. 验证：`curl http://localhost/` 或浏览器访问 `http://localhost/?id=店员名`
+
+**镜像说明**：
+- 基础镜像 `nginx:alpine`，最终镜像约 573MB（含 230MB 产品视频）
+- `nginx.conf` 已配置 SPA 路由兼容、视频 Range 支持、分级缓存策略、gzip 压缩
+- `.dockerignore` 已排除 `.git` 和 `assets/_raw_videos/`（1.5GB 原始视频不进镜像）
+- 内置 `HEALTHCHECK`，可通过 `docker ps` 查看健康状态
 
 ---
 
