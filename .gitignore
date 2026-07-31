@@ -1,9 +1,6 @@
-# 原始飞书视频（300MB+）不入库，仅保留 ffmpeg 压缩后的版本
+# 原始飞书视频（~1.5GB）不入库，仅保留 ffmpeg 压缩后的版本
 assets/_raw_videos/
 
-# 产品视频（~230MB）已迁到 OSS，不再入库
-assets/products/*-video.mp4
-
-# 流水线环境变量（安全起见，不提交到仓库）
-.codeup/.env
-.codeup/.env.local
+# 本地开发临时文件
+.DS_Store
+Thumbs.db
