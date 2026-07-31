@@ -4,21 +4,21 @@
   "region": "重庆区域",
   "zaidian": true,
   "isManager": true,
-  "commission": 3816.65,
-  "commissionShangpin": 739.38,
-  "commissionFujian": 2390,
+  "commission": 3947.95,
+  "commissionShangpin": 757.62,
+  "commissionFujian": 2480,
   "commissionBaojin": 160,
-  "commissionJishi": 15.63,
-  "commissionManager": 464.77,
+  "commissionJishi": 16.63,
+  "commissionManager": 483.83,
   "target": 75000,
-  "achieved": 53244.54,
-  "achievementRate": 0.7099272,
+  "achieved": 54606.53,
+  "achievementRate": 0.728087067,
   "lastMonthAchieved": 87583.29,
   "lastMonthTarget": 70000,
-  "salesMom": -0.39206965164245366,
-  "dailyAvg": 1717.5658064516128,
+  "salesMom": -0.3765188542243617,
+  "dailyAvg": 1761.5009677419355,
   "dailyAvgLast": 2919.4429999999998,
-  "dailyAvgMom": -0.4116803080410842,
+  "dailyAvgMom": -0.3966311492493823,
   "userTarget": 90,
   "newCustomers": 16,
   "customerService": {
@@ -28,11 +28,11 @@
     "replyRate": 89,
     "firstReplyMin": 11
   },
-  "mendianDachengLv": 0.970760467,
+  "mendianDachengLv": 1.0218598,
   "mendianStaffCount": 4,
-  "milkCans": 188,
+  "milkCans": 192,
   "milkCansLast": 309,
-  "momMilkCans": -0.39158576051779936,
+  "momMilkCans": -0.3786407766990291,
   "pushCans": 90,
   "pushCansLast": 107,
   "momPushCans": -0.1588785046728972,
@@ -101,43 +101,43 @@
       }
     }
   },
-  "totalClients": 60,
+  "totalClients": 61,
   "totalClientsLast": 115,
-  "momClients": -0.4782608695652174,
-  "milkClients": 50,
+  "momClients": -0.46956521739130436,
+  "milkClients": 51,
   "milkClientsLast": 78,
-  "momMilkClients": -0.358974358974359,
+  "momMilkClients": -0.34615384615384615,
   "pushClients": 24,
   "pushClientsLast": 27,
   "momPushClients": -0.1111111111111111,
-  "milkAvg": 3.76,
+  "milkAvg": 3.764705882,
   "milkAvgLast": 3.961538462,
-  "momMilkAvg": -0.050873786518344864,
+  "momMilkAvg": -0.049685893974793914,
   "depositCount": 7,
   "visitShould": 0,
   "visitDone": 0,
   "visitPending": 0,
-  "naifenUsers": 50,
+  "naifenUsers": 51,
   "naifenUsersLast": 78,
-  "naifenGuanshu": 188,
+  "naifenGuanshu": 192,
   "naifenGuanshuLast": 309,
-  "kedanjia": 887.409,
-  "kedanjiaQoq": 0.165199834,
+  "kedanjia": 895.1890164,
+  "kedanjiaQoq": 0.175415275,
   "milkAov": 665.0585135135136,
   "milkOrderCnt": 74,
   "milkAovQoq": -0.008135247324499878,
   "nonMilkAov": 73.5942,
   "nonMilkOrderCnt": 50,
   "nonMilkAovQoq": 0.12419453158077046,
-  "kedanliang": 3.76,
+  "kedanliang": 3.764705882,
   "kedanliangLast": 3.961538462,
-  "chengjiaoNew": 60,
+  "chengjiaoNew": 61,
   "chengjiaoNewLast": 115,
-  "chengjiaoTotal": 359,
-  "fugouRate": 0.091922006,
+  "chengjiaoTotal": 360,
+  "fugouRate": 0.091666667,
   "zhutuiUsers": 24,
   "zhutuiUsersLast": 27,
-  "tonghuoUsers": 29,
+  "tonghuoUsers": 30,
   "tonghuoUsersLast": 54,
   "bindWecom": 16,
   "haoyouTotal": 220,
@@ -145,25 +145,25 @@
   "sankeUsersLast": 195,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
-  "liushiUsers": 35,
+  "liushiUsers": 37,
   "liushiUsersLast": 27,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 02-26",
+  "version": "2026-07-31 04-06",
   "storeRank": 1,
   "storeTotal": 3,
   "storeTopName": "（你）",
-  "storeTopComm": 3816.65,
+  "storeTopComm": 3947.95,
   "regionRank": 1,
   "regionTotal": 19,
   "regionTopName": "（你）",
-  "regionTopComm": 3816.65,
+  "regionTopComm": 3947.95,
   "nationRank": 1,
   "nationTotal": 23,
   "nationTopName": "（你）",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3947.94883,
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（50 位奶粉客户中仅 24 位（48%）使用过主推产品；主推罐数环比下降 16%（107→90罐）），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（51 位奶粉客户中仅 24 位（47%）使用过主推产品；主推罐数环比下降 16%（107→90罐）），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
@@ -5523,33 +5523,33 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 9043.28431630853,
-      "gap": -0.4587867909316035,
+      "gmv": 10033.311545782071,
+      "gap": -0.5011020460461538,
       "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
+        "traffic": 78,
+        "aov": 931.7991026,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.13220339
+        "repRate": 0.138047138
       },
       "componentGaps": {
-        "traffic": -0.1891891891891892,
-        "aov": -0.039998403570534094,
+        "traffic": -0.21794871794871795,
+        "aov": -0.03928967746142575,
         "milkAov": -0.19435461004565452,
         "nonMilkAov": -0.2852262980948825,
-        "repRate": -0.3046925196093686
+        "repRate": -0.3359756071147235
       }
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 4894.34492534724,
+      "gmv": 5005.598601572176,
       "gap": 0,
       "components": {
-        "traffic": 60,
-        "aov": 887.409,
+        "traffic": 61,
+        "aov": 895.1890164,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091922006
+        "repRate": 0.091666667
       },
       "componentGaps": {
         "traffic": 0,
@@ -5559,23 +5559,23 @@
         "repRate": 0
       }
     },
-    "myGmv": 4894.34492534724,
+    "myGmv": 5005.598601572176,
     "myComponents": {
-      "traffic": 60,
-      "aov": 887.409,
+      "traffic": 61,
+      "aov": 895.1890164,
       "milkAov": 665.0585135135136,
       "nonMilkAov": 73.5942,
-      "repRate": 0.091922006
+      "repRate": 0.091666667
     }
   },
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 45 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 46 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 26 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 27 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔄",
@@ -5583,13 +5583,13 @@
     }
   ],
   "customerInsights": [
-    "总体客户从 115 降至 60（↓48%），流失 55 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
-    "奶粉客户从 78 降至 50（↓36%），本月有 45 位未复购。宝宝月龄增长、口味变化、竞品活动都可能是原因——逐一了解才能留住客户。",
-    "你服务了 50 位奶粉客户，但只有 24 位（48%）接触过主推产品。其余 26 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "总体客户从 115 降至 61（↓47%），流失 54 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
+    "奶粉客户从 78 降至 51（↓35%），本月有 46 位未复购。宝宝月龄增长、口味变化、竞品活动都可能是原因——逐一了解才能留住客户。",
+    "你服务了 51 位奶粉客户，但只有 24 位（47%）接触过主推产品。其余 27 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
     "有 3 位客户停止了主推产品购买（27→24，↓11%），可能是不适应口感或宝宝需求变化——建议逐一了解原因。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 26 位奶粉客户未接触过主推产品，3 位客户停止了主推产品）",
+    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 27 位奶粉客户未接触过主推产品，3 位客户停止了主推产品）",
     "products": [
       {
         "name": "能恩全护A2",
@@ -5630,11 +5630,11 @@
   },
   "storeAgg": {
     "target": 150000,
-    "achieved": 85589.28,
-    "achievementRate": 0.5705952,
-    "milkCans": 474,
-    "momMilkCans": -0.04048582995951417,
-    "pushCans": 168,
+    "achieved": 87777.28,
+    "achievementRate": 0.5851818666666666,
+    "milkCans": 498,
+    "momMilkCans": 0.008097165991902834,
+    "pushCans": 170,
     "momPushCans": null
   }
 }

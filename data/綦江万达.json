@@ -30,9 +30,9 @@
   },
   "mendianDachengLv": 0,
   "mendianStaffCount": 0,
-  "milkCans": 181,
+  "milkCans": 191,
   "milkCansLast": 144,
-  "momMilkCans": 0.2569444444444444,
+  "momMilkCans": 0.3263888888888889,
   "pushCans": 0,
   "pushCansLast": 3,
   "momPushCans": -1,
@@ -101,47 +101,47 @@
       }
     }
   },
-  "totalClients": 89,
+  "totalClients": 92,
   "totalClientsLast": 96,
-  "momClients": -0.07291666666666667,
-  "milkClients": 50,
+  "momClients": -0.041666666666666664,
+  "milkClients": 52,
   "milkClientsLast": 49,
-  "momMilkClients": 0.02040816326530612,
+  "momMilkClients": 0.061224489795918366,
   "pushClients": 0,
   "pushClientsLast": 1,
   "momPushClients": -1,
-  "milkAvg": 3.62,
+  "milkAvg": 3.673076923,
   "milkAvgLast": 2.93877551,
-  "momMilkAvg": 0.2318055556410976,
+  "momMilkAvg": 0.249866453052074,
   "depositCount": 0,
   "visitShould": 0,
   "visitDone": 0,
   "visitPending": 0,
-  "naifenUsers": 50,
+  "naifenUsers": 52,
   "naifenUsersLast": 49,
-  "naifenGuanshu": 181,
+  "naifenGuanshu": 191,
   "naifenGuanshuLast": 144,
-  "kedanjia": 607.6831461,
-  "kedanjiaQoq": 0.255185213,
+  "kedanjia": 625.3028261,
+  "kedanjiaQoq": 0.291579116,
   "milkAov": 620.8441558441558,
   "milkOrderCnt": 77,
   "milkAovQoq": 0.24590284724566108,
   "nonMilkAov": 60.85242718446601,
   "nonMilkOrderCnt": 103,
   "nonMilkAovQoq": 0.5305213168830236,
-  "kedanliang": 3.62,
+  "kedanliang": 3.673076923,
   "kedanliangLast": 2.93877551,
-  "chengjiaoNew": 89,
+  "chengjiaoNew": 92,
   "chengjiaoNewLast": 96,
-  "chengjiaoTotal": 250,
-  "fugouRate": 0.164,
+  "chengjiaoTotal": 253,
+  "fugouRate": 0.162055336,
   "zhutuiUsers": 0,
   "zhutuiUsersLast": 1,
-  "tonghuoUsers": 50,
+  "tonghuoUsers": 52,
   "tonghuoUsersLast": 51,
   "bindWecom": 0,
   "haoyouTotal": 5,
-  "sankeUsers": 168,
+  "sankeUsers": 171,
   "sankeUsersLast": 142,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
@@ -149,21 +149,21 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 02-26",
+  "version": "2026-07-31 04-06",
   "storeRank": 10,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 1742.78,
+  "storeTopComm": 1821.27,
   "regionRank": 19,
   "regionTotal": 19,
   "regionTopName": "詹芹芹",
-  "regionTopComm": 3816.65,
+  "regionTopComm": 3947.95,
   "nationRank": 23,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3947.94883,
   "learningResources": {
-    "intro": "👶 你的客户可能错过了更适合的选择（50 位奶粉客户中仅 0 位（0%）使用过主推产品；主推罐数环比下降 100%（3→0罐）），以下产品资料能帮你更自信地推荐：",
+    "intro": "👶 你的客户可能错过了更适合的选择（52 位奶粉客户中仅 0 位（0%）使用过主推产品；主推罐数环比下降 100%（3→0罐）），以下产品资料能帮你更自信地推荐：",
     "items": [
       {
         "name": "能恩全护A2",
@@ -3263,59 +3263,59 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 9043.28431630853,
-      "gap": -0.019190054162066785,
+      "gmv": 10033.311545782071,
+      "gap": -0.070825555519143,
       "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
+        "traffic": 78,
+        "aov": 931.7991026,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.13220339
+        "repRate": 0.138047138
       },
       "componentGaps": {
-        "traffic": 0.20270270270270271,
-        "aov": -0.34260663304149447,
+        "traffic": 0.1794871794871795,
+        "aov": -0.3289295682350231,
         "milkAov": -0.24791545123829475,
         "nonMilkAov": -0.4089790411669347,
-        "repRate": 0.2405128189224195
+        "repRate": 0.17391304410816527
       }
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 4894.34492534724,
-      "gap": 0.8122431777417726,
+      "gmv": 5005.598601572176,
+      "gap": 0.8624539088945963,
       "components": {
-        "traffic": 60,
-        "aov": 887.409,
+        "traffic": 61,
+        "aov": 895.1890164,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091922006
+        "repRate": 0.091666667
       },
       "componentGaps": {
-        "traffic": 0.48333333333333334,
-        "aov": -0.3152163815106675,
+        "traffic": 0.5081967213114754,
+        "aov": -0.3014851448751534,
         "milkAov": -0.06648190613450346,
         "nonMilkAov": -0.17313555708919984,
-        "repRate": 0.7841212037953132
+        "repRate": 0.7678763862986314
       }
     },
-    "myGmv": 8869.743200475601,
+    "myGmv": 9322.696681855425,
     "myComponents": {
-      "traffic": 89,
-      "aov": 607.6831461,
+      "traffic": 92,
+      "aov": 625.3028261,
       "milkAov": 620.8441558441558,
       "nonMilkAov": 60.85242718446601,
-      "repRate": 0.164
+      "repRate": 0.162055336
     }
   },
   "weeklyTasks": [
     {
       "icon": "📋",
-      "text": "联系 42 位本月未复购客户，了解宝宝近况和换品原因"
+      "text": "联系 44 位本月未复购客户，了解宝宝近况和换品原因"
     },
     {
       "icon": "🎯",
-      "text": "向 50 位未接触主推产品的客户介绍适合的奶粉"
+      "text": "向 52 位未接触主推产品的客户介绍适合的奶粉"
     },
     {
       "icon": "🔄",
@@ -3323,17 +3323,17 @@
     },
     {
       "icon": "🔐",
-      "text": "从 50 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
+      "text": "从 52 位奶粉客户中筛选购买最规律的 3 位，推荐保证金方案"
     }
   ],
   "customerInsights": [
-    "总体客户从 96 降至 89（↓7%），流失 7 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
-    "你服务了 50 位奶粉客户，但只有 0 位（0%）接触过主推产品。其余 50 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
+    "总体客户从 96 降至 92（↓4%），流失 4 位——每位背后都可能是一个正在换品牌的家庭，越早联系挽回机会越大。",
+    "你服务了 52 位奶粉客户，但只有 0 位（0%）接触过主推产品。其余 52 位可能不知道有更适合宝宝的选项——建议从购买量最大的客户开始介绍。",
     "有 1 位客户停止了主推产品购买（1→0，↓100%），可能是不适应口感或宝宝需求变化——建议逐一了解原因。",
-    "你的 50 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
+    "你的 52 位奶粉客户中没有保证金用户，意味着每月都需要手动跟进复购。购买最规律的客户最适合推荐保证金方案。"
   ],
   "productKnowledge": {
-    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 50 位奶粉客户未接触过主推产品，1 位客户停止了主推产品）",
+    "intro": "了解这些产品能帮你判断哪位宝宝的状况更适合哪款奶粉（有 52 位奶粉客户未接触过主推产品，1 位客户停止了主推产品）",
     "products": [
       {
         "name": "能恩全护A2",
@@ -3374,11 +3374,11 @@
   },
   "storeAgg": {
     "target": 75000,
-    "achieved": 39589.13,
-    "achievementRate": 0.5278550666666666,
-    "milkCans": 339,
-    "momMilkCans": 0.4425531914893617,
-    "pushCans": 54,
+    "achieved": 42369.149999999994,
+    "achievementRate": 0.5649219999999999,
+    "milkCans": 361,
+    "momMilkCans": 0.5361702127659574,
+    "pushCans": 63,
     "momPushCans": null
   }
 }

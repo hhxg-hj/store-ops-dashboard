@@ -145,23 +145,23 @@
   "sankeUsersLast": 152,
   "jishiOrders": 0,
   "jishiOrdersLast": 0,
-  "liushiUsers": 31,
+  "liushiUsers": 33,
   "liushiUsersLast": 23,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 02-26",
+  "version": "2026-07-31 04-06",
   "storeRank": 4,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
-  "storeTopComm": 2774.75,
+  "storeTopComm": 2514.91,
   "regionRank": 9,
   "regionTotal": 19,
   "regionTopName": "詹芹芹",
-  "regionTopComm": 3816.65,
-  "nationRank": 9,
+  "regionTopComm": 3947.95,
+  "nationRank": 12,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3947.94883,
   "learningResources": {
     "intro": "👶 你的客户可能错过了更适合的选择（主推罐数环比下降 100%（9→0罐）；1 位成交客户中暂无奶粉用户——这些宝宝可能正在被竞品服务），以下产品资料能帮你更自信地推荐：",
     "items": [
@@ -4123,18 +4123,18 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 9043.28431630853,
+      "gmv": 10033.311545782071,
       "gap": -1,
       "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
+        "traffic": 78,
+        "aov": 931.7991026,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.13220339
+        "repRate": 0.138047138
       },
       "componentGaps": {
-        "traffic": -0.9864864864864865,
-        "aov": -0.8615292335969417,
+        "traffic": -0.9871794871794872,
+        "aov": -0.8626313336825058,
         "milkAov": -1,
         "nonMilkAov": -0.3784086664176318,
         "repRate": -1
@@ -4142,18 +4142,18 @@
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 4894.34492534724,
+      "gmv": 5005.598601572176,
       "gap": -1,
       "components": {
-        "traffic": 60,
-        "aov": 887.409,
+        "traffic": 61,
+        "aov": 895.1890164,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091922006
+        "repRate": 0.091666667
       },
       "componentGaps": {
-        "traffic": -0.9833333333333333,
-        "aov": -0.8557598581939105,
+        "traffic": -0.9836065573770492,
+        "aov": -0.8570134377712189,
         "milkAov": -1,
         "nonMilkAov": -0.1303662516883124,
         "repRate": -1
@@ -4222,11 +4222,11 @@
   },
   "storeAgg": {
     "target": 160000,
-    "achieved": 116402.91,
-    "achievementRate": 0.7275181875,
-    "milkCans": 442,
-    "momMilkCans": -0.2730263157894737,
-    "pushCans": 106,
+    "achieved": 122731.94,
+    "achievementRate": 0.767074625,
+    "milkCans": 465,
+    "momMilkCans": -0.23519736842105263,
+    "pushCans": 112,
     "momPushCans": null
   }
 }

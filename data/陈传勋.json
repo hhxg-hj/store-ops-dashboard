@@ -2,7 +2,7 @@
   "name": "陈传勋",
   "store": "宝妈时光（成都光环店）",
   "region": "成都区域",
-  "zaidian": true,
+  "zaidian": false,
   "isManager": false,
   "commission": 0,
   "commissionShangpin": 0,
@@ -149,19 +149,19 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 02-26",
-  "storeRank": 1,
+  "version": "2026-07-31 04-06",
+  "storeRank": 4,
   "storeTotal": 4,
-  "storeTopName": "（你）",
-  "storeTopComm": 0,
-  "regionRank": 1,
+  "storeTopName": "张炳坤",
+  "storeTopComm": 172.39,
+  "regionRank": 4,
   "regionTotal": 4,
-  "regionTopName": "（你）",
-  "regionTopComm": 0,
-  "nationRank": 11,
+  "regionTopName": "张炳坤",
+  "regionTopComm": 172.39,
+  "nationRank": 14,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3947.94883,
   "learningResources": {
     "intro": "✅ 你的客户对主推产品的接受度良好。以下 5 款主推产品资料供日常参考，随时准备回答客户的个性化问题 👇",
     "items": [
@@ -1221,21 +1221,21 @@
   },
   "regionalBM": {
     "topSales": {
-      "name": "陈传勋",
+      "name": "张炳坤",
       "gmv": 0,
       "gap": null,
       "components": {
-        "traffic": 0,
-        "aov": 0,
-        "milkAov": 0,
-        "nonMilkAov": 0,
+        "traffic": 65,
+        "aov": 203.8458462,
+        "milkAov": 764.0171428571429,
+        "nonMilkAov": 27.50646464646465,
         "repRate": 0
       },
       "componentGaps": {
-        "traffic": null,
-        "aov": null,
-        "milkAov": null,
-        "nonMilkAov": null,
+        "traffic": -1,
+        "aov": -1,
+        "milkAov": -1,
+        "nonMilkAov": -1,
         "repRate": null
       }
     },
@@ -1244,8 +1244,8 @@
       "gmv": 0,
       "gap": null,
       "components": {
-        "traffic": 56,
-        "aov": 239.6496429,
+        "traffic": 65,
+        "aov": 203.8458462,
         "milkAov": 764.0171428571429,
         "nonMilkAov": 27.50646464646465,
         "repRate": 0
@@ -1317,10 +1317,10 @@
     ]
   },
   "storeAgg": {
-    "target": 0,
-    "achieved": 0,
-    "achievementRate": 0,
-    "milkCans": 94,
+    "target": 60000,
+    "achieved": 29296.07,
+    "achievementRate": 0.48826783333333335,
+    "milkCans": 97,
     "momMilkCans": null,
     "pushCans": 6,
     "momPushCans": null

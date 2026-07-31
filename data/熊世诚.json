@@ -149,19 +149,19 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 02-26",
+  "version": "2026-07-31 04-06",
   "storeRank": 8,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 1742.78,
+  "storeTopComm": 1821.27,
   "regionRank": 14,
   "regionTotal": 19,
   "regionTopName": "詹芹芹",
-  "regionTopComm": 3816.65,
+  "regionTopComm": 3947.95,
   "nationRank": 18,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3947.94883,
   "learningResources": {
     "intro": "✅ 你的客户对主推产品的接受度良好。以下 5 款主推产品资料供日常参考，随时准备回答客户的个性化问题 👇",
     "items": [
@@ -1222,14 +1222,14 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 9043.28431630853,
+      "gmv": 10033.311545782071,
       "gap": -1,
       "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
+        "traffic": 78,
+        "aov": 931.7991026,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.13220339
+        "repRate": 0.138047138
       },
       "componentGaps": {
         "traffic": -1,
@@ -1241,14 +1241,14 @@
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 4894.34492534724,
+      "gmv": 5005.598601572176,
       "gap": -1,
       "components": {
-        "traffic": 60,
-        "aov": 887.409,
+        "traffic": 61,
+        "aov": 895.1890164,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091922006
+        "repRate": 0.091666667
       },
       "componentGaps": {
         "traffic": -1,
@@ -1318,11 +1318,11 @@
   },
   "storeAgg": {
     "target": 75000,
-    "achieved": 39589.13,
-    "achievementRate": 0.5278550666666666,
-    "milkCans": 339,
-    "momMilkCans": 0.4425531914893617,
-    "pushCans": 54,
+    "achieved": 42369.149999999994,
+    "achievementRate": 0.5649219999999999,
+    "milkCans": 361,
+    "momMilkCans": 0.5361702127659574,
+    "pushCans": 63,
     "momPushCans": null
   }
 }
