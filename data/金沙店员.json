@@ -149,19 +149,19 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-07-31 04-06",
+  "version": "2026-08-01 06-21",
   "storeRank": 6,
   "storeTotal": 6,
   "storeTopName": "胡美娟",
-  "storeTopComm": 2514.91,
+  "storeTopComm": 2774.75,
   "regionRank": 17,
   "regionTotal": 19,
   "regionTopName": "詹芹芹",
-  "regionTopComm": 3947.95,
+  "regionTopComm": 3816.65,
   "nationRank": 21,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3947.94883,
+  "nationTopComm": 3816.64949,
   "learningResources": {
     "intro": "✅ 你的客户对主推产品的接受度良好。以下 5 款主推产品资料供日常参考，随时准备回答客户的个性化问题 👇",
     "items": [
@@ -1211,6 +1211,8 @@
   },
   "userMetrics": {
     "totalClients": 7,
+    "totalMilk": 1,
+    "totalNonMilk": 6,
     "qwTotal": null,
     "qwTodayNew": null,
     "today": {
@@ -1238,14 +1240,14 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 10033.311545782071,
+      "gmv": 9043.28431630853,
       "gap": -1,
       "components": {
-        "traffic": 78,
-        "aov": 931.7991026,
+        "traffic": 74,
+        "aov": 924.3828378,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.138047138
+        "repRate": 0.13220339
       },
       "componentGaps": {
         "traffic": -1,
@@ -1257,14 +1259,14 @@
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 5005.598601572176,
+      "gmv": 4894.34492534724,
       "gap": -1,
       "components": {
-        "traffic": 61,
-        "aov": 895.1890164,
+        "traffic": 60,
+        "aov": 887.409,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091666667
+        "repRate": 0.091922006
       },
       "componentGaps": {
         "traffic": -1,
@@ -1335,11 +1337,11 @@
   },
   "storeAgg": {
     "target": 160000,
-    "achieved": 122731.94,
-    "achievementRate": 0.767074625,
-    "milkCans": 465,
-    "momMilkCans": -0.23519736842105263,
-    "pushCans": 112,
+    "achieved": 116402.91,
+    "achievementRate": 0.7275181875,
+    "milkCans": 442,
+    "momMilkCans": -0.2730263157894737,
+    "pushCans": 106,
     "momPushCans": null
   }
 }
