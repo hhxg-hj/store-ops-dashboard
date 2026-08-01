@@ -759,16 +759,22 @@ function buildDailyActionPlan(d) {
   const list = Array.isArray(fu.list) ? fu.list : null;
   const monthProgress = now.getDate() / daysInMonth;
 
-  // ── GMV 分解：GMV ≈ 流量 × 客单价 × 复购率 × 裂变率；客单价拆分为奶粉/其他 ──
-  const traffic = d.totalClients; // 本月下单客户数（流量代理指标）
-  const aov = d.kedanjia || 0;   // 本月全品类客单价
-  const milkAov = d.milkAov || 0;
-  const nonMilkAov = d.nonMilkAov || 0;
-  const repRate = repurchaseRate; // 本月复购用户占比（0-1）
+  // ── GMV 分解（新口径 2026-08-01）：新流量GMV + 历史复购GMV，各分奶粉/其他 ──
+  //   新流量部分：当月新增企微 × 转化率 × 新客品类占比 × 品类客单价
+  //   历史复购部分：品类成交用户 × 复购率 × 品类客单价（复购率=复购用户÷成交用户总量，两部分共用）
+  const mc = (d.regionalBM && d.regionalBM.myComponents) || {};
+  const traffic = d.totalClients; // 保留：R1/R2 场景证据仍用本月下单客户
+  const aov = d.kedanjia || 0;   // 保留：R5/R6 场景证据仍用全品类客单价
+  const milkAov = mc.milkAov ?? (d.milkAov || 0);
+  const nonMilkAov = mc.nonMilkAov ?? (d.nonMilkAov || 0);
+  const repRate = mc.repRate ?? repurchaseRate; // 复购率（0-1，parse 新口径=复购用户÷成交用户总量）
   const refRate = null;           // 裂变率数据缺失（R8 禁用）
-  const gmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * aov * repRate) : null;
-  const milkGmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * milkAov * repRate) : null;
-  const nonMilkGmvApprox = traffic > 0 && repRate !== null ? Math.round(traffic * nonMilkAov * repRate) : null;
+  const qwMonthNew = mc.qwMonthNew ?? null;
+  const convRate = mc.convRate ?? null;
+  const newMilkShare = mc.newMilkShare ?? null;
+  const gmvApprox = Math.round((mc.newMilkGmv || 0) + (mc.newNonMilkGmv || 0) + (mc.repMilkGmv || 0) + (mc.repNonMilkGmv || 0));
+  const milkGmvApprox = Math.round((mc.newMilkGmv || 0) + (mc.repMilkGmv || 0));
+  const nonMilkGmvApprox = Math.round((mc.newNonMilkGmv || 0) + (mc.repNonMilkGmv || 0));
   const gmvComp = {
     traffic: { value: traffic, strength: traffic === 0 ? 'unknown' : clientMom !== null ? (clientMom <= T.clientMomDecline ? 'weak' : clientMom < 0 ? 'normal' : clientMom >= T.clientGrowthInsufficient ? 'strong' : 'normal') : 'normal' },
     aov: { value: aov, strength: aovMom !== null ? (aovMom <= T.aovDecline ? 'weak' : aovMom >= T.aovGrowthGood ? 'strong' : 'normal') : 'normal' },
@@ -934,8 +940,9 @@ function buildDailyActionPlan(d) {
   const bmText = bmSales?.name
     ? ` | 区域标杆：${bmSales.name}（销售最好，GMV≈¥${(bmSales.gmv||0).toLocaleString()}）· ${bmPush?.name||''}（主推最多）| 你的GMV差距：${bmSales?.gap != null ? dapPct(bmSales.gap, true) : '—'}`
     : '';
-  const aovBreakText = `其中奶粉客单价¥${milkAov.toFixed(0)}、其他产品客单价¥${nonMilkAov.toFixed(0)}`;
-  const insightsText = `你的本月GMV约${gmvy}（=客户流量${traffic}人 × 全品类客单价¥${aov.toFixed(0)}，${aovBreakText} × 复购率${repRate !== null ? dapPct(repRate) : '—'}，裂变率暂缺）${weakText}${bmText}。${primary.headline}。`;
+  const newPartGmv = Math.round((mc.newMilkGmv || 0) + (mc.newNonMilkGmv || 0));
+  const repPartGmv = Math.round((mc.repMilkGmv || 0) + (mc.repNonMilkGmv || 0));
+  const insightsText = `你的本月GMV约${gmvy}（新客部分 ¥${newPartGmv.toLocaleString()} = 新增企微${qwMonthNew != null ? qwMonthNew : '—'}人 × 转化率${convRate != null ? dapPct(convRate) : '—'}，分品类×客单价；复购部分 ¥${repPartGmv.toLocaleString()} = 历史成交用户 × 复购率${repRate !== null ? dapPct(repRate) : '—'}，分品类×客单价）${weakText}${bmText}。${primary.headline}。`;
 
   const Qs = DAP_CONFIG.quotas;
   // ── 建议文案来源：skills/store-action-advisor/references/playbook.md ──
@@ -978,29 +985,23 @@ function buildDailyActionPlan(d) {
   // ── 区域标杆差距建议（每个组件分别给出动作，含奶粉/其他客单价）──
   // 文案来源：skills/store-action-advisor/references/playbook.md
   const cmpAdviceMap = {
-    traffic: { low: '拓客', rule: 'R1-新客', text: '今日完成3位到店新客信息登记并添加企微，参与地推/短视频引流，宣导老带新活动' },
-    aov:     { low: '客单价', rule: 'R5-客单价', text: '每笔主推商品成交时主动搭配关联商品做连带推荐，完成3次关联商品推荐' },
+    qwMonthNew: { low: '新客引流', rule: 'R1-新客', text: '今日完成3位到店新客信息登记并添加企微，参与地推/短视频引流，宣导老带新活动' },
+    convRate: { low: '新客转化', rule: 'R2-转化', text: '跟进近期未成交新客了解未下单原因，使用新客体验套餐/新人优惠话术促进首单' },
+    repRate: { low: '复购', rule: 'R4/R7-复购', text: '标记奶粉/纸尿裤客户预估补货时间，今日联系本周清单中临近补货日期的客户提前做补货提醒' },
+    newMilkShare: { low: '新客奶粉首单', rule: 'R5-奶粉', text: '新客首单优先推荐奶粉：用「段数/月龄适配」话术引导新客首单选择主力奶粉' },
     milkAov: { low: '奶粉客单价', rule: 'R5-奶粉', text: '奶粉连带（同段位/跨段位升级）+ 段数月龄适配盘点 + 特配粉/高毛利主推奶粉推荐' },
     nonMilkAov: { low: '其他产品客单价', rule: 'R5-其他', text: '奶粉成交时搭配营养品/纸品/零辅食，向奶粉客户推荐互补营养品（DHA/益生菌/钙铁锌）' },
-    repRate: { low: '复购', rule: 'R4/R7-复购', text: '标记奶粉/纸尿裤客户预估补货时间，今日联系本周清单中临近补货日期的客户提前做补货提醒' },
   };
-  const cmpLabels = { traffic: '流量', aov: '客单价', milkAov: '奶粉客单价', nonMilkAov: '其他产品客单价', repRate: '复购率' };
-  // 格式化组件值（流量/客单价/复购率/奶粉客单价/其他客单价）
+  const cmpLabels = { qwMonthNew: '新增企微', convRate: '转化率', repRate: '复购率', newMilkShare: '新客奶粉占比', milkAov: '奶粉客单价', nonMilkAov: '其他产品客单价' };
+  // 格式化组件值（新增企微/转化率/复购率/新客奶粉占比/客单价）
   const fmtCompVal = (src, key) => {
     const v = src?.components?.[key];
-    if (key === 'repRate') return v != null ? dapPct(v) : '—';
-    if (key === 'traffic') return (v ?? 0) + '人';
-    if (['aov', 'milkAov', 'nonMilkAov'].includes(key)) return '¥' + (v ?? 0).toFixed(0);
+    if (['convRate', 'repRate', 'newMilkShare'].includes(key)) return v != null ? dapPct(v) : '—';
+    if (key === 'qwMonthNew') return v != null ? v + '人' : '—';
+    if (['milkAov', 'nonMilkAov'].includes(key)) return '¥' + (v ?? 0).toFixed(0);
     return v ?? '—';
   };
-  const myCompVal = (key) => {
-    if (key === 'repRate') return repRate != null ? dapPct(repRate) : '—';
-    if (key === 'traffic') return traffic + '人';
-    if (key === 'aov') return '¥' + aov.toFixed(0);
-    if (key === 'milkAov') return '¥' + milkAov.toFixed(0);
-    if (key === 'nonMilkAov') return '¥' + nonMilkAov.toFixed(0);
-    return '—';
-  };
+  const myCompVal = (key) => fmtCompVal({ components: mc }, key);
   // 与胡美娟（销售最好）逐项对比
   if (bmSales?.name && bmSales.name !== d.name && bmSales.componentGaps) {
     for (const [key, gap] of Object.entries(bmSales.componentGaps)) {
@@ -1057,7 +1058,7 @@ function buildDailyActionPlan(d) {
       { scenario: '复购率趋势', reason: '仅有本月复购率，只能判断「偏低」，不能判断「下降」' },
       { scenario: '新客增速放缓', reason: '缺少第三个月数据，只能判断「增长不足」' },
     ],
-    gmv: { traffic, aov, milkAov, nonMilkAov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, milkGmvApprox, nonMilkGmvApprox, components: gmvComp, benchmark: bm },
+    gmv: { traffic, aov, milkAov, nonMilkAov, repurchaseRate: repRate, referralRate: refRate, gmvApprox, milkGmvApprox, nonMilkGmvApprox, components: gmvComp, benchmark: bm, mc, newPartGmv, repPartGmv },
     insightsText, refSuggestions, refWeekActions,
   };
 }
@@ -1071,20 +1072,32 @@ function renderAction(d) {
     <div class="section-title plain">🧮 GMV 拆解</div>
     <div class="gmv-bars">
       <div class="gmv-bar-row">
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 奶粉客单价</div><div class="gmv-bar-val">¥${plan.gmv.milkAov.toFixed(0)}</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
-        <div class="gmv-bar-result">≈ 奶粉类 ${plan.gmv.milkGmvApprox !== null ? '¥' + plan.gmv.milkGmvApprox.toLocaleString() : '—'}</div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">🌱 新增企微</div><div class="gmv-bar-val">${plan.gmv.mc.qwMonthNew != null ? plan.gmv.mc.qwMonthNew + '人' : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 转化率</div><div class="gmv-bar-val">${plan.gmv.mc.convRate != null ? perc(plan.gmv.mc.convRate) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 奶粉占比</div><div class="gmv-bar-val">${plan.gmv.mc.newMilkShare != null ? perc(plan.gmv.mc.newMilkShare) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 奶粉客单价</div><div class="gmv-bar-val">¥${(plan.gmv.mc.milkAov || 0).toFixed(0)}</div></div>
+        <div class="gmv-bar-result">≈ 新客奶粉 ${plan.gmv.mc.newMilkGmv != null ? '¥' + Math.round(plan.gmv.mc.newMilkGmv).toLocaleString() : '—'}</div>
       </div>
       <div class="gmv-bar-row">
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">流量</div><div class="gmv-bar-val">${plan.gmv.traffic}人</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 其他客单价</div><div class="gmv-bar-val">¥${plan.gmv.nonMilkAov.toFixed(0)}</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${perc(plan.gmv.repurchaseRate)}</div></div>
-        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 裂变率</div><div class="gmv-bar-val">—</div></div>
-        <div class="gmv-bar-result">≈ 其他类 ${plan.gmv.nonMilkGmvApprox !== null ? '¥' + plan.gmv.nonMilkGmvApprox.toLocaleString() : '—'}</div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">🌱 新增企微</div><div class="gmv-bar-val">${plan.gmv.mc.qwMonthNew != null ? plan.gmv.mc.qwMonthNew + '人' : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 转化率</div><div class="gmv-bar-val">${plan.gmv.mc.convRate != null ? perc(plan.gmv.mc.convRate) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 其他占比</div><div class="gmv-bar-val">${plan.gmv.mc.newNonMilkShare != null ? perc(plan.gmv.mc.newNonMilkShare) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 其他客单价</div><div class="gmv-bar-val">¥${(plan.gmv.mc.nonMilkAov || 0).toFixed(0)}</div></div>
+        <div class="gmv-bar-result">≈ 新客其他 ${plan.gmv.mc.newNonMilkGmv != null ? '¥' + Math.round(plan.gmv.mc.newNonMilkGmv).toLocaleString() : '—'}</div>
       </div>
-      <div class="gmv-bar-result total">全品类口径 ≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}</div>
+      <div class="gmv-bar-row">
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">🥛 奶粉成交用户</div><div class="gmv-bar-val">${plan.gmv.mc.totalMilk ?? 0}人</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${plan.gmv.mc.repRate != null ? perc(plan.gmv.mc.repRate) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 奶粉客单价</div><div class="gmv-bar-val">¥${(plan.gmv.mc.milkAov || 0).toFixed(0)}</div></div>
+        <div class="gmv-bar-result">≈ 复购奶粉 ${plan.gmv.mc.repMilkGmv != null ? '¥' + Math.round(plan.gmv.mc.repMilkGmv).toLocaleString() : '—'}</div>
+      </div>
+      <div class="gmv-bar-row">
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">🛒 其他成交用户</div><div class="gmv-bar-val">${plan.gmv.mc.totalNonMilk ?? 0}人</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 复购率</div><div class="gmv-bar-val">${plan.gmv.mc.repRate != null ? perc(plan.gmv.mc.repRate) : '—'}</div></div>
+        <div class="gmv-bar-item"><div class="gmv-bar-lbl">× 其他客单价</div><div class="gmv-bar-val">¥${(plan.gmv.mc.nonMilkAov || 0).toFixed(0)}</div></div>
+        <div class="gmv-bar-result">≈ 复购其他 ${plan.gmv.mc.repNonMilkGmv != null ? '¥' + Math.round(plan.gmv.mc.repNonMilkGmv).toLocaleString() : '—'}</div>
+      </div>
+      <div class="gmv-bar-result total">合计 ≈ ${plan.gmv.gmvApprox !== null ? '¥' + plan.gmv.gmvApprox.toLocaleString() : '—'}（新客 ¥${(plan.gmv.newPartGmv || 0).toLocaleString()} + 复购 ¥${(plan.gmv.repPartGmv || 0).toLocaleString()}）</div>
       ${plan.gmv.benchmark?.topSales?.name ? `
       <div class="gmv-bench-section">
         <div class="gmv-bench-title">🏆 区域标杆：每个 GMV 组件对比</div>
@@ -1092,44 +1105,52 @@ function renderAction(d) {
           <thead><tr><th></th><th>你的</th><th>${plan.gmv.benchmark.topSales.name}</th><th>差距</th><th>${plan.gmv.benchmark.topPush?.name||''}</th><th>差距</th></tr></tr></thead>
           <tbody>
             <tr>
-              <td>流量</td>
-              <td>${plan.gmv.traffic}人</td>
-              <td>${plan.gmv.benchmark.topSales.components?.traffic ?? 0}人</td>
-              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.traffic)}
-              <td>${plan.gmv.benchmark.topPush.components?.traffic ?? 0}人</td>
-              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.traffic)}
+              <td>🌱 新增企微</td>
+              <td>${plan.gmv.mc.qwMonthNew != null ? plan.gmv.mc.qwMonthNew + '人' : '—'}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.qwMonthNew != null ? plan.gmv.benchmark.topSales.components.qwMonthNew + '人' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.qwMonthNew)}
+              <td>${plan.gmv.benchmark.topPush.components?.qwMonthNew != null ? plan.gmv.benchmark.topPush.components.qwMonthNew + '人' : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.qwMonthNew)}
             </tr>
             <tr>
-              <td>全品类客单价</td>
-              <td>¥${plan.gmv.aov.toFixed(0)}</td>
-              <td>¥${(plan.gmv.benchmark.topSales.components?.aov ?? 0).toFixed(0)}</td>
-              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.aov)}
-              <td>¥${(plan.gmv.benchmark.topPush.components?.aov ?? 0).toFixed(0)}</td>
-              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.aov)}
+              <td>📈 转化率</td>
+              <td>${plan.gmv.mc.convRate != null ? perc(plan.gmv.mc.convRate) : '—'}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.convRate != null ? perc(plan.gmv.benchmark.topSales.components.convRate) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.convRate)}
+              <td>${plan.gmv.benchmark.topPush.components?.convRate != null ? perc(plan.gmv.benchmark.topPush.components.convRate) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.convRate)}
             </tr>
             <tr>
-              <td>奶粉客单价</td>
-              <td>¥${plan.gmv.milkAov.toFixed(0)}</td>
+              <td>🥛 新客奶粉占比</td>
+              <td>${plan.gmv.mc.newMilkShare != null ? perc(plan.gmv.mc.newMilkShare) : '—'}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.newMilkShare != null ? perc(plan.gmv.benchmark.topSales.components.newMilkShare) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.newMilkShare)}
+              <td>${plan.gmv.benchmark.topPush.components?.newMilkShare != null ? perc(plan.gmv.benchmark.topPush.components.newMilkShare) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.newMilkShare)}
+            </tr>
+            <tr>
+              <td>🔁 复购率</td>
+              <td>${plan.gmv.mc.repRate != null ? perc(plan.gmv.mc.repRate) : '—'}</td>
+              <td>${plan.gmv.benchmark.topSales.components?.repRate != null ? perc(plan.gmv.benchmark.topSales.components.repRate) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.repRate)}
+              <td>${plan.gmv.benchmark.topPush.components?.repRate != null ? perc(plan.gmv.benchmark.topPush.components.repRate) : '—'}</td>
+              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.repRate)}
+            </tr>
+            <tr>
+              <td>🥛 奶粉客单价</td>
+              <td>¥${(plan.gmv.mc.milkAov || 0).toFixed(0)}</td>
               <td>¥${(plan.gmv.benchmark.topSales.components?.milkAov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.milkAov)}
               <td>¥${(plan.gmv.benchmark.topPush.components?.milkAov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.milkAov)}
             </tr>
             <tr>
-              <td>其他产品客单价</td>
-              <td>¥${plan.gmv.nonMilkAov.toFixed(0)}</td>
+              <td>🛒 其他产品客单价</td>
+              <td>¥${(plan.gmv.mc.nonMilkAov || 0).toFixed(0)}</td>
               <td>¥${(plan.gmv.benchmark.topSales.components?.nonMilkAov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.nonMilkAov)}
               <td>¥${(plan.gmv.benchmark.topPush.components?.nonMilkAov ?? 0).toFixed(0)}</td>
               ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.nonMilkAov)}
-            </tr>
-            <tr>
-              <td>复购率</td>
-              <td>${perc(plan.gmv.repurchaseRate)}</td>
-              <td>${plan.gmv.benchmark.topSales.components?.repRate != null ? perc(plan.gmv.benchmark.topSales.components.repRate) : '—'}</td>
-              ${gapCell(plan.gmv.benchmark.topSales.componentGaps?.repRate)}
-              <td>${plan.gmv.benchmark.topPush.components?.repRate != null ? perc(plan.gmv.benchmark.topPush.components.repRate) : '—'}</td>
-              ${gapCell(plan.gmv.benchmark.topPush.componentGaps?.repRate)}
             </tr>
           </tbody>
         </table>

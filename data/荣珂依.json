@@ -149,7 +149,7 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-08-01 06-41",
+  "version": "2026-08-01 07-48",
   "storeRank": 2,
   "storeTotal": 10,
   "storeTopName": "陈丹",
@@ -1547,54 +1547,91 @@
       "stable": 2,
       "churned": 0
     },
-    "newThisMonth": 8
+    "newThisMonth": 8,
+    "newMilk": 8,
+    "newNonMilk": 0
   },
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 9043.28431630853,
-      "gap": -0.8959525835395244,
+      "gmv": 90304.11952370305,
+      "gap": -0.8712438472727803,
       "components": {
-        "traffic": 74,
-        "aov": 924.3828378,
+        "qwMonthNew": 27,
+        "convRate": 1.962962962962963,
+        "repRate": 0.40406976744186046,
+        "newMilkShare": 0.3018867924528302,
+        "newNonMilkShare": 0.6981132075471698,
         "milkAov": 825.4978205128206,
         "nonMilkAov": 102.96153846153848,
-        "repRate": 0.13220339
+        "totalMilk": 202,
+        "totalNonMilk": 142,
+        "newThisMonth": 53,
+        "newMilk": 16,
+        "newNonMilk": 37,
+        "newMilkGmv": 13207.965128205129,
+        "newNonMilkGmv": 3809.576923076924,
+        "repMilkGmv": 67378.85989639237,
+        "repNonMilkGmv": 5907.717576028624
       },
       "componentGaps": {
-        "traffic": -0.8648648648648649,
-        "aov": 0.3741665769381511,
+        "qwMonthNew": -0.037037037037037035,
+        "convRate": -0.8432510885341074,
+        "repRate": -0.5416999733546496,
+        "newMilkShare": 2.3125000000000004,
         "milkAov": 0.09912551158773518,
-        "nonMilkAov": -1,
-        "repRate": -0.43969610764141526
+        "nonMilkAov": -1
       }
     },
     "topPush": {
       "name": "詹芹芹",
-      "gmv": 4894.34492534724,
-      "gap": -0.8077515206260858,
+      "gmv": 98225.53516636955,
+      "gap": -0.881627409964248,
       "components": {
-        "traffic": 60,
-        "aov": 887.409,
+        "qwMonthNew": 16,
+        "convRate": 1.6875,
+        "repRate": 0.46701846965699206,
+        "newMilkShare": 0.8518518518518519,
+        "newNonMilkShare": 0.14814814814814814,
         "milkAov": 665.0585135135136,
         "nonMilkAov": 73.5942,
-        "repRate": 0.091922006
+        "totalMilk": 252,
+        "totalNonMilk": 127,
+        "newThisMonth": 27,
+        "newMilk": 23,
+        "newNonMilk": 4,
+        "newMilkGmv": 15296.345810810813,
+        "newNonMilkGmv": 294.3768,
+        "repMilkGmv": 78269.84152178565,
+        "repNonMilkGmv": 4364.971033773087
       },
       "componentGaps": {
-        "traffic": -0.8333333333333334,
-        "aov": 0.4314211372659057,
+        "qwMonthNew": 0.625,
+        "convRate": -0.8176638176638177,
+        "repRate": -0.6034735300272024,
+        "newMilkShare": 0.17391304347826086,
         "milkAov": 0.3642795270634152,
-        "nonMilkAov": -1,
-        "repRate": -0.19416386539693223
+        "nonMilkAov": -1
       }
     },
-    "myGmv": 940.9303694294401,
+    "myGmv": 11627.211005291007,
     "myComponents": {
-      "traffic": 10,
-      "aov": 1270.256,
+      "qwMonthNew": 26,
+      "convRate": 0.3076923076923077,
+      "repRate": 0.18518518518518517,
+      "newMilkShare": 1,
+      "newNonMilkShare": 0,
       "milkAov": 907.3257142857143,
       "nonMilkAov": 0,
-      "repRate": 0.074074074
+      "totalMilk": 26,
+      "totalNonMilk": 1,
+      "newThisMonth": 8,
+      "newMilk": 8,
+      "newNonMilk": 0,
+      "newMilkGmv": 7258.605714285714,
+      "newNonMilkGmv": 0,
+      "repMilkGmv": 4368.605291005291,
+      "repNonMilkGmv": 0
     }
   },
   "weeklyTasks": [
