@@ -521,7 +521,10 @@ function renderOverview(d) {
         <button class="um-detail-btn" id="umRepBtn" onclick="umToggleCard('rep')">详情 ▾</button>
         <div class="um-val">${fmtNum(umRep.total)}</div><div class="um-lbl">🔁 复购用户</div><div class="um-sub">历史累计≥2次</div>
       </div>
-      <div class="um-node um-root orange"><div class="um-val">${fmtNum(umx.newThisMonth != null ? umx.newThisMonth : 0)}</div><div class="um-lbl">🌱 本月新增成交</div><div class="um-sub">历史首单在本月</div></div>
+      <div class="um-node um-root orange">
+        ${umQwMonthNew != null ? '<button class="um-detail-btn" id="umNewBtn" onclick="umToggleCard(&quot;new&quot;)">详情 ▾</button>' : ''}
+        <div class="um-val">${fmtNum(umx.newThisMonth != null ? umx.newThisMonth : 0)}</div><div class="um-lbl">🌱 本月新增成交</div><div class="um-sub">历史首单在本月</div>
+      </div>
       <!-- 复购三类细分：默认隐藏，点击「复购用户」卡的详情按钮展开 -->
       <div class="um-detail-inline" id="umRepDetail" style="display:none">
         <div class="um-detail-title">🔁 复购用户 · 活跃度细分</div>
@@ -529,6 +532,14 @@ function renderOverview(d) {
           <div class="um-node um-active"><div class="um-val">${fmtNum(umRep.active)}</div><div class="um-lbl">🟢 活跃用户</div><div class="um-sub">90天内≥3次</div></div>
           <div class="um-node um-stable"><div class="um-val">${fmtNum(umRep.stable)}</div><div class="um-lbl">🟡 稳定用户</div><div class="um-sub">90天内1-2次</div></div>
           <div class="um-node um-churned"><div class="um-val">${fmtNum(umRep.churned)}</div><div class="um-lbl">🔴 流失用户</div><div class="um-sub">90天前购买</div></div>
+        </div>
+      </div>
+      <!-- 本月新增成交细分：当月新增企微 vs 转化率，默认隐藏 -->
+      <div class="um-detail-inline" id="umNewDetail" style="display:none">
+        <div class="um-detail-title">🌱 本月新增成交 · 转化细分</div>
+        <div class="um-row">
+          <div class="um-node" style="border-left:3px solid var(--success)"><div class="um-val" style="color:var(--success)">${umQwMonthNew != null ? fmtNum(umQwMonthNew) : '—'}</div><div class="um-lbl">💬 当月新增企微</div><div class="um-sub">本月新加好友</div></div>
+          <div class="um-node" style="border-left:3px solid var(--accent)"><div class="um-val" style="color:var(--accent)">${convRate}</div><div class="um-lbl">📈 企微→成交转化率</div><div class="um-sub">新增成交 ÷ 新增企微</div></div>
         </div>
       </div>
     </div>
@@ -542,6 +553,7 @@ function umToggleCard(which) {
     today: ['umTodayDetail', 'umTodayBtn'],
     total: ['umTotalDetail', 'umTotalBtn'],
     qw: ['umQwDetail', 'umQwBtn'],
+    new: ['umNewDetail', 'umNewBtn'],
   };
   const pair = map[which];
   if (!pair) return;
