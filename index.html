@@ -405,11 +405,12 @@ function renderOverview(d) {
   const userTargetNum = userTarget;
   const userAchieved = d.newCustomers || 0;
   const userAchieveRate = userTargetNum > 0 ? Math.round((userAchieved / userTargetNum) * 100) : 0;
-  // 新客成交占比 = 本月新增成交(newThisMonth) ÷ 成交用户总量(totalClients)
-  // 口径同源（均来自销售明细按客户手机统计），必然 ≤100%；含义=本月拉新占存量的比重
+  // 新客成交占比 = 当月新增成交用户(newThisMonth) ÷ 当月新增企微用户(qwMonthNew)
+  // 含义：当月新加企微好友中转化为成交客户的比率（企微拉新→成交转化）
+  // 边界：当月新增企微为 0/null 时显示 —（无基准则不计算，避免除零或误导）
   const convNew = umx.newThisMonth != null ? umx.newThisMonth : 0;
-  const convTotal = umTotal > 0 ? umTotal : 0;
-  const convRate = convTotal > 0 ? ((convNew / convTotal) * 100).toFixed(1) + '%' : '—';
+  const convDenom = umQwMonthNew != null ? umQwMonthNew : null;
+  const convRate = (convDenom != null && convDenom > 0) ? ((convNew / convDenom) * 100).toFixed(1) + '%' : '—';
 
   return `
   <div class="card">
@@ -444,7 +445,7 @@ function renderOverview(d) {
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">📣 地推任务</div><div class="kpi-sub" style="color:var(--text2)">每天需完成 1 次</div></div>
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎥 直播任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
     <div class="kpi"><div class="kpi-val">1<span style="font-size:14px;color:var(--text2)"> 次</span></div><div class="kpi-lbl">🎬 视频任务</div><div class="kpi-sub" style="color:var(--text2)">需完成 1 次</div></div>
-    <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🌱 新客成交占比</div><div class="kpi-sub" style="color:var(--text2)">本月新增成交 ${fmtNum(convNew)} ÷ 成交用户总量 ${fmtNum(convTotal)}</div></div>
+    <div class="kpi orange"><div class="kpi-val">${convRate}</div><div class="kpi-lbl">🌱 新客成交占比</div><div class="kpi-sub" style="color:var(--text2)">本月新增成交 ${fmtNum(convNew)} ÷ 当月新增企微 ${convDenom != null ? fmtNum(convDenom) : '—'}</div></div>
   </div>
 
   <div class="section-title plain">👥 用户</div>
