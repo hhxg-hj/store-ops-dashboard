@@ -149,7 +149,7 @@
   "liushiUsersLast": 27,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-08-01 06-21",
+  "version": "2026-08-01 06-41",
   "storeRank": 1,
   "storeTotal": 3,
   "storeTopName": "（你）",
@@ -5500,6 +5500,8 @@
     "totalNonMilk": 127,
     "qwTotal": 220,
     "qwTodayNew": 1,
+    "qwMonthNew": 16,
+    "qwOld": 204,
     "today": {
       "date": "2026-07-26",
       "total": 5,

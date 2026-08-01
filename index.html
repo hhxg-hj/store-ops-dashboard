@@ -396,6 +396,9 @@ function renderOverview(d) {
   const umTotalNonMilk = umx.totalNonMilk != null ? umx.totalNonMilk : null;
   const umQw = umx.qwTotal != null ? umx.qwTotal : null;
   const umQwNew = umx.qwTodayNew != null ? umx.qwTodayNew : null;
+  // 企微总量拆解：当月新增 vs 存量（当月之前）
+  const umQwMonthNew = umx.qwMonthNew != null ? umx.qwMonthNew : null;
+  const umQwOld = umx.qwOld != null ? umx.qwOld : null;
 
   // ── 业绩指标（精简+新增）──
   // 用户目标：实际新增(newCustomers) / 目标(userTarget) / 达成率
@@ -453,13 +456,24 @@ function renderOverview(d) {
         ${umTotalMilk != null ? '<button class="um-detail-btn" id="umTotalBtn" onclick="umToggleCard(&quot;total&quot;)">详情 ▾</button>' : ''}
         <div class="um-val">${fmtNum(umTotal)}</div><div class="um-lbl">成交用户总量</div><div class="um-sub">历史去重客户</div>
       </div>
-      <div class="um-node um-root"><div class="um-val">${umQw != null ? fmtNum(umQw) : '—'}</div><div class="um-lbl">企微用户总量</div><div class="um-sub">${umQwNew != null ? '今日新增 +' + fmtNum(umQwNew) : '企微客户总数'}</div></div>
+      <div class="um-node um-root">
+        ${umQwMonthNew != null ? '<button class="um-detail-btn" id="umQwBtn" onclick="umToggleCard(&quot;qw&quot;)">详情 ▾</button>' : ''}
+        <div class="um-val">${umQw != null ? fmtNum(umQw) : '—'}</div><div class="um-lbl">企微用户总量</div><div class="um-sub">${umQwNew != null ? '今日新增 +' + fmtNum(umQwNew) : '企微客户总数'}</div>
+      </div>
       <!-- 成交用户总量拆解：奶粉 vs 其他（互斥，买过奶粉即算奶粉），默认隐藏 -->
       <div class="um-detail-inline" id="umTotalDetail" style="display:none">
         <div class="um-detail-title">👥 成交用户总量 · 品类细分（互斥口径）</div>
         <div class="um-row">
           <div class="um-node" style="border-left:3px solid var(--accent)"><div class="um-val" style="color:var(--accent)">${fmtNum(umTotalMilk || 0)}</div><div class="um-lbl">🥛 奶粉成交用户</div><div class="um-sub">历史买过奶粉</div></div>
           <div class="um-node" style="border-left:3px solid var(--text2)"><div class="um-val">${fmtNum(umTotalNonMilk || 0)}</div><div class="um-lbl">🛒 其他成交用户</div><div class="um-sub">历史仅买非奶粉</div></div>
+        </div>
+      </div>
+      <!-- 企微用户总量拆解：当月新增 vs 存量，默认隐藏 -->
+      <div class="um-detail-inline" id="umQwDetail" style="display:none">
+        <div class="um-detail-title">💬 企微用户总量 · 新增/存量细分</div>
+        <div class="um-row">
+          <div class="um-node" style="border-left:3px solid var(--success)"><div class="um-val" style="color:var(--success)">${fmtNum(umQwMonthNew || 0)}</div><div class="um-lbl">🌱 当月新增企微用户</div><div class="um-sub">本月新加好友</div></div>
+          <div class="um-node" style="border-left:3px solid var(--text2)"><div class="um-val">${fmtNum(umQwOld || 0)}</div><div class="um-lbl">📦 存量企微用户</div><div class="um-sub">当月之前积累</div></div>
         </div>
       </div>
     </div>
@@ -526,6 +540,7 @@ function umToggleCard(which) {
     rep: ['umRepDetail', 'umRepBtn'],
     today: ['umTodayDetail', 'umTodayBtn'],
     total: ['umTotalDetail', 'umTotalBtn'],
+    qw: ['umQwDetail', 'umQwBtn'],
   };
   const pair = map[which];
   if (!pair) return;
