@@ -3,23 +3,28 @@
 // 绑定规则: staff_master_raw.json 中 userid = 'm' + 电话
 import fs from 'fs';
 import path from 'path';
+import { DATA_DIR, RAW_DIR, SCRIPTS_DIR } from './config.mjs';
 
 const CORPID = process.env.WECOM_CORPID;
 const CORPSECRET = process.env.WECOM_CORPSECRET;
 const AGENTID = process.env.WECOM_AGENTID || '1000019';
 const BASE = 'https://qyapi.weixin.qq.com/cgi-bin';
-const DASHBOARD = 'https://hhxg-hj.github.io/store-ops-dashboard/';
+// 看板基址：与 parse-data-v2.mjs 的 LINKS_BASE 保持同一环境变量，默认新域名
+const DASHBOARD = process.env.STORE_OPS_LINKS_BASE || 'https://operational-enablement.linkduoo.com/';
 const DRY = process.argv.includes('--dry-run');
-
-const __dirname = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Z]:)/, '$1'));
 
 if (!DRY && (!CORPID || !CORPSECRET)) {
   console.error('❌ 缺少 WECOM_CORPID / WECOM_CORPSECRET 环境变量（或加 --dry-run 仅预览）');
   process.exit(1);
 }
 
-const version = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'deploy', 'data', 'version.json'), 'utf-8'));
-const staff = JSON.parse(fs.readFileSync(path.join(__dirname, 'staff_master_raw.json'), 'utf-8'));
+// 店员主数据优先取 raw/（每日刷新），回退 scripts/（历史位置）
+const staffPath = [path.join(RAW_DIR, 'staff_master_raw.json'), path.join(SCRIPTS_DIR, 'staff_master_raw.json')]
+  .find((p) => fs.existsSync(p));
+if (!staffPath) { console.error('❌ 找不到 staff_master_raw.json（已查 raw/ 与 scripts/）'); process.exit(1); }
+
+const version = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'version.json'), 'utf-8'));
+const staff = JSON.parse(fs.readFileSync(staffPath, 'utf-8'));
 const f = staff.data.fields;
 const iTel = f.indexOf('电话');
 const iName = f.indexOf('【标准】店员名字');
