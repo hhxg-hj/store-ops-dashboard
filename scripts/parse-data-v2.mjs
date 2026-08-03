@@ -1259,6 +1259,73 @@ fs.writeFileSync(path.join(dataDir, 'version.json'), JSON.stringify({
   version, users: userList, updatedAt: new Date().toISOString(), totalUsers: userList.length,
 }, null, 2));
 
+// ═══ 自动生成 LINKS.md（店员日报链接汇总，按 store 分组）═══
+// 数据源权威 = staff_master「所属门店」→ users[name].store；门店汇总条目(mendianStaffCount===0)不生成链接
+try {
+  const LINKS_BASE = process.env.STORE_OPS_LINKS_BASE || 'https://operational-enablement.linkduoo.com/';
+  const today = new Date().toISOString().slice(0, 10);
+  // 门店短名（用于判别汇总条目）：宝妈时光（重庆綦江万达店）→ 綦江万达（去地域前缀与"店"）
+  function storeShort(store) {
+    const m = String(store || '').match(/（(.+?)）/);
+    let s = m ? m[1] : String(store || '未分组');
+    s = s.replace(/^(重庆|成都)/, '').replace(/总?店$/, '');
+    return s || '未分组';
+  }
+  // 分组标题（保留地域前缀，去括号与"店/总店"）：→ 重庆綦江万达 / 大礼堂 / 金沙天街 / 成都光环
+  function storeTitle(store) {
+    const m = String(store || '').match(/（(.+?)）/);
+    let s = m ? m[1] : String(store || '未分组');
+    s = s.replace(/总?店$/, '');
+    return s || '未分组';
+  }
+  // 门店汇总条目判别：name 命中"门店短名集合"（如 大礼堂/綦江万达 是门店名而非人名）
+  // 注：不能用业绩/mendianStaffCount 判别——当月激励表未录数据的真实店员这些字段也为 0
+  const storeShortSet = new Set(userList.map(n => storeShort(users[n].store)));
+  const clerks = userList.filter(n => !storeShortSet.has(n));
+  // 按 store 分组（保持 storeGroups 插入顺序）
+  const byStore = {};
+  for (const n of clerks) {
+    const s = users[n].store || '未分组';
+    (byStore[s] = byStore[s] || []).push(n);
+  }
+  const enc = encodeURIComponent;
+  let md = `# 门店运营数据看板 · 店员日报链接汇总
+
+> 更新日期：${today}
+> 线上地址：\`${LINKS_BASE}?id=<店员名>\`
+> 使用方式：点击链接或复制到浏览器打开，建议收藏对应店员的链接，每日自动更新数据。
+
+---
+`;
+  for (const [store, names] of Object.entries(byStore)) {
+    md += `\n## ${storeTitle(store)}（${names.length} 人）\n\n| 店员 | 日报链接 |\n|---|---|\n`;
+    for (const n of names) {
+      md += `| ${n} | [打开看板](${LINKS_BASE}?id=${enc(n)}) |\n`;
+    }
+    md += `\n---\n`;
+  }
+  md += `
+## 常见问题
+
+**Q: 链接打不开 / 显示"店员不存在"？**
+A: 确认 URL 中 \`?id=\` 后的店员名完整无拼写错误；如仍无法访问，可能是看板尚未部署最新数据，联系管理员。
+
+**Q: 数据多久更新一次？**
+A: 数据每日由飞书多维表格自动生成，更新后看板实时展示最新内容（页面缓存已禁用，刷新即得最新）。
+
+**Q: 手机上可以看吗？**
+A: 可以，看板已适配移动端浏览器，建议将链接发送到企业微信收藏或添加到手机主屏。
+
+---
+
+**维护说明**：本文档由 \`parse-data-v2.mjs\` 自动生成（按店员主数据「所属门店」分组），请勿手工编辑；店员变动以多维表为准，重跑 parse 即可更新。
+`;
+  fs.writeFileSync(path.join(WORK_ROOT, 'deploy', 'LINKS.md'), md, 'utf-8');
+  console.log(`✅ LINKS.md 已自动生成（${clerks.length} 店员，${Object.keys(byStore).length} 门店分组）→ deploy/LINKS.md`);
+} catch (e) {
+  console.log('⚠️ LINKS.md 自动生成跳过：', e.message);
+}
+
 console.log(`✅ ${userList.length} 店员数据已生成 → deploy/data/`);
 userList.forEach(n => {
   const u = users[n];
