@@ -514,6 +514,7 @@ function buildCustomerOrderIndex() {
     if (!idx[clerk]) idx[clerk] = {};
     if (!idx[clerk][phone]) idx[clerk][phone] = {
       orders: new Set(), firstDate: null, lastDate: null, cnt90d: new Set(),
+      everMilk: false,
       today: { hasMilk: false, milkCats: new Set(), hasNonMilk: false },
     };
     return idx[clerk][phone];
@@ -534,6 +535,11 @@ function buildCustomerOrderIndex() {
       if (!rec.firstDate || date < rec.firstDate) rec.firstDate = date;
       if (!rec.lastDate || date > rec.lastDate) rec.lastDate = date;
       if (date >= d90ago) rec.cnt90d.add(billKey);
+      // 历史是否买过奶粉（用于成交用户总量拆分：奶粉用户 vs 其他用户，互斥）
+      {
+        const _mc = String(ev(val(row, mapSpec.map, milkCatField)) || '').trim();
+        if (CATEGORY_KEY[_mc]) rec.everMilk = true;
+      }
       // 当日订单的品类归属
       const isToday = date.getFullYear() === today0.getFullYear() && date.getMonth() === today0.getMonth() && date.getDate() === today0.getDate();
       if (isToday) {
@@ -556,6 +562,10 @@ function computeUserMetrics(clerk) {
   const custMap = CUST_IDX[clerk] || {};
   const phones = Object.keys(custMap);
   const totalClients = phones.length; // 成交用户总量（历史去重，按手机）
+  // 成交用户总量拆解：历史买过奶粉 vs 其他（互斥）
+  let totalMilk = 0;
+  // 本月新增成交用户拆解
+  let newMilk = 0, newNonMilk = 0;
   // 当日成交拆解
   let todayTotal = 0, todayMilk = 0, todayNonMilk = 0, todayNew = 0, todayRep = 0;
   const milkCatCount = { main: 0, special: 0, child: 0, general: 0 }; // 主推/特配/儿童/通货
@@ -592,14 +602,30 @@ function computeUserMetrics(clerk) {
       else if (lastIn90 && n90 >= 1) repStable++;
       else repChurned++; // 末单在90天前
     }
+    // 成交用户总量拆解（历史买过奶粉即算奶粉用户）
+    if (c.everMilk) totalMilk++;
     // 新增：历史首单在本月
-    if (c.firstDate && c.firstDate >= reportMonthStart) newThisMonth++;
+    if (c.firstDate && c.firstDate >= reportMonthStart) {
+      newThisMonth++;
+      if (c.everMilk) newMilk++; else newNonMilk++;
+    }
   }
   const wmem = wecomMemberMap[clerk] || {};
+  const _qwTotal = wmem.qwTotal ?? null;
+  // 企微总量拆解：当月新增（观测驾驶舱「本月新增」）vs 存量
+  const _cRowQ = cm.rows.find(r => ev(val(r, cm.map, '店员')) === clerk);
+  const _qwMonthNewRaw = _cRowQ ? ev(val(_cRowQ, cm.map, '本月新增')) : null;
+  const qwMonthNew = (_qwMonthNewRaw === null || _qwMonthNewRaw === undefined || _qwMonthNewRaw === '')
+    ? null : (Number(_qwMonthNewRaw) || 0);
+  const qwOld = (_qwTotal != null && qwMonthNew != null) ? Math.max(_qwTotal - qwMonthNew, 0) : null;
   return {
     totalClients,
-    qwTotal: wmem.qwTotal ?? null,
+    totalMilk,
+    totalNonMilk: totalClients - totalMilk,
+    qwTotal: _qwTotal,
     qwTodayNew: wmem.qwTodayNew ?? null,
+    qwMonthNew,
+    qwOld,
     today: {
       date: TODAY_STR, total: todayTotal, milk: todayMilk, nonMilk: todayNonMilk,
       new: todayNew, rep: todayRep,
@@ -610,6 +636,8 @@ function computeUserMetrics(clerk) {
     },
     repurchase: { total: repTotal, active: repActive, stable: repStable, churned: repChurned },
     newThisMonth,
+    newMilk,
+    newNonMilk,
   };
 }
 console.log('✅ 用户指标计算模块就绪（当日=' + TODAY_STR + '，近90天自 ' + `${d90ago.getFullYear()}-${String(d90ago.getMonth() + 1).padStart(2, '0')}-${String(d90ago.getDate()).padStart(2, '0')}` + '）');
