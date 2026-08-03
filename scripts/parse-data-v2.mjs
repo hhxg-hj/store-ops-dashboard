@@ -507,6 +507,7 @@ function parseSaleDate(v) {
 const MILK_PRIORITY = { main: 0, special: 1, child: 2, general: 3 }; // 主推>特配>儿童>通货
 
 // 构建客户订单索引：{ clerk: { phone: { orders:Set(billKey), firstDate, lastDate, cnt90d:Set(billKey),
+//   hasMilk/hasNonMilk:Boolean（历史累计，用于成交用户总量拆解）,
 //   today:{hasMilk:Boolean, milkCats:Set(key), hasNonMilk:Boolean} } } }
 function buildCustomerOrderIndex() {
   const idx = {};
@@ -514,7 +515,7 @@ function buildCustomerOrderIndex() {
     if (!idx[clerk]) idx[clerk] = {};
     if (!idx[clerk][phone]) idx[clerk][phone] = {
       orders: new Set(), firstDate: null, lastDate: null, cnt90d: new Set(),
-      everMilk: false,
+      hasMilk: false, hasNonMilk: false,
       today: { hasMilk: false, milkCats: new Set(), hasNonMilk: false },
     };
     return idx[clerk][phone];
@@ -535,11 +536,11 @@ function buildCustomerOrderIndex() {
       if (!rec.firstDate || date < rec.firstDate) rec.firstDate = date;
       if (!rec.lastDate || date > rec.lastDate) rec.lastDate = date;
       if (date >= d90ago) rec.cnt90d.add(billKey);
-      // 历史是否买过奶粉（用于成交用户总量拆分：奶粉用户 vs 其他用户，互斥）
-      {
-        const _mc = String(ev(val(row, mapSpec.map, milkCatField)) || '').trim();
-        if (CATEGORY_KEY[_mc]) rec.everMilk = true;
-      }
+      // 历史累计品类归属（用于成交用户总量拆解：奶粉成交用户/其他成交用户，互斥，买奶粉即算奶粉）
+      const milkCatAll = String(ev(val(row, mapSpec.map, milkCatField)) || '').trim();
+      if (CATEGORY_KEY[milkCatAll]) rec.hasMilk = true;
+      const nmCatAll = String(ev(val(row, mapSpec.map, '二级分类')) || '').trim();
+      if (NON_MILK_MAP[nmCatAll]) rec.hasNonMilk = true;
       // 当日订单的品类归属
       const isToday = date.getFullYear() === today0.getFullYear() && date.getMonth() === today0.getMonth() && date.getDate() === today0.getDate();
       if (isToday) {
@@ -562,10 +563,8 @@ function computeUserMetrics(clerk) {
   const custMap = CUST_IDX[clerk] || {};
   const phones = Object.keys(custMap);
   const totalClients = phones.length; // 成交用户总量（历史去重，按手机）
-  // 成交用户总量拆解：历史买过奶粉 vs 其他（互斥）
-  let totalMilk = 0;
-  // 本月新增成交用户拆解
-  let newMilk = 0, newNonMilk = 0;
+  // 总量拆解：奶粉成交用户 vs 其他成交用户（互斥，历史上买过奶粉即算奶粉）
+  let totalMilk = 0, totalNonMilk = 0;
   // 当日成交拆解
   let todayTotal = 0, todayMilk = 0, todayNonMilk = 0, todayNew = 0, todayRep = 0;
   const milkCatCount = { main: 0, special: 0, child: 0, general: 0 }; // 主推/特配/儿童/通货
@@ -573,8 +572,12 @@ function computeUserMetrics(clerk) {
   let repTotal = 0, repActive = 0, repStable = 0, repChurned = 0;
   // 新增（本月首次成交）
   let newThisMonth = 0;
+  // 新客品类拆解（本月首单客户，互斥：买过奶粉算奶粉）——用于 GMV 新流量部分的新客品类占比
+  let newMilk = 0, newNonMilk = 0;
   for (const phone of phones) {
     const c = custMap[phone];
+    // 总量拆解（互斥，优先奶粉）
+    if (c.hasMilk) totalMilk++; else totalNonMilk++;
     // 当日
     const t = c.today;
     if (t.hasMilk || t.hasNonMilk) {
@@ -602,27 +605,22 @@ function computeUserMetrics(clerk) {
       else if (lastIn90 && n90 >= 1) repStable++;
       else repChurned++; // 末单在90天前
     }
-    // 成交用户总量拆解（历史买过奶粉即算奶粉用户）
-    if (c.everMilk) totalMilk++;
     // 新增：历史首单在本月
     if (c.firstDate && c.firstDate >= reportMonthStart) {
       newThisMonth++;
-      if (c.everMilk) newMilk++; else newNonMilk++;
+      if (c.hasMilk) newMilk++; else newNonMilk++;
     }
   }
   const wmem = wecomMemberMap[clerk] || {};
-  const _qwTotal = wmem.qwTotal ?? null;
-  // 企微总量拆解：当月新增（观测驾驶舱「本月新增」）vs 存量
-  const _cRowQ = cm.rows.find(r => ev(val(r, cm.map, '店员')) === clerk);
-  const _qwMonthNewRaw = _cRowQ ? ev(val(_cRowQ, cm.map, '本月新增')) : null;
-  const qwMonthNew = (_qwMonthNewRaw === null || _qwMonthNewRaw === undefined || _qwMonthNewRaw === '')
-    ? null : (Number(_qwMonthNewRaw) || 0);
-  const qwOld = (_qwTotal != null && qwMonthNew != null) ? Math.max(_qwTotal - qwMonthNew, 0) : null;
+  // 企微用户总量拆解：当月新增（企微联系情况表当月「新增客户数」）+ 存量（客户总数−当月新增，即当月之前积累）
+  const qwMonthNew = (wecomMap[clerk] && wecomMap[clerk].newCustomers != null) ? wecomMap[clerk].newCustomers : null;
+  const qwTotalV = wmem.qwTotal ?? null;
+  const qwOld = (qwTotalV != null && qwMonthNew != null) ? Math.max(qwTotalV - qwMonthNew, 0) : null;
   return {
     totalClients,
     totalMilk,
-    totalNonMilk: totalClients - totalMilk,
-    qwTotal: _qwTotal,
+    totalNonMilk,
+    qwTotal: qwTotalV,
     qwTodayNew: wmem.qwTodayNew ?? null,
     qwMonthNew,
     qwOld,
@@ -914,15 +912,53 @@ for (const [region, names] of Object.entries(regionGroups)) {
 }
 
 // ═══ Regional GMV Benchmarks（业绩最好 + 主推卖最多）═══
+// 新口径（2026-08-01）：GMV = 新流量GMV + 历史复购GMV，各分奶粉/其他品
+//   新流量部分：当月新增企微(qwMonthNew) × 转化率(newThisMonth/qwMonthNew) × 新客品类占比 × 品类客单价
+//   历史复购部分：品类成交用户(totalMilk/totalNonMilk) × 复购率(repRate) × 品类客单价
+//   复购率 = 复购用户(repurchase.total) ÷ 成交用户总量(totalClients)，两部分共用
 const regionBM = {};
-const _gmv = (u) => (u.totalClients || 0) * (u.kedanjia || 0) * (u.fugouRate || 0);
-const _gmvComps = (u) => ({
-  traffic: u.totalClients || 0,
-  aov: u.kedanjia || 0,
-  milkAov: u.milkAov || 0,
-  nonMilkAov: u.nonMilkAov || 0,
-  repRate: u.fugouRate || 0,
-});
+// 新口径组件：返回 null 表示数据不足（前端显示 —）
+const _gmvComps = (u) => {
+  const umx = u.userMetrics || {};
+  const rep = umx.repurchase || {};
+  const totalClients = umx.totalClients || 0;
+  const totalMilk = umx.totalMilk || 0;
+  const totalNonMilk = umx.totalNonMilk || 0;
+  const qwMonthNew = umx.qwMonthNew ?? null;
+  const newThisMonth = umx.newThisMonth || 0;
+  const newMilk = umx.newMilk || 0;
+  const newNonMilk = umx.newNonMilk || 0;
+  const milkAov = u.milkAov || 0;
+  const nonMilkAov = u.nonMilkAov || 0;
+  const convRate = (qwMonthNew != null && qwMonthNew > 0) ? newThisMonth / qwMonthNew : null;
+  const repRate = totalClients > 0 ? (rep.total || 0) / totalClients : null;
+  const newMilkShare = newThisMonth > 0 ? newMilk / newThisMonth : null;
+  const newNonMilkShare = newThisMonth > 0 ? newNonMilk / newThisMonth : null;
+  // 四部分 GMV（任一因子缺失则该部分为 null）
+  const newMilkGmv = (qwMonthNew != null && convRate != null && newMilkShare != null) ? qwMonthNew * convRate * newMilkShare * milkAov : null;
+  const newNonMilkGmv = (qwMonthNew != null && convRate != null && newNonMilkShare != null) ? qwMonthNew * convRate * newNonMilkShare * nonMilkAov : null;
+  const repMilkGmv = repRate != null ? totalMilk * repRate * milkAov : null;
+  const repNonMilkGmv = repRate != null ? totalNonMilk * repRate * nonMilkAov : null;
+  return {
+    qwMonthNew, convRate, repRate, newMilkShare, newNonMilkShare,
+    milkAov, nonMilkAov, totalMilk, totalNonMilk, newThisMonth, newMilk, newNonMilk,
+    newMilkGmv, newNonMilkGmv, repMilkGmv, repNonMilkGmv,
+  };
+};
+const _gmv = (u) => {
+  const c = _gmvComps(u);
+  return (c.newMilkGmv || 0) + (c.newNonMilkGmv || 0) + (c.repMilkGmv || 0) + (c.repNonMilkGmv || 0);
+};
+// 组件差距对比（null 安全：基准>0 才算）
+const _gap = (mine, bench) => (bench != null && bench > 0 && mine != null) ? (mine - bench) / bench : null;
+const _compGaps = (myC, benchC) => benchC ? ({
+  qwMonthNew: _gap(myC.qwMonthNew, benchC.qwMonthNew),
+  convRate: _gap(myC.convRate, benchC.convRate),
+  repRate: _gap(myC.repRate, benchC.repRate),
+  newMilkShare: _gap(myC.newMilkShare, benchC.newMilkShare),
+  milkAov: _gap(myC.milkAov, benchC.milkAov),
+  nonMilkAov: _gap(myC.nonMilkAov, benchC.nonMilkAov),
+}) : null;
 for (const [region, names] of Object.entries(regionGroups)) {
   const topSalesName = [...names].sort((a,b) => (users[b].achieved||0) - (users[a].achieved||0))[0];
   const topPushName = [...names].sort((a,b) => (users[b].pushCans||0) - (users[a].pushCans||0))[0];
@@ -938,29 +974,18 @@ for (const [name, u] of Object.entries(users)) {
   const bm = regionBM[u.region];
   const myGmv = _gmv(u);
   const myComps = _gmvComps(u);
-  const compGaps = (bench) => {
-    if (!bench || !bench.components) return null;
-    const c = bench.components;
-    return {
-      traffic: c.traffic > 0 ? (myComps.traffic - c.traffic) / c.traffic : null,
-      aov: c.aov > 0 ? (myComps.aov - c.aov) / c.aov : null,
-      milkAov: c.milkAov > 0 ? (myComps.milkAov - c.milkAov) / c.milkAov : null,
-      nonMilkAov: c.nonMilkAov > 0 ? (myComps.nonMilkAov - c.nonMilkAov) / c.nonMilkAov : null,
-      repRate: c.repRate > 0 ? (myComps.repRate - c.repRate) / c.repRate : null,
-    };
-  };
   u.regionalBM = {
     topSales: {
       name: bm?.topSales.name || '', gmv: bm?.topSales.gmv || 0,
       gap: (bm?.topSales.gmv > 0) ? (myGmv - bm.topSales.gmv) / bm.topSales.gmv : null,
       components: bm?.topSales.components || null,
-      componentGaps: compGaps(bm?.topSales),
+      componentGaps: _compGaps(myComps, bm?.topSales.components),
     },
     topPush: {
       name: bm?.topPush.name || '', gmv: bm?.topPush.gmv || 0,
       gap: (bm?.topPush.gmv > 0) ? (myGmv - bm.topPush.gmv) / bm.topPush.gmv : null,
       components: bm?.topPush.components || null,
-      componentGaps: compGaps(bm?.topPush),
+      componentGaps: _compGaps(myComps, bm?.topPush.components),
     },
     myGmv, myComponents: myComps,
   };
