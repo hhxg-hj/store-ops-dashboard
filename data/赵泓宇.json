@@ -149,19 +149,19 @@
   "liushiUsersLast": 0,
   "updatedAt": "2026-07",
   "month": "2026-07",
-  "version": "2026-08-01 07-48",
+  "version": "2026-08-03 04-02",
   "storeRank": 9,
   "storeTotal": 10,
   "storeTopName": "陈丹",
-  "storeTopComm": 1742.78,
+  "storeTopComm": 1727.84,
   "regionRank": 15,
   "regionTotal": 19,
   "regionTopName": "詹芹芹",
-  "regionTopComm": 3816.65,
+  "regionTopComm": 3717.23,
   "nationRank": 19,
   "nationTotal": 23,
   "nationTopName": "詹芹芹",
-  "nationTopComm": 3816.64949,
+  "nationTopComm": 3717.233045,
   "learningResources": {
     "intro": "✅ 你的客户对主推产品的接受度良好。以下 5 款主推产品资料供日常参考，随时准备回答客户的个性化问题 👇",
     "items": [
@@ -1202,7 +1202,7 @@
     "qwMonthNew": 0,
     "qwOld": 0,
     "today": {
-      "date": "2026-07-26",
+      "date": "2026-08-02",
       "total": 0,
       "milk": 0,
       "nonMilk": 0,
@@ -1228,25 +1228,25 @@
   "regionalBM": {
     "topSales": {
       "name": "胡美娟",
-      "gmv": 90304.11952370305,
+      "gmv": 92132.05399238691,
       "gap": -1,
       "components": {
         "qwMonthNew": 27,
-        "convRate": 1.962962962962963,
-        "repRate": 0.40406976744186046,
-        "newMilkShare": 0.3018867924528302,
-        "newNonMilkShare": 0.6981132075471698,
-        "milkAov": 825.4978205128206,
-        "nonMilkAov": 102.96153846153848,
+        "convRate": 0.6296296296296297,
+        "repRate": 0.4253246753246753,
+        "newMilkShare": 1,
+        "newNonMilkShare": 0,
+        "milkAov": 895.2196551724136,
+        "nonMilkAov": 0,
         "totalMilk": 202,
-        "totalNonMilk": 142,
-        "newThisMonth": 53,
-        "newMilk": 16,
-        "newNonMilk": 37,
-        "newMilkGmv": 13207.965128205129,
-        "newNonMilkGmv": 3809.576923076924,
-        "repMilkGmv": 67378.85989639237,
-        "repNonMilkGmv": 5907.717576028624
+        "totalNonMilk": 106,
+        "newThisMonth": 17,
+        "newMilk": 17,
+        "newNonMilk": 0,
+        "newMilkGmv": 15218.734137931031,
+        "newNonMilkGmv": 0,
+        "repMilkGmv": 76913.31985445587,
+        "repNonMilkGmv": 0
       },
       "componentGaps": {
         "qwMonthNew": -1,
@@ -1254,30 +1254,30 @@
         "repRate": null,
         "newMilkShare": null,
         "milkAov": -1,
-        "nonMilkAov": -1
+        "nonMilkAov": null
       }
     },
     "topPush": {
-      "name": "詹芹芹",
-      "gmv": 98225.53516636955,
+      "name": "荣珂依",
+      "gmv": 15145.932834224597,
       "gap": -1,
       "components": {
-        "qwMonthNew": 16,
-        "convRate": 1.6875,
-        "repRate": 0.46701846965699206,
-        "newMilkShare": 0.8518518518518519,
-        "newNonMilkShare": 0.14814814814814814,
-        "milkAov": 665.0585135135136,
-        "nonMilkAov": 73.5942,
-        "totalMilk": 252,
-        "totalNonMilk": 127,
-        "newThisMonth": 27,
-        "newMilk": 23,
-        "newNonMilk": 4,
-        "newMilkGmv": 15296.345810810813,
-        "newNonMilkGmv": 294.3768,
-        "repMilkGmv": 78269.84152178565,
-        "repNonMilkGmv": 4364.971033773087
+        "qwMonthNew": 26,
+        "convRate": 0.5384615384615384,
+        "repRate": 0.15151515151515152,
+        "newMilkShare": 1,
+        "newNonMilkShare": 0,
+        "milkAov": 803.5623529411764,
+        "nonMilkAov": 0,
+        "totalMilk": 32,
+        "totalNonMilk": 1,
+        "newThisMonth": 14,
+        "newMilk": 14,
+        "newNonMilk": 0,
+        "newMilkGmv": 11249.872941176469,
+        "newNonMilkGmv": 0,
+        "repMilkGmv": 3896.0598930481283,
+        "repNonMilkGmv": 0
       },
       "componentGaps": {
         "qwMonthNew": -1,
@@ -1285,7 +1285,7 @@
         "repRate": null,
         "newMilkShare": null,
         "milkAov": -1,
-        "nonMilkAov": -1
+        "nonMilkAov": null
       }
     },
     "myGmv": 0,
@@ -1359,11 +1359,11 @@
   },
   "storeAgg": {
     "target": 75000,
-    "achieved": 39589.13,
-    "achievementRate": 0.5278550666666666,
-    "milkCans": 339,
-    "momMilkCans": 0.4425531914893617,
-    "pushCans": 54,
+    "achieved": 45026.189999999995,
+    "achievementRate": 0.6003491999999999,
+    "milkCans": 12,
+    "momMilkCans": -0.9368421052631579,
+    "pushCans": 9,
     "momPushCans": null
   }
 }

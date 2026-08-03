@@ -48,10 +48,10 @@
 
 | 店员 | 日报链接 |
 |---|---|
-| 陈传勋 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E9%99%88%E4%BC%A0%E5%8B%8B) |
-| 陈翰弘 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E9%99%88%E7%BF%B0%E5%BC%98) |
-| 张炳坤 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E5%BC%A0%E7%82%B3%E5%9D%A4) |
 | 康园 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E5%BA%B7%E5%9B%AD) |
+| 张炳坤 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E5%BC%A0%E7%82%B3%E5%9D%A4) |
+| 陈翰弘 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E9%99%88%E7%BF%B0%E5%BC%98) |
+| 陈传勋 | [打开看板](https://operational-enablement.linkduoo.com/?id=%E9%99%88%E4%BC%A0%E5%8B%8B) |
 
 ---
 
